@@ -26,3 +26,76 @@
  *   content-only       = Content
  *
  ****/
+
+#page {
+	/*override*/
+	width: auto;
+	position: static;
+}
+
+#page-header {
+	background: #ddd;
+	float: none;
+}
+#page-content {
+	/*override*/
+	clear: none;
+	overflow: visible;
+	position: static;
+	min-width: 900px;
+	/*override*/
+
+}
+#page-content #region-main-box {
+	/*override*/
+	left: 0;
+	position: static;
+	width: auto;
+	/*override*/
+	float: left;
+}
+#page-content #region-post-box {
+	/*override*/
+	float: none;
+	left: 0;
+	margin-left: 0;
+	position: static;
+	width: auto;
+}
+#page-content #region-main-wrap {
+	/*override*/
+	position: static;
+	right: 0;
+	/*override*/
+	width: 660px;
+	float: left;
+	margin-right: 20px;
+}
+#page-content #region-main {
+	margin-right: 0;
+	margin-left: 0;
+	overflow: visible;	
+}
+#page-content #region-pre {
+	/*override*/
+	float: none;
+	overflow: visible;
+	position: static;
+	margin-left: 0;
+	/*override*/
+	width: 220px;
+	float: left;
+	margin-right: 20px;
+}
+#page-content #region-post {
+	/*override*/
+	left: 0;
+	overflow: visible;
+	position: static;
+	/*override*/
+	width: 220px;
+	float: left;
+}
+#page-footer {
+	background: #ccc;
+}

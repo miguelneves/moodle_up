@@ -35,7 +35,7 @@
 
 $THEME->name = 'up';
 
-$THEME->parents = array();
+$THEME->parents = array('base');
 
 $THEME->sheets = array(
     'pagelayout',   /** Must come first: Page layout **/
