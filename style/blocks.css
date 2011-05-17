@@ -1,0 +1,10 @@
+
+#page-content .region-content {
+	overflow: visible;
+	padding: 0;
+}
+.block {
+	border: none;
+	border-top: 4px solid #444;
+	margin: 0;
+}
