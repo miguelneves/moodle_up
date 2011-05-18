@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 .headermenu {
     float: right;
     font-size: 0.8em;
-    margin: 0 10px;
+    margin: 10px;
     text-align: right;
 }
 
@@ -79,12 +79,13 @@ h1, h2, h3, h4, h5, h6 {
 #page {
 	/*override*/
 	position: static;
- 	background-color: #a39778;
 	float: left;
 }
 
 #page-header {
 	float: none;
+	margin: 0 0 10px 0;
+ 	background-color: #a39778;
 }
 
 .navbar {
@@ -122,6 +123,8 @@ h1, h2, h3, h4, h5, h6 {
 	/*override*/
 	padding: 10px;
 	width: 100%;
+	border-top: 5px solid #444;
+ 	background-color: #a39778;
 }
 #page-content #region-main-box {
 	/*override*/
@@ -151,7 +154,6 @@ h1, h2, h3, h4, h5, h6 {
 	width: 660px;
 	float: left;
 	margin-right: 20px;
-	border-top: 10px solid #444;
 }
 #page-content #region-main {
 	margin-right: 0;
@@ -181,4 +183,58 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-footer {
 	background: #ccc;
+}
+
+
+/* Courses Homepage */
+
+.coursebox {
+	float: none;
+	width: auto;
+	padding: 0 10px;
+	border-left: 10px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+.coursebox .info,
+.coursebox .summary {
+	float: none;
+	width: auto;	
+}
+
+.coursebox h3 {
+	margin: 0;
+	padding: 0;
+}
+
+#pageheading {
+	font-size: 18px;
+}
+
+.mod_introbox {
+	font-style: italic;
+	border: none;
+}
+
+.generalbox {
+	font-size: 12px;
+	line-height: 15px;
+	padding: 10px 0;
+	border-width: 1px 0 0 0;
+	border-color: #444;
+	border-style: dotted;
+}
+
+
+
+ul.section.img-text {
+	margin: 0;
+}
+
+
+.modified {
+	font-size: 10px;
+	font-style: italic;
+	padding: 5px 0;
+	border-top: 1px dotted #444;
 }
