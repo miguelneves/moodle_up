@@ -26,20 +26,93 @@
  *   content-only       = Content
  *
  ****/
+ 
+ html {
+  	background-color: transparent;
+ }
+ 
+ body {
+	margin: 0 auto;
+	padding: 20px;
+ }
+ 
+abbr {
+	text-decoration: none;
+} 
+ 
+a {
+	text-decoration: none;
+	color: #000;
+} 
+ 
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+ 
+ 
+.headermain {
+	float: none;
+	height: 160px;
+	margin: 0 0 0 -20px;
+    padding: 10px 20px;
+    border-left: 10px solid #000;
+/*
+ 	background-image: url(http://localhost/moodle/theme/up/pix/bg.png);
+	background-repeat: no-repeat;
+	background-position: right;  
+*/
+/* box-shadow: 10px 10px 5px #888; */
+}
+
+.headermenu {
+    float: right;
+    font-size: 0.8em;
+    margin: 0 10px;
+    text-align: right;
+}
+
+.headermenu a {
+    font-weight: bold;
+}
+
 
 #page {
 	/*override*/
-	width: auto;
 	position: static;
+ 	background-color: #a39778;
+	float: left;
 }
 
 #page-header {
 	float: none;
-	padding: 20px;
 }
+
 .navbar {
-	border-bottom: 1px solid #888; 
+	border-top: 1px solid #fff; 
 }
+
+.breadcrumb {
+	font-size: 10px;
+	text-transform: uppercase;
+	padding: 5px 10px;
+}
+
+/*
+.singlebutton input {
+	background-color: #000;
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 9px;
+	text-transform: uppercase;
+	padding: 1px 3px;
+}
+
+.singlebutton input:hover {
+	background-color: #555;
+}
+*/
+
+
 #page-content {
 	/*override*/
 	clear: none;
@@ -47,9 +120,8 @@
 	position: static;
 	min-width: 900px;
 	/*override*/
-	margin: 20px;
-	width: 1140px;
-
+	padding: 10px;
+	width: 100%;
 }
 #page-content #region-main-box {
 	/*override*/
