@@ -1,0 +1,36 @@
+/* CALENDAR BLOCK */
+
+.calendartable th, .calendartable td {
+	border: 1px solid #a39778;
+}
+
+.block .minicalendar .weekdays {
+	color: #fff;
+	background-color: #333;
+}
+
+.block .minicalendar td.weekend.day {
+	color: #fff;
+	background-color: #555;
+}
+
+.block .minicalendar td.day {
+	color: #fff;
+	background-color: #777;
+}
+
+.block .minicalendar td.day.today {
+	color: #fff;
+	background-color: #ff0000;
+}
+
+.block .minicalendar td a {
+	color: #fff;
+}
+
+.calendar-event-panel .yui3-overlay-content {
+    background-color: #000;
+    border: none;
+    margin-left: -5px;
+    margin-top: -5px;
+  }
