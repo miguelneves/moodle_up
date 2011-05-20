@@ -38,7 +38,7 @@ echo $OUTPUT->doctype() ?>
 <?php if ($hasheading || $hasnavbar) { ?>
     <div id="page-header">
         <?php if ($hasheading) { ?>
-        <h1 class="headermain"><?php echo $PAGE->heading ?></h1>
+        <h1 class="headermain">Moodle U.Porto</h1>
         <div class="headermenu"><?php
             if ($haslogininfo) {
                 echo $OUTPUT->login_info();
@@ -67,7 +67,10 @@ echo $OUTPUT->doctype() ?>
 
                 <div id="region-main-wrap">
                     <div id="region-main">
-                        <div class="region-content">
+            	        <div class="region-content">
+                        	<?php if ($hasheading) { ?>
+                        		<h2><?php echo $PAGE->heading ?></h2>
+                        	<?php } ?>
                             <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
                         </div>
                     </div>

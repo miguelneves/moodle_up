@@ -163,5 +163,11 @@ $THEME->layouts = array(
     ),
 );
 
-
+// Disable dock
 $THEME->enable_dock = false;
+
+// Overrides the left arrow image used throughout Moodle
+$THEME->larrow = '«';
+
+// Overrides the right arrow image used throughout Moodle
+$THEME->rarrow = '»';
