@@ -135,6 +135,7 @@ function customMenu(){
 	$('#megamenu li h3').click(function(){
 		//$('#megamenu .sub').not(this).slideToggle();
 		$(this).next().slideToggle();
+		$(this).parent().toggleClass('active')
 	})
 	
 	

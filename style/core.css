@@ -31,10 +31,72 @@
 
 h2:hover {background: #ddd; }
 
-#megamenu { overflow: hidden; }
-#megamenu li { }
-#megamenu > ul > li { background: #ddd; float: left; margin-right: 30px; }
+#megamenu { 
+	overflow: hidden; 
+	border-top: 1px solid #fff;
+}
 
-#megamenu #myProfile .sub { width: 700px; background: #ddd; overflow: hidden; }
-#megamenu #myProfile .sub > li { float: left; background: #ccc; display: inline-block; margin: 5px; width: 220px; }
+#megamenu ul { margin: 0;}
+
+#megamenu ul li {list-style-type: none;}
+
+#megamenu > ul > li { 
+	float: left; 
+	width: 193px;
+	list-style-type: none;
+}
+
+#megamenu li h3 {
+	margin: 0;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-style: normal;
+}
+
+#megamenu li h4 {
+	margin: 0;
+	padding: 0 0 2px 0;
+	font-size: 11px;
+}
+
+#megamenu #myProfile.active,
+#megamenu #myCourses.active,
+#megamenu #myProfile.active .sub,
+#megamenu #myCourses.active .sub {
+	background-color: #948765;
+}
+
+#megamenu #myProfile .sub,
+#megamenu #myCourses .sub { width: 930px; overflow: hidden; padding: 0 5px 5px; }
+
+#megamenu #myProfile .sub > li,
+#megamenu #myCourses .sub > li  { 
+	float: left;
+	display: inline-block; 
+	margin: 5px; width: 220px; 
+}
+
+#megamenu #myProfile .sub #general {
+	margin: 21px 5px 5px;
+}
+
+#megamenu #myProfile .sub li ul,
+#megamenu #myCourses .sub li ul { 
+	border-top: 1px dotted #444;
+}
+
+#megamenu #myProfile .sub li ul li,
+#megamenu #myCourses .sub li { 
+	padding: 1px 0;
+	border-bottom: 1px dotted #444;
+}
+
+#megamenu #myProfile .sub > li a:hover,
+#megamenu #myCourses .sub > li a:hover { 
+	font-weight: bold;
+}
+
 #megamenu #myProfile .sub > li.contains_branch { float: right; }
+
+
+#megamenu #myProfile {}

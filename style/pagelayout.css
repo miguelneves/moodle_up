@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 .accesshide,
 .skip-block { display: none;}
 
-/* ++ Cabeçalho ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++ CABEÇALHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 #page-header {
 	float: none;
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
+/* ++ MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
 
@@ -190,13 +190,18 @@ h1, h2, h3, h4, h5, h6 {
 	/*override*/
 	width: 660px;
 	float: left;
-	margin-right: 20px;
+	margin: 0;
 }
+
+
 #page-content #region-main {
-	margin-right: 0;
-	margin-left: 0;
+	margin: 0;
+	padding: 10px;
 	overflow: visible;	
 }
+
+
+
 #page-content #region-pre {
 	/*override*/
 	float: none;
@@ -206,8 +211,10 @@ h1, h2, h3, h4, h5, h6 {
 	/*override*/
 	width: 220px;
 	float: left;
-	margin-right: 20px;
+	margin: 0;
 }
+
+
 #page-content #region-post {
 	/*override*/
 	left: 0;
@@ -216,10 +223,12 @@ h1, h2, h3, h4, h5, h6 {
 	/*override*/
 	width: 220px;
 	float: left;
+	padding: 10px;
 }
 
 #page-footer {
-	background: #ccc;
+	float: left;
+	background-color: #fff;
 }
 
 
