@@ -1,0 +1,40 @@
+/*Course Topics*/
+
+.course-content ul.topics li.section{
+	background: #ccc;
+}
+/*edit mode*/
+.commands a {
+	margin-right: 5px;
+}
+/*
+.commands { 
+	opacity: 1;
+}
+.commands a {
+	opacity: 0;
+}
+.commands:hover a {
+	color: purple;
+	background: #ddd;
+	opacity: 1;
+}
+.commands:hover a:hover {
+	opacity: 1;
+	color: red;
+}
+*/
+
+
+
+/* mega menu */
+
+h2:hover {background: #ddd; }
+
+#megamenu { overflow: hidden; }
+#megamenu li { }
+#megamenu > ul > li { background: #ddd; float: left; margin-right: 30px; }
+
+#megamenu #myProfile .sub { width: 700px; background: #ddd; overflow: hidden; }
+#megamenu #myProfile .sub > li { float: left; background: #ccc; display: inline-block; margin: 5px; width: 220px; }
+#megamenu #myProfile .sub > li.contains_branch { float: right; }
