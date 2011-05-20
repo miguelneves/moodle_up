@@ -1,0 +1,36 @@
+.course h2.headingblock {
+	margin: 0 0 20px 0;
+	font-size: 25px;
+	font-family: 'Droid Serif', arial, serif;
+}
+
+
+
+
+ul.unlist {
+	margin: 0;
+}
+
+ul.unlist li {
+	list-style-type: none;
+}
+
+.region-content h2 {
+	margin: 0;
+}
+
+
+.course-content h2 {
+	margin: 0 0 20px 0;
+	font-size: 25px;
+	font-family: 'Droid Serif', arial, serif;
+}
+
+.course-content ul {
+	margin: 0;
+}
+
+.course-content li {
+	margin: 0;
+	list-style-type: none;
+}
