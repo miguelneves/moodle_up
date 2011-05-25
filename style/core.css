@@ -29,7 +29,6 @@
 
 /* mega menu */
 
-h2:hover {background: #ddd; }
 
 #megamenu { 
 	overflow: hidden; 
@@ -67,13 +66,13 @@ h2:hover {background: #ddd; }
 }
 
 #megamenu #myProfile .sub,
-#megamenu #myCourses .sub { width: 930px; overflow: hidden; padding: 0 5px 5px; }
+#megamenu #myCourses .sub { width: 897px; overflow: hidden; padding: 0 5px 5px; }
 
 #megamenu #myProfile .sub > li,
 #megamenu #myCourses .sub > li  { 
 	float: left;
 	display: inline-block; 
-	margin: 5px; width: 220px; 
+	margin: 5px; width: 214px; 
 }
 
 #megamenu #myProfile .sub #general {

@@ -39,7 +39,8 @@ echo $OUTPUT->doctype() ?>
             echo $OUTPUT->lang_menu();
             echo $PAGE->headingmenu;
         ?></div>
-        <h1 class="headermain"><!-- <?php echo $PAGE->heading ?> --><img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/></h1>
+        <h1 class="headermain"><!-- <?php echo $PAGE->heading ?> -->
+        <img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/></h1>
         <?php if ($hascustommenu) { ?>
         <div id="custommenu"><?php echo $custommenu; ?></div>
         <?php } ?>
