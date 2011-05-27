@@ -29,7 +29,7 @@ echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
     <title><?php echo $PAGE->title ?></title>
-    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />  
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
@@ -38,16 +38,22 @@ echo $OUTPUT->doctype() ?>
 <?php if ($hasheading || $hasnavbar) { ?>
     <div id="page-header">
         <?php if ($hasheading) { ?>
-        <h1 class="headermain">Moodle U.Porto</h1>
-        <div class="headermenu"><?php
-            if ($haslogininfo) {
-                echo $OUTPUT->login_info();
-            }
-            if (!empty($PAGE->layout_options['langmenu'])) {
-                echo $OUTPUT->lang_menu();
-            }
-            echo $PAGE->headingmenu
-        ?></div><?php } ?>
+	        <h1 class="headermain">Moodle U.Porto</h1>
+	        
+	    	<?php if ($haslogininfo) {
+	            echo $OUTPUT->login_info();
+	        }
+	        if (!empty($PAGE->layout_options['langmenu'])) {
+	            echo $OUTPUT->lang_menu();
+	        } ?>
+        
+	        <?php if($hasheadingmenu) { ?>
+		        <div class="headermenu">
+		        	<?php echo $PAGE->headingmenu; ?>
+		        </div>
+	        <?php } ?>
+        <?php } ?>
+        
         <?php if ($hascustommenu) { ?>
         <div id="custommenu"><?php echo $custommenu; ?></div>
         <?php } ?>
@@ -66,22 +72,23 @@ echo $OUTPUT->doctype() ?>
             <div id="region-post-box">
 
                 <div id="region-main-wrap">
-                    <div id="region-main">
-            	        <div class="region-content">
-                        	<?php if ($hasheading) { ?>
-                        		<h2><?php echo $PAGE->heading ?></h2>
+                	<?php if ($hasheading) { ?>
+                        		<h2 id="course-title"><?php echo $PAGE->heading ?></h2>
                         	<?php } ?>
-                            <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
+                    <div id="region-main">                    	
+            	        <div class="region-content">                        	
+                            <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>                           
                         </div>
                     </div>
+                   		<?php if ($hassidepre) { ?>
+		                <div id="region-pre" class="block-region">
+		                    <div class="region-content">
+		                        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
+		                    </div>
+		                </div>
                 </div>
 
-                <?php if ($hassidepre) { ?>
-                <div id="region-pre" class="block-region">
-                    <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-                    </div>
-                </div>
+                
                 <?php } ?>
 
                 <?php if ($hassidepost) { ?>
