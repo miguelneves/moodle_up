@@ -4,8 +4,28 @@
 /* remove all <br> */
 br { display: none !important; }
 
+.clearer { clear: both; }
 
 
+/* course links*/
+a {
+	color: #d64d25;
+	border-bottom: 1px solid #444;
+}
+a:visited {
+	color: #e89279;
+	border-bottom: 1px solid #777;
+}
+a:hover {
+	color: #444;
+	border-bottom: 1px solid #444;
+	background: #fefcfb;
+}
+a:active {
+	color: #fff;
+	border-bottom: 1px solid #444;
+	background: #d64d25;
+}
 /* modal box */
 
 #helppopupbox {
@@ -20,8 +40,82 @@ br { display: none !important; }
 	float: right;
 }
 
-/* mega menu */
+/* buttons */
+input[type=submit] {
+	border: none;
+	color: #fff;
+	background: #D64D25;
+	padding: 4px;
+	border-radius: 2px;
+}
+input[type=submit]:hover {
+	background: #7f2e16;
+	cursor: pointer;
+}
 
+/* intro */
+#intro.generalbox {
+	font: 20px Tahoma, sans-serif;
+	padding: 0;
+	border-bottom: 2px solid #d64d25;
+	margin: 0 0 20px 0;
+}
+
+/* FORUMS 
+.forumheaderlist
+	thead
+	tbody
+		tr.discussion
+			td.<name>
+
+*/
+.path-mod-forum  .forumheaderlist {
+	border-style: none;
+	border-bottom: 2px solid #444;
+}
+.path-mod-forum .forumheaderlist tr th,
+.path-mod-forum .forumheaderlist tr td {
+	border-style: none;
+}
+.forumheaderlist thead {
+	background: #444;
+	color: #fff;
+	border-style: none;
+}
+.forumheaderlist tbody tr {
+	border-bottom: 1px solid #E5E5E5;
+}
+.forumheaderlist tbody tr:nth-child(odd) {
+	background: #f7f7f7;
+}
+.forumheaderlist td {
+	border-color: #E5E5E5;
+}
+
+
+/*TABTREE*/
+.tabtree ul {
+	margin: 0;
+	padding: 0;
+}
+.tabtree ul li {
+	display: inline;
+	float: left;
+}
+.tabtree ul li a {
+	border: 1px solid #777;
+	padding: 5px;
+}
+.tabtree ul .selected a {
+	background: #d64d25;
+	color: #fff;
+	border-color: #d64d25;
+}
+
+
+
+
+/* mega menu */
 
 #megamenu { 
 	overflow: hidden; 

@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-style: italic;
 	border: none;
 }
-
+/*
 .generalbox {
 	font-size: 12px;
 	line-height: 15px;
@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #444;
 	border-style: dotted;
 }
-
+*/
 ul.section.img-text {
 	margin: 0;
 }

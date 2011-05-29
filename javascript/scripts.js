@@ -3,7 +3,7 @@ $(document).ready(function() {
 	customMenu();
 	//textIcons();
 	//editMode();
-	newPostModal();
+//	newPostModal();
 		
 });
 
