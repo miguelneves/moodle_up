@@ -94,25 +94,51 @@ input[type=submit]:hover {
 
 
 /*TABTREE*/
+.tabtree {
+	position: relative;
+	margin-bottom: 50px;
+}
 .tabtree ul {
 	margin: 0;
 	padding: 0;
 }
 .tabtree ul li {
 	display: inline;
-	float: left;
 }
-.tabtree ul li a {
+.tabtree .tabrow0 .here .empty {
+	display: none;
+}
+.tabtree .tabrow0 li a {
 	border: 1px solid #777;
 	padding: 5px;
 }
-.tabtree ul .selected a {
+.tabtree .tabrow0 > .active > a,
+.tabtree .tabrow0 > .selected > a {
 	background: #d64d25;
 	color: #fff;
 	border-color: #d64d25;
 }
-
-
+/*2nd level */
+.tabtree ul .here ul{
+	position: absolute;
+	top: 100%;
+	width: 100%;
+}
+.tabtree .tabrow1 {
+	margin-top: 11px;
+	border-top: 2px solid #444;
+	border-bottom: 2px solid #444;
+	padding: 2px 0;
+}
+.tabtree .tabrow1 li a {
+	padding: 2px;
+	border: none;
+}
+.tabtree .tabrow1 .selected a {
+	background: #d64d25;
+	color: #fff;
+	border-color: #d64d25;
+}
 
 
 /* mega menu */
