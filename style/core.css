@@ -1,29 +1,10 @@
-/*Course Topics*/
+/* hide acessibility links */
+.skip-block { display: none; }
 
-.course-content ul.topics li.section{
-	background: #ccc;
-}
-/*edit mode*/
-.commands a {
-	margin-right: 5px;
-}
-/*
-.commands { 
-	opacity: 1;
-}
-.commands a {
-	opacity: 0;
-}
-.commands:hover a {
-	color: purple;
-	background: #ddd;
-	opacity: 1;
-}
-.commands:hover a:hover {
-	opacity: 1;
-	color: red;
-}
-*/
+/* remove all <br> */
+br { display: none !important; }
+
+
 
 /* modal box */
 

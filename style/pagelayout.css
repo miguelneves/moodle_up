@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 #page-header {
 	float: none;
 	margin: 0 0 10px 0;
- 	background-color: #a39778;
+ 	background-color: #f7f7f7;
 }
 
 .headermain {
@@ -159,9 +159,8 @@ h1, h2, h3, h4, h5, h6 {
 #page-content #region-main-wrap {
 	float: left;
 	margin-right: 20px;
-	background: #f7f7f7;
+	/*background: #f7f7f7;*/
 }
-
 
 #page-content #region-main {
 	padding: 0 20px;
@@ -169,14 +168,11 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 }
 
-
-
 #page-content #region-pre {
 	width: 220px;
 	float: left;
 	margin: 0 20px 0 0
 }
-
 
 #page-content #region-post {
 	width: 220px;
@@ -188,7 +184,6 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	border-top: 5px solid #444;
 }
-
 
 /* Courses Homepage */
 
@@ -229,12 +224,9 @@ h1, h2, h3, h4, h5, h6 {
 	border-style: dotted;
 }
 
-
-
 ul.section.img-text {
 	margin: 0;
 }
-
 
 .modified {
 	font-size: 10px;
@@ -242,8 +234,6 @@ ul.section.img-text {
 	padding: 5px 0;
 	border-top: 1px dotted #444;
 }
-
-
 
 .forumheaderlist {
 	margin: 0 !important;
