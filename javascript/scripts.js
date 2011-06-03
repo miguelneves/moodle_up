@@ -126,23 +126,19 @@ function customMenu(){
 	$('#page-header').append('<div id="megamenu"><ul>' + list + '</ul></div>');
 	
 	
-	//style megadropdown
-	
-	$('#megamenu .sub').css({
-		display: 'none'
-	})
-	
+	//megadropdown behaviour
+
+	$('#megamenu .sub').hide();
 	$('#megamenu li h3').click(function(){
-		//$('#megamenu .sub').not(this).slideToggle();
-		$(this).next().slideToggle();
-		$(this).parent().toggleClass('active')
-	})
-	
+		$('#megamenu li .sub').slideUp('slow');
+		if($(this).next().css('display') == 'none') {
+			$(this).next().slideDown('slow');
+		}
+	});
 	
 
 	//NEW NAVIGATION BLOCK 
-	
-	
+		
 	
 	//table of contents
 	var tableContents = $('.block_navigation .type_course li.type_structure');
@@ -180,7 +176,6 @@ function customMenu(){
 
 	//add course info
 	$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul id="tc">' + info + '</ul></div>');
-	
 	
 	
 }
