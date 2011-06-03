@@ -60,20 +60,27 @@ h1, h2, h3, h4, h5, h6 {
 /* ++ CABEÇALHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 #page-header {
-	float: none;
-	margin: 0 0 10px 0;
+	/*float: none;
+	margin: 0 0 10px 0;*/
  	background-color: #a39778;
 }
 
 .headermain {
-	float: none;
+	margin: 0;
+	float: left;
+	/*float: none;
 	height: 160px;
 	margin: 0 0 0 -20px;
     padding: 10px 20px;
     border-left: 10px solid #b8ae96;
  	background-image: url(http://localhost/moodle/theme/up/pix/bg.png);
 	background-repeat: no-repeat;
-	background-position: right;  
+	background-position: right; */
+}
+.logininfo {
+	float: right;
+	border-bottom: 2px solid #fff;
+	color: #fff;
 }
 
 .headermenu {
@@ -93,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 10px;
 	text-transform: uppercase;
 	padding: 5px 10px;
+	float: left;
 }
 
 .breadcrumb ul {
@@ -108,26 +116,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-
+.navbutton {
+	float: right;
+}
 
 
 
 /* ++ MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/*
-.singlebutton input {
-	background-color: #000;
-	border: 1px solid #fff;
-	color: #fff;
-	font-size: 9px;
-	text-transform: uppercase;
-	padding: 1px 3px;
-}
-
-.singlebutton input:hover {
-	background-color: #555;
-}
-*/
 #page {
 	margin: 0 auto;
 	width: 1140px;
@@ -136,14 +132,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-	border-top: 1px solid #fff; 
+	overflow: hidden;
+	border-bottom: 1px solid #444;
 }
 
 #page-content {
 	border-top: 5px solid #444;
- 	background-color: #a39778;
  	width: 1140px;
-	margin: 0 auto;
+	margin: 20px auto 0;
 	clear: both;
 }
 #page-content #region-main-box {

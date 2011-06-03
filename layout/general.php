@@ -38,7 +38,10 @@ echo $OUTPUT->doctype() ?>
 <?php if ($hasheading || $hasnavbar) { ?>
     <div id="page-header">
         <?php if ($hasheading) { ?>
-	        <h1 class="headermain">Moodle U.Porto</h1>
+	        <h1 class="headermain">
+	        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
+	        	<img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/>
+	        </h1>
 	        
 	    	<?php if ($haslogininfo) {
 	            echo $OUTPUT->login_info();
@@ -50,6 +53,7 @@ echo $OUTPUT->doctype() ?>
 	        <?php if($hasheadingmenu) { ?>
 		        <div class="headermenu">
 		        	<?php echo $PAGE->headingmenu; ?>
+		        	
 		        </div>
 	        <?php } ?>
         <?php } ?>
@@ -57,17 +61,17 @@ echo $OUTPUT->doctype() ?>
         <?php if ($hascustommenu) { ?>
         <div id="custommenu"><?php echo $custommenu; ?></div>
         <?php } ?>
-        <?php if ($hasnavbar) { ?>
+    </div>
+<?php } ?>
+<!-- END OF HEADER -->
+		
+    <div id="page-content">
+    	<?php if ($hasnavbar) { ?>
             <div class="navbar clearfix">
                 <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
                 <div class="navbutton"> <?php echo $PAGE->button; ?></div>
             </div>
         <?php } ?>
-    </div>
-<?php } ?>
-<!-- END OF HEADER -->
-
-    <div id="page-content">
         <div id="region-main-box">
             <div id="region-post-box">
 
