@@ -34,7 +34,7 @@
  body {
 	margin: 0 auto;
 	padding: 20px;
-	background-color: #b8ae96;
+	background-color: #f7f7f7;
  }
  
 abbr {
@@ -109,9 +109,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 /* ++ MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /*
@@ -131,8 +128,6 @@ h1, h2, h3, h4, h5, h6 {
 #page {
 	margin: 0 auto;
 	width: 1140px;
-	padding: 20px;
-	background-color: #fff;
 }
 
 .navbar {
@@ -140,8 +135,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-content {
-	border-top: 5px solid #444;
- 	background-color: #a39778;
  	width: 1140px;
 	margin: 0 auto;
 	clear: both;
@@ -159,7 +152,9 @@ h1, h2, h3, h4, h5, h6 {
 #page-content #region-main-wrap {
 	float: left;
 	margin-right: 20px;
-	/*background: #f7f7f7;*/
+	background-color: #fff;
+	box-shadow: 0 0 2px #ccc;
+	padding: 20px;
 }
 
 #page-content #region-main {
@@ -169,9 +164,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-content #region-pre {
-	width: 220px;
+	width: 200px;
 	float: left;
-	margin: 0 20px 0 0
+	margin: 0;
 }
 
 #page-content #region-post {
