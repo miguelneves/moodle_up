@@ -144,12 +144,18 @@ input[type=submit]:hover {
 /* mega menu */
 
 #megamenu { 
-	overflow: hidden; 
-	border-top: 1px solid #fff;
+	overflow: hidden;
 	clear: both;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #444;
 }
 
-#megamenu ul { margin: 0;}
+#megamenu ul {
+	margin: 0;
+}
+#megamenu ul li a {
+	color: #fff;
+}
 
 #megamenu ul li {list-style-type: none;}
 
@@ -172,24 +178,30 @@ input[type=submit]:hover {
 	font-size: 11px;
 }
 
-#megamenu #myProfile.active,
-#megamenu #myCourses.active,
-#megamenu #myProfile.active .sub,
-#megamenu #myCourses.active .sub {
-	background-color: #948765;
+#megamenu .sub {
+	position: absolute;
+	background: #444;
+	color: #fff;
 }
 
-#megamenu #myProfile .sub,
-#megamenu #myCourses .sub { width: 897px; overflow: hidden; padding: 0 5px 5px; }
+#megamenu .active {
+	background: #444;
+	color: #fff;
+}
 
-#megamenu #myProfile .sub > li,
-#megamenu #myCourses .sub > li  { 
+#megamenu .sub,
+#megamenu .sub {
+	padding: 0 5px 5px;
+}
+
+#megamenu .sub > li,
+#megamenu .sub > li  { 
 	float: left;
 	display: inline-block; 
 	margin: 5px; width: 214px; 
 }
 
-#megamenu #myProfile .sub #general {
+#megamenu .sub #general {
 	margin: 21px 5px 5px;
 }
 
@@ -204,13 +216,4 @@ input[type=submit]:hover {
 	border-bottom: 1px dotted #444;
 }
 
-#megamenu #myProfile .sub > li a:hover,
-#megamenu #myCourses .sub > li a:hover { 
-	font-weight: bold;
-}
-
 #megamenu #myProfile .sub > li.contains_branch { float: right; }
-
-
-#megamenu #myProfile {}
-

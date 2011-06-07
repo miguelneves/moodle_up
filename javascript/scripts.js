@@ -124,22 +124,20 @@ function customMenu(){
 	$('#page-header').append('<div id="megamenu"><ul>' + list + '</ul></div>');
 	
 	
-	//style megadropdown
-	
-	$('#megamenu .sub').css({
-		display: 'none'
-	})
-	
+	//megadropdown behaviour
+
+	$('#megamenu .sub').hide();
 	$('#megamenu li h3').click(function(){
-		//$('#megamenu .sub').not(this).slideToggle();
-		$(this).next().slideToggle();
-		$(this).parent().toggleClass('active')
-	})
-	
+		$('#megamenu li .sub').slideUp('slow', function(){
+			$(this).parent().removeClass('active');
+		});
+		if($(this).next().css('display') == 'none') {
+			$(this).next().slideDown('slow').parent().addClass('active');
+		}
+	});
 	
 
 	//NEW NAVIGATION BLOCK 
-	
 	
 	//table of contents
 	var tableContents = $('.block_navigation .type_course li.type_structure');
@@ -175,7 +173,6 @@ function customMenu(){
 	$('#region-pre .region-content').append('<div id="tableContents"><h4>Table of Contents</h4><ul id="tc">' + tc + '</ul></div>');
 	//add course info
 	$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul id="tc">' + getBranch(courseInfo) + '</ul></div>');
-		
 }
 
 
