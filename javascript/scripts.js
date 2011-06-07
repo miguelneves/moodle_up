@@ -165,8 +165,7 @@ function customMenu(){
 	
 	//course info
 	var courseInfo = $('.block_navigation .type_course li.type_unknown.depth_4');
-	var info = '';	
-	console.log(courseInfo);
+	var info = '';
 	$(courseInfo).each(function(index){
 		info += $(this).html();		
 	});
@@ -179,7 +178,7 @@ function customMenu(){
 	$('#region-pre .region-content').append('<div id="tableContents"><h4>Table of Contents</h4><ul id="tc">' + tc + '</ul></div>');
 
 	//add course info
-	$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul id="tc">' + info + '</ul></div>');
+	$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul id="tc">' + getBranch(courseInfo) + '</ul></div>');
 	
 	
 	
@@ -261,40 +260,92 @@ function newPostModal(){
 
 
 function getBranch(el){
-		var h4 = $('> li > p span', el);
-		var branch = $('> li.contains_branch > ul', el);
-		var ul = '';
-		//clean up branch
-		var branchContent = new Array(branch.length);		
-		for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
 	
-		$(branch).each(function(index){
-			branchTemp = '';
-			
-			if($('> li:not(.contains_branch)', this)){
-				$('> li:not(.contains_branch) p', this).each( function(){
-					branchTemp += '<li>' + $(this).html() + '</li>';
-				})
+	content = '';
+	el.each(function(index){
 				
-			} 
-			if($('> li.contains_branch', this)){
-				b = $(this).find('> li.contains_branch');
-				getBranch(b);
+		var h4 = $('> p > a', this);
+		var ul = $('> ul', this);
+		var lista;
+		//check if has branch
+		$('> li', ul).each(function() {
+			if($(this).hasClass('contains_branch')) {
+				//getBranch(this);
+			} else {			
+				noBranch(this, index);
 			}
-			
-			branchContent[index] +=  branchTemp;
-			
 		});
+		
+		function noBranch(ele, index) {
+			lista += '<li>' + $(this).html() + '</li>';
+			console.log($(ele));
+		}
+			
+		
+		
 		//create branch
-		content = '';
-		for (var i = 0; i < branch.length ; i++){
-			content += '<li><h4>' + h4[i].innerHTML + '</h4>';
-			content += '<ul>' + branchContent[i] + '</ul></li>';
-		};
+		branch = '';
+		branch += '<li><h4>' + h4.html() + '</h4>';
+		branch += '<ul>' + lista + '</ul></li>';
+	
+		content += branch;
+	});
+	
+	/*var lista = '';
+	
+	$('> li', ul).each(function() {
+		if($(this).hasClass('contains_branch')) {
+			//getBranch(this);
+		} else {			
+			noBranch(this, index);
+		}
+	});
+	
+	var branchContent = new Array(2);
+	for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
+	
+	function noBranch(ele, index) {	
+		$(ele).each(function(index){			
+			branchTemp += '<li id="' + index + '">' + $('> p', this).html() + '</li>';
+			//branchContent[index] +=  branchTemp;
+			
+			lista = branchTemp;
+		});		
+	}
+	
+	//clean up branch
+	//var branchContent = new Array(branch.length);		
+	//for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
+	
+	
+	/*
+	var ul = '';
+	//clean up branch
+	var branchContent = new Array(branch.length);		
+	for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
+
+	$(branch).each(function(index){
+		branchTemp = '';
 		
-		c = content
-		return content;
+		if($('> li:not(.contains_branch)', this)){
+			$('> li:not(.contains_branch) p', this).each( function(){
+				branchTemp += '<li>' + $(this).html() + '</li>';
+			})
+			
+		} 
+		if($('> li.contains_branch', this)){
+			b = $(this).find('> li.contains_branch');
+			getBranch(b);
+		}
 		
+		branchContent[index] +=  branchTemp;
+		
+	});
+	
+	
+	c = content*/
+	return content;
+	
 }
 /*
 function getMenu(item){

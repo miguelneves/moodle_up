@@ -1,9 +1,36 @@
 
-#page-content .region-content {
-	overflow: visible;
-	padding: 0;
-}
+/* general */
+
 .block {
-	border: none;
+	/*border-top: 4px solid #444;*/
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 0 2px #ccc;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+.blcok .header {
+
+}
+.block .header h2 {
 	margin: 0;
+	padding: 2px;
+	border-radius: 2px;
+	text-transform: none;
+	/*background: #e89279;
+	color: #fff;*/
+	
+}
+
+/* latests news */
+.unlist {
+	margin: 0;
+}
+.unlist .post {
+	list-style-type: none;
+	border-bottom: 1px solid #E5E5E5;
+	padding: 10px 0;
+}
+.unlist .post .head {
+	color: #7f2e16;
 }

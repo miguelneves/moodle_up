@@ -44,8 +44,6 @@
 }
 
 .course-content ul.topics li.section {
-	border-top: 4px solid #444;
-	border-bottom 2px solid #444;
 	padding: 0 0 10px 0;
 	margin-bottom: 10px;
 }
@@ -59,7 +57,6 @@
 }
 
 .course-content ul.topics li.section .content h3 {
-	border-bottom: 2px solid #D64D25;
 	font-family: Tahoma;
 }
 .course-content ul.topics li.section .right {
@@ -70,12 +67,23 @@
 .course-content ul.topics li.section .right a {
 	float: right;
 }
+.course-content ul.topics li.section .left {
+		width: 40px;
+		height: 40px;
+		font-family: Klavika;
+		font-weight: bold;
+		color: #fff;
+		background: #444;
+		margin-left: -40px;
+}
 .course-content ul.topics li.section .left div,
 .course-content ul.topics li.section .left a {
 	float: left;
 }
 .course-content ul.topics li.section .content .sectionname {
-	margin: 0 0 20px 0;	
+	margin: 0 0 20px 0;
+	background: #f7f7f7;
+	height: 40px;	
 }
 .course-content ul.topics li.section .content .summary {
 	border-bottom: 1px solid #E5E5E5;

@@ -32,8 +32,7 @@
  }
  
  body {
-	margin: 0 auto;
-	padding: 20px;
+	margin: 0;
 	background-color: #f7f7f7;
  }
  
@@ -62,18 +61,11 @@ h1, h2, h3, h4, h5, h6 {
 #page-header {
 	float: none;
 	margin: 0 0 10px 0;
- 	background-color: #f7f7f7;
+ 	background-color: #444;
 }
 
 .headermain {
-	float: none;
-	height: 160px;
-	margin: 0 0 0 -20px;
-    padding: 10px 20px;
-    border-left: 10px solid #b8ae96;
- 	background-image: url(http://localhost/moodle/theme/up/pix/bg.png);
-	background-repeat: no-repeat;
-	background-position: right;  
+	float: left;
 }
 
 .headermenu {
@@ -89,10 +81,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Breadcrumb */
 
+.navbar {
+	width: 900px;
+	margin-bottom: 5px;
+}
 .breadcrumb {
 	font-size: 10px;
 	text-transform: uppercase;
 	padding: 5px 10px;
+	float: left;
 }
 
 .breadcrumb ul {
@@ -106,6 +103,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .breadcrumb li:last-child a {
 	font-weight: bold;
+}
+
+.navbutton {
+	float: right;
 }
 
 
@@ -127,11 +128,6 @@ h1, h2, h3, h4, h5, h6 {
 */
 #page {
 	margin: 0 auto;
-	width: 1140px;
-}
-
-.navbar {
-	border-top: 1px solid #fff; 
 }
 
 #page-content {
@@ -140,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 #page-content #region-main-box {
-	float: left;
+	clear: both;
 }
 #page-content #region-post-box {
 
@@ -159,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-content #region-main {
 	padding: 0 20px;
-	width: 600px;
+	width: 620px;
 	float: left;
 }
 
@@ -172,12 +168,13 @@ h1, h2, h3, h4, h5, h6 {
 #page-content #region-post {
 	width: 220px;
 	float: left;
-	padding: 10px;
 }
 
 #page-footer {
 	clear: both;
-	border-top: 5px solid #444;
+	background: #E5E5E5;
+	padding: 20px;
+	border-top: 2px solid #777;
 }
 
 /* Courses Homepage */

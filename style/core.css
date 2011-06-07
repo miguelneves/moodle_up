@@ -146,6 +146,7 @@ input[type=submit]:hover {
 #megamenu { 
 	overflow: hidden; 
 	border-top: 1px solid #fff;
+	clear: both;
 }
 
 #megamenu ul { margin: 0;}
@@ -212,3 +213,4 @@ input[type=submit]:hover {
 
 
 #megamenu #myProfile {}
+
