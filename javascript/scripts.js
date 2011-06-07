@@ -130,9 +130,11 @@ function customMenu(){
 
 	$('#megamenu .sub').hide();
 	$('#megamenu li h3').click(function(){
-		$('#megamenu li .sub').slideUp('slow');
+		$('#megamenu li .sub').slideUp('slow', function(){
+			$(this).parent().removeClass('active');
+		});
 		if($(this).next().css('display') == 'none') {
-			$(this).next().slideDown('slow');
+			$(this).next().slideDown('slow').parent().addClass('active');
 		}
 	});
 	
