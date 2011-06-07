@@ -32,8 +32,6 @@ function customMenu(){
 	var myCourses = $('.block_navigation li.depth_2:eq(3)');
 	var settings = $('.block_navigation a[title=Home]');
 	
-	
-	
 	//MY PROFILE
 	
 	var h3 = $('> p span', myProfile);
@@ -143,14 +141,9 @@ function customMenu(){
 	//NEW NAVIGATION BLOCK 
 	
 	
-	
 	//table of contents
 	var tableContents = $('.block_navigation .type_course li.type_structure');
-	var tc = '';
-	
-	$('p span', tableContents).each(function(index){
-		tc += '<li class="tc"><a href="#section-' + index + '">' + $(this).html() + '</a></li>';
-	});
+	var tc = '';	
 	
 	//go to link
 	$('#tc li').click(function(e) {	
@@ -163,57 +156,57 @@ function customMenu(){
 		e.preventDefault();
 	});
 	
+	
+	//DEFINE LISTS	
 	//course info
 	var courseInfo = $('.block_navigation .type_course li.type_unknown.depth_4');
 	var info = '';
-	$(courseInfo).each(function(index){
+	$(courseInfo).each(function(){
 		info += $(this).html();		
 	});
-
+	
+	$('p span', tableContents).each(function(index){
+		tc += '<li class="tc"><a href="#section-' + index + '">' + $(this).html() + '</a></li>';
+	});
 	
 	//remove default navigation block
 	$('#region-pre .region-content').empty();
-	
 	//add table of content	
 	$('#region-pre .region-content').append('<div id="tableContents"><h4>Table of Contents</h4><ul id="tc">' + tc + '</ul></div>');
-
 	//add course info
 	$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul id="tc">' + getBranch(courseInfo) + '</ul></div>');
-	
-	
-	
+		
 }
 
-function textIcons(){
-	$('.commands a').each(function(){
-		var title = $(this).attr('title');
-		
-		$('img',this).remove();
-		$(this).html(title);
-		
-		//debug
-		//console.log(title);
-	});
-}
 
-function editMode(){
-	$('.singlebutton input').click(function(e){
-		$.ajax({
-  		url: "http://localhost/moodle/course/view.php",
-  			type: 'POST',
-  			data: {
-  				id: '3',
-  				sesskey: '8La3UtEcRI',
-  				edit: 'on'
-  			},
-  			success: function(){
-  				$(this).addClass("done");		
-			}
+// create lists
+function getBranch(el) {
+	content = '';
+
+	el.each(function(){
+		var h4 = $('> p > a', this);
+		var ul = $('> ul', this);
+		var lista = '';
+		
+		$('> li', ul).each(function(){
+			lista += '<li>' + $('p', this).html() + '</li>';
 		});
-		e.preventDefault();
+		
+		//create branch
+		branch = '';
+		branch += '<li><a href="#"><h4>' + h4.html() + '</h4></a>';
+		branch += '<ul>' + lista + '</ul></li>';
+	
+		content += branch;
 	});
+	
+	return content;
 }
 
+
+
+
+// TODO
 function newPostModal(){
 	$('#newdiscussionform').click(function(){
 		$.ajax({
@@ -257,186 +250,32 @@ function newPostModal(){
 	});
 }
 
-
-
-function getBranch(el){
-	
-	content = '';
-	el.each(function(index){
-				
-		var h4 = $('> p > a', this);
-		var ul = $('> ul', this);
-		var lista;
-		//check if has branch
-		$('> li', ul).each(function() {
-			if($(this).hasClass('contains_branch')) {
-				//getBranch(this);
-			} else {			
-				noBranch(this, index);
+function editMode(){
+	$('.singlebutton input').click(function(e){
+		$.ajax({
+  		url: "http://localhost/moodle/course/view.php",
+  			type: 'POST',
+  			data: {
+  				id: '3',
+  				sesskey: '8La3UtEcRI',
+  				edit: 'on'
+  			},
+  			success: function(){
+  				$(this).addClass("done");		
 			}
 		});
-		
-		function noBranch(ele, index) {
-			lista += '<li>' + $(this).html() + '</li>';
-			console.log($(ele));
-		}
-			
-		
-		
-		//create branch
-		branch = '';
-		branch += '<li><h4>' + h4.html() + '</h4>';
-		branch += '<ul>' + lista + '</ul></li>';
-	
-		content += branch;
+		e.preventDefault();
 	});
-	
-	/*var lista = '';
-	
-	$('> li', ul).each(function() {
-		if($(this).hasClass('contains_branch')) {
-			//getBranch(this);
-		} else {			
-			noBranch(this, index);
-		}
-	});
-	
-	var branchContent = new Array(2);
-	for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
-	
-	function noBranch(ele, index) {	
-		$(ele).each(function(index){			
-			branchTemp += '<li id="' + index + '">' + $('> p', this).html() + '</li>';
-			//branchContent[index] +=  branchTemp;
-			
-			lista = branchTemp;
-		});		
-	}
-	
-	//clean up branch
-	//var branchContent = new Array(branch.length);		
-	//for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
-	
-	
-	/*
-	var ul = '';
-	//clean up branch
-	var branchContent = new Array(branch.length);		
-	for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
-
-	$(branch).each(function(index){
-		branchTemp = '';
-		
-		if($('> li:not(.contains_branch)', this)){
-			$('> li:not(.contains_branch) p', this).each( function(){
-				branchTemp += '<li>' + $(this).html() + '</li>';
-			})
-			
-		} 
-		if($('> li.contains_branch', this)){
-			b = $(this).find('> li.contains_branch');
-			getBranch(b);
-		}
-		
-		branchContent[index] +=  branchTemp;
-		
-	});
-	
-	
-	c = content*/
-	return content;
-	
 }
-/*
-function getMenu(item){
-	
-	var h3 = $('> p span', item).html();
-	var ul = $('> ul', item);
-	
-	//no branch
-	var li = $('> li', ul);
-	var content = ''
-	li.each(function(index){
-		if($('li.contains_branch', li)){
-			getMenu($(this));
-		}
-		if($('li.contains_branch', li).not()){
-			
-			var p = $('> p', this);
-			var u = $('> ul', this);
-			
-			
-			noBranchContent = '';
-				
-			ul.each(function(){
-				noBranchContent += '<li>' + this.innerHTML + '</li>';
-			});
-			noBranchContent = '<ul>' + noBranchContent + '</ul>';
-			console.log(noBranchContent);
-			content = noBranchContent;
-			
-			//console.log(noBranch);
-			//noBranchContent = '';	
-			//$(noBranch).each( function(){
-			//	noBranchContent += '<li>' + this.innerHTML + '</li>';
-			//});
+function textIcons(){
+	$('.commands a').each(function(){
+		var title = $(this).attr('title');
 		
-			//noBranchContent = '<li id="' + index + '"><ul>' + noBranchContent + '</ul></li>';
-			//content += noBranchContent;
-		}
-	})
-	
-	
-	//branch
-
-	
-	//console.log(li);
-	//content = noBranchContent + 'branchContent';
-	
-	//create my profile content
-	content = '<h3>' + h3 + '</h3><ul class="sub">' + content + '</ul>';
-	
-	
-	return content;
-	
-	
-/*	
-	
-	//contain branch
-	var h4 = $('> li.contains_branch p span', ul);
-	var branch = $('> li.contains_branch ul', ul);
-
-	//clean up branch
-	var branchContent = new Array(3);
-	for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
-
-	$(branch).each( function(index){
-		branchTemp = '';
-		$('li p', this).each( function(){
-			branchTemp += '<li>' + $(this).html() + '</li>';
-		})
-		branchContent[index] +=  branchTemp;
+		$('img',this).remove();
+		$(this).html(title);
 		
+		//debug
+		//console.log(title);
 	});
-
-	//create branch
-	content = '';
-	for (var i = branch.length - 1; i >= 0; i--){
-		content += '<li><h4>' + h4[i].innerHTML + '</h4>';
-		content += '<ul>' + branchContent[i] + '</ul></li>';
-	};
-	
-	
-	
-	//create my profile content
-	mp = '<h3>' + h3.html() + '</h3><ul class="sub">' + content + '</ul>';
-
-	mp = getBranch(ul);
-	
 }
-*/
-
-
-
-
 
