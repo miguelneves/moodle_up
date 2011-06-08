@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//init
 	customMenu();
-	//textIcons();
+	textIcons();
 	//editMode();
 //	newPostModal();
 		
@@ -110,7 +110,6 @@ function customMenu(){
 	//create settings content
 	set = '<h3>' + h3.html() + '</h3><ul class="sub">' + s + '</ul>';
 	
-	
 	//Create megadropdown menu
 	list = '<li id="home"><h3 id="myHome">' + home.parent().html() + '</h3></li>';
 	list += '<li id="myProfile">' + mp + '</li>';
@@ -122,7 +121,6 @@ function customMenu(){
 	
 	
 	//megadropdown behaviour
-
 	$('#megamenu .sub').hide();
 	$('#megamenu li h3').click(function(){
 		$('#megamenu li .sub').slideUp('fast', function(){
@@ -133,20 +131,12 @@ function customMenu(){
 			$(this).next().slideDown('fast').parent().addClass('active');
 		}
 	});
+	
 	//remove menu
-	$(document.body).bind('click', function(ev) {
+	$(document.body).bind('click', function() {
 		$('#megamenu li .sub').slideUp('fast', function(){
 			$(this).parent().removeClass('active');
-		});
-		//if($('#megamenu .sub').hasClass('active')) {
-			//console.log('sds');
-		//}
-		
-		/*if($(ev.target).is('#megamenu .sub')) {
-	  			$('#megamenu .sub').slideUp('fast');
-	     		console.log('dfdf');
-		}
-          */         
+		}); 
 	});
 	$('#megamenu > ul > li').bind('click', function(ev) {
 		ev.stopPropagation();
@@ -210,12 +200,47 @@ function customMenu(){
 
 }
 
+//CHANGE ICONS TO TEXT
+function textIcons(){
+	
+	//course content edit mode
+	$('.course-content .commands a').each(function(){
+		iconToText(this, true);
+	});
+	
+	
+	
+	//////////////
+	
+	function iconToText(icon, remove){
+		var title = $(icon).attr('title');		
+		//return text; if true remove img
+		if(!remove) {
+			return $(icon).html(title);
+		} else {
+			return $(icon).append(title);
+		}
+	}
+}
+/*
+function textIcons(text){
+	$('.commands a').each(function(){
+		var title = $(this).attr('title');
+		
+		$('img',this).remove();
+		$(this).html(title);
+	return text;
+}
+*/
 
 
 
+/*TODO:
+ * — add back to top in each section
+ *
+ */ 
 
 
-// TODO
 function newPostModal(){
 	$('#newdiscussionform').click(function(){
 		$.ajax({
@@ -276,13 +301,5 @@ function editMode(){
 		e.preventDefault();
 	});
 }
-function textIcons(){
-	$('.commands a').each(function(){
-		var title = $(this).attr('title');
-		
-		$('img',this).remove();
-		$(this).html(title);
-		
-	});
-}
+
 
