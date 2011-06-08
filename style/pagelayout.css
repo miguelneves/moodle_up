@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 #page-header {
 	margin: 0 0 10px 0;
  	background-color: #444;
+ 	overflow: hidden;
 }
 
 .headermain {
@@ -70,14 +71,6 @@ h1, h2, h3, h4, h5, h6 {
 .headermain {
 	margin: 0;
 	float: left;
-	/*float: none;
-	height: 160px;
-	margin: 0 0 0 -20px;
-    padding: 10px 20px;
-    border-left: 10px solid #b8ae96;
- 	background-image: url(http://localhost/moodle/theme/up/pix/bg.png);
-	background-repeat: no-repeat;
-	background-position: right; */
 }
 .logininfo {
 	float: right;

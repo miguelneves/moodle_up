@@ -14,7 +14,12 @@ function customMenu(){
 	$('.block_navigation .block_tree').removeClass();
 	$('.block_settings .block_tree').removeClass();
 	
-	//create megadropdownmenu
+	//remove images
+	$('.block_navigation a img').remove();
+	$('.block_settings a img').remove();
+	
+	
+	//MEGAMENU
 	/*
 	 * Home
 	 * My Profile
@@ -24,123 +29,122 @@ function customMenu(){
 	 * Site Pages?
 	 */
 	
-	//remove images
-	$('.block_navigation a img').remove();
-	$('.block_settings a img').remove();
-	
 	//get content
 	var home = $('.block_navigation a[title="My home"]');
 	var myProfile = $('.block_navigation li.depth_2:eq(2)');
 	var myCourses = $('.block_navigation li.depth_2:eq(3)');
 	var settings = $('.block_navigation a[title=Home]');
 	
-	//MY PROFILE
+	//create megamenu if exist
+	if($(home).length) {	
 	
-	var h3 = $('> p span', myProfile);
-	var ul = $('> ul', myProfile);
-	
-	//contain branch
-	var h4 = $('> li.contains_branch p span', ul);
-	var branch = $('> li.contains_branch ul', ul);
-
-	//clean up branch
-	var branchContent = new Array(3);
-	for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
-
-	$(branch).each( function(index){
-		branchTemp = '';
-		$('li p', this).each( function(){
-			branchTemp += '<li>' + $(this).html() + '</li>';
-		})
-		branchContent[index] +=  branchTemp;
+		//MY PROFILE
+		var h3 = $('> p span', myProfile);
+		var ul = $('> ul', myProfile);
 		
-	});
-
-	//create branch
-	content = '';
-	for (var i = branch.length - 1; i >= 0; i--){
-		content += '<li><h4>' + h4[i].innerHTML + '</h4>';
-		content += '<ul>' + branchContent[i] + '</ul></li>';
-	};
+		//contain branch
+		var h4 = $('> li.contains_branch p span', ul);
+		var branch = $('> li.contains_branch ul', ul);
 	
-	//no branch
-	var noBranch = $('> li.item_with_icon p', ul);
-	noBranchContent = '';	
-	$(noBranch).each( function(){
-		noBranchContent += '<li>' + this.innerHTML + '</li>';
-	});
-
-	noBranchContent = '<li id="general"><ul>' + noBranchContent + '</ul></li>';
+		//clean up branch
+		var branchContent = new Array(3);
+		for (var i = branchContent.length - 1; i >= 0; i--) branchContent[i] = '';
 	
-	content = noBranchContent + content;
-	
-	//create my profile content
-	mp = '<h3>' + h3.html() + '</h3><ul class="sub">' + content + '</ul>';
-
-	//mp = getBranch(ul);
-	
-	//MY COURSES
-	
-	//get courses
-	var courses = $('> ul', myCourses);
-	//get my courses title
-	var h3 = $('> p span', myCourses);
-	var ul = '';
-	
-	//create list of courses
-	$('> li', courses).each( function(){
-		li = $('> .tree_item', this);
-		ul += '<li>' + li[0].innerHTML + '</li>';
-	});
-	
-	//create my course contetn
-	mc = '<h3>' + h3.html() + '</h3><ul class="sub">' + ul + '</ul>';
-	
-	$('.block_navigation').hide();
-	
-	//SETTINGS
-	//get settings
-	var settings = $('.block_settings');
-	
-	//get settings title
-	var h3 = $('.header .title h2', settings);
-	var set = $('#settingsnav > ul > li', settings);
-	s = getBranch(set);
-	
-	//create settings content
-	set = '<h3>' + h3.html() + '</h3><ul class="sub">' + s + '</ul>';
-	
-	//Create megadropdown menu
-	list = '<li id="home"><h3 id="myHome">' + home.parent().html() + '</h3></li>';
-	list += '<li id="myProfile">' + mp + '</li>';
-	list += '<li id="myCourses">' + mc + '</li>';
-	list += '<li id="settings">' + set + '</li>';
-	
-	
-	$('#page-header').append('<div id="megamenu"><ul>' + list + '</ul></div>');
-	
-	
-	//megadropdown behaviour
-	$('#megamenu .sub').hide();
-	$('#megamenu li h3').click(function(){
-		$('#megamenu li .sub').slideUp('fast', function(){
-			$(this).parent().removeClass('active');
-			
+		$(branch).each( function(index){
+			branchTemp = '';
+			$('li p', this).each( function(){
+				branchTemp += '<li>' + $(this).html() + '</li>';
+			})
+			branchContent[index] +=  branchTemp;
 		});
-		if($(this).next().css('display') == 'none') {
-			$(this).next().slideDown('fast').parent().addClass('active');
-		}
-	});
 	
-	//remove menu
-	$(document.body).bind('click', function() {
-		$('#megamenu li .sub').slideUp('fast', function(){
-			$(this).parent().removeClass('active');
-		}); 
-	});
-	$('#megamenu > ul > li').bind('click', function(ev) {
-		ev.stopPropagation();
-	});
+		//create branch
+		content = '';
+		for (var i = branch.length - 1; i >= 0; i--){
+			content += '<li><h4>' + h4[i].innerHTML + '</h4>';
+			content += '<ul>' + branchContent[i] + '</ul></li>';
+		};
+		
+		//no branch
+		var noBranch = $('> li.item_with_icon p', ul);
+		noBranchContent = '';	
+		$(noBranch).each( function(){
+			noBranchContent += '<li>' + this.innerHTML + '</li>';
+		});
+	
+		noBranchContent = '<li id="general"><ul>' + noBranchContent + '</ul></li>';
+		
+		content = noBranchContent + content;
+		
+		//create my profile content
+		mp = '<h3>' + h3.html() + '</h3><ul class="sub">' + content + '</ul>';
+		
+		//MY COURSES
+		
+		//get courses
+		var courses = $('> ul', myCourses);
+		//get my courses title
+		var h3 = $('> p span', myCourses);
+		var ul = '';
+		
+		//create list of courses
+		$('> li', courses).each( function(){
+			li = $('> .tree_item', this);
+			ul += '<li>' + li[0].innerHTML + '</li>';
+		});
+		
+		//create my course contetn
+		mc = '<h3>' + h3.html() + '</h3><ul class="sub">' + ul + '</ul>';
+		
+		$('.block_navigation').hide();
+		
+		//SETTINGS
+		//get settings
+		var settings = $('.block_settings');
+		
+		//get settings title
+		var h3 = $('.header .title h2', settings);
+		var set = $('#settingsnav > ul > li', settings);
+		s = getBranch(set);
+		
+		//create settings content
+		set = '<h3>' + h3.html() + '</h3><ul class="sub">' + s + '</ul>';
+		
+		//Create megadropdown menu		
+		if($(home).length)
+			list = '<li id="home"><h3 id="myHome">' + home.parent().html() + '</h3></li>';
+		if($(myProfile).length)
+			list += '<li id="myProfile">' + mp + '</li>';
+		if($(myCourses).length)
+			list += '<li id="myCourses">' + mc + '</li>';
+		if($(settings).length)
+			list += '<li id="settings">' + set + '</li>';
+		
+		$('#page-header').append('<div id="megamenu"><ul>' + list + '</ul></div>');
+		
+		//megadropdown behaviour
+		$('#megamenu .sub').hide();
+		$('#megamenu li h3').click(function(){
+			$('#megamenu li .sub').slideUp('fast', function(){
+				$(this).parent().removeClass('active');
+				
+			});
+			if($(this).next().css('display') == 'none') {
+				$(this).next().slideDown('fast').parent().addClass('active');
+			}
+		});
+		
+		//remove menu
+		$(document.body).bind('click', function() {
+			$('#megamenu li .sub').slideUp('fast', function(){
+				$(this).parent().removeClass('active');
+			}); 
+		});
+		$('#megamenu > ul > li').bind('click', function(ev) {
+			ev.stopPropagation();
+		});
+	}
+	
 
 	//NEW NAVIGATION BLOCK 
 	
@@ -156,12 +160,16 @@ function customMenu(){
 	var courseInfo = $('.block_navigation .type_course li.type_unknown.depth_4');
 
 	//remove default navigation block
-	$('#region-pre .region-content').empty();
-	//add table of content	
-	$('#region-pre .region-content').append('<div id="tableContents"><h4>Table of Contents</h4><ul>' + tc + '</ul></div>');
-	//add course info
-	$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul>' + getBranch(courseInfo) + '</ul></div>');
-
+	if($(tc).length || $(courseInfo).length) {	
+		$('#region-pre .region-content').empty();
+		//add table of content
+		if($(tc).length)	
+			$('#region-pre .region-content').append('<div id="tableContents"><h4>Table of Contents</h4><ul>' + tc + '</ul></div>');
+		//add course info
+		if($(courseInfo).length)	
+			$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul>' + getBranch(courseInfo) + '</ul></div>');
+	}
+	
 	//go to link
 	$('#tableContents .tc').bind('click', function() {
 		console.log(this)
@@ -207,8 +215,6 @@ function textIcons(){
 	$('.course-content .commands a').each(function(){
 		iconToText(this, true);
 	});
-	
-	
 	
 	//////////////
 	
@@ -301,5 +307,3 @@ function editMode(){
 		e.preventDefault();
 	});
 }
-
-
