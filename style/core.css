@@ -141,80 +141,83 @@ input[type=submit]:hover {
 }
 
 
-/* mega menu */
+/* MEGAMENU*/
 
 #megamenu { 
 	overflow: hidden;
 	clear: both;
-	border-top: 1px solid #444;
-	border-bottom: 1px solid #444;
+	font: 20px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
 }
-
+#megamenu a {
+	color: #fff;
+	border: none;
+}
+#megamenu a:hover {
+	background: inherit;
+}
 #megamenu ul {
 	margin: 0;
+	overflow: hidden;
 }
-#megamenu ul li a {
-	color: #fff;
-}
-
-#megamenu ul li {list-style-type: none;}
-
-#megamenu > ul > li { 
-	float: left; 
-	width: 193px;
-	list-style-type: none;
-}
-
 #megamenu li h3 {
 	margin: 0;
-	padding: 5px 10px;
-	font-size: 14px;
-	font-style: normal;
+	padding: 5px 20px;
+	font-size: 18px;
+	text-transform: uppercase;
 }
-
-#megamenu li h4 {
-	margin: 0;
-	padding: 0 0 2px 0;
-	font-size: 11px;
+#megamenu .submenu h3:after {
+	content: ' ▾';
+}
+#megamenu .submenu.active h3:after {
+	content: ' ▴';
+}
+#megamenu .first-level { 
+	float: left;
+	list-style-type: none;
+	border-right: 2px solid #fff;
+	background: hsla(0, 0%, 0%, 0.4);
+}
+#megamenu .first-level:hover {
+	background: hsla(0, 0%, 0%, 0.6);
+}
+#megamenu .first-level.active {
+	background: hsla(0, 0%, 0%, 0.8);
+	color: #fff;
 }
 
 #megamenu .sub {
 	position: absolute;
-	background: #444;
-	color: #fff;
+	/*background: hsla(0, 0%, 0%, 0.95);*/
+	background: rgba(90, 40, 3, 0.95);
 	z-index: 9999;
-}
-
-#megamenu .active {
-	background: #444;
-	color: #fff;
-}
-
-#megamenu .sub,
-#megamenu .sub {
 	padding: 0 5px 5px;
+	border-bottom: 2px solid #FF6600;
 }
-
-#megamenu .sub > li,
+#megamenu .sub h4 {
+	margin: 0;
+	border-bottom
+	padding: 0 0 2px 0;
+	border-bottom: 2px solid #fff;
+	cursor: none;
+}
+#megamenu .sub li li {
+	color: #fff;
+	font-family: 'Droid Serif', Georgia, serif;
+	font-size: 13px;
+	padding: 2px 0;
+}
+#megamenu .sub li li a:hover {
+	text-decoration: underline;
+}
 #megamenu .sub > li  { 
 	float: left;
 	display: inline-block; 
 	margin: 5px; width: 214px; 
 }
-
+/*
 #megamenu .sub #general {
 	margin: 21px 5px 5px;
 }
 
-#megamenu #myProfile .sub li ul,
-#megamenu #myCourses .sub li ul { 
-	border-top: 1px dotted #444;
-}
-
-#megamenu #myProfile .sub li ul li,
-#megamenu #myCourses .sub li { 
-	padding: 1px 0;
-	border-bottom: 1px dotted #444;
-}
-
 #megamenu #myProfile .sub > li.contains_branch { float: right; }
+*/

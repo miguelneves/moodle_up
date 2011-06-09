@@ -31,36 +31,43 @@ echo $OUTPUT->doctype() ?>
     <title><?php echo $PAGE->title ?></title>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />  
     <?php echo $OUTPUT->standard_head_html() ?>
+    
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight,light,regular,bold' rel='stylesheet' type='text/css'>
+    
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="page">
 <?php if ($hasheading || $hasnavbar) { ?>
-    <div id="page-header">
-        <?php if ($hasheading) { ?>
-	        <h1 class="headermain">
-	        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
-	        	<img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/>
-	        </h1>
+	<div id="page-header-wrap">
+    	<div id="page-header">
+    		<?php if ($hasheading) { ?>
+		        <h1 class="headermain">
+		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
+		        	<img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/>
+		        </h1>
+		        
+		    	<?php if ($haslogininfo) {
+		            echo $OUTPUT->login_info();
+		        }
+		        if (!empty($PAGE->layout_options['langmenu'])) {
+		            echo $OUTPUT->lang_menu();
+		        } ?>
 	        
-	    	<?php if ($haslogininfo) {
-	            echo $OUTPUT->login_info();
-	        }
-	        if (!empty($PAGE->layout_options['langmenu'])) {
-	            echo $OUTPUT->lang_menu();
-	        } ?>
-        
-	        <?php if($hasheadingmenu) { ?>
-		        <div class="headermenu">
-		        	<?php echo $PAGE->headingmenu; ?>
-		        	
-		        </div>
+		        <?php if($hasheadingmenu) { ?>
+			        <div class="headermenu">
+			        	<?php echo $PAGE->headingmenu; ?>
+			        	
+			        </div>
+		        <?php } ?>
 	        <?php } ?>
-        <?php } ?>
-        
-        <?php if ($hascustommenu) { ?>
-        <div id="custommenu"><?php echo $custommenu; ?></div>
-        <?php } ?>
+	        
+	        <?php if ($hascustommenu) { ?>
+	        <div id="custommenu"><?php echo $custommenu; ?></div>
+	        <?php } ?>
+	    </div>
     </div>
 <?php } ?>
 <!-- END OF HEADER -->
@@ -69,16 +76,20 @@ echo $OUTPUT->doctype() ?>
     	<?php if ($hasnavbar) { ?>
             <div class="navbar clearfix">
                 <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-                <div class="navbutton"> <?php echo $PAGE->button; ?></div>
             </div>
         <?php } ?>
         <div id="region-main-box">
             <div id="region-post-box">
 
                 <div id="region-main-wrap">
-                	<?php if ($hasheading) { ?>
-                        		<h2 id="course-title"><?php echo $PAGE->heading ?></h2>
-                        	<?php } ?>
+                	<div id="course-title">
+	                	<?php if ($hasheading) { ?>
+                    		<h2><?php echo $PAGE->heading ?></h2>
+                    	<?php } ?>
+                    	<?php if ($hasnavbar) { ?>					             
+				        	<div class="navbutton"> <?php echo $PAGE->button; ?></div>
+				        <?php } ?>
+					</div>
                     <div id="region-main">                    	
             	        <div class="region-content">                        	
                             <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>                           

@@ -44,11 +44,11 @@ a {
 	text-decoration: none;
 	color: #000;
 } 
- 
+ /*
 h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
- 
+ */
 /*  */ 
  
 .skiplinks,
@@ -58,14 +58,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ++ CABEÇALHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-#page-header {
-	margin: 0 0 10px 0;
- 	background-color: #444;
+#page-header-wrap {
+ 	background: #FF6600;
+ 	background: -webkit-linear-gradient(45deg, #FF6600, #FF9832); 
  	overflow: hidden;
+ 	border-bottom: 2px solid #444;
 }
-
+#page-header {
+ 	width: 1140px;
+ 	height: 160px;
+	margin: 0 auto;
+	color: #fff;
+}
 .headermain {
 	float: left;
+	height: 130px; /* colocar imagem */
 }
 
 .headermain {
@@ -93,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
 	width: 900px;
-	margin-bottom: 5px;
+	overflow: hidden;
 }
 .breadcrumb {
 	font-size: 10px;
@@ -101,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 5px 10px;
 	float: left;
 }
-
 .breadcrumb ul {
 	margin: 0;
 }
@@ -125,22 +131,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #page {
 	margin: 0 auto;
+	font: 13px/1.8 normal 'Droid Serif', Georgia, serif;
+	color: #444;
 }
 
 #page-content {
 	width: 1140px;
-	padding: 20px;
-	background-color: #fff;
-}
-
-.navbar {
-	overflow: hidden;
-	border-bottom: 1px solid #444;
-}
-
-#page-content {
-	border-top: 5px solid #444;
- 	width: 1140px;
 	margin: 20px auto 0;
 	clear: both;
 }
@@ -181,8 +177,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-footer {
 	clear: both;
-	background: #E5E5E5;
-	padding: 20px;
+	width: 1140px;
+	margin: 0 auto;
 	border-top: 2px solid #777;
 }
 

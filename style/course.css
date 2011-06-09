@@ -23,14 +23,22 @@
  * red hover: #fefcfb
  * 
  */
-#course-title {
-	background: #444;
-	color: #fff;
-	padding: 5px;
-	border-radius: 2px;
-	margin: 0;
-}
 
+/*
+ * .course-content ul.topics li.section .content
+ * .course-content ul.weeks li.section .content * 
+ * 
+ */
+#course-title {
+	border-bottom: 2px solid #444;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+#course-title h2 {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
 .course-content {
 	font: 13px/1.8 normal 'Droid Serif', Georgia, serif	;
 }
@@ -43,15 +51,17 @@
 	margin: 0;
 }
 
-.course-content ul.topics li.section {
+#region-main .section{
 	padding: 0 0 10px 0;
 	margin-bottom: 10px;
 }
 
-.course-content .topics .section .section li {
+#region-main .section .section li {
 	
 }
-
+#region-main .section .content {
+	margin: 0;
+}
 .course-content ul.topics li.section .content {
 	margin: 0;
 }

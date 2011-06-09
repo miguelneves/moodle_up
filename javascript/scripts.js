@@ -61,7 +61,7 @@ function customMenu(){
 		//create branch
 		content = '';
 		for (var i = branch.length - 1; i >= 0; i--){
-			content += '<li><h4>' + h4[i].innerHTML + '</h4>';
+			content += '<li><a href="#"><h4>' + h4[i].innerHTML + '</h4></a>';
 			content += '<ul>' + branchContent[i] + '</ul></li>';
 		};
 		
@@ -77,7 +77,7 @@ function customMenu(){
 		content = noBranchContent + content;
 		
 		//create my profile content
-		mp = '<h3>' + h3.html() + '</h3><ul class="sub">' + content + '</ul>';
+		mp = '<a href="#"><h3>' + h3.html() + '</h3></a><ul class="sub">' + content + '</ul>';
 		
 		//MY COURSES
 		
@@ -94,7 +94,7 @@ function customMenu(){
 		});
 		
 		//create my course content
-		mc = '<h3>' + h3.html() + '</h3><ul class="sub">' + ul + '</ul>';
+		mc = '<a href="#"><h3>' + h3.html() + '</h3></a><ul class="sub">' + ul + '</ul>';
 		
 		$('.block_navigation').hide();
 		
@@ -108,29 +108,30 @@ function customMenu(){
 		s = getBranch(set);
 		
 		//create settings content
-		set = '<h3>' + h3.html() + '</h3><ul class="sub">' + s + '</ul>';
+		set = '<a href="#"><h3>' + h3.html() + '</h3></a><ul class="sub">' + s + '</ul>';
 		
 		//Create megadropdown menu		
 		if($(home).length)
-			list = '<li id="home"><h3 id="myHome">' + home.parent().html() + '</h3></li>';
+			list = '<li id="home" class="first-level"><h3 id="myHome">' + home.parent().html() + '</h3></li>';
 		if($(myProfile).length)
-			list += '<li id="myProfile">' + mp + '</li>';
+			list += '<li id="myProfile" class="first-level submenu">' + mp + '</li>';
 		if($(myCourses).length)
-			list += '<li id="myCourses">' + mc + '</li>';
+			list += '<li id="myCourses" class="first-level submenu">' + mc + '</li>';
 		if($(settings).length)
-			list += '<li id="settings">' + set + '</li>';
+			list += '<li id="settings" class="first-level submenu">' + set + '</li>';
 		
 		$('#page-header').append('<div id="megamenu"><ul>' + list + '</ul></div>');
 		
 		//megadropdown behaviour
 		$('#megamenu .sub').hide();
-		$('#megamenu li h3').click(function(){
+		$('#megamenu li a').click(function(ev){
 			$('#megamenu li .sub').slideUp('fast', function(){
 				$(this).parent().removeClass('active');
 			});
 			if($(this).next().css('display') == 'none') {
 				$(this).next().slideDown('fast').parent().addClass('active');
 			}
+			//ev.preventDefault();
 		});
 		
 		//remove menu
@@ -139,7 +140,7 @@ function customMenu(){
 				$(this).parent().removeClass('active');
 			}); 
 		});
-		$('#megamenu > ul > li').bind('click', function(ev) {
+		$('#megamenu .first-level').bind('click', function(ev) {
 			ev.stopPropagation();
 		});
 	}
@@ -150,6 +151,8 @@ function customMenu(){
 	//DEFINE LISTS	
 	//table of contents
 	var tableContents = $('.block_navigation .type_course li.type_structure');
+	var outline = $('.course-content .outline').html();
+	$('.course-content .outline').remove();
 	var tc = '';
 	$('p span', tableContents).each(function(index){
 		tc += '<li class="tc"><a href="#section-' + index + '">' + $(this).html() + '</a></li>';
@@ -163,10 +166,10 @@ function customMenu(){
 		$('#region-pre .region-content').empty();
 		//add table of content
 		if($(tc).length)	
-			$('#region-pre .region-content').append('<div id="tableContents"><h4>Table of Contents</h4><ul>' + tc + '</ul></div>');
+			$('#region-pre .region-content').append('<div id="tableContents"><h4>' + outline + '</h4><ul>' + tc + '</ul></div>');
 		//add course info
 		if($(courseInfo).length)	
-			$('#region-pre .region-content').append('<div id="courseInfo"><h4>Course</h4><ul>' + getBranch(courseInfo) + '</ul></div>');
+			$('#region-pre .region-content').append('<div id="courseInfo"><ul>' + getBranch(courseInfo) + '</ul></div>');
 	}
 	
 	//go to link
