@@ -123,6 +123,7 @@
 }
 
 
+/* EDIT MODE */
 
 .section_add_menus {
 	border: 1px solid #ccc;
@@ -131,8 +132,6 @@
 	margin-top: 20px;
 	width: 300px;
 }
-
-
 
 .edit-summary {
 	margin: 10px 0 0 0;
@@ -144,9 +143,6 @@
 	font-size: 12px;
 }
 
-
-
-
 /*commands
 
 ul.section
@@ -157,13 +153,21 @@ ul.section
 				ul
 					li
 */
-.commands {
+.mod-indent {
 	position: relative;
-	display: block;
 }
-.commands ul {
+.commands {
 	position: absolute;
+	display: block;
 	right: 0;
+	z-index: 9999;
+}
+.commands a {
+	display: block;
 	padding: 10px;
 	background: #aaa;
+}
+
+.content .section .edit-active {
+	background: #ddd;
 }

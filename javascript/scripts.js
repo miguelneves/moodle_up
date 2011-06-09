@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//init
 	customMenu();
 	textIcons();
-	//editMode();
+	editMode();
 //	newPostModal();
 		
 });
@@ -93,7 +93,7 @@ function customMenu(){
 			ul += '<li>' + li[0].innerHTML + '</li>';
 		});
 		
-		//create my course contetn
+		//create my course content
 		mc = '<h3>' + h3.html() + '</h3><ul class="sub">' + ul + '</ul>';
 		
 		$('.block_navigation').hide();
@@ -127,7 +127,6 @@ function customMenu(){
 		$('#megamenu li h3').click(function(){
 			$('#megamenu li .sub').slideUp('fast', function(){
 				$(this).parent().removeClass('active');
-				
 			});
 			if($(this).next().css('display') == 'none') {
 				$(this).next().slideDown('fast').parent().addClass('active');
@@ -216,29 +215,54 @@ function textIcons(){
 		iconToText(this, true);
 	});
 	
-	//////////////
 	
-	function iconToText(icon, remove){
-		var title = $(icon).attr('title');		
-		//return text; if true remove img
-		if(!remove) {
-			return $(icon).html(title);
-		} else {
-			return $(icon).append(title);
-		}
+}
+//change link icons to text
+function iconToText(icon, remove){
+	var title = $(icon).attr('title');		
+	//return text; if true remove img
+	if(!remove) {
+		return $(icon).html(title);
+	} else {
+		return $(icon).append(title);
 	}
 }
-/*
-function textIcons(text){
-	$('.commands a').each(function(){
-		var title = $(this).attr('title');
-		
-		$('img',this).remove();
-		$(this).html(title);
-	return text;
-}
-*/
 
+function editMode(){	
+	// Edit Summary 
+	$('.summary .edit').parent().each(function(){
+		iconToText(this);
+		$(this).addClass('edit-summary');
+	});
+	
+	// toggle menu
+	$('.section .commands').hide();
+	
+	var item = $('.section .section > li');
+	
+	item.click(function(){
+		item.removeClass('edit-active');
+		$(this).addClass('edit-active');
+		$('.commands').fadeOut(function(){			
+			$('.commands', this);
+		});
+		if($('.commands', this).css('display') == 'none') {
+			$('.commands', this).fadeIn().addClass('edit-active');
+		} else {
+			$(this).removeClass('edit-active');
+		}
+	});
+	
+	//remove menu
+	$(document.body).bind('click', function() {
+		$('.commands').fadeOut('fast', function(){
+			$('.section > li').removeClass('edit-active');
+		}); 
+	});
+	$('.section > li, .section > li .commands').bind('click', function(ev) {		
+		ev.stopPropagation();
+	});
+}
 
 
 /*TODO:
@@ -287,23 +311,5 @@ function newPostModal(){
 		
 		});
 		return false; 
-	});
-}
-
-function editMode(){
-	$('.singlebutton input').click(function(e){
-		$.ajax({
-  		url: "http://localhost/moodle/course/view.php",
-  			type: 'POST',
-  			data: {
-  				id: '3',
-  				sesskey: '8La3UtEcRI',
-  				edit: 'on'
-  			},
-  			success: function(){
-  				$(this).addClass("done");		
-			}
-		});
-		e.preventDefault();
 	});
 }
