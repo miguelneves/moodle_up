@@ -2,10 +2,9 @@
 /* general */
 
 .block {
-	/*border-top: 4px solid #444;*/
 	background: #fff;
 	border-radius: 2px;
-	box-shadow: 0 0 2px #ccc;
+	box-shadow: 0 0 3px #ccc;
 	margin-bottom: 20px;
 	padding: 10px;
 }
@@ -17,9 +16,6 @@
 	padding: 2px;
 	border-radius: 2px;
 	text-transform: none;
-	/*background: #e89279;
-	color: #fff;*/
-	
 }
 
 /* latests news */

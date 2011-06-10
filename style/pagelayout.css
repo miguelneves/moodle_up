@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 .breadcrumb {
 	font-size: 10px;
 	text-transform: uppercase;
-	padding: 5px 10px;
+	padding: 5px 20px;
 	float: left;
 }
 .breadcrumb ul {
@@ -124,7 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbutton {
 	float: right;
 }
-
+.navbutton table {	margin: 0; }
+.navbutton th, .navbutton td {	padding: 0; }
 
 
 /* ++ MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -154,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	margin-right: 20px;
 	background-color: #fff;
-	box-shadow: 0 0 2px #ccc;
+	box-shadow: 0 0 3px #ccc;
 	padding: 20px;
 }
 
@@ -220,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #444;
 	border-style: dotted;
 }
-*/
+
 ul.section.img-text {
 	margin: 0;
 }
@@ -250,3 +251,4 @@ ul.section.img-text {
 	border: none;
 	border-bottom: 1px solid #000;
 }
+*/

@@ -56,20 +56,26 @@
 	margin-bottom: 10px;
 }
 
-#region-main .section .section li {
-	
-}
 #region-main .section .content {
 	margin: 0;
 }
-.course-content ul.topics li.section .content {
+#region-main .section .content h3 {
+	font: 20px bold 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	background: #E5E5E5;
+	padding: 5px 0;
 	margin: 0;
 }
-
-.course-content ul.topics li.section .content h3 {
-	font-family: Tahoma;
+#region-main .section .content ul li{
+	list-style-type: none;
 }
-.course-content ul.topics li.section .right {
+#region-main .section .content ul li:before{
+	/*content: '\00BB ';*/ 
+}
+#region-main .section .left {
+	width: auto;
+}
+/*
+#region-main .section .right {
 	width: auto;
 	border: 1px solid #ccc;
 }
@@ -102,7 +108,7 @@
 	clear: both;
 }
 .course-content ul.topics li.section .content .section {
-	/*border-bottom: 1px solid #E5E5E5;*/
+
 	padding-bottom: 10px;
 }
 .course-content ul.topics li.section .content .section li {
@@ -110,6 +116,7 @@
 	padding: 2px;
 	list-style-type: none;
 }
+*/
 
 /* course edit mode */
 .editing .course-content ul.topics li.section .content .section li:hover {
@@ -163,6 +170,7 @@ ul.section
 				ul
 					li
 */
+/*
 .mod-indent {
 	position: relative;
 }
@@ -181,3 +189,4 @@ ul.section
 .content .section .edit-active {
 	background: #ddd;
 }
+*/

@@ -162,10 +162,10 @@ function customMenu(){
 	var courseInfo = $('.block_navigation .type_course li.type_unknown.depth_4');
 
 	//remove default navigation block
-	if($(tc).length || $(courseInfo).length) {	
+	if($(tc).length || $(courseInfo).length) {
 		$('#region-pre .region-content').empty();
 		//add table of content
-		if($(tc).length)	
+		if($(tc).length && outline != null)	
 			$('#region-pre .region-content').append('<div id="tableContents"><h4>' + outline + '</h4><ul>' + tc + '</ul></div>');
 		//add course info
 		if($(courseInfo).length)	

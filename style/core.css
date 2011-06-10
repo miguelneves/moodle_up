@@ -4,8 +4,14 @@
 /* remove all <br> */
 br { display: none !important; }
 
-.clearer { clear: both; }
+.clearer,
+.clearfix { clear: both; }
 
+.picture a { border: none; }
+
+th, td {
+	border: none;
+}
 
 /* course links*/
 a {
@@ -26,6 +32,10 @@ a:active {
 	border-bottom: 1px solid #444;
 	background: #d64d25;
 }
+
+.helplink a {
+	border: none;
+}
 /* modal box */
 
 #helppopupbox {
@@ -41,14 +51,14 @@ a:active {
 }
 
 /* buttons */
-input[type=submit] {
+input[type=submit], button {
 	border: none;
 	color: #fff;
 	background: #D64D25;
 	padding: 4px;
 	border-radius: 2px;
 }
-input[type=submit]:hover {
+input[type=submit]:hover, button:hover {
 	background: #7f2e16;
 	cursor: pointer;
 }
@@ -91,7 +101,31 @@ input[type=submit]:hover {
 .forumheaderlist td {
 	border-color: #E5E5E5;
 }
+/* forum post */
+#page-mod-forum-discuss .discussioncontrols {
+	float: left;
+	margin: 0 0 5px 0;
+}
+#page-mod-forum-discuss .discussioncontrols .discussioncontrol {
 
+}
+#page-mod-forum-discuss .discussioncontrols .discussioncontrol.movediscussion {
+	margin-top: 20px;
+	padding: 0;
+}
+.forumpost {
+	border: none;
+	border-top: 2px solid #e89279;
+	border-bottom: 1px solid #f9e5de;
+	margin: 0;
+}
+.forumpost .header {
+	border-bottom: 1px solid #E5E5E5;
+}
+.forumpost .maincontent .left,
+.forumpost .side .left {
+	display: none;
+}
 
 /*TABTREE*/
 .tabtree {
@@ -190,6 +224,7 @@ input[type=submit]:hover {
 	/*background: hsla(0, 0%, 0%, 0.95);*/
 	background: rgba(90, 40, 3, 0.95);
 	z-index: 9999;
+	left: 0;
 	padding: 0 5px 5px;
 	border-bottom: 2px solid #FF6600;
 }
@@ -221,3 +256,44 @@ input[type=submit]:hover {
 
 #megamenu #myProfile .sub > li.contains_branch { float: right; }
 */
+
+
+/* FORMS */
+
+form {
+	
+}
+
+form fieldset.clearfix {
+	border-bottom: 2px solid #e89279;
+}
+form fieldset legend {
+	border-bottom: 3px solid #777;
+	margin-bottom: 10px;
+}
+form fieldset .fitem {
+	margin-bottom: 10px;
+}
+form fieldset .fitemtitle {
+	font: 16px bold 'Yanone Kaffeesatz', Tahoma, sans-serif;
+}
+form fieldset .felement {
+	
+}
+form fieldset .felement textarea {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
