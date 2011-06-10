@@ -7,12 +7,15 @@ br { display: none !important; }
 .clearer,
 .clearfix { clear: both; }
 
-.picture a { border: none; }
+.picture a,
+.picture a:hover { border: none; }
 
 th, td {
 	border: none;
 }
-
+::selection {
+	background: #f9e5de;
+}
 /* course links*/
 a {
 	color: #d64d25;
@@ -101,6 +104,9 @@ input[type=submit]:hover, button:hover {
 .forumheaderlist td {
 	border-color: #E5E5E5;
 }
+.forumheaderlist .discussion .lastpost {
+	
+}
 /* forum post */
 #page-mod-forum-discuss .discussioncontrols {
 	float: left;
@@ -135,22 +141,46 @@ input[type=submit]:hover, button:hover {
 .tabtree ul {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 .tabtree ul li {
 	display: inline;
 }
+
 .tabtree .tabrow0 .here .empty {
-	display: none;
+	display: block;
+	height: 1px;
+	border: none;
+	border-bottom: 2px solid #777;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	margin-top: -4px;
 }
 .tabtree .tabrow0 li a {
-	border: 1px solid #777;
+	border: 2px solid #E5E5E5;;
 	padding: 5px;
+	background: #f7f7f7;
+	color: #777;
+	border-radius: 2px 2px 0 0;
+}
+.tabtree .tabrow0 li a:hover {
+	background: #E5E5E5;
+	color: #444;
+}
+.tabtree .tabrow0 li a:active {
+	background: #444;
+	border-color: #444;
+	color: #fff;
 }
 .tabtree .tabrow0 > .active > a,
 .tabtree .tabrow0 > .selected > a {
-	background: #d64d25;
-	color: #fff;
-	border-color: #d64d25;
+	background: #fff;
+	color: #444;
+	border-color: #777;
+	z-index: 200;
+	position: relative;
+	border-bottom-color: #fff;;
 }
 /*2nd level */
 .tabtree ul .here ul{
@@ -159,21 +189,28 @@ input[type=submit]:hover, button:hover {
 	width: 100%;
 }
 .tabtree .tabrow1 {
-	margin-top: 11px;
-	border-top: 2px solid #444;
-	border-bottom: 2px solid #444;
+	border-top: 2px solid #777;
+	border-bottom: 2px solid #E5E5E5;
 	padding: 2px 0;
+	margin-top: 1px;
 }
 .tabtree .tabrow1 li a {
 	padding: 2px;
 	border: none;
+	background: none;
+}
+.tabtree .tabrow1 li a:hover {
+	background: none;
 }
 .tabtree .tabrow1 .selected a {
-	background: #d64d25;
-	color: #fff;
-	border-color: #d64d25;
+	color: #444;
+	font-weight: bold;
+	text-decoration: underline;
 }
-
+/* 3rd level */
+.tabtree .here .tabrow2.empty {
+	display: none;
+}
 
 /* MEGAMENU*/
 

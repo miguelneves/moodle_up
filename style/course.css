@@ -13,7 +13,7 @@
 /*
  * background: #f7f7f7
  * dark grey: #444
- * middle grey: #777
+ * middle grey: #777 || #DDD
  * light grey #E5E5E5
  * 
  * red: #d64d25
@@ -42,26 +42,25 @@
 .course-content {
 	font: 13px/1.8 normal 'Droid Serif', Georgia, serif	;
 }
-::selection {
-	background: #f9e5de;
-}
-
 .course-content .headingblock {
 	text-transform: none;
 	margin: 0;
 }
-
+.course-content ul .section.main{
+	border-top: 1px solid #E5E5E5;
+}
+.course-content ul #section-0 {
+	border-top: none;
+}
 #region-main .section{
 	padding: 0 0 10px 0;
 	margin-bottom: 10px;
 }
-
 #region-main .section .content {
 	margin: 0;
 }
 #region-main .section .content h3 {
 	font: 20px bold 'Yanone Kaffeesatz', Tahoma, sans-serif;
-	background: #E5E5E5;
 	padding: 5px 0;
 	margin: 0;
 }
@@ -71,14 +70,13 @@
 #region-main .section .content ul li:before{
 	/*content: '\00BB ';*/ 
 }
-#region-main .section .left {
-	width: auto;
-}
-/*
+#region-main .section .left,
 #region-main .section .right {
 	width: auto;
-	border: 1px solid #ccc;
 }
+#region-main .section .right { margin-top: 10px; }
+#region-main .section .right a { border: none; }
+/*
 .course-content ul.topics li.section .right div,
 .course-content ul.topics li.section .right a {
 	float: right;
@@ -123,7 +121,6 @@
 	background: #f7f7f7;
 	border: 1px solid #ccc;
 }
-
 
 /* table of content */
 #tableContents {
