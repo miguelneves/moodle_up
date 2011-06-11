@@ -381,9 +381,7 @@ input[type=button]:active {
 	border-bottom: 2px solid #e89279;
 }
 .mform fieldset.clearfix  legend {
-	border-top: 1px solid #f9e5de;
 	border-bottom: 1px solid #f9e5de;
-	background: #fefcfb;
 	margin: 0 10px 10px 0;
 	float: left;
 	width: 100%;

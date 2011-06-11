@@ -129,20 +129,49 @@
 	border: 1px solid #ccc;
 }
 
+
+/* SIDEBAR */
+#region-pre ul { margin: 0; }
+#region-pre ul li {
+	list-style-type: none;
+}
+#region-pre a {
+	color: #444;
+	text-decoration: none;
+}
+#region-pre a:visited { }
+#region-pre a:hover { color: #d64d25; }
+#region-pre a:active { color: #fff; }
+
 /* table of content */
 #tableContents {
 	/*border-top: 2px solid #d64d25;*/
+	margin-bottom: 20px;
 }
-#tableContents h4 {
+#tableContents li:before {
+	content: "\00BB  ";
+}
+#tableContents h4,
+#courseInfo .list-header h4 {
 	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
 	font-size: 18px;
 	color: #d64d25;
-	border-bottom: 2px solid #444;
+	border-bottom: 1px solid #e89279;
+	line-height: 1.2;
 }
 #tableContents #tc {
 	font-family: 'Droid Serif', Georgia, serif;
 }
+#tableContents .list-header {
+	cursor: default;
+}
 
+#courseInfo .first-level {
+	margin-bottom: 20px;
+}
+#courseInfo .first-level li:before {
+	content: "\00BB  ";
+}
 
 /* EDIT MODE */
 

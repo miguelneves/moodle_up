@@ -198,7 +198,7 @@ function customMenu(){
 			
 			//create branch
 			branch = '';
-			branch += '<li><a href="#"><h4>' + h4.html() + '</h4></a>';
+			branch += '<li class="first-level"><a href="#" class="list-header"><h4>' + h4.html() + '</h4></a>';
 			branch += '<ul>' + lista + '</ul></li>';
 		
 			content += branch;

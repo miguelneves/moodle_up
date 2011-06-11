@@ -108,6 +108,8 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 5px 20px;
 	float: left;
 }
+.breadcrumb a:visited { color: #d64d25; }
+.breadcrumb a:active { color: #fff; }
 .breadcrumb ul {
 	margin: 0;
 }
