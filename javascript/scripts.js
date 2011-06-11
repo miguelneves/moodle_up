@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	//init
 	customMenu();
-	textIcons();
-	editMode();
+	//textIcons();
+	//editMode();
 //	newPostModal();
 		
 });

@@ -2,8 +2,9 @@
 .skip-block { display: none; }
 
 /* remove all <br> */
+/*
 br { display: none !important; }
-
+*/
 .clearer,
 .clearfix { clear: both; }
 
@@ -54,26 +55,77 @@ a:active {
 }
 
 /* buttons */
-input[type=submit], button {
+input[type=submit], button,
+input[type=button] {
 	border: none;
 	color: #fff;
 	background: #D64D25;
 	padding: 4px;
 	border-radius: 2px;
+	border-bottom: 1px solid #777;
+	border-right: 1px solid #777;
 }
-input[type=submit]:hover, button:hover {
+input[type=submit]:hover, button:hover,
+input[type=button]:hover
+ {
 	background: #7f2e16;
 	cursor: pointer;
 }
-
-/* intro */
+input[type=submit]:active, button:active,
+input[type=button]:active {
+	background: #e89279;
+	cursor: pointer;
+	
+}
+/* GENERAL */
+.generalbox {
+	border: 1px solid #E5E5E5;
+	background: #f7f7f7;
+	padding: 10px;
+	width: 70%;
+	margin: 0 auto 20px;
+}
+.generalbox p {
+	margin: 0;
+}
+.boxaligncenter {
+	margin: 0 auto;
+}
+/*
 #intro.generalbox {
 	font: 20px Tahoma, sans-serif;
 	padding: 0;
 	border-bottom: 2px solid #d64d25;
 	margin: 0 0 20px 0;
 }
+*/
+/* TABLES */
 
+.generaltable {
+	border-bottom: 2px solid #444;
+}
+.generaltable thead {
+	background: #444;
+	color: #fff;
+	border-style: none;
+	font: 18px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
+}
+.generaltable tbody tr {
+	border-bottom: 1px solid #E5E5E5;
+}
+.generaltable tbody tr:nth-child(odd) {
+	background: #f7f7f7;
+}
+.generaltable tbody tr:hover {
+	background: #f9e5de;
+} 
+.generaltable td {
+	border-color: #E5E5E5;
+}
+.generaltable a {
+	border: none;
+	background: none;
+}
 /* FORUMS 
 .forumheaderlist
 	thead
@@ -82,6 +134,30 @@ input[type=submit]:hover, button:hover {
 			td.<name>
 
 */
+.path-mod-forum .forumheaderlist {
+	border-style: none;
+	border-collapse: collapse;
+	border-bottom: 2px solid #444;
+}
+.path-mod-forum .forumheaderlist a { border: none; }
+.path-mod-forum .forumheaderlist a:visited { color: #d64d25; }
+.path-mod-forum .forumheaderlist a:hover { background: none; color: #444; }
+.path-mod-forum .forumheaderlist a:active { background: #d64d25 ; color: #fff; }
+
+.path-mod-forum .forumheaderlist tr th,
+.path-mod-forum .forumheaderlist tr td { border-style: none; }
+.path-mod-forum .forumheaderlist thead {
+	background: #444;
+	color: #fff;
+	border-style: none;	
+	font: 18px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
+}
+.path-mod-forum .forumheaderlist tbody tr { border-bottom: 1px solid #e5e5e5; }
+.path-mod-forum .forumheaderlist tbody tr:nth-child(odd) { 	background: #f7f7f7; }
+.path-mod-forum .forumheaderlist tbody tr:hover { background: #f9e5de; } 
+.path-mod-forum .forumheaderlist tbody td { border-color: #E5E5E5; }
+
+/*
 .path-mod-forum  .forumheaderlist {
 	border-style: none;
 	border-bottom: 2px solid #444;
@@ -168,6 +244,7 @@ input[type=submit]:hover, button:hover {
 	background: #E5E5E5;
 	color: #444;
 }
+.tabtree .tabrow0 li a.nolink:hover { background: none; }	
 .tabtree .tabrow0 li a:active {
 	background: #444;
 	border-color: #444;
@@ -297,36 +374,58 @@ input[type=submit]:hover, button:hover {
 
 /* FORMS */
 
-form {
+.mform {
 	
 }
-
-form fieldset.clearfix {
+.mform fieldset.clearfix {
 	border-bottom: 2px solid #e89279;
 }
-form fieldset legend {
-	border-bottom: 3px solid #777;
+.mform fieldset.clearfix  legend {
+	border-top: 1px solid #f9e5de;
+	border-bottom: 1px solid #f9e5de;
+	background: #fefcfb;
+	margin: 0 10px 10px 0;
+	float: left;
+	width: 100%;
+	color: #777;
+}
+.mform fieldset.clearfix  .fitem {
 	margin-bottom: 10px;
+	clear: both;
 }
-form fieldset .fitem {
-	margin-bottom: 10px;
+.mform fieldset.clearfix  .fitemtitle {
+	float: left;
+	margin-right: 10px;
+	width: 170px;
+	text-align: right;
+	color: #777;
+	line-height: 1.2;
 }
-form fieldset .fitemtitle {
-	font: 16px bold 'Yanone Kaffeesatz', Tahoma, sans-serif;
+.mform fieldset.clearfix  .felement {
+	margin-left: 180px;
+	width: 460px;
 }
-form fieldset .felement {
-	
-}
-form fieldset .felement textarea {
+.mform fieldset.clearfix  .felement textarea {
 	width: 100%;
 }
+.mform fieldset.clearfix .required .fitemtitle  {
+	color: #7f2e16 !important;
+}
+span.hide, div.hide {
+	display: none;
+}
+/* submit */
+.mform fieldset .advancedbutton {
+	text-align: right;
+}
 
-
-
-
-
-
-
+.filemanager-container {
+	padding: 5px;
+	background: #f9e5de;
+	border-radius: 2px;
+	border: 1px solid #e89279;
+	margin-top: 10px;
+}
 
 
 
