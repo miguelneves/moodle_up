@@ -1,5 +1,6 @@
 <?php
-
+// disable error notice in moodle server
+error_reporting(0);
 $hassidepre = $PAGE->blocks->region_has_content('side-pre', $OUTPUT);
 $hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
 $showsidepre = $hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT);
@@ -66,7 +67,31 @@ echo $OUTPUT->doctype() ?>
 	        
 	        <!-- header login -->
 	        <div id="header-login">
-	        	<?php         
+	        	<?php  
+	        	error_reporting(1);
+	        	$sidebar = $OUTPUT->blocks_for_region('side-post');
+      	      
+				$doc = new DOMDocument();
+				$doc->loadHTML($sidebar);
+				
+				$elems = $doc->getElementsByTagName('div');
+				
+				foreach($elems as $elem){
+					$attr = $elem->getAttribute('class');
+					// check if has block_login class
+					$pattern = '/block_login/';
+					$match = preg_match($pattern, $attr);
+					if ($match) {
+						$children = $elem->childNodes; 
+						foreach ($children as $child) { 
+				    		$tmp_doc = new DOMDocument(); 
+				  			$tmp_doc->appendChild($tmp_doc->importNode($child,true));        
+				    		$innerHTML .= $tmp_doc->saveHTML(); 
+						}
+						echo $innerHTML;
+					}					
+				}
+	        	/* 
 	        		$sidebar = $OUTPUT->blocks_for_region('side-post');               
 	                $sidebar = '<!DOCTYPE html>' . $sidebar; //need doctype to get id
 					$doc = new DOMDocument();
@@ -82,6 +107,7 @@ echo $OUTPUT->doctype() ?>
 					    $innerHTML .= $tmp_doc->saveHTML(); 
 					}
 					echo $innerHTML;
+					*/
 				?>
 	        </div>
 	    </div>

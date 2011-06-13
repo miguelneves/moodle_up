@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* header login */
 
-#inst22 { display: none; } /* remove login from sidebar */
+#block_login { display: none; } /* remove login from sidebar */
 #header-login {
 	float: right;
 	width: 200px;
