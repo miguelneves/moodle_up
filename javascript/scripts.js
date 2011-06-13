@@ -72,7 +72,7 @@ function customMenu(){
 			noBranchContent += '<li>' + this.innerHTML + '</li>';
 		});
 	
-		noBranchContent = '<li id="general"><ul>' + noBranchContent + '</ul></li>';
+		noBranchContent = '<li class="general"><ul>' + noBranchContent + '</ul></li>';
 		
 		content = noBranchContent + content;
 		

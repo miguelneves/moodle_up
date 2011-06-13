@@ -84,6 +84,31 @@ h1, h2, h3, h4, h5, h6 {
 	border-bottom: 2px solid #fff;
 	color: #fff;
 }
+.logininfo a,
+.logininfo a:visited { color: #fff; border-bottom-color: #444; }
+.logininfo a:hover { color: #444; background: inherit; }
+
+/* header login */
+
+#inst22 { display: none; } /* remove login from sidebar */
+#login {
+	float: right;
+	width: 220px;
+}
+#login .header h2 {
+	font: 20px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	margin: 5px 0;
+	border-bottom: 2px solid #fff;
+	display: none;
+}
+#login .loginform { float: left; }
+#login .loginform .fld {  }
+#login .loginform .fld input { width: 100%; border: 1px solid #d64d25; }
+#login .loginform label { display: block; }
+#login .loginform .btn { margin-top: 5px; float: right; }
+#login .footer a { margin-top: -25px; float: left; }
+#login .footer a:hover { color: #fff; background: inherit; }
+#login .footer a:active { background: #d64d25; }
 
 .headermenu {
     float: right;
@@ -149,9 +174,6 @@ h1, h2, h3, h4, h5, h6 {
 #page-content #region-post-box {
 
 }
-.side-pre-only #page-content #region-main,
-.side-pre-only #page-content #region-post-box
-{ margin-left: 0; }
 
 #page-content #region-main-wrap {
 	float: left;
@@ -159,25 +181,22 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #fff;
 	box-shadow: 0 0 3px #ccc;
 	padding: 20px;
+	width: 860px;
 }
-
 #page-content #region-main {
 	padding: 0 20px 0 0;
 	width: 640px;
 	float: left;
 }
-
 #page-content #region-pre {
 	width: 200px;
 	float: left;
 	margin: 0;
 }
-
 #page-content #region-post {
 	width: 220px;
 	float: left;
 }
-
 #page-footer {
 	clear: both;
 	width: 1140px;
@@ -185,8 +204,12 @@ h1, h2, h3, h4, h5, h6 {
 	border-top: 2px solid #777;
 }
 
-/* Courses Homepage */
+/*if no sidebar */
+.side-pre-only #page-content #region-main-wrap { width: 1100px; }
+.side-pre-only #page-content #region-main { width: 880px; }
 
+/* Courses Homepage */
+/*
 .coursebox {
 	float: none;
 	width: auto;
@@ -194,22 +217,18 @@ h1, h2, h3, h4, h5, h6 {
 	border-left: 10px solid #fff;
 	border-right: 1px solid #fff;
 }
-
 .coursebox .info,
 .coursebox .summary {
 	float: none;
 	width: auto;	
 }
-
 .coursebox h3 {
 	margin: 0;
 	padding: 0;
 }
-
 #pageheading {
 	font-size: 18px;
 }
-
 .mod_introbox {
 	font-style: italic;
 	border: none;
@@ -254,3 +273,6 @@ ul.section.img-text {
 	border-bottom: 1px solid #000;
 }
 */
+/* FRONT PAGE */
+
+.pagelayout-frontpage #page-content #region-main { width: 840px; }

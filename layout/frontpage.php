@@ -27,24 +27,66 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
     <meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
+    
+     <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight,light,regular,bold' rel='stylesheet' type='text/css'>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <div id="page">
-
-    <div id="page-header" class="clearfix">
-    	 <div class="headermenu"><?php
-            echo $OUTPUT->login_info();
-            echo $OUTPUT->lang_menu();
-            echo $PAGE->headingmenu;
-        ?></div>
-        <h1 class="headermain"><!-- <?php echo $PAGE->heading ?> -->
-        <img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/></h1>
-        <?php if ($hascustommenu) { ?>
-        <div id="custommenu"><?php echo $custommenu; ?></div>
-        <?php } ?>
+	<div id="page-header-wrap">
+    	<div id="page-header">
+    		
+		        <h1 class="headermain">
+		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
+		        	<img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/>
+		        </h1>
+		   <?php if ($hasheading) { ?>  
+		    	<?php if ($haslogininfo) {
+		            echo $OUTPUT->login_info();
+		        }
+		        if (!empty($PAGE->layout_options['langmenu'])) {
+		            echo $OUTPUT->lang_menu();
+		        } ?>
+		     
+	        
+		        <?php if($hasheadingmenu) { ?>
+			        <div class="headermenu">
+			        	<?php echo $PAGE->headingmenu; ?>
+			        	
+			        </div>
+		        <?php } ?>
+	        <?php } ?>
+	        
+	        <?php if ($hascustommenu) { ?>
+	        <div id="custommenu"><?php echo $custommenu; ?></div>
+	        <?php } ?>
+	        
+	        <!-- header login -->
+	        <div id="login">
+	        	<?php         
+	        		$sidebar = $OUTPUT->blocks_for_region('side-post');               
+	                $sidebar = '<!DOCTYPE html>' . $sidebar; //need doctype to get id
+					$doc = new DOMDocument();
+					$doc->loadHTML($sidebar);
+				
+					
+					$elem = $doc->getElementById('inst22');
+					
+					$children = $elem->childNodes; 
+					foreach ($children as $child) { 
+					    $tmp_doc = new DOMDocument(); 
+					    $tmp_doc->appendChild($tmp_doc->importNode($child,true));        
+					    $innerHTML .= $tmp_doc->saveHTML(); 
+					}
+					echo $innerHTML;
+				?>
+	        </div>
+	    </div>
     </div>
+    
 <!-- END OF HEADER -->
 
     <div id="page-content">
@@ -54,7 +96,7 @@ echo $OUTPUT->doctype() ?>
                 <div id="region-main-wrap">
                     <div id="region-main">
                         <div class="region-content">
-                            <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
+                           <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>              
                         </div>
                     </div>
                 </div>
