@@ -91,24 +91,26 @@ h1, h2, h3, h4, h5, h6 {
 /* header login */
 
 #inst22 { display: none; } /* remove login from sidebar */
-#login {
+#header-login {
 	float: right;
-	width: 220px;
+	width: 200px;
+	padding: 10px;
 }
-#login .header h2 {
+#header-login #login { width: 200px; }
+#header-login .header h2 {
 	font: 20px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
 	margin: 5px 0;
 	border-bottom: 2px solid #fff;
 	display: none;
 }
-#login .loginform { float: left; }
-#login .loginform .fld {  }
-#login .loginform .fld input { width: 100%; border: 1px solid #d64d25; }
-#login .loginform label { display: block; }
-#login .loginform .btn { margin-top: 5px; float: right; }
-#login .footer a { margin-top: -25px; float: left; }
-#login .footer a:hover { color: #fff; background: inherit; }
-#login .footer a:active { background: #d64d25; }
+#header-login .loginform { float: left; }
+#header-login .loginform .fld {  }
+#header-login .loginform .fld input { width: 100%; border: 1px solid #d64d25; }
+#header-login .loginform label { display: block; }
+#header-login .loginform .btn { margin-top: 5px; float: right; }
+#header-login .footer a { margin-top: -25px; float: left; }
+#header-login .footer a:hover { color: #fff; background: inherit; }
+#header-login .footer a:active { background: #d64d25; }
 
 .headermenu {
     float: right;

@@ -1,8 +1,11 @@
 $(document).ready(function() {
 	//init
 	customMenu();
-	//textIcons();
-	//editMode();
+	textIcons();
+	if($('body').hasClass('editing')) {
+		editMode();
+	}
+	
 //	newPostModal();
 		
 });
@@ -235,19 +238,58 @@ function editMode(){
 	// Edit Summary 
 	$('.summary .edit').parent().each(function(){
 		iconToText(this);
-		$(this).addClass('edit-summary');
+		$(this).addClass('edit-summary button');
 	});
 	
 	// toggle menu
 	$('.section .commands').hide();
 	
-	var item = $('.section .section > li');
-	
+	var item = $('.section.main .section > li');
+
+	item.bind({
+		mouseenter: function() {
+			if(!$(this).hasClass('edit-active'))
+				$('.mod-indent', this).append($('<span class="edit-toggle">▼</span>'));
+		},
+		mouseleave: function(){
+			if(!$(this).hasClass('edit-active'))
+				$('.mod-indent .edit-toggle', this).remove();
+		},
+		click: function() {
+			
+			// if($('.section .section > li').hasClass('edit-active')) {
+				// $('.mod-indent .edit-toggle', this).html('▲');		
+			// } else {
+				// $('.mod-indent .edit-toggle', this).html('▼');	
+			// }
+				
+	    	item.removeClass('edit-active');
+			$(this).addClass('edit-active');
+			
+			
+			$('.section.main .commands').fadeOut(function(){			
+				$('.commands', this);
+							
+			});
+			if($('.commands', this).css('display') == 'none') {
+				$('.commands', this).fadeIn().addClass('edit-active');
+				$('.mod-indent .edit-toggle').empty();
+				$('.mod-indent .edit-toggle', this).html('▲');
+			} else {
+				$(this).removeClass('edit-active');
+				$('.mod-indent .edit-toggle', this).html('▼');
+				
+			}
+		}
+	});
+
+/*
 	item.click(function(){
 		item.removeClass('edit-active');
 		$(this).addClass('edit-active');
 		$('.commands').fadeOut(function(){			
 			$('.commands', this);
+			
 		});
 		if($('.commands', this).css('display') == 'none') {
 			$('.commands', this).fadeIn().addClass('edit-active');
@@ -255,11 +297,12 @@ function editMode(){
 			$(this).removeClass('edit-active');
 		}
 	});
-	
+	*/
 	//remove menu
 	$(document.body).bind('click', function() {
-		$('.commands').fadeOut('fast', function(){
+		$('.section.main .commands').fadeOut('fast', function(){
 			$('.section > li').removeClass('edit-active');
+			$('.mod-indent .edit-toggle').remove();
 		}); 
 	});
 	$('.section > li, .section > li .commands').bind('click', function(ev) {		
@@ -267,52 +310,3 @@ function editMode(){
 	});
 }
 
-
-/*TODO:
- * — add back to top in each section
- *
- */ 
-
-
-function newPostModal(){
-	$('#newdiscussionform').click(function(){
-		$.ajax({
-			url: "http://localhost/moodle/mod/forum/post.php",
-			type: 'get',
-			data: {
-				forum: "1"
-			},
-			success: function(data){
-				var form = $(data).find('form');
-								
-				//overlay
-				$('body').append('<div id="overlay"></div>');
-	 
-	  				$('#overlay').css({
-				    position: "fixed",
-				    top: "0",
-				    left: "0",
-				    height: "100%",
-				    width: "100%",
-				    background: "#000",
-				    opacity: '0.5'
-				});
-				
-				//form
-	  
-				var imageWidth = form.width / 2 ;
-				var imageHeight = form.height / 2;
-			    form.css({
-			        "margin-left": -imageWidth,
-		       		"margin-top": -imageHeight,
-		       		"z-index": "80000"
-			    });
-			  
-			    $("body").append(form);
-			}
-			
-		
-		});
-		return false; 
-	});
-}

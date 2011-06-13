@@ -56,7 +56,7 @@ a:active {
 	float: right;
 }
 /* buttons */
-input[type=submit], button, input[type=button] {
+input[type=submit], button, input[type=button], .button {
 	border: none;
 	color: #fff;
 	background: #D64D25;
@@ -65,11 +65,15 @@ input[type=submit], button, input[type=button] {
 	border-bottom: 1px solid #777;
 	border-right: 1px solid #777;
 }
-input[type=submit]:hover, button:hover, input[type=button]:hover {
+input[type=submit]:visited, button:visited, input[type=button]:visited, .button:visited {
+	background: #D64D25;
+}
+input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover {
 	background: #7f2e16;
+	color: #fff;
 	cursor: pointer;
 }
-input[type=submit]:active, button:active, input[type=button]:active {
+input[type=submit]:active, button:active, input[type=button]:active, .button:active {
 	background: #e89279;
 	cursor: pointer;
 }
@@ -369,6 +373,7 @@ input[type=submit]:active, button:active, input[type=button]:active {
 	font-size: 13px;
 	padding: 2px 0;
 	list-style-type: none;
+	
 }
 #megamenu .sub li li:before { content: '\00BB '; }
 

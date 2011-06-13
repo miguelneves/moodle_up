@@ -65,7 +65,7 @@ echo $OUTPUT->doctype() ?>
 	        <?php } ?>
 	        
 	        <!-- header login -->
-	        <div id="login">
+	        <div id="header-login">
 	        	<?php         
 	        		$sidebar = $OUTPUT->blocks_for_region('side-post');               
 	                $sidebar = '<!DOCTYPE html>' . $sidebar; //need doctype to get id
