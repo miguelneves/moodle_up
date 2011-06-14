@@ -108,7 +108,10 @@ function customMenu(){
 		//get settings title
 		var h3 = $('.header .title h2', settings);
 		var set = $('#settingsnav > ul > li', settings);
+		var set2 = $('#settingsnav > ul > li .contains_branch', settings);
+		console.log(set2);
 		s = getBranch(set);
+		s += getBranch(set2);
 		
 		//create settings content
 		set = '<a href="#"><h3>' + h3.html() + '</h3></a><ul class="sub">' + s + '</ul>';
@@ -201,7 +204,7 @@ function customMenu(){
 			
 			//create branch
 			branch = '';
-			branch += '<li class="first-level"><a href="#" class="list-header"><h4>' + h4.html() + '</h4></a>';
+			branch += '<li class="level-2"><a href="#" class="list-header"><h4>' + h4.html() + '</h4></a>';
 			branch += '<ul>' + lista + '</ul></li>';
 		
 			content += branch;

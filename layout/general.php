@@ -1,4 +1,6 @@
 <?php
+// disable error notice in moodle server
+error_reporting(0);
 
 $hasheading = ($PAGE->heading);
 $hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
@@ -46,7 +48,7 @@ echo $OUTPUT->doctype() ?>
     		<?php if ($hasheading) { ?>
 		        <h1 class="headermain">
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
-		        	<img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/>
+		        	<img src="http://localhost/moodle/theme/up/pix/logo_fcpe.png" alt="logo" />
 		        </h1>
 		        
 		    	<?php if ($haslogininfo) {

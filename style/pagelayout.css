@@ -66,7 +66,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 #page-header {
  	width: 1140px;
- 	height: 160px;
 	margin: 0 auto;
 	color: #fff;
 }
@@ -90,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* header login */
 
-#block_login { display: none; } /* remove login from sidebar */
+.block_login { display: none; } /* remove login from sidebar */
 #header-login {
 	float: right;
 	width: 200px;

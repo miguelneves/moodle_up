@@ -197,10 +197,10 @@
 	cursor: default;
 }
 
-#courseInfo .first-level {
+#courseInfo .level-2 {
 	margin-bottom: 20px;
 }
-#courseInfo .first-level li:before {
+#courseInfo .level-2 li:before {
 	content: "\00BB  ";
 }
 

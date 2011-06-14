@@ -354,10 +354,15 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	z-index: 9999;
 	padding: 0 5px 5px;
 	border-bottom: 2px solid #FF6600;
+	max-width: 672px;
 }
+/*
 #megamenu #myProfile .sub { margin-left: -90px; }
 #megamenu #myCourses .sub { margin-left: -202px; }
 #megamenu #settings .sub { margin-left: -322px; }
+*/
+#megamenu #myCourses .sub { margin-left: -115px; }
+#megamenu #settings .sub { margin-left: -233px; }
 
 #megamenu .sub .general { margin-top: 32px; }
 

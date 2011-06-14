@@ -1,6 +1,7 @@
 <?php
 // disable error notice in moodle server
 error_reporting(0);
+
 $hassidepre = $PAGE->blocks->region_has_content('side-pre', $OUTPUT);
 $hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
 $showsidepre = $hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT);
@@ -42,7 +43,7 @@ echo $OUTPUT->doctype() ?>
     		
 		        <h1 class="headermain">
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
-		        	<img src="http://localhost/moodle/theme/up/pix/logo.png" alt="logo" width="413" height="60"/>
+		        	<img src="http://localhost/moodle/theme/up/pix/logo_fcpe.png" alt="logo" />
 		        </h1>
 		   <?php if ($hasheading) { ?>  
 		    	<?php if ($haslogininfo) {
