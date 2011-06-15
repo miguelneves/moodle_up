@@ -77,6 +77,9 @@
 #region-main .section .content ul li:before{
 	/*content: '\00BB ';*/ 
 }
+#region-main .section .content ul li .activityicon {
+	float: left; margin: 3px 5px 0 0;	
+}
 #region-main .section .left,
 #region-main .section .right {
 	width: auto;

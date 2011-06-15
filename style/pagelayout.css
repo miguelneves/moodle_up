@@ -108,8 +108,10 @@ h1, h2, h3, h4, h5, h6 {
 #header-login .loginform label { display: block; }
 #header-login .loginform .btn { margin-top: 5px; float: right; }
 #header-login .footer a { margin-top: -25px; float: left; }
+#header-login .footer a:visited { color: #d64d25; }
 #header-login .footer a:hover { color: #fff; background: inherit; }
 #header-login .footer a:active { background: #d64d25; }
+
 
 .headermenu {
     float: right;
@@ -275,5 +277,46 @@ ul.section.img-text {
 }
 */
 /* FRONT PAGE */
+.pagelayout-frontpage #page-content #region-main { width: auto;  }
+.pagelayout-frontpage #page-content #region-content { margin-right: 0; }
 
-.pagelayout-frontpage #page-content #region-main { width: 840px; }
+#frontpage-content {
+	width: 640px;
+	float: left;	
+}
+#frontpage-content > .frontblock {
+	border-bottom: 2px solid #d64d25;
+	overflow: hidden;
+	padding-bottom: 20px;
+	margin-right: 20px;
+	
+}
+
+#frontpage-content > .frontblock:last-child { border: none; }
+#uni { float: right; }
+#uni h2 { border-bottom: 2px solid #d64d25; }
+#uni ul { margin: 0; }
+#uni .list .icon {
+	float: left;
+	display: none;
+}
+#uni .list li {
+	list-style-type: none;
+	border-bottom: 1px solid #e5e5e5;
+}
+#uni .list li a {
+	color: #444;
+	border: none;
+}
+#uni .list li a:hover {
+	color: #d64d25;
+}
+
+
+
+
+
+
+
+
+

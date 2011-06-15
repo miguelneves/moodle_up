@@ -16,12 +16,22 @@
 	padding: 2px;
 	border-radius: 2px;
 	text-transform: none;
+	line-height: 1.2;
+	border-bottom: 1px solid #e5e5e5;
 }
 
-/* latests news */
 .unlist {
 	margin: 0;
 }
+.unlist li {
+	list-style-type: none;
+	list-style-position: inside;
+}
+.unlist li:before {
+/*	content: '\00BB ';*/
+}
+
+/* latests news */
 .unlist .post {
 	list-style-type: none;
 	border-bottom: 1px solid #E5E5E5;
@@ -29,4 +39,16 @@
 }
 .unlist .post .head {
 	color: #7f2e16;
+}
+
+/* my private files */
+
+/*.ygtvspacer { display: none; }*/
+.block_private_files #ygtvcontentel1 .icon {
+	margin: 3px 5px 0 0;
+	float: left;
+}
+.block_private_files .ygtvtn,
+.block_private_files .ygtvln {
+	display: none;
 }

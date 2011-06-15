@@ -123,7 +123,55 @@ echo $OUTPUT->doctype() ?>
                 <div id="region-main-wrap">
                     <div id="region-main">
                         <div class="region-content">
-                           <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>              
+                          <!-- <?php echo core_renderer::MAIN_CONTENT_TOKEN ?> -->
+                           
+							<!-- frontpage static content -->
+							<div id="frontpage-content">
+								<div class="frontblock">
+	  								<h2 class="frontblock fronthead p1">Welcome to Moodle U.PORTO!</h2>
+									<p class="fronttext p1"> <a title="Clicar aqui para se validar" href="/login/index.php"><img alt="Login eLearning@UP" src="http://moodle.up.pt/file.php/1/img/moodle-logo.gif" style="float: left;"></a>  <strong style="color: rgb(128, 112, 64);">How to login:</strong><br><strong>U.Porto Community: </strong>You may automatically login clicking on <em>Moodle U.PORTO</em> item that will show on your SiGARRA (IS) personal page after validation.<br><strong>External user and FEUP: </strong>Insert username and password on "Login" block. <br><br>Check for more information: <a href="/login/index.php">First time here</a>, or <a href="http://elearning.up.pt" target="_blank">http://elearning.up.pt</a>, or contact <a target="_blank" href="http://sigarra.up.pt/up/web_base.gera_pagina?p_pagina=18377">GATIUP</a> by email [<a href="mailto:gatiup@reit.up.pt" target="_blank">gatiup@reit.up.pt</a>]  </p> </div>
+								<div class="frontblock">
+									<h2 class="frontblock fronthead p2">U.PORTO courses</h2>
+									<p class="fronttext p2">
+										<a title="Clicar aqui para listar cursos" href="course/index.php">
+										<img alt="Cursos Moodle U.PORTO" src="http://moodle.up.pt/file.php/1/img/cursos.png" style="float: left;">
+										</a> Check U.PORTO course list!<br>On the left side of the interface you can find a list of all Institutions and Faculties of the University of Porto presenting e-learning courses in this platform.  </p>
+								</div>
+								<div class="frontblock">
+									<h2 class="frontblock fronthead p3">Training</h2>
+									<p class="fronttext p3"> <a href="/course/category.php?id=20"><img alt="Formação" src="http://moodle.up.pt/file.php/1/img/form-continua.png" style="float: left;"></a>  Check out the list of <a href="course/category.php?id=20">Continuing Education</a> and <a href="course/category.php?id=8">Internal Training</a> courses available in this platform. <br> Go to <a href="http://elearning.up.pt" target="_blank">eLearning portal</a> for more information about current training courses.  </p> </div>        
+								<div class="frontblock">
+									<h2 class="frontblock fronthead p4">SiGARRA courses</h2>
+									<p class="fronttext p4"> <a href="/course/category.php?id=6"><img alt="Formação SiGARRA" src="http://moodle.up.pt/file.php/1/img/cursos-sigarra.png" style="float: left;"></a>  SiGARRA courses are free courses to support you using U.Porto IS - SiGARRA. There you can find documentation, tutorials, tips and FAQs to help you to take advantage of all SiGARRA potentialities. Click <a href="course/category.php?id=6">FORMAÇÃO SiGARRA</a> and choose a subcategory of your interest.</p> </div>     
+                       		</div>
+                       	<div id="uni">
+                       		<h2>Unidades Curriculares</h2>
+	                       	<ul class="list">
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=26">GESTÃO DE PROJECTOS</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=6">FORMACAO SIGARRA</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=18">EGP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=9">FAUP</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=12">FADEUP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=10">FBAUP</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=21">FCNAUP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=11">FCUP</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=16">FDUP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=14">FEP</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=15">FEUP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=25">FFUP</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=17">FLUP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=23">FMDUP</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=22">FMUP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=13">FPCEUP</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=19">ICBAS</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=32">REITORIA</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=36">MOSTRA UP</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=118">UNIVERSIDADE JÚNIOR</a></div></li>
+								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=612">FORMAÇÃO CONTÍNUA</a></div></li>
+								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=778">UNIVERSIDADE DE VERÃO</a></div></li>
+							</ul>
+                       	</div>	
+                       		
                         </div>
                     </div>
                 </div>
@@ -131,7 +179,7 @@ echo $OUTPUT->doctype() ?>
                 <?php if ($hassidepre) { ?>
                 <div id="region-pre" class="block-region">
                     <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
+                    	<?php echo $OUTPUT->blocks_for_region('side-pre') ?>
                     </div>
                 </div>
                 <?php } ?>
