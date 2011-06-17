@@ -78,7 +78,8 @@ function customMenu(){
 	
 		//noBranchContent = '<li class="general"><ul>' + noBranchContent + '</ul></li>';
 		noBranchContent = '<li class="general"><a href="#"><h4>General</h4></a><ul>' + noBranchContent + '</ul></li>';
-		
+			//noBranchContent = '<li id="general"><a href="#"><h4>General</h4></a><ul>' + noBranchContent + '</ul></li>';
+
 		content = noBranchContent + content;
 		
 		//create my profile content
@@ -322,9 +323,7 @@ function editMode(){
 
 
 function ariaMenu(){
-	//store taret ul (menu ul) in a variable and assign it a menubar role
 var menu = $('ul#menu');
-console.log(menu);
 //add the role and default state attributes
 	//add the role and default state attributes
 		if( !$('body').is('[role]') ){ $('body').attr('role','application'); }
@@ -393,6 +392,7 @@ menu
 				else {				
 					targetLi.parents('li').next().find('a').eq(0).focus();
 				}
+				//console.log(targetLi.parents('li'));
 							});
 				//shift focus up one item
 			menu.bind('traverseUp',function(event){
@@ -412,18 +412,14 @@ menu
 
 			});
 			
-			
-			
-			
-			
-			
-			
 	//clicks and presses
 			menu.focus(function(event){
 				//deactivate previously active menu node, if one exists
-				menu.find('[tabindex=0]').attr('tabindex','-1').removeClass('active');
+				menu.find('[tabindex=0]').attr('tabindex','-1').removeClass('menu-item-active');
 				//assign 0 tabindex to focused item
-				$(event.target).attr('tabindex','0').addClass('active');
+				$(event.target).attr('tabindex','0').addClass('menu-item-active');
+				//if($('li.first-child').hasClass('menu-item-active') && $('li.first-child').not('[aria-expanded=true]'))
+				$(event.target).parent().prev('li.first-level').find('> a').trigger('collapse');
 			});
 			menu.click(function(event){
 				//save reference to event target
@@ -476,6 +472,5 @@ menu
 						
 	
 						});
-	
 
 }

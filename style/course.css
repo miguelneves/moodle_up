@@ -80,6 +80,8 @@
 #region-main .section .content ul li .activityicon {
 	float: left; margin: 3px 5px 0 0;	
 }
+#region-main .section .left {font: 21px bold 'Yanone Kaffeesatz', Tahoma, sans-serif; margin: 4px 4px 0 0; }
+
 #region-main .section .left,
 #region-main .section .right {
 	width: auto;

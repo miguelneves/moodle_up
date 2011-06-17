@@ -305,7 +305,9 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	display: none;
 }
 /* MEGAMENU*/
-
+.menu ul.menu-group-collapsed {
+	display:none;
+}
 #megamenu {
 	/*	overflow: hidden;*/
 	clear: both;
@@ -327,14 +329,16 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	border-right: 2px solid #fff;
 	background: hsla(0, 0%, 0%, 0.4);
 }
-#megamenu .first-level:hover,
-#megamenu .first-level:focus {
-	background: hsla(0, 0%, 0%, 0.4);
+#megamenu .first-level a:hover,
+#megamenu .first-level a:focus {
+/*	background: #60310D !important;*/
 }
-
+#megamenu .first-level[aria-expanded="true"] {
+	background: #60310D;
+}
  
 #megamenu .first-level.active {
-	background: hsla(0, 0%, 0%, 0.6);
+	background: #60310D;
 	color: #fff;
 }
 #megamenu .first-level > a {
@@ -452,54 +456,6 @@ span.hide, div.hide {
 .userprofile .profilepicture a {
 	border-bottom: none;
 }
-/* nav*/
-/*
-body {
-font-size: 62.5%;
-}
-.menu {
-font-size:1.5em;
-}
-.menu,.menu ul,.menu li {
-list-style:none;
-margin:0;
-padding:0;
-}
-.menu ul {
-margin-left:8px;
-}
 
-.menu li a:hover,
-.menu li a.menu-parent:hover,
-.menu li a:focus,
-.menu li a.menu-parent:focus,
-.menu li a.menu-item-active {
-color:#000;
-border:1px solid#eee;
-background-color:#fafafa;
--moz-border-radius:4px;
--webkit-border-radius:4px;
-border-radius:4px;
-}
-.menu li a:focus,
-.menu li a.menu-parent:focus,
-.menu li a.menu-item-active {
-border:1px solid #e2f3fb;
-background-color:#f2fafd;
-}
 
-.menu li a {
-color:#555;
-padding:.1em 7px .1em 27px;
-display:block;
-text-decoration:none;
-border:1px dashed #fff;
-}
-.menu li a.menu-parent {
-}
-.menu li a.menu-parent-collapsed {
-}
-.menu ul.menu-group-collapsed {
-display:none;
-}
-*/
+
