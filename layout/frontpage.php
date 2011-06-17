@@ -43,7 +43,7 @@ echo $OUTPUT->doctype() ?>
     		
 		        <h1 class="headermain">
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
-		        	<img src="http://localhost/moodle/theme/up/pix/logo_fcpe.png" alt="logo" />
+		        	<img src="<?php echo $OUTPUT->pix_url('logo_fcpe', 'theme'); ?>" alt="logo_fcpe" />
 		        </h1>
 		   <?php if ($hasheading) { ?>  
 		    	<?php if ($haslogininfo) {
@@ -198,13 +198,13 @@ echo $OUTPUT->doctype() ?>
 
 <!-- START OF FOOTER -->
     <div id="page-footer">
-        <p class="helplink">
+     <!--   <p class="helplink">
         <?php echo page_doc_link(get_string('moodledocslink')) ?>
-        </p>
-
-        <?php
+     </p> -->
+     <img src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="logo_up" />
+        <?php        
         echo $OUTPUT->login_info();
-        echo $OUTPUT->home_link();
+    //   echo $OUTPUT->home_link();
         echo $OUTPUT->standard_footer_html();
         ?>
     </div>
