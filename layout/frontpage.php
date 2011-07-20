@@ -32,7 +32,7 @@ echo $OUTPUT->doctype() ?>
     
      <!-- google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight,light,regular,bold' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&v2' rel='stylesheet' type='text/css'>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
@@ -92,23 +92,7 @@ echo $OUTPUT->doctype() ?>
 						echo $innerHTML;
 					}					
 				}
-	        	/* 
-	        		$sidebar = $OUTPUT->blocks_for_region('side-post');               
-	                $sidebar = '<!DOCTYPE html>' . $sidebar; //need doctype to get id
-					$doc = new DOMDocument();
-					$doc->loadHTML($sidebar);
 				
-					
-					$elem = $doc->getElementById('inst22');
-					
-					$children = $elem->childNodes; 
-					foreach ($children as $child) { 
-					    $tmp_doc = new DOMDocument(); 
-					    $tmp_doc->appendChild($tmp_doc->importNode($child,true));        
-					    $innerHTML .= $tmp_doc->saveHTML(); 
-					}
-					echo $innerHTML;
-					*/
 				?>
 	        </div>
 	    </div>

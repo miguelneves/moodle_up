@@ -6,6 +6,11 @@
 /*
  br { display: none !important; }
  */
+
+/* prevent sidebar from showing */
+.block_navigation ,
+.block_settings { display: none; }
+
 .clearer, .clearfix {
 	clear: both;
 }
@@ -457,5 +462,15 @@ span.hide, div.hide {
 	border-bottom: none;
 }
 
-
+/*edit mode */
+.blockmovetarget {
+	display: block;
+	height: 1em;
+	margin: 1em 0;
+	border: 2px dashed #d64d25;
+}
+.blockmovetarget:hover {
+	background: none;
+	border: 2px dashed #444;
+}
 

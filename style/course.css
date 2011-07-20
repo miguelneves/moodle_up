@@ -46,7 +46,6 @@
 	font-size: 16px;
 	text-transform: uppercase;
 	margin: 0;
-	text-decoration: underline;
 }
 .region-content > h2.main { margin-bottom: 20px; }
 .course-content .headingblock {
@@ -73,9 +72,14 @@
 }
 #region-main .section .content ul li{
 	list-style-type: none;
+	overflow: hidden;
 }
 #region-main .section .content ul li:before{
 	/*content: '\00BB ';*/ 
+}
+#region-main .section .content ul li a {
+	color: #d64d25;
+	border-bottom: 1px solid #444;
 }
 #region-main .section .content ul li .activityicon {
 	float: left; margin: 3px 5px 0 0;	
