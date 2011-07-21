@@ -96,14 +96,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 .boxaligncenter {
 	margin: 0 auto;
 }
-/*
- #intro.generalbox {
- font: 20px Tahoma, sans-serif;
- padding: 0;
- border-bottom: 2px solid #d64d25;
- margin: 0 0 20px 0;
- }
- */
+
 /* TABLES */
 
 .generaltable {
@@ -113,7 +106,8 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	background: #444;
 	color: #fff;
 	border-style: none;
-	font: 18px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-size: 18px;
 }
 .generaltable tbody tr {
 	border-bottom: 1px solid #E5E5E5;
@@ -165,7 +159,8 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	background: #444;
 	color: #fff;
 	border-style: none;
-	font: 18px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-size: 18px;
 }
 .path-mod-forum .forumheaderlist tbody tr {
 	border-bottom: 1px solid #e5e5e5;
@@ -179,32 +174,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 .path-mod-forum .forumheaderlist tbody td {
 	border-color: #E5E5E5;
 }
-/*
- .path-mod-forum  .forumheaderlist {
- border-style: none;
- border-bottom: 2px solid #444;
- }
- .path-mod-forum .forumheaderlist tr th,
- .path-mod-forum .forumheaderlist tr td {
- border-style: none;
- }
- .forumheaderlist thead {
- background: #444;
- color: #fff;
- border-style: none;
- }
- .forumheaderlist tbody tr {
- border-bottom: 1px solid #E5E5E5;
- }
- .forumheaderlist tbody tr:nth-child(odd) {
- background: #f7f7f7;
- }
- .forumheaderlist td {
- border-color: #E5E5E5;
- }
- .forumheaderlist .discussion .lastpost {
-
- }
  /* forum post */
 #page-mod-forum-discuss .discussioncontrols {
 	float: left;
@@ -253,7 +222,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 }
 .tabtree .tabrow0 li a {
 	border: 2px solid #E5E5E5;
-	;
 	padding: 5px;
 	background: #f7f7f7;
 	color: #777;
@@ -278,7 +246,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	z-index: 200;
 	position: relative;
 	border-bottom-color: #fff;
-	;
 }
 /*2nd level */
 .tabtree ul .here ul {
@@ -314,9 +281,9 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	display:none;
 }
 #megamenu {
-	/*	overflow: hidden;*/
 	clear: both;
-	font: 20px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-size: 20px;
 }
 #megamenu a {
 	color: #fff;
@@ -352,6 +319,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	font-size: 18px;
 	text-transform: uppercase;
 	display: block;
+	line-height: 1;
 }
 #megamenu .submenu a.menu-parent:after {
 	content: ' ▾';
@@ -378,7 +346,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 
 #megamenu .sub h4 {
 	margin: 0;
-	border-bottom
 	padding: 0 0 2px 0;
 	border-bottom: 2px solid #fff;
 }
@@ -387,8 +354,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	font-family: 'Droid Serif', Georgia, serif;
 	font-size: 13px;
 	padding: 2px 0;
-	list-style-type: none;
-	
+	list-style-type: none;	
 }
 #megamenu .sub li li:before { content: '\00BB '; }
 
