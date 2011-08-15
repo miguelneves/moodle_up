@@ -1,24 +1,274 @@
 $(document).ready(function() {
+	
 	//init
 	customMenu();
-	ariaMenu();
 	textIcons();
+	
 	if($('body').hasClass('editing')) {
 		editMode();
-	}
-	
-//	newPostModal();
-		
+	}		
 });
 
+function customMenu() {
+	var content = '';
+	
+	//remove images
+	$('.block_navigation a img').remove();
+	$('.block_settings a img').remove();
+	
+	//get content
+	var home = $('.block_navigation li.depth_2:eq(0) p');
+	
+	var myProfile = $('.block_navigation li.depth_2:eq(2)');
+	var myCourses = $('.block_navigation li.depth_2:eq(3)');
+	var sitePages = $('.block_navigation li.depth_2:eq(1)');
+	
+	var settingsName = $('.block_settings .header .title h2').html()
+	var settings = $('#settingsnav > ul');
+	settings = $('<li class="contains_branch"></li>').append(settings);
+	
+	if(myProfile.length){
+		content = '<li id="home" class="level-1" role="menuitem">' + home.html() + '</a></li>' 
+		+ parseItem(myProfile) 
+		+ parseItem(myCourses)
+		+ parseItem(sitePages)
+		+ parseItem(settings, settingsName);
 
-function customMenu(){
+		$('#page-header').append('<div id="megamenu"><ul id="menu" class="menu" role="menu">' + content + '</ul></div>');
+		
+		/* ==== Menu behaviour===== */
+		var menu = $('ul#menu');
+		
+		//add the role and default state attributes (some were already added)
+			if( !$('body').is('[role]') ){ $('body').attr('role','application'); }
+			//add role and class of menu
+			menu.attr({'role': 'menu'}).addClass('menu');
+			//set first node's tabindex to 0
+			menu.find('a:eq(0)').attr('tabindex','0');
+			//set all others to -1
+			menu.find('a:gt(0)').attr('tabindex','-1');
+			//add group role and menu-group-collapsed class to all ul children
+			menu.find('li.level-1 > ul').attr('role','group').addClass('menu-group-collapsed');
+			//add menuitem role to all li children
+			menu.find('li').attr('role','menuitem');
+			//find menu group parents
+			menu.find('li.level-1:has(ul)')
+					.attr('aria-expanded', 'false')
+					.find('>a')
+					.addClass('menu-parent menu-parent-collapsed');
+		//	menu.find('li.first-level > ul > li').attr('aria-expanded','true');
+			menu.find('li.level-1 > ul > li').has('ul').addClass('expanded');
+		
+		//bind custom events
+		$('#menu .sub').hide();
+		
+		menu.bind({
+			//expand a sublist
+			expand: function(event){
+				var target = $(event.target) || menu.find('a[tabindex=0]');
+				target.removeClass('menu-parent-collapsed');
+				target.siblings().hide().removeClass('menu-group-collapsed').slideDown(150, function(){
+					target.parent().attr('aria-expanded', 'true');
+				});
+			},
+			//collapse a menu node
+			collapse: function(event){
+				var target = $(event.target) || menu.find('a[tabindex=0]');
+				target.addClass('menu-parent-collapsed');
+				target.siblings().slideUp(150, function(){
+					target.parent().attr('aria-expanded', 'false');				
+					$(this).addClass('menu-group-collapsed');
+				});
+			},
+			toggle: function(event){
+				var target = $(event.target) || menu.find('a[tabindex=0]');
+				//check if target parent LI is collapsed
+				if( target.parent().is('[aria-expanded=false]') ){ 
+					//call expand function on the target
+					target.trigger('expand');
+				}
+				//otherwise, parent must be expanded
+				else{ 
+					//collapse the target
+					target.trigger('collapse');
+				}
+			},
+			//shift focus down one item	
+			traverseDown: function(event){
+				var target = $(event.target) || menu.find('a[tabindex=0]');
+				var targetLi = target.parent();
+				if(targetLi.is('[aria-expanded=true]') || targetLi.hasClass('expanded')){
+					target.next().find('a').eq(0).focus();
+				}
+				else if(targetLi.next().length) {
+					targetLi.next().find('a').eq(0).focus();
+				}	
+				else {				
+					targetLi.parents('li').next().find('a').eq(0).focus();
+				}
+			},
+			//shift focus up one item
+			traverseUp: function(event){
+				var target = $(event.target) || menu.find('a[tabindex=0]');
+				var targetLi = target.parent();
+					if(targetLi.prev().hasClass('expanded')){
+					targetLi.addClass('test');
+						targetLi.prev().find('li:last-child a').eq(0).focus();
+					}
+					else if(targetLi.prev().length){
+						targetLi.prev().find('a').eq(0).focus();
+					}
+				
+				else { 				
+					targetLi.parents('li:eq(0)').find('a').eq(0).focus();
+				}
+			},
+			//clicks and presses
+			focus: function(event){
+					//deactivate previously active menu node, if one exists
+					menu.find('[tabindex=0]').attr('tabindex','-1').removeClass('active');
+					//assign 0 tabindex to focused item
+					$(event.target).attr('tabindex','0').addClass('active');
+					//if($('li.first-child').hasClass('menu-item-active') && $('li.first-child').not('[aria-expanded=true]'))
+					$(event.target).parent().siblings('li.level-1').find('> a').trigger('collapse');
+				//	$(event.target).parent().next('li.level-1').find('> a').trigger('collapse');
+			},
+			click: function(event){
+				//save reference to event target
+				var target = $(event.target);
+				//check if target is a menu node
+				if( target.is('a.menu-parent') ){
+					target.trigger('toggle');
+					target.eq(0).focus();
+					//return click event false because it's a menu node (folder)
+					return false;
+				}
+			},
+			keydown: function(event){	
+				var target = menu.find('a[tabindex=0]');
+				//check for arrow keys
+				if(event.keyCode == 32 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40){
+					//if key is left arrow 
+					if(event.keyCode == 32){ 
+						//if list is expanded
+						if(target.parent().is('[aria-expanded=true]')){
+							target.trigger('collapse');
+						}
+						//try traversing to parent
+						else {
+							target.parents('li:eq(1)').find('a').eq(0).focus();
+						}	
+					}
+				}
+				//if key is right arrow
+				if(event.keyCode == 32){ 
+					//if list is collapsed
+					if(target.parent().is('[aria-expanded=false]')){
+						target.trigger('expand');
+					}
+				}
+				//if key is up arrow
+				if(event.keyCode == 38){ 
+					target.trigger('traverseUp');
+				}
+				//if key is down arrow
+				if(event.keyCode == 40){ 
+					target.trigger('traverseDown');
+				}
+				//return any of these keycodes false
+				return false;
+			}
+		});
+	
+		//remove menu em click outsite menu
+		$(document.body).bind('click', function() {
+			$('a.menu-parent').trigger('collapse');
+		});
+		$('#menu .level-1 .sub').bind('click', function(ev) {
+			ev.stopPropagation();
+		});
+	}
+	
+	
+}
+//create menu branch (use 'li' as argument)
+//can use a custom name as argument
+function parseItem(item, name){
+	//test if received a name as input
+	if(isNaN(name)){
+		var level = 0;
+	} else {
+		var level = (name || 0);
+	}
+	
+	level++;
+	
+	var h4 = $('> p a, > p > span', item);
+	var list = $('> ul > li', item);
+	
+	//define list id
+	var id = h4.text().replace(/ /g,'-');
+	id = id.toLowerCase();
+	
+	//convert h4 to html
+	h4 = h4.html() || name;
+	
+	if (level == 1)
+		h4 = '<a href="#" tabindex="-1" class="menu-parent menu-parent-collapsed">' + h4 + '</a>';
+	else
+		h4 = '<a href="#" tabindex="-1"><h4>' + h4 + '</h4></a>';
+
+	//define list content
+	var branchContent = new Array();
+	var noBranchContent = '';	
+	var i = 0;
+	
+	$(list).each( function(index){
+		if($(this).hasClass('contains_branch') && !$(this).hasClass('type_course')) {
+			branchContent[i] = parseItem(this, level)	
+			i++;
+		} else {
+			noBranchContent += '<li role="menuitem">' + $('> p', this).html() + '</li>';		
+		}		
+	});
+	
+	if(!$(this, list).hasClass('type_course')) {
+		if (level == 1)
+			noBranchContent = '<li class="general"><ul>' + noBranchContent + '</ul></li>';
+	}
+	//output only filled elements
+	branchTemp = "";
+	for (var i=0; i < branchContent.length; i++) {
+		if (branchContent[i] != null)
+			branchTemp += branchContent[i];
+	};
+
+	branchContent = branchTemp
+	
+	branch = noBranchContent + branchContent;
+	
+	//set lists
+	if (level == 1)
+		list = '<ul class="sub menu-group-collapsed" role="group">' + branch + '</ul>';
+	else
+		list = '<ul>' + branch +  '</ul>';
+
+	if (level == 1)
+		content = '<li id="' +  id + '" class="level-' + level + '" role="menuitem">' + h4 + list +  '</li>';
+	else
+		content = '<li class="level-' + level + '" role="menuitem expanded">' + h4 + list +  '</li>';
+	
+	return content;
+}
+
+
+function customMenu2(){
 	
 	//remove default tree view
 	$('.block_navigation .block_tree').removeClass();
 	$('.block_settings .block_tree').removeClass();
 	
-	//remove images
+	//removeove images
 	$('.block_navigation a img').remove();
 	$('.block_settings a img').remove();
 	
@@ -321,156 +571,3 @@ function editMode(){
 	});
 }
 
-
-function ariaMenu(){
-var menu = $('ul#menu');
-//add the role and default state attributes
-	//add the role and default state attributes
-		if( !$('body').is('[role]') ){ $('body').attr('role','application'); }
-		//add role and class of menu
-		menu.attr({'role': 'menu'}).addClass('menu');
-		//set first node's tabindex to 0
-		menu.find('a:eq(0)').attr('tabindex','0');
-		//set all others to -1
-		menu.find('a:gt(0)').attr('tabindex','-1');
-		//add group role and menu-group-collapsed class to all ul children
-		menu.find('li.first-level > ul').attr('role','group').addClass('menu-group-collapsed');
-		//add menuitem role to all li children
-		menu.find('li').attr('role','menuitem');
-		//find menu group parents
-		menu.find('li.first-level:has(ul)')
-				.attr('aria-expanded', 'false')
-				.find('>a')
-				.addClass('menu-parent menu-parent-collapsed');
-	//	menu.find('li.first-level > ul > li').attr('aria-expanded','true');
-		menu.find('li.first-level > ul > li').addClass('expanded');
-
-//bind custom events
-menu
-	//expand a sublist
-	.bind('expand',function(event){
-				var target = $(event.target) || menu.find('a[tabindex=0]');
-				target.removeClass('menu-parent-collapsed');
-				target.next().hide().removeClass('menu-group-collapsed').slideDown(150, function(){
-					$(this).removeAttr('style');
-					target.parent().attr('aria-expanded', 'true');
-				});
-			})
-	//collapse a menu node
-	.bind('collapse',function(event){
-				var target = $(event.target) || menu.find('a[tabindex=0]');
-				target.addClass('menu-parent-collapsed');
-				target.next().slideUp(150, function(){
-					target.parent().attr('aria-expanded', 'false');
-					
-					$(this).addClass('menu-group-collapsed').removeAttr('style');
-				});
-			})
-	.bind('toggle',function(event){
-				var target = $(event.target) || menu.find('a[tabindex=0]');
-				//check if target parent LI is collapsed
-				if( target.parent().is('[aria-expanded=false]') ){ 
-					//call expand function on the target
-					target.trigger('expand');
-				}
-				//otherwise, parent must be expanded
-				else{ 
-					//collapse the target
-					target.trigger('collapse');
-				}
-			});
-			//shift focus down one item		
-			menu.bind('traverseDown',function(event){
-				var target = $(event.target) || menu.find('a[tabindex=0]');
-				var targetLi = target.parent();
-				if(targetLi.is('[aria-expanded=true]') || targetLi.hasClass('expanded')){
-					target.next().find('a').eq(0).focus();
-				}
-				else if(targetLi.next().length) {
-					targetLi.next().find('a').eq(0).focus();
-				}	
-				else {				
-					targetLi.parents('li').next().find('a').eq(0).focus();
-				}
-				//console.log(targetLi.parents('li'));
-							});
-				//shift focus up one item
-			menu.bind('traverseUp',function(event){
-				var target = $(event.target) || menu.find('a[tabindex=0]');
-				var targetLi = target.parent();
-					if(targetLi.prev().hasClass('expanded')){
-					targetLi.addClass('test');
-						targetLi.prev().find('li:last-child a').eq(0).focus();
-					}
-					else if(targetLi.prev().length){
-						targetLi.prev().find('a').eq(0).focus();
-					}
-				
-				else { 				
-					targetLi.parents('li:eq(0)').find('a').eq(0).focus();
-				}
-
-			});
-			
-	//clicks and presses
-			menu.focus(function(event){
-				//deactivate previously active menu node, if one exists
-				menu.find('[tabindex=0]').attr('tabindex','-1').removeClass('menu-item-active');
-				//assign 0 tabindex to focused item
-				$(event.target).attr('tabindex','0').addClass('menu-item-active');
-				//if($('li.first-child').hasClass('menu-item-active') && $('li.first-child').not('[aria-expanded=true]'))
-				$(event.target).parent().prev('li.first-level').find('> a').trigger('collapse');
-			});
-			menu.click(function(event){
-				//save reference to event target
-				var target = $(event.target);
-				//check if target is a menu node
-				if( target.is('a.menu-parent') ){
-					target.trigger('toggle');
-					target.eq(0).focus();
-					//return click event false because it's a menu node (folder)
-					return false;
-				
-				}
-				
-			});
-			menu.keydown(function(event){	
-					var target = menu.find('a[tabindex=0]');
-					//check for arrow keys
-					if(event.keyCode == 32 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40){
-						//if key is left arrow 
-						if(event.keyCode == 32){ 
-							//if list is expanded
-							if(target.parent().is('[aria-expanded=true]')){
-								target.trigger('collapse');
-							}
-							//try traversing to parent
-							else {
-								target.parents('li:eq(1)').find('a').eq(0).focus();
-							}	
-						}
-						}
-						//if key is right arrow
-						if(event.keyCode == 32){ 
-							//if list is collapsed
-							if(target.parent().is('[aria-expanded=false]')){
-								target.trigger('expand');
-							}
-						
-						}
-							//if key is up arrow
-						if(event.keyCode == 38){ 
-							target.trigger('traverseUp');
-						}
-						
-						//if key is down arrow
-						if(event.keyCode == 40){ 
-							target.trigger('traverseDown');
-						}
-						//return any of these keycodes false
-						return false;
-						
-	
-						});
-
-}

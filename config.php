@@ -171,3 +171,6 @@ $THEME->larrow = '«';
 
 // Overrides the right arrow image used throughout Moodle
 $THEME->rarrow = '»';
+
+// enable renderes
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';

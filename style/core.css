@@ -8,8 +8,8 @@
  */
 
 /* prevent sidebar from showing */
-.block_navigation ,
-.block_settings { display: none; }
+/*.block_navigation ,
+.block_settings { display: none; }*/
 
 .clearer, .clearfix {
 	clear: both;
@@ -277,9 +277,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	display: none;
 }
 /* MEGAMENU*/
-.menu ul.menu-group-collapsed {
-	display:none;
-}
 #megamenu {
 	clear: both;
 	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
@@ -295,25 +292,25 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 #megamenu ul {
 	margin: 0;
 }
-#megamenu .first-level {
+#megamenu .level-1 {
 	float: left;
 	list-style-type: none;
 	border-right: 2px solid #fff;
 	background: hsla(0, 0%, 0%, 0.4);
 }
-#megamenu .first-level a:hover,
-#megamenu .first-level a:focus {
+#megamenu .level-1 a:hover,
+#megamenu .level-1 a:focus {
 /*	background: #60310D !important;*/
 }
-#megamenu .first-level[aria-expanded="true"] {
+#megamenu .level-1[aria-expanded="true"] {
 	background: #60310D;
 }
  
-#megamenu .first-level.active {
+#megamenu .level-1.active {
 	background: #60310D;
 	color: #fff;
 }
-#megamenu .first-level > a {
+#megamenu .level-1 > a {
 	margin: 0;
 	padding: 5px 20px;
 	font-size: 18px;
@@ -337,32 +334,32 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	max-width: 672px;
 }
 /*
-#megamenu #myProfile .sub { margin-left: -90px; }
-#megamenu #myCourses .sub { margin-left: -202px; }
-#megamenu #settings .sub { margin-left: -322px; }
+#menu #myProfile .sub { margin-left: -90px; }
+#menu #myCourses .sub { margin-left: -202px; }
+#menu #settings .sub { margin-left: -322px; }
 */
-#megamenu #myCourses .sub { margin-left: -115px; }
-#megamenu #settings .sub { margin-left: -233px; }
+/*#menu #myCourses .sub { margin-left: -115px; }
+#menu #settings .sub { margin-left: -233px; }*/
 
-#megamenu .sub h4 {
+#menu .sub h4 {
 	margin: 0;
 	padding: 0 0 2px 0;
 	border-bottom: 2px solid #fff;
 }
-#megamenu .sub li li {
+#menu .sub li li {
 	color: #fff;
 	font-family: 'Droid Serif', Georgia, serif;
 	font-size: 13px;
 	padding: 2px 0;
 	list-style-type: none;	
 }
-#megamenu .sub li li:before { content: '\00BB '; }
+#menu .sub li li:before { content: '\00BB '; }
 
-#megamenu .sub li li a:hover,
-#megamenu .sub li li a:focus {
+#menu .sub li li a:hover,
+#menu .sub li li a:focus {
 	text-decoration: underline;
 }
-#megamenu .sub > li {
+#menu .sub > li {
 	float: left;
 	display: inline-block;
 	margin: 5px;
