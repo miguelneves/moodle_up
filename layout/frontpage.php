@@ -45,15 +45,16 @@ echo $OUTPUT->doctype() ?>
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
 		        	<img src="<?php echo $OUTPUT->pix_url('logo_fcpe', 'theme'); ?>" alt="logo_fcpe" />
 		        </h1>
-		   <?php if ($hasheading) { ?>  
-		    	<?php if ($haslogininfo) {
-		            echo $OUTPUT->login_info();
-		        }
+		        
+		    <?php 
+		    	//if ($haslogininfo) {
+		    		echo $OUTPUT->login_info();
+		    	// }
 		        if (!empty($PAGE->layout_options['langmenu'])) {
 		            echo $OUTPUT->lang_menu();
-		        } ?>
+		    } ?>
 		     
-	        
+			<?php if ($hasheading) { ?>  
 		        <?php if($hasheadingmenu) { ?>
 			        <div class="headermenu">
 			        	<?php echo $PAGE->headingmenu; ?>
@@ -109,7 +110,11 @@ echo $OUTPUT->doctype() ?>
                         <div class="region-content">
                           <!-- <?php echo core_renderer::MAIN_CONTENT_TOKEN ?> -->
                            
-							<!-- frontpage static content -->
+							<!-- frontpage static content 
+								
+								REMOVER OU ALTERAR PELO CORRECTO
+								
+								-->
 							<div id="frontpage-content">
 								<div class="frontblock">
 	  								<h2 class="frontblock fronthead p1">Welcome to Moodle U.PORTO!</h2>
