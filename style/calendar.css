@@ -6,7 +6,7 @@
 }
 .minicalendar th,
 .minicalendar td  {
-	padding: 2px 4px;
+	padding: 2px 2px;
 }
 .minicalendar .weekdays {
 	font: 16px normal 'Yanone Kaffeesatz', Tahoma, sans-serif;

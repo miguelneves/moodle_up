@@ -34,6 +34,10 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />  
     <?php echo $OUTPUT->standard_head_html() ?>
     
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="http://localhost/moodle/theme/up/style/ie.css" />
+	<![endif]-->
+    
     <!-- google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:extralight,light,regular,bold' rel='stylesheet' type='text/css'>
@@ -48,7 +52,7 @@ echo $OUTPUT->doctype() ?>
     		<?php if ($hasheading) { ?>
 		        <h1 class="headermain">
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
-		        	<img src="<?php echo $OUTPUT->pix_url('logo_fcpe', 'theme'); ?>" alt="logo_fcpe" />
+		        	<a href="/"><img src="<?php echo $OUTPUT->pix_url('header_up', 'theme'); ?>" alt="logo_fcpe" /></a>
 		        </h1>
 		        
 		    	<?php if ($haslogininfo) {

@@ -156,8 +156,9 @@ $THEME->layouts = array(
         'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true),
     ),
     // The pagelayout used for reports
+    // http://moodle-testbed.up.pt/moodle2.x/mod/data/templates.php?d=5&mode=listtemplate
     'report' => array(
-        'file' => 'report.php',
+        'file' => 'general.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),

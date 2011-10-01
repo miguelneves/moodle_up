@@ -30,6 +30,10 @@ echo $OUTPUT->doctype() ?>
     <meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
     
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="http://localhost/moodle/theme/up/style/ie.css" />
+	<![endif]-->
+	
      <!-- google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&v2' rel='stylesheet' type='text/css'>
@@ -43,11 +47,11 @@ echo $OUTPUT->doctype() ?>
     		
 		        <h1 class="headermain">
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
-		        	<img src="<?php echo $OUTPUT->pix_url('logo_fcpe', 'theme'); ?>" alt="logo_fcpe" />
+		        	<a href="/"><img src="<?php echo $OUTPUT->pix_url('header_up', 'theme'); ?>" alt="logo_fcpe" /></a>
 		        </h1>
 		        
 		    <?php 
-		    	//if ($haslogininfo) {
+		    	// if ($haslogininfo) {
 		    		echo $OUTPUT->login_info();
 		    	// }
 		        if (!empty($PAGE->layout_options['langmenu'])) {

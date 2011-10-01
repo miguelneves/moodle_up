@@ -24,8 +24,13 @@
 	margin: 0;
 }
 .unlist li {
+	clear: both;
 	list-style-type: none;
 	list-style-position: inside;
+}
+.unlist li img {
+	float: left;
+	margin: 3px 5px 0 0;
 }
 .unlist li:before {
 /*	content: '\00BB ';*/
@@ -38,7 +43,7 @@
 	padding: 10px 0;
 }
 .unlist .post .head {
-	color: #7f2e16;
+	color: #57492a;
 }
 
 /* my private files */

@@ -16,11 +16,11 @@
  * middle grey: #777 || #DDD
  * light grey #E5E5E5
  * 
- * red: #d64d25
- * light red: #f9e5de
- * middle red: #e89279
- * dark red: #7f2e16
- * red hover: #fefcfb
+ * red: #857040 => 857040
+ * light red: #f9e5de => b59d65
+ * middle red: #e89279 => a78d51
+ * dark red: #7f2e16 => 57492a
+ * red hover: #fefcfb => fdfcfa
  * 
  */
 
@@ -78,8 +78,14 @@
 	/*content: '\00BB ';*/ 
 }
 #region-main .section .content ul li a {
-	color: #d64d25;
+	color: #857040;
 	border-bottom: 1px solid #444;
+}
+#region-main .section .content ul li a:hover {
+	color: #444;
+}
+#region-main .section .content ul li a:active {
+	color: #fff;
 }
 #region-main .section .content ul li .activityicon {
 	float: left; margin: 3px 5px 0 0;	
@@ -133,6 +139,7 @@
 */
 
 /* course edit mode */
+/*
 .editing .course-content .section li { border: 1px solid #fff; padding-left: 10px; }
 .editing .course-content .section li.edit-active,
 .editing .course-content .section li:hover {
@@ -160,7 +167,7 @@
 .editing .course-content .section li .mod-indent { position: relative; }
 .editing .course-content .section li .mod-indent .edit-toggle { position: absolute; right: 5px; color: #777 !important; }
 
-
+*/
 /* side */
 .editing .left { margin: 8px 5px 0 0; }
 .editing .left div { display: none; }
@@ -181,7 +188,7 @@
 	text-decoration: none;
 }
 #region-pre a:visited { }
-#region-pre a:hover { color: #d64d25; }
+#region-pre a:hover { color: #857040; }
 #region-pre a:active { color: #fff; }
 
 /* table of content */
@@ -195,8 +202,8 @@
 #courseInfo .list-header h4 {
 	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
 	font-size: 18px;
-	color: #d64d25;
-	border-bottom: 1px solid #e89279;
+	color: #857040;
+	border-bottom: 1px solid #7a6f3a;
 	line-height: 1.2;
 }
 #tableContents #tc {
@@ -225,7 +232,7 @@
 /*
 .edit-summary {
 	margin: 10px 0 0 0;
-	background: #D64D25;
+	background: #857040;
 	padding: 0 4px;
 	color: #fff;
 	border-radius: 2px;

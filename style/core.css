@@ -7,9 +7,12 @@
  br { display: none !important; }
  */
 
+
+/* to be fixed... */
+.notloggedin .logininfo { display: none; }
 /* prevent sidebar from showing */
-/*.block_navigation ,
-.block_settings { display: none; }*/
+.block_navigation,
+.block_settings { display: none; }
 
 .clearer, .clearfix {
 	clear: both;
@@ -21,26 +24,26 @@ th, td {
 	border: none;
 }
 ::selection {
-	background: #f9e5de;
+	background: #fdfcfa;
 }
 /* course links*/
 a {
-	color: #d64d25;
+	color: #857040;
 	border-bottom: 1px solid #444;
 }
 a:visited {
-	color: #e89279;
+	color: #7a6f3a;
 	border-bottom: 1px solid #777;
 }
 a:hover {
 	color: #444;
 	border-bottom: 1px solid #444;
-	background: #fefcfb;
+	background: #fdfcfa;
 }
 a:active {
 	color: #fff;
 	border-bottom: 1px solid #444;
-	background: #d64d25;
+	background: #857040;
 }
 .helplink a {
 	border: none;
@@ -64,22 +67,22 @@ a:active {
 input[type=submit], button, input[type=button], .button {
 	border: none;
 	color: #fff;
-	background: #D64D25;
+	background: #857040;
 	padding: 4px;
 	border-radius: 2px;
 	border-bottom: 1px solid #777;
 	border-right: 1px solid #777;
 }
 input[type=submit]:visited, button:visited, input[type=button]:visited, .button:visited {
-	background: #D64D25;
+	background: #57492a;
 }
 input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover {
-	background: #7f2e16;
+	background: #57492a;
 	color: #fff;
 	cursor: pointer;
 }
 input[type=submit]:active, button:active, input[type=button]:active, .button:active {
-	background: #e89279;
+	background: #b59d65;
 	cursor: pointer;
 }
 /* GENERAL */
@@ -116,7 +119,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	background: #f7f7f7;
 }
 .generaltable tbody tr:hover {
-	background: #f9e5de;
+	background: #fdfcfa;
 }
 .generaltable td {
 	border-color: #E5E5E5;
@@ -142,14 +145,14 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	border: none;
 }
 .path-mod-forum .forumheaderlist a:visited {
-	color: #d64d25;
+	color: #857040;
 }
 .path-mod-forum .forumheaderlist a:hover {
 	background: none;
 	color: #444;
 }
 .path-mod-forum .forumheaderlist a:active {
-	background: #d64d25 ;
+	background: #857040 ;
 	color: #fff;
 }
 .path-mod-forum .forumheaderlist tr th, .path-mod-forum .forumheaderlist tr td {
@@ -169,7 +172,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	background: #f7f7f7;
 }
 .path-mod-forum .forumheaderlist tbody tr:hover {
-	background: #f9e5de;
+	background: #fdfcfa;
 }
 .path-mod-forum .forumheaderlist tbody td {
 	border-color: #E5E5E5;
@@ -187,8 +190,8 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 }
 .forumpost {
 	border: none;
-	border-top: 2px solid #e89279;
-	border-bottom: 1px solid #f9e5de;
+	border-top: 2px solid #7a6f3a;
+	border-bottom: 1px solid #fdfcfa;
 	margin: 0;
 }
 .forumpost .header {
@@ -220,6 +223,8 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	width: 100%;
 	margin-top: -4px;
 }
+.gecko .tabtree .tabrow0 .here .empty { margin-top: 0; } /* rever */
+
 .tabtree .tabrow0 li a {
 	border: 2px solid #E5E5E5;
 	padding: 5px;
@@ -292,22 +297,25 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 #megamenu ul {
 	margin: 0;
 }
+/*#megamenu #site-pages > ul { margin-left: -109px;}*/
+/*#megamenu #settings > ul { margin-left: -109px;}*/
+
 #megamenu .level-1 {
 	float: left;
 	list-style-type: none;
 	border-right: 2px solid #fff;
-	background: hsla(0, 0%, 0%, 0.4);
+	background: #57492a;
 }
 #megamenu .level-1 a:hover,
 #megamenu .level-1 a:focus {
 /*	background: #60310D !important;*/
 }
 #megamenu .level-1[aria-expanded="true"] {
-	background: #60310D;
+	background: #40361f;
 }
  
 #megamenu .level-1.active {
-	background: #60310D;
+	background: #40361f;
 	color: #fff;
 }
 #megamenu .level-1 > a {
@@ -318,6 +326,9 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	display: block;
 	line-height: 1;
 }
+#megamenu .level-1 > a:hover {
+	background: #40361f;
+}
 #megamenu .submenu a.menu-parent:after {
 	content: ' ▾';
 }
@@ -327,10 +338,10 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 
 #megamenu .sub {
 	position: absolute;
-	background: rgba(90, 40, 3, 0.95);
-	z-index: 9999;
+	background: #40361f;
+	z-index: 999999;
 	padding: 0 5px 5px;
-	border-bottom: 2px solid #FF6600;
+	border-bottom: 2px solid #857040;
 	max-width: 672px;
 }
 /*
@@ -353,7 +364,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	padding: 2px 0;
 	list-style-type: none;	
 }
-#menu .sub li li:before { content: '\00BB '; }
+/*#menu .sub li li:before { content: '\00BB '; }*/
 
 #menu .sub li li a:hover,
 #menu .sub li li a:focus {
@@ -365,15 +376,19 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	margin: 5px;
 	width: 214px;
 }
+
+#menu .sub > .general {
+	margin-top: 12px;
+}
 /* FORMS */
 
 .mform {
 }
 .mform fieldset.clearfix {
-	border-bottom: 2px solid #e89279;
+	border-bottom: 2px solid #7a6f3a;
 }
 .mform fieldset.clearfix  legend {
-	border-bottom: 1px solid #f9e5de;
+	border-bottom: 1px solid #fdfcfa;
 	margin: 0 10px 10px 0;
 	float: left;
 	width: 100%;
@@ -399,7 +414,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	width: 100%;
 }
 .mform fieldset.clearfix .required .fitemtitle {
-	color: #7f2e16 !important;
+	color: #857040 !important;
 }
 span.hide, div.hide {
 	display: none;
@@ -410,9 +425,9 @@ span.hide, div.hide {
 }
 .filemanager-container {
 	padding: 5px;
-	background: #f9e5de;
+	background: #fdfcfa;
 	border-radius: 2px;
-	border: 1px solid #e89279;
+	border: 1px solid #7a6f3a;
 	margin-top: 10px;
 }
 /* user profile */
@@ -430,7 +445,7 @@ span.hide, div.hide {
 	display: block;
 	height: 1em;
 	margin: 1em 0;
-	border: 2px dashed #d64d25;
+	border: 2px dashed #857040;
 }
 .blockmovetarget:hover {
 	background: none;

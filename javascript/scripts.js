@@ -5,7 +5,7 @@ $(document).ready(function() {
 	tableContents();
 	textIcons();	
 	if($('body').hasClass('editing')) {
-		editMode();
+		//editMode();
 	}		
 });
 
@@ -151,12 +151,14 @@ function customMenu() {
 			keydown: function(event){	
 				var target = menu.find('a[tabindex=0]');
 				//check for arrow keys
-				if(event.keyCode == 32 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40){
+				if(event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40 || event.keyCode == 49 || event.keyCode == 32 || event.keyCode == 9){
 					//if key is left arrow 
-					if(event.keyCode == 32){ 
+					if(event.keyCode == 37 || event.keyCode == 32){ 
 						//if list is expanded
-						if(target.parent().is('[aria-expanded=true]')){
+						if(target.parents().is('[aria-expanded=true]')){
 							target.trigger('collapse');
+							$('li[aria-expanded=true] > a').focus();
+							$('a.menu-parent').trigger('collapse');
 						}
 						//try traversing to parent
 						else {
@@ -165,9 +167,9 @@ function customMenu() {
 					}
 				}
 				//if key is right arrow
-				if(event.keyCode == 32){ 
+				if(event.keyCode == 39 || event.keyCode == 32){ 
 					//if list is collapsed
-					if(target.parent().is('[aria-expanded=false]')){
+					if(target.parents().is('[aria-expanded=false]')){
 						target.trigger('expand');
 					}
 				}
@@ -179,8 +181,10 @@ function customMenu() {
 				if(event.keyCode == 40){ 
 					target.trigger('traverseDown');
 				}
+				if(event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40 || event.keyCode == 49 || event.keyCode == 32) {
 				//return any of these keycodes false
 				return false;
+				} 
 			}
 		});
 	
@@ -210,7 +214,7 @@ function parseItem(item, name){
 	var list = $('> ul > li', item);
 	
 	//define list id
-	var id = h4.text().replace(/ /g,'-');
+	var id = h4.text().replace(/ /g,'-') || name;
 	id = id.toLowerCase();
 	
 	//convert h4 to html
@@ -292,8 +296,8 @@ function tableContents(){
 		if($(tc).length && outline != null)	
 			$('#region-pre .region-content').append('<div id="tableContents"><h4>' + outline + '</h4><ul>' + tc + '</ul></div>');
 		//add course info
-		if($(courseInfo).length)	
-			$('#region-pre .region-content').append('<div id="courseInfo"><ul>' + getBranch(courseInfo) + '</ul></div>');
+		//if($(courseInfo).length)	
+		//	$('#region-pre .region-content').append('<div id="courseInfo"><ul>' + getBranch(courseInfo) + '</ul></div>');
 	}
 	
 	//go to link
