@@ -57,3 +57,9 @@
 .block_private_files .ygtvln {
 	display: none;
 }
+
+/* edit mode */
+/*Os icons de edição dos blocos parecem-me demasiado juntos. Acho que se torna desconfortável e difícil de aceder*/
+a.icon {
+	padding: 0 5px 0 0;
+}

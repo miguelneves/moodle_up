@@ -117,11 +117,10 @@ h1, h2, h3, h4, h5, h6 {
 #header-login .loginform input[type=submit] { background: #7a663a; }
 #header-login .loginform input[type=submit]:hover { background: #857040; }
 #header-login .loginform input[type=submit]:active { background: #c0ab7c; }
-#header-login .footer a { margin-top: -25px; float: left; color: #444;}
+#header-login .footer a { margin-top: -25px; float: left; color: #444; color: #fff; }
 #header-login .footer a:visited { color: #857040; }
 #header-login .footer a:hover { color: #fff; background: inherit; }
 #header-login .footer a:active { background: #857040; }
-
 
 .headermenu {
     float: right;
