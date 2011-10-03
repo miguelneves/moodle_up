@@ -3,7 +3,7 @@ $(document).ready(function() {
 	//init
 	customMenu();
 	tableContents();
-	textIcons();	
+	//textIcons();	
 	if($('body').hasClass('editing')) {
 		//editMode();
 	}		
@@ -30,7 +30,7 @@ function customMenu() {
 	var settingsName = $('.block_settings .header .title h2').html()
 	var settings = $('#settingsnav > ul');
 	settings = $('<li class="contains_branch"></li>').append(settings);
-	
+
 	if(myProfile.length){
 		content = '<li id="home" class="level-1" role="menuitem">' + home.html() + '</a></li>' 
 		+ parseItem(myProfile) 
@@ -231,7 +231,8 @@ function parseItem(item, name){
 	var i = 0;
 
 	$(list).each( function(index){
-		if($(this).hasClass('contains_branch') && !$(this).hasClass('type_course')) {
+		//if($(this).hasClass('contains_branch') && !$(this).hasClass('type_course')) {
+		if($(this).hasClass('contains_branch') && !$(this).hasClass('depth_3')) {
 			branchContent[i] = parseItem(this, level)	
 			i++;
 		} else {
