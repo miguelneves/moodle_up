@@ -51,8 +51,7 @@ echo $OUTPUT->doctype() ?>
 		        </h1>
 		        
 		    <?php 
-	    		echo $OUTPUT->login_info();
-				echo $OUTPUT->lang_menu();
+		  		echo $OUTPUT->login_info();
 		    ?>
 		     
 			<?php if ($hasheading) { ?>  
@@ -61,10 +60,12 @@ echo $OUTPUT->doctype() ?>
 			        	<?php echo $PAGE->headingmenu; ?>
 			        	
 			        </div>
+			       
 		        <?php } ?>
 	        <?php } ?>
-	        
+
 	        <?php if ($hascustommenu) { ?>
+	        	
 	        <div id="custommenu"><?php echo $custommenu; ?></div>
 	        <?php } ?>
 	        
@@ -97,6 +98,9 @@ echo $OUTPUT->doctype() ?>
 				
 				?>
 	        </div>
+	        <?php 
+	        	echo $OUTPUT->lang_menu();
+	        ?>
 	    </div>
     </div>
     
