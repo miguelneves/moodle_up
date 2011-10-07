@@ -51,12 +51,9 @@ echo $OUTPUT->doctype() ?>
 		        </h1>
 		        
 		    <?php 
-		    	// if ($haslogininfo) {
-		    		echo $OUTPUT->login_info();
-		    	// }
-		        if (!empty($PAGE->layout_options['langmenu'])) {
-		            echo $OUTPUT->lang_menu();
-		    } ?>
+	    		echo $OUTPUT->login_info();
+				echo $OUTPUT->lang_menu();
+		    ?>
 		     
 			<?php if ($hasheading) { ?>  
 		        <?php if($hasheadingmenu) { ?>
