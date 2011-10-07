@@ -341,7 +341,23 @@ ul.section.img-text {
 	color: #857040;
 }
 
+/* login page */
 
+#page-login-index #page-content #region-main #region-main,
+#page-login-index #page-content #region-main-wrap,
+#page-login-index #page-content #region-main {
+	width: 100%;
+}
+
+.loginpanel, .signuppanel {
+	float: left;
+}
+.loginpanel {
+	width: 40%;
+}
+.signuppanel {
+	width: 60%;
+}
 
 
 
