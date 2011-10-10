@@ -297,23 +297,15 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 #megamenu ul {
 	margin: 0;
 }
-/*#megamenu #site-pages > ul { margin-left: -109px;}*/
-/*#megamenu #settings > ul { margin-left: -109px;}*/
-
 #megamenu .level-1 {
 	float: left;
 	list-style-type: none;
 	border-right: 2px solid #fff;
 	background: #57492a;
 }
-#megamenu .level-1 a:hover,
-#megamenu .level-1 a:focus {
-/*	background: #60310D !important;*/
-}
 #megamenu .level-1[aria-expanded="true"] {
 	background: #40361f;
 }
- 
 #megamenu .level-1.active {
 	background: #40361f;
 	color: #fff;
@@ -344,19 +336,24 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	border-bottom: 2px solid #857040;
 	max-width: 672px;
 }
-/*
-#menu #myProfile .sub { margin-left: -90px; }
-#menu #myCourses .sub { margin-left: -202px; }
-#menu #settings .sub { margin-left: -322px; }
-*/
-/*#menu #myCourses .sub { margin-left: -115px; }
-#menu #settings .sub { margin-left: -233px; }*/
 
-#menu .sub h4 {
-	margin: 0;
+#menu .sub .level-2 h4 {
+	margin: 2px 0 4px;
 	padding: 0 0 2px 0;
 	border-bottom: 2px solid #fff;
+	line-height: 1;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 17px;
 }
+#menu .sub .level-3 h4 {
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+	border-bottom-width: 1px;
+	text-transform: none;
+	font-size: 17px;
+	margin: 4px 0 2px;
+}
+
 #menu .sub li li {
 	color: #fff;
 	font-family: 'Droid Serif', Georgia, serif;
@@ -365,7 +362,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	list-style-type: none;	
 	line-height: 1.4;
 }
-/*#menu .sub li li:before { content: '\00BB '; }*/
 
 #menu .sub li li a:hover,
 #menu .sub li li a:focus {
@@ -381,6 +377,8 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 #menu .sub > .general {
 	margin-top: 12px;
 }
+
+
 /* FORMS */
 
 .mform {
