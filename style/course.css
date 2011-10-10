@@ -83,7 +83,7 @@
 }
 #region-main .section .content ul li a {
 	color: #857040;
-	border-bottom: 1px solid #444;
+	text-decoration: underline;
 }
 #region-main .section .content ul li a:hover {
 	color: #444;
