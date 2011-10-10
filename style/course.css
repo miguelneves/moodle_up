@@ -40,11 +40,13 @@
 	padding: 0;
 }
 .course-content {
-	font: 13px/1.8 normal 'Droid Serif', Georgia, serif	;
+	font: 13px/1.8 'Droid Serif', Georgia, serif;
 }
 .region-content h2.main {
 	font-size: 16px;
 	text-transform: uppercase;
+	font-weight: normal !important;
+	color: red;
 	margin: 0;
 }
 .region-content > h2.main { margin-bottom: 20px; }
@@ -70,7 +72,7 @@
 	margin: 0;
 }
 #region-main .section .content h3 {
-	font: 20px bold 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font: 20px bold 'PT Sans Narrow', Tahoma, sans-serif;
 	padding: 5px 0;
 	margin: 0;
 }
@@ -94,7 +96,7 @@
 #region-main .section .content ul li .activityicon {
 	float: left; margin: 3px 5px 0 0;	
 }
-#region-main .section .left {font: 21px bold 'Yanone Kaffeesatz', Tahoma, sans-serif; margin: 4px 4px 0 0; }
+#region-main .section .left {font: 21px bold 'PT Sans Narrow', Tahoma, sans-serif; margin: 4px 4px 0 0; }
 
 #region-main .section .left,
 #region-main .section .right {
@@ -204,7 +206,7 @@
 }
 #tableContents h4,
 #courseInfo .list-header h4 {
-	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 18px;
 	color: #857040;
 	border-bottom: 1px solid #7a6f3a;

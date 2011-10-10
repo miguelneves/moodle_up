@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header-login #login { width: 200px; }
 #header-login .header h2 {
-	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 20px;
 	margin: 5px 0;
 	border-bottom: 2px solid #fff;
@@ -179,7 +179,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #page {
 	margin: 0 auto;
-	font: 13px/1.8 normal 'Droid Serif', Georgia, serif;
+	font: 13px/1.8 'Droid Serif', Georgia, serif;
+	font-weight: normal;
 	color: #444;
 }
 

@@ -109,7 +109,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	background: #444;
 	color: #fff;
 	border-style: none;
-	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 18px;
 }
 .generaltable tbody tr {
@@ -162,7 +162,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	background: #444;
 	color: #fff;
 	border-style: none;
-	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 18px;
 }
 .path-mod-forum .forumheaderlist tbody tr {
@@ -284,7 +284,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 /* MEGAMENU*/
 #megamenu {
 	clear: both;
-	font-family: 'Yanone Kaffeesatz', Tahoma, sans-serif;
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 20px;
 }
 #megamenu a {
