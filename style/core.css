@@ -451,3 +451,21 @@ span.hide, div.hide {
 	border: 2px dashed #444;
 }
 
+/* course list */
+.categorylist {
+	margin-top: 10px;
+}
+.categorylist .image {
+	float: left;
+	margin-right: 5px;
+}
+.categorylist .course .indentation {
+	margin-left: 20px;
+}
+.categorylist .course .name,
+.categorylist .course .info {
+	display: inline;
+}
+#coursesearch {
+	margin-top: 20px;
+}
