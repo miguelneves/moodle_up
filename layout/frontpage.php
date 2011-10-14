@@ -36,7 +36,7 @@ echo $OUTPUT->doctype() ?>
 	
      <!-- google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&v2' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
