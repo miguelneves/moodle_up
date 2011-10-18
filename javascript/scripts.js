@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	//init
 	customMenu();
-	tableContents();
+	//tableContents();
 	//textIcons();	
 	if($('body').hasClass('editing')) {
 		//editMode();
@@ -280,6 +280,7 @@ function tableContents(){
 	//DEFINE LISTS	
 	//table of contents
 	var tableContents = $('.block_navigation .type_course li.type_structure');
+	console.log(tableContents);
 	var outline = $('.course-content .outline').html();
 	$('.course-content .outline').remove();
 	var tc = '';
@@ -295,11 +296,7 @@ function tableContents(){
 	if($(tc).length || $(courseInfo).length) {
 		//add table of content
 		if($(tc).length && outline != null)	
-			$('#region-pre .region-content').append('<div id="tableContents"><h4>' + outline + '</h4><ul>' + tc + '</ul></div>');
-		//add course info
-		//if($(courseInfo).length)	
-		//	$('#region-pre .region-content').append('<div id="courseInfo"><ul>' + getBranch(courseInfo) + '</ul></div>');
-	}
+			$('#region-pre .region-content').append('<div id="tableContents"><h4>' + outline + '</h4><ul>' + tc + '</ul></div>');	}
 	
 	//go to link
 	$('#tableContents .tc').bind('click', function() {

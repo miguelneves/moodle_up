@@ -35,8 +35,17 @@ echo $OUTPUT->doctype() ?>
 	<![endif]-->
 	
      <!-- google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+   <script type="text/javascript">
+		google.load("webfont", "1");
+	
+		google.setOnLoadCallback( function() {
+			WebFont.load({
+				google: {
+					families: [ 'Droid Serif', 'PT Sans Narrow' ]
+				}
+			});
+		});
+	</script>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
