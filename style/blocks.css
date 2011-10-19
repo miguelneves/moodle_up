@@ -4,6 +4,8 @@
 .block {
 	background: #fff;
 	border-radius: 2px;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
 	box-shadow: 0 0 3px #ccc;
 	margin-bottom: 20px;
 	padding: 10px;

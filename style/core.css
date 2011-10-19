@@ -54,6 +54,8 @@ a:active {
 	background: #f7f7f7;
 	border: 1px solid #ea9e88;
 	border-radius: 2px;
+	-moz-box-shadow: 0 0 4px #444;
+	-webkit-box-shadow: 0 0 4px #444;
 	box-shadow: 0 0 4px #444;
 	padding: 10px;
 }
