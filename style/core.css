@@ -64,7 +64,8 @@ a:active {
 	float: right;
 }
 /* buttons */
-input[type=submit], button, input[type=button], .button {
+
+[type=submit], button, input[type=button], .button {
 	border: none;
 	color: #fff;
 	background: #857040;
@@ -127,6 +128,10 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 .generaltable a {
 	border: none;
 	background: none;
+}
+
+.roleassigntable td {
+	vertical-align: top;
 }
 /* FORUMS
  .forumheaderlist
