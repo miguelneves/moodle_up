@@ -129,6 +129,10 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	border: none;
 	background: none;
 }
+.roleassigntable td {
+    vertical-align: top;
+}
+
 /* FORUMS
  .forumheaderlist
  thead

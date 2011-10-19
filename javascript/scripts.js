@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	//init
 	customMenu();
-	//tableContents();
+	tableContents();
 	//textIcons();	
 	if($('body').hasClass('editing')) {
 		//editMode();
@@ -274,39 +274,41 @@ function parseItem(item, name){
 
 function tableContents(){
 	
-
 	//NEW NAVIGATION BLOCK 
 	
 	//DEFINE LISTS	
 	//table of contents
 	var tableContents = $('.block_navigation .type_course li.type_structure');
-	console.log(tableContents);
-	var outline = $('.course-content .outline').html();
 	$('.course-content .outline').remove();
-	var tc = '';
-	$('p span', tableContents).each(function(index){
-		tc += '<li class="tc"><a href="#section-' + index + '">' + $(this).html() + '</a></li>';
-	});
-
-	//course info
-	var courseInfo = $('.block_navigation .type_course li.type_unknown.depth_4');
-
-	//remove default navigation block
-	$('#region-pre .region-content').empty();
-	if($(tc).length || $(courseInfo).length) {
-		//add table of content
-		if($(tc).length && outline != null)	
-			$('#region-pre .region-content').append('<div id="tableContents"><h4>' + outline + '</h4><ul>' + tc + '</ul></div>');	}
 	
-	//go to link
-	$('#tableContents .tc').bind('click', function() {
-		var index = $(this).index();
-		var section = "#section-" + index;
-		$('body, html').animate({
-	  		scrollTop: $(section).offset().top
-		}, 500);
-		return false;
-	});
+	var outline = $('.course-content .outline').html();
+	if(outline) {
+		var tc = '';
+		$('p span', tableContents).each(function(index){
+			tc += '<li class="tc"><a href="#section-' + index + '">' + $(this).html() + '</a></li>';
+		});
+	
+		//course info
+		var courseInfo = $('.block_navigation .type_course li.type_unknown.depth_4');
+	
+		//remove default navigation block
+		$('#region-pre .region-content').empty();
+		if($(tc).length || $(courseInfo).length) {
+			//add table of content
+			if($(tc).length && outline != null)	
+				$('#region-pre .region-content').append('<div id="tableContents"><h4>' + outline + '</h4><ul>' + tc + '</ul></div>');	}
+		
+		//go to link
+		$('#tableContents .tc').bind('click', function() {
+			var index = $(this).index();
+			var section = "#section-" + index;
+			$('body, html').animate({
+		  		scrollTop: $(section).offset().top
+			}, 500);
+			return false;
+		});
+	}
+	
 
 }
 
