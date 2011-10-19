@@ -64,8 +64,7 @@ a:active {
 	float: right;
 }
 /* buttons */
-
-[type=submit], button, input[type=button], .button {
+input[type=submit], button, input[type=button], .button {
 	border: none;
 	color: #fff;
 	background: #857040;
@@ -87,7 +86,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	cursor: pointer;
 }
 /* GENERAL */
-.generalbox, .eventlist {
+.generalbox {
 	border: 1px solid #E5E5E5;
 	background: #f7f7f7;
 	padding: 10px;
@@ -473,12 +472,4 @@ span.hide, div.hide {
 }
 #coursesearch {
 	margin-top: 20px;
-}
-
-/* file picker */
-.fp-grid-panel div {
-    float:left;   
-}
-.fp-panel {
-    padding: 5px;   
 }
