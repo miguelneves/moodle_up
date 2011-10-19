@@ -469,3 +469,11 @@ span.hide, div.hide {
 #coursesearch {
 	margin-top: 20px;
 }
+
+/* file picker */
+.fp-grid-panel div {
+    float:left;   
+}
+.fp-panel {
+    padding: 5px;   
+}
