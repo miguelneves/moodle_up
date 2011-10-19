@@ -225,6 +225,20 @@
 #courseInfo .level-2 li:before {
 	content: "\00BB  ";
 }
+#roleassign td {
+	vertical-align: top;
+}
+input + input {
+	margin-left: 5px;
+}
+
+.mod-indent-1 {
+	margin-left: 20px;	
+}
+.mod-indent-2 {
+	margin-left: 40px;	
+}
+
 
 /* EDIT MODE */
 

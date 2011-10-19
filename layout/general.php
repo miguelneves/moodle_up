@@ -64,14 +64,7 @@ echo $OUTPUT->doctype() ?>
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
 		        	<a href="/"><img src="<?php echo $OUTPUT->pix_url('header_up', 'theme'); ?>" alt="logo_fcpe" /></a>
 		        </h1>
-		        
-		    	<?php if ($haslogininfo) {
-		            echo $OUTPUT->login_info();
-		        }
-		        if (!empty($PAGE->layout_options['langmenu'])) {
-		            echo $OUTPUT->lang_menu();
-		        } ?>
-	        
+		                
 		        <?php if($hasheadingmenu) { ?>
 			        <div class="headermenu">
 			        	<?php echo $PAGE->headingmenu; ?>
@@ -83,6 +76,17 @@ echo $OUTPUT->doctype() ?>
 	        <?php if ($hascustommenu) { ?>
 	        <div id="custommenu"><?php echo $custommenu; ?></div>
 	        <?php } ?>
+	        
+	        <div id="login-info-wrap">
+		    	<?php 
+		    		 if (!empty($PAGE->layout_options['langmenu'])) {
+		            	echo $OUTPUT->lang_menu();
+		       		}
+		  			if ($haslogininfo) {
+		            	echo $OUTPUT->login_info();
+		       		}
+	        	?>
+		    </div>
 	    </div>
     </div>
 <?php } ?>

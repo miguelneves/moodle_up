@@ -58,11 +58,7 @@ echo $OUTPUT->doctype() ?>
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
 		        	<a href="/"><img src="<?php echo $OUTPUT->pix_url('header_up', 'theme'); ?>" alt="logo_fcpe" /></a>
 		        </h1>
-		        
-		    <?php 
-		  		echo $OUTPUT->login_info();
-		    ?>
-		     
+		   
 			<?php if ($hasheading) { ?>  
 		        <?php if($hasheadingmenu) { ?>
 			        <div class="headermenu">
@@ -74,14 +70,11 @@ echo $OUTPUT->doctype() ?>
 	        <?php } ?>
 
 	        <?php if ($hascustommenu) { ?>
-	        	
-	        <div id="custommenu"><?php echo $custommenu; ?></div>
+	       		<div id="custommenu"><?php echo $custommenu; ?></div>
 	        <?php } ?>
 	        
 	        <!-- header login -->
-	        <div id="header-login">
 	        	<?php  
-	        	error_reporting(1);
 	        	$sidebar = $OUTPUT->blocks_for_region('side-post');
       	      
 				$doc = new DOMDocument();
@@ -95,6 +88,7 @@ echo $OUTPUT->doctype() ?>
 					$pattern = '/block_login/';
 					$match = preg_match($pattern, $attr);
 					if ($match) {
+						echo "<div id=\"header-login\">";
 						$children = $elem->childNodes; 
 						foreach ($children as $child) { 
 				    		$tmp_doc = new DOMDocument(); 
@@ -102,14 +96,18 @@ echo $OUTPUT->doctype() ?>
 				    		$innerHTML .= $tmp_doc->saveHTML(); 
 						}
 						echo $innerHTML;
+						echo "</div>";
 					}					
 				}
 				
 				?>
-	        </div>
-	        <?php 
-	        	echo $OUTPUT->lang_menu();
-	        ?>
+	  
+	        <div id="login-info-wrap">
+		    	<?php 
+		    		echo $OUTPUT->lang_menu();
+		  			echo $OUTPUT->login_info();
+	        	?>
+		    </div>
 	    </div>
     </div>
     
