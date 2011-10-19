@@ -87,6 +87,9 @@
 	color: #857040;
 	text-decoration: underline;
 }
+#region-main .section .content ul li .dimmed {
+	text-decoration: line-through;
+}
 #region-main .section .content ul li a:hover {
 	color: #444;
 }
@@ -104,6 +107,8 @@
 }
 #region-main .section .right { margin-top: 10px; }
 #region-main .section .right a { border: none; }
+
+
 /*
 .course-content ul.topics li.section .right div,
 .course-content ul.topics li.section .right a {
@@ -293,7 +298,3 @@ ul.section
 }
 */
 
-/*dimmed components*/
-.dimmed {
-	text-decoration: line-through;
-}
