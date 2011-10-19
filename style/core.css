@@ -478,3 +478,8 @@ span.hide, div.hide {
 .fp-panel {
     padding: 5px;   
 }
+
+/* LISTS */
+.filemanager-container ul li {
+    list-style-type: none;
+}
