@@ -232,12 +232,11 @@ input + input {
 	margin-left: 5px;
 }
 
-.mod-indent-1 {
-	margin-left: 20px;	
-}
-.mod-indent-2 {
-	margin-left: 40px;	
-}
+.mod-indent-1 { margin-left: 20px; }
+.mod-indent-2 { margin-left: 40px; }
+.mod-indent-3 { margin-left: 60px; }
+.mod-indent-4 { margin-left: 80px; }
+.mod-indent-5 { margin-left: 100px; }
 
 
 /* EDIT MODE */
