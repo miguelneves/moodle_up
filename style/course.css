@@ -231,6 +231,9 @@
 input + input {
 	margin-left: 5px;
 }
+.singlebutton + .singlebutton {
+	margin-top: 5px;
+}
 
 .mod-indent-1 { margin-left: 20px; }
 .mod-indent-2 { margin-left: 40px; }
