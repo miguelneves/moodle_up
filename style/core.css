@@ -86,7 +86,8 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	cursor: pointer;
 }
 /* GENERAL */
-.generalbox {
+.generalbox,
+.eventlist {
 	border: 1px solid #E5E5E5;
 	background: #f7f7f7;
 	padding: 10px;
@@ -127,10 +128,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 .generaltable a {
 	border: none;
 	background: none;
-}
-
-.roleassigntable td {
-	vertical-align: top;
 }
 /* FORUMS
  .forumheaderlist
@@ -472,4 +469,12 @@ span.hide, div.hide {
 }
 #coursesearch {
 	margin-top: 20px;
+}
+
+/* file picker */
+.fp-grid-panel div {
+    float:left;   
+}
+.fp-panel {
+    padding: 5px;   
 }
