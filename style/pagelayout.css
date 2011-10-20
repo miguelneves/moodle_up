@@ -380,7 +380,10 @@ ul.section.img-text {
     margin-right: 5px;   
 }
 
-
+/* TABLES — WIDTH */
+table.generalbox {
+width: 73.5%;
+}
 
 
 
