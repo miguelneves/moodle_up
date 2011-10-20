@@ -14,13 +14,24 @@
 
 }
 .block .header h2 {
-	margin: 0;
-	padding: 2px;
+	margin: 0 0 10px 0;
 	border-radius: 2px;
 	text-transform: none;
 	line-height: 1.2;
 	border-bottom: 1px solid #e5e5e5;
 }
+.block .generalbox {
+	width: auto;
+}
+
+.block .content .list {
+	margin: 10px 0 0;
+	list-style: none;
+}
+.block .content .listentry img {
+	margin-right: 5px;
+}
+
 
 .unlist {
 	margin: 0;
@@ -64,4 +75,10 @@
 /*Os icons de edição dos blocos parecem-me demasiado juntos. Acho que se torna desconfortável e difícil de aceder*/
 a.icon {
 	padding: 0 5px 0 0;
+}
+
+
+/*reset some stuff */
+.block.block_html .content .no-overflow {
+	padding: 0;
 }
