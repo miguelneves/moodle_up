@@ -386,7 +386,7 @@ width: 73.5%;
 }
 
 /* DIV WIDTHS */
-.path-mod-choice .results.names .user, .path-mod-choice #yourselection {
+#intro.generalbox, .path-mod-choice .results.names .user, .path-mod-choice #yourselection {
 padding: 10px;
 }
 
