@@ -367,7 +367,18 @@ ul.section.img-text {
 	width: 60%;
 }
 
+/* ONLINE USERS BLOCK */
+.block_online_users ul.list li {
+    list-style-type: none;
+}
 
+.block_online_users ul.list {
+    margin: 0px;   
+}
+
+.block_online_users ul.list img.userpicture {
+    margin-right: 5px;   
+}
 
 
 
