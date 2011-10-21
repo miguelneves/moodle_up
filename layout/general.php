@@ -39,17 +39,19 @@ echo $OUTPUT->doctype() ?>
 	<![endif]-->
     
     <!-- google fonts -->
-    <script type="text/javascript">
-		google.load("webfont", "1");
-	
-		google.setOnLoadCallback( function() {
-			WebFont.load({
-				google: {
-					families: [ 'Droid Serif', 'PT Sans Narrow' ]
-				}
-			});
-		});
-	</script>
+	<script type="text/javascript">
+		WebFontConfig = {
+    	google: { families: [ 'PT+Sans+Narrow:400,700:latin', 'Droid+Serif:400,700,400italic,700italic:latin' ] }
+  	};
+  	(function() {
+    	var wf = document.createElement('script');
+    	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    	wf.type = 'text/javascript';
+    	wf.async = 'true';
+    	var s = document.getElementsByTagName('script')[0];
+    	s.parentNode.insertBefore(wf, s);
+  	})(); </script>
 
 
 </head>
