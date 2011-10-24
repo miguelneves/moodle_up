@@ -135,6 +135,11 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
     vertical-align: top;
 }
 
+th {
+ text-align: left;
+ padding: 5px;
+}
+
 /* FORUMS
  .forumheaderlist
  thead
