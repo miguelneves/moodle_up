@@ -1,4 +1,6 @@
 
+.block .block_action { display: none; }
+
 /* general */
 
 .block {
@@ -27,6 +29,8 @@
 
 .block .content .list {
 	margin: 10px 0 0;
+}
+.block .content .list li {
 	list-style: none;
 }
 .block .content .listentry img {
