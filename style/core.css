@@ -96,8 +96,11 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	width: 70%;
 	margin: 0 auto 20px;
 }
-.generalbox p {
+.generalbox p:last-child {
 	margin: 0;
+}
+.generalbox h1 {
+	margin-top: 0;
 }
 .boxaligncenter {
 	margin: 0 auto;
