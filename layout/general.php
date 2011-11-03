@@ -5,24 +5,22 @@ error_reporting(0);
 $hasheading = ($PAGE->heading);
 $hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
 $hasfooter = (empty($PAGE->layout_options['nofooter']));
-$hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
+
 $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
 $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
 
-$showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
 
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
 
 $bodyclasses = array();
-if ($showsidepre && !$showsidepost) {
-    $bodyclasses[] = 'side-pre-only';
-} else if ($showsidepost && !$showsidepre) {
+if ($showsidepost) {
     $bodyclasses[] = 'side-post-only';
-} else if (!$showsidepost && !$showsidepre) {
+} else if (!$showsidepost) {
     $bodyclasses[] = 'content-only';
 }
+
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
@@ -117,27 +115,21 @@ echo $OUTPUT->doctype() ?>
                             <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>                           
                         </div>
                     </div>
-                   		<?php if ($hassidepre) { ?>
-		                <div id="region-pre" class="block-region">
-		                    <div class="region-content">
-		                        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-		                    </div>
-		                </div>
-                </div>
+				</div>
+                <!-- sidebar -->
+  				<?php if ($hassidepost) { ?>               
+	                <div id="region-post" class="block-region">
+	                    <div class="region-content">	                    
+	                        <?php echo $OUTPUT->blocks_for_region('side-post') ?>
+	                    </div>
+	                </div>
+                <?php } ?>	
+				</div>
+			</div>
+		</div>
+	</div>
 
-                
-                <?php } ?>
 
-                <?php if ($hassidepost) { ?>
-                <div id="region-post" class="block-region">
-                    <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-post') ?>
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
 
 <!-- START OF FOOTER -->
     <?php if ($hasfooter) { ?>
