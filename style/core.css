@@ -50,6 +50,9 @@ a:active {
 }
 /* modal box */
 
+strong {
+	font-style: inherit;
+}
 #helppopupbox {
 	background: #f7f7f7;
 	border: 1px solid #ea9e88;
