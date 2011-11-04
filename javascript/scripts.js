@@ -3,6 +3,7 @@ $(document).ready(function() {
 	//init
 	customMenu();
 	tableContents();
+	settingsMenu();
 	//textIcons();	
 	if($('body').hasClass('editing')) {
 		//editMode();
@@ -11,14 +12,16 @@ $(document).ready(function() {
 
 function customMenu() {
 	var content = '';
+	var idisd = "sds";
+	
 	
 	//hide default block
 	$('.block_navigation').hide();
-	$('.block_settings').hide();
+	//$('.block_settings').hide();
 	
 	//remove images
 	$('.block_navigation a img').remove();
-	$('.block_settings a img').remove();
+	//$('.block_settings a img').remove();
 	
 	//get content
 	var home = $('.block_navigation li.depth_2:eq(0) p');
@@ -27,16 +30,18 @@ function customMenu() {
 	var myCourses = $('.block_navigation li.depth_2:eq(3)');
 	var sitePages = $('.block_navigation li.depth_2:eq(1)');
 	
-	var settingsName = $('.block_settings .header .title h2').html()
+	/*
+var settingsName = $('.block_settings .header .title h2').html()
 	var settings = $('#settingsnav > ul');
 	settings = $('<li class="contains_branch"></li>').append(settings);
+*/
 
 	if(myProfile.length){
 		content = '<li id="home" class="level-1" role="menuitem">' + home.html() + '</a></li>' 
 		+ parseItem(myProfile) 
 		+ parseItem(myCourses)
-		+ parseItem(sitePages)
-		+ parseItem(settings, settingsName);
+		+ parseItem(sitePages);
+		//+ parseItem(settings, settingsName);
 
 		$('#page-header').append('<div id="megamenu"><ul id="menu" class="menu" role="menu">' + content + '</ul></div>');
 		
@@ -199,6 +204,8 @@ function customMenu() {
 	
 	
 }
+
+
 //create menu branch (use 'li' as argument)
 //can use a custom name as argument
 function parseItem(item, name){
@@ -271,6 +278,18 @@ function parseItem(item, name){
 	return content;
 }
 
+
+function settingsMenu(){
+
+	var settingsName = $('.block_settings .header .title h2').html()
+	var settings = $('.block_settings');
+	
+	$('.header', settings).remove();
+	$('.footer', settings).remove();	
+	
+	$('#region-main-wrap').append(settings);
+	
+}
 
 function tableContents(){
 	
@@ -405,4 +424,3 @@ function editMode(){
 		ev.stopPropagation();
 	});
 }
-

@@ -10,9 +10,7 @@
 
 /* to be fixed... */
 .notloggedin .logininfo { display: none; }
-/* prevent sidebar from showing */
-.block_navigation,
-.block_settings { display: none; }
+
 
 .clearer, .clearfix {
 	clear: both;
