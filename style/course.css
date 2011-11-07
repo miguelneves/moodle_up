@@ -42,6 +42,12 @@
 .course-content {
 	font: 13px/1.8 'Droid Serif', Georgia, serif;
 }
+
+.region-content h1 { font-size: 20px; }
+.region-content h2 { font-size: 18px; }
+.region-content h3 { font-size: 16px; }
+.region-content h4 { font-size: 14px; }
+
 .region-content h2.main {
 	font-size: 16px;
 	text-transform: uppercase;
