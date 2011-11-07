@@ -146,25 +146,15 @@ th, td {
  padding: 5px;
 }
 
-/* FORUMS
- .forumheaderlist
- thead
- tbody
- tr.discussion
- td.<name>
+/* ============== FORUMS ============== */
 
- */
 .path-mod-forum .forumheaderlist {
 	border-style: none;
 	border-collapse: collapse;
 	border-bottom: 2px solid #444;
 }
-.path-mod-forum .forumheaderlist a {
-	border: none;
-}
-.path-mod-forum .forumheaderlist a:visited {
-	color: #857040;
-}
+.path-mod-forum .forumheaderlist a { border: none; }
+.path-mod-forum .forumheaderlist a:visited { color: #857040; }
 .path-mod-forum .forumheaderlist a:hover {
 	background: none;
 	color: #444;
@@ -173,7 +163,13 @@ th, td {
 	background: #857040 ;
 	color: #fff;
 }
-.path-mod-forum .forumheaderlist tr th, .path-mod-forum .forumheaderlist tr td {
+.path-mod-forum .forumheaderlist .replies,
+.path-mod-forum .forumheaderlist .discussion .author,
+.path-mod-forum .forumheaderlist .discussion .lastpost {
+	white-space: normal;
+}
+.path-mod-forum .forumheaderlist tr th,
+.path-mod-forum .forumheaderlist tr td {
 	border-style: none;
 }
 
@@ -222,7 +218,9 @@ th, td {
 .forumpost .maincontent .left, .forumpost .side .left {
 	display: none;
 }
-/*TABTREE*/
+
+
+/* ============ TABTREE =============== */
 .tabtree {
 	position: relative;
 	margin-bottom: 50px;
