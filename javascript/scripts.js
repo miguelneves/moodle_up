@@ -24,7 +24,7 @@ function customMenu() {
 	//$('.block_settings a img').remove();
 	
 	//get content
-	var home = $('.block_navigation li.depth_2:eq(0) p');
+	var myHome = $('.block_navigation li.depth_1:eq(0) p');
 	
 	var myProfile = $('.block_navigation li.depth_2:eq(2)');
 	var myCourses = $('.block_navigation li.depth_2:eq(3)');
@@ -36,8 +36,9 @@ var settingsName = $('.block_settings .header .title h2').html()
 	settings = $('<li class="contains_branch"></li>').append(settings);
 */
 
+
 	if(myProfile.length){
-		content = '<li id="home" class="level-1" role="menuitem">' + home.html() + '</a></li>' 
+		content = '<li id="home" class="level-1" role="menuitem">' + myHome.html() + '</a></li>' 
 		+ parseItem(myProfile) 
 		+ parseItem(myCourses)
 		+ parseItem(sitePages);

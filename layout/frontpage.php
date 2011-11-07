@@ -58,7 +58,7 @@ echo $OUTPUT->doctype() ?>
     		
 		        <h1 class="headermain">
 		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
-		        	<a href="/"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="logo_fcpe" /></a>
+		        	<a href="/?redirect=0"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="logo_fcpe" /></a>
 		        </h1>
 		   
 			<?php if ($hasheading) { ?>  
