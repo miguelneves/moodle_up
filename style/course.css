@@ -74,6 +74,10 @@
 	background-color: #eee;
 	padding: 0 5px 0;
 }
+#region-main .section.current {
+	border-left: 5px solid #857040;
+	margin-left: -5px;
+}
 #region-main .section .content {
 	margin: 0;
 }
