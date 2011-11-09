@@ -503,3 +503,20 @@ span.hide, div.hide {
 .filemanager-container ul li {
     list-style-type: none;
 }
+
+/* ====== CHAT ====== */
+#chat-userlist { background: #f2f2f2 !important; }
+#chat-input-area, #chat-input-area table.generaltable,
+#chat-input-area table.generaltable td.cell {
+	background: inherit !important;
+}
+.path-mod-chat .yui-layout-unit-bottom { border-top-color: #857040 !important; }
+
+.mdl-chat-entry,
+.mdl-chat-my-entry,
+.chat-message {
+	border-radius: 0 !important;
+	border: none !important;
+	border-bottom: 1px solid #ccc !important;
+}
+.mdl-chat-my-entry .chat-message .text { background: none !important; }
