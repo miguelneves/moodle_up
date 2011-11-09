@@ -68,7 +68,7 @@
 }
 #region-main .section{
 	padding: 0 0 10px 0;
-	margin-bottom: 10px;
+	margin-bottom: 0 0 10px 0;
 }
 #region-main .section.hidden {
 	background-color: #eee;
@@ -81,6 +81,9 @@
 #region-main .section .content {
 	margin: 0;
 }
+#region-main .section.hidden .content {
+	padding-bottom: 5px;
+}
 #region-main .section .content h3 {
 	font: 20px bold 'PT Sans Narrow', Tahoma, sans-serif;
 	padding: 5px 0;
@@ -88,10 +91,6 @@
 }
 #region-main .section .content ul li{
 	list-style-type: none;
-	overflow: hidden;
-}
-#region-main .section .content ul li:before{
-	/*content: '\00BB ';*/ 
 }
 #region-main .section .content ul li a {
 	color: #857040;
@@ -118,90 +117,18 @@
 #region-main .section .right { margin-top: 10px; }
 #region-main .section .right a { border: none; }
 
-
-/*
-.course-content ul.topics li.section .right div,
-.course-content ul.topics li.section .right a {
-	float: right;
-}
-.course-content ul.topics li.section .left {
-		width: 40px;
-		height: 40px;
-		font-family: Klavika;
-		font-weight: bold;
-		color: #fff;
-		background: #444;
-		margin-left: -40px;
-}
-.course-content ul.topics li.section .left div,
-.course-content ul.topics li.section .left a {
-	float: left;
-}
-.course-content ul.topics li.section .content .sectionname {
-	margin: 0 0 20px 0;
-	background: #f7f7f7;
-	height: 40px;	
-}
-.course-content ul.topics li.section .content .summary {
+.course-content .section .content .summary {
 	border-bottom: 1px solid #E5E5E5;
-	padding-bottom: 10px;
-	margin-bottom: 20px;
 	clear: both;
 }
-.course-content ul.topics li.section .content .section {
-
-	padding-bottom: 10px;
-}
-.course-content ul.topics li.section .content .section li {
-	border: 1px solid #fff;
-	padding: 2px;
-	list-style-type: none;
-}
-*/
-
-/* course edit mode */
-/*
-.editing .course-content .section li { border: 1px solid #fff; padding-left: 10px; }
-.editing .course-content .section li.edit-active,
-.editing .course-content .section li:hover {
-	background: #f7f7f7;
-	border: 1px solid #e5e5e5;
-}
-.editing .course-content .section li .commands {
-	background: #f7f7f7;
-	padding: 2px;
-	border: 1px solid #e5e5e5;
-	border-top: none;
-	margin-right: -1px;
-	position: absolute;
-	right: 0;
-	z-index: 99999;
-}
-.editing .course-content .section li .commands a {
-	display: block;
-	border-color: #e5e5e5;
-}
-.editing .course-content .section li .commands a:last-child { border: none; }
-.editing .course-content .section li .commands a img { margin-right: 5px; }
-
-.editing .course-content .section .edit-toggle { float: right; }
-.editing .course-content .section li .mod-indent { position: relative; }
-.editing .course-content .section li .mod-indent .edit-toggle { position: absolute; right: 5px; color: #777 !important; }
-
-*/
-/* side */
-.editing .left { margin: 8px 5px 0 0; }
-.editing .left div { margin-left: 32px; }
-.editing .left a {
-	margin-top: -32px;
-	border: 1px solid #e5e5e5;
-	padding: 5px 2px 1px 2px;
-	float: left;
+.course-content .section .content .summary p:last-child {
+	margin-bottom: 0;
 }
 
-.editing .right a,
-.editing .right div { float: right; margin-left: 5px; }
-.editing .right div img { display: block; }
+
+
+
+
 
 
 /* SIDEBAR */
@@ -262,7 +189,43 @@ input + input {
 .mod-indent-5 { margin-left: 100px; }
 
 
-/* EDIT MODE */
+
+/* ===== EDIT MODE ===== */
+
+.editing .course-content .section li { border: 1px solid #fff; padding-left: 10px; }
+.editing .course-content .section li.edit-active,
+.editing .course-content .section li:hover,
+.editing .block .edit-active h2,
+.editing .block h2:hover {
+	background: #f7f7f7;
+	border: 1px solid #e5e5e5;
+}
+.editing .course-content .section li .commands,
+.editing .block .commands {
+	background: #f7f7f7;
+	padding: 2px;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	margin-right: -1px;
+	position: absolute;
+	right: 0;
+	z-index: 99999;
+}
+.editing .course-content .section li .commands a {
+	display: block;
+	border-color: #e5e5e5;
+}
+.editing .course-content .section li .commands a:last-child { border: none; }
+.editing .course-content .section li .commands a img { margin-right: 5px; }
+
+.editing .course-content .section .edit-toggle { float: right; }
+.editing .course-content .section li .mod-indent { position: relative; }
+.edit-toggle { position: absolute; right: 5px; color: #777 !important; }
+
+.editing .course-content .section li .mod-indent .move {
+	float: left;
+	margin: 0 5px 0 -10px;
+}
 
 .section_add_menus {
 	border: 1px solid #ccc;
@@ -271,45 +234,30 @@ input + input {
 	margin-top: 20px;
 	width: 300px;
 }
-/*
+
 .edit-summary {
-	margin: 10px 0 0 0;
+	margin: 10px 0;
 	background: #857040;
+	margin-top: 3px;
 	padding: 0 4px;
 	color: #fff;
 	border-radius: 2px;
 	display: inline-block;
 	font-size: 12px;
 }
-*/
-/*commands
 
-ul.section
-	li
-		.mod-indent
-			a
-			span.commands
-				ul
-					li
-*/
-/*
-.mod-indent {
-	position: relative;
+/* side */
+.editing .left { margin: 8px 5px 0 0; }
+.editing .left div { margin-left: 32px; }
+.editing .left a {
+	margin-top: -32px;
+	border: 1px solid #e5e5e5;
+	padding: 5px 2px 1px 2px;
+	float: left;
 }
-.commands {
-	position: absolute;
-	display: block;
-	right: 0;
-	z-index: 9999;
-}
-.commands a {
-	display: block;
-	padding: 10px;
-	background: #aaa;
-}
+.editing .right a,
+.editing .right div { float: right; margin-left: 5px; }
+.editing .right div img { display: block; }
 
-.content .section .edit-active {
-	background: #ddd;
-}
-*/
+/* sidebar */
 

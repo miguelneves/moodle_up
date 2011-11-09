@@ -21,6 +21,7 @@
 	border-radius: 2px;
 	text-transform: none;
 	line-height: 1.2;
+	border: 1px solid #fff;
 	border-bottom: 1px solid #e5e5e5;
 }
 .block .generalbox {
@@ -76,14 +77,26 @@
 	display: none;
 }
 
-/* edit mode */
-/*Os icons de edição dos blocos parecem-me demasiado juntos. Acho que se torna desconfortável e difícil de aceder*/
-a.icon {
-	padding: 0 5px 0 0;
+/* ===== EDIT MODE ===== */
+
+.editing .block .title { position: relative; }
+.editing .block div.commands { margin: -11px 0 0 0; }
+.editing .block .commands a { display: block; }
+.editing .block .commands a img { margin-right: 5px; }
+.editing .block .edit-toggle {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	color: #777 !important;
 }
+
+
+
 
 
 /*reset some stuff */
+/*
 .block.block_html .content .no-overflow {
 	padding: 0;
 }
+*/

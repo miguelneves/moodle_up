@@ -6,7 +6,7 @@ $(document).ready(function() {
 	settingsMenu();
 	//textIcons();	
 	if($('body').hasClass('editing')) {
-		//editMode();
+		editMode();
 	}		
 });
 
@@ -332,23 +332,6 @@ function tableContents(){
 
 }
 
-//CHANGE ICONS TO TEXT
-function textIcons(){
-	//course content edit mode
-	$('.course-content .commands a').each(function(){
-		iconToText(this, true);
-	});
-}
-//change link icons to text
-function iconToText(icon, remove){
-	var title = $(icon).attr('title');		
-	//return text; if true remove img
-	if(!remove) {
-		return $(icon).html(title);
-	} else {
-		return $(icon).append(title);
-	}
-}
 
 function editMode(){	
 	// Edit Summary 
@@ -357,6 +340,22 @@ function editMode(){
 		$(this).addClass('edit-summary button');
 	});
 	
+	//change move button location
+	$('.course-content .commands').each(function(){
+		var m = $('a:first', this).addClass('move');
+ 		$(this).parent().prepend(m);
+	});
+	
+	$('.course-content .commands a').click(function(){
+		$('.course-content .commands a').each(function(){
+			iconToText(this, true);
+		});
+	});
+	// change icons to text
+	$('.course-content .commands a').each(function(){
+		iconToText(this, true);
+	});
+
 	// toggle menu
 	$('.section .commands').hide();
 	
@@ -372,13 +371,6 @@ function editMode(){
 				$('.mod-indent .edit-toggle', this).remove();
 		},
 		click: function() {
-			
-			// if($('.section .section > li').hasClass('edit-active')) {
-				// $('.mod-indent .edit-toggle', this).html('▲');		
-			// } else {
-				// $('.mod-indent .edit-toggle', this).html('▼');	
-			// }
-				
 	    	item.removeClass('edit-active');
 			$(this).addClass('edit-active');
 			
@@ -399,21 +391,6 @@ function editMode(){
 		}
 	});
 
-/*
-	item.click(function(){
-		item.removeClass('edit-active');
-		$(this).addClass('edit-active');
-		$('.commands').fadeOut(function(){			
-			$('.commands', this);
-			
-		});
-		if($('.commands', this).css('display') == 'none') {
-			$('.commands', this).fadeIn().addClass('edit-active');
-		} else {
-			$(this).removeClass('edit-active');
-		}
-	});
-	*/
 	//remove menu
 	$(document.body).bind('click', function() {
 		$('.section.main .commands').fadeOut('fast', function(){
@@ -424,4 +401,83 @@ function editMode(){
 	$('.section > li, .section > li .commands').bind('click', function(ev) {		
 		ev.stopPropagation();
 	});
+}
+editMode2();
+function editMode2(){	
+	
+	$('block .commands a').click(function(){
+		$('.block .commands a').each(function(){
+			iconToText(this, true);
+		});
+	});
+	// change icons to text
+	$('.block .commands a').each(function(){
+		iconToText(this, true);
+	});
+
+	// toggle menu
+	$('.block .commands').hide();
+	
+
+	var item = $('.block .title');
+	console.log(item)
+
+	item.bind({
+		mouseenter: function() {
+			if(!$(this).hasClass('edit-active'))
+				$(this).append($('<span class="edit-toggle">▼</span>'));
+		},
+		mouseleave: function(){
+			if(!$(this).hasClass('edit-active'))
+				$('.edit-toggle', this).remove();
+		},
+		click: function() {
+	    	item.removeClass('edit-active');
+			$(this).addClass('edit-active');
+			
+			
+			$('.block .commands').fadeOut(function(){			
+				$('.commands', this);
+							
+			});
+			if($('.commands', this).css('display') == 'none') {
+				$('.commands', this).fadeIn().addClass('edit-active');
+				$('.edit-toggle').empty();
+				$('.edit-toggle', this).html('▲');
+			} else {
+				$(this).removeClass('edit-active');
+				$('.edit-toggle', this).html('▼');
+				
+			}
+		}
+
+	});
+
+	//remove menu
+	$(document.body).bind('click', function() {
+		$('.block .commands').fadeOut('fast', function(){
+			$('.block .title').removeClass('edit-active');
+			$('.block .edit-toggle').remove();
+		}); 
+	});
+	$('.block .title, .block .commands').bind('click', function(ev) {		
+		ev.stopPropagation();
+	});
+
+
+}
+
+
+// ==============================
+
+//change link icons to text
+function iconToText(icon, remove){
+	var title = $(icon).attr('title');	
+	//return text; if true remove img
+	if(!remove) {
+		return $(icon).html(title);
+	} else {
+		var img = $('img', icon);		
+		return $(icon).empty().append(img, title);
+	}
 }

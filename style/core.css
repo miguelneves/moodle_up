@@ -77,7 +77,8 @@ input[type=submit], button, input[type=button], .button {
 	border-right: 1px solid #777;
 }
 input[type=submit]:visited, button:visited, input[type=button]:visited, .button:visited {
-	background: #57492a;
+	background: #857040;
+	color: #fff;
 }
 input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover {
 	background: #57492a;
@@ -351,7 +352,7 @@ th, td {
 #megamenu .sub {
 	position: absolute;
 	background: #40361f;
-	z-index: 999999;
+	z-index: 9999;
 	padding: 0 5px 5px;
 	border-bottom: 2px solid #857040;
 	max-width: 672px;
