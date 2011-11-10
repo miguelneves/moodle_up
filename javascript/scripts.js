@@ -12,6 +12,8 @@ $(document).ready(function() {
 
 function customMenu() {
 	var content = '';
+	var idisd = "sds";
+	
 	
 	//hide default block
 	$('.block_navigation').hide();
@@ -332,7 +334,6 @@ function tableContents(){
 
 
 function editMode(){	
-	
 	// Edit Summary 
 	$('.summary .edit').parent().each(function(){
 		iconToText(this);
@@ -344,33 +345,82 @@ function editMode(){
 		var m = $('a:first', this).addClass('move');
  		$(this).parent().prepend(m);
 	});
-	// redraw menu if item is added
+	
 	$('.course-content .commands a').click(function(){
 		$('.course-content .commands a').each(function(){
 			iconToText(this, true);
 		});
 	});
-	
-	createDropdown($('.block .commands'));
-	createDropdown($('.course-content .commands'));
-}
-
-function createDropdown(commands){	
-	
 	// change icons to text
-	$('a', commands).each(function(){
+	$('.course-content .commands a').each(function(){
 		iconToText(this, true);
 	});
-	// redraw dropdown if item changes 
-	$('a', commands).click(function(){
-		$(this).each(function(){
+
+	// toggle menu
+	$('.section .commands').hide();
+	
+	var item = $('.section.main .section > li');
+
+	item.bind({
+		mouseenter: function() {
+			if(!$(this).hasClass('edit-active'))
+				$('.mod-indent', this).append($('<span class="edit-toggle">▼</span>'));
+		},
+		mouseleave: function(){
+			if(!$(this).hasClass('edit-active'))
+				$('.mod-indent .edit-toggle', this).remove();
+		},
+		click: function() {
+	    	item.removeClass('edit-active');
+			$(this).addClass('edit-active');
+			
+			
+			$('.section.main .commands').fadeOut(function(){			
+				$('.commands', this);
+							
+			});
+			if($('.commands', this).css('display') == 'none') {
+				$('.commands', this).fadeIn().addClass('edit-active');
+				$('.mod-indent .edit-toggle').empty();
+				$('.mod-indent .edit-toggle', this).html('▲');
+			} else {
+				$(this).removeClass('edit-active');
+				$('.mod-indent .edit-toggle', this).html('▼');
+				
+			}
+		}
+	});
+
+	//remove menu
+	$(document.body).bind('click', function() {
+		$('.section.main .commands').fadeOut('fast', function(){
+			$('.section > li').removeClass('edit-active');
+			$('.mod-indent .edit-toggle').remove();
+		}); 
+	});
+	$('.section > li, .section > li .commands').bind('click', function(ev) {		
+		ev.stopPropagation();
+	});
+}
+editMode2();
+function editMode2(){	
+	
+	$('block .commands a').click(function(){
+		$('.block .commands a').each(function(){
 			iconToText(this, true);
 		});
 	});
+	// change icons to text
+	$('.block .commands a').each(function(){
+		iconToText(this, true);
+	});
+
 	// toggle menu
-	commands.hide();
+	$('.block .commands').hide();
 	
-	var item = commands.parent();
+
+	var item = $('.block .title');
+	console.log(item)
 
 	item.bind({
 		mouseenter: function() {
@@ -382,37 +432,38 @@ function createDropdown(commands){
 				$('.edit-toggle', this).remove();
 		},
 		click: function() {
-	    	$('.commands').parent().removeClass('edit-active');
+	    	item.removeClass('edit-active');
 			$(this).addClass('edit-active');
 			
-			$(commands).fadeOut(function(){			
-				$('.commands', this);				
+			
+			$('.block .commands').fadeOut(function(){			
+				$('.commands', this);
+							
 			});
 			if($('.commands', this).css('display') == 'none') {
-				$('.commands').fadeOut().removeClass('edit-active')
 				$('.commands', this).fadeIn().addClass('edit-active');
 				$('.edit-toggle').empty();
 				$('.edit-toggle', this).html('▲');
 			} else {
 				$(this).removeClass('edit-active');
 				$('.edit-toggle', this).html('▼');
+				
 			}
 		}
+
 	});
 
 	//remove menu
 	$(document.body).bind('click', function() {
-		$(commands).fadeOut('fast', function(){
-			$('.edit-active').removeClass('edit-active');
-			$('.edit-toggle').remove();
+		$('.block .commands').fadeOut('fast', function(){
+			$('.block .title').removeClass('edit-active');
+			$('.block .edit-toggle').remove();
 		}); 
 	});
-	$(commands).parent().bind('click', function(ev) {		
+	$('.block .title, .block .commands').bind('click', function(ev) {		
 		ev.stopPropagation();
 	});
-	$(commands).bind('click', function(ev) {		
-		ev.stopPropagation();
-	});
+
 
 }
 
