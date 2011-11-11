@@ -12,8 +12,6 @@ $(document).ready(function() {
 
 function customMenu() {
 	var content = '';
-	var idisd = "sds";
-	
 	
 	//hide default block
 	$('.block_navigation').hide();
@@ -345,82 +343,34 @@ function editMode(){
 		var m = $('a:first', this).addClass('move');
  		$(this).parent().prepend(m);
 	});
-	
+	// redraw menu if item is added or removed
 	$('.course-content .commands a').click(function(){
 		$('.course-content .commands a').each(function(){
 			iconToText(this, true);
 		});
 	});
+	
+	createDropdown($('.block .commands'));
+	createDropdown($('.course-content .commands'));
+}
+
+function createDropdown(){	
+	
+
 	// change icons to text
-	$('.course-content .commands a').each(function(){
+	$('a', commands).each(function(){
 		iconToText(this, true);
 	});
-
-	// toggle menu
-	$('.section .commands').hide();
-	
-	var item = $('.section.main .section > li');
-
-	item.bind({
-		mouseenter: function() {
-			if(!$(this).hasClass('edit-active'))
-				$('.mod-indent', this).append($('<span class="edit-toggle">▼</span>'));
-		},
-		mouseleave: function(){
-			if(!$(this).hasClass('edit-active'))
-				$('.mod-indent .edit-toggle', this).remove();
-		},
-		click: function() {
-	    	item.removeClass('edit-active');
-			$(this).addClass('edit-active');
-			
-			
-			$('.section.main .commands').fadeOut(function(){			
-				$('.commands', this);
-							
-			});
-			if($('.commands', this).css('display') == 'none') {
-				$('.commands', this).fadeIn().addClass('edit-active');
-				$('.mod-indent .edit-toggle').empty();
-				$('.mod-indent .edit-toggle', this).html('▲');
-			} else {
-				$(this).removeClass('edit-active');
-				$('.mod-indent .edit-toggle', this).html('▼');
-				
-			}
-		}
-	});
-
-	//remove menu
-	$(document.body).bind('click', function() {
-		$('.section.main .commands').fadeOut('fast', function(){
-			$('.section > li').removeClass('edit-active');
-			$('.mod-indent .edit-toggle').remove();
-		}); 
-	});
-	$('.section > li, .section > li .commands').bind('click', function(ev) {		
-		ev.stopPropagation();
-	});
-}
-editMode2();
-function editMode2(){	
-	
-	$('block .commands a').click(function(){
-		$('.block .commands a').each(function(){
+	// redraw dropdown if item changes 
+	$('a', commands).click(function(){
+		$(this).each(function(){
 			iconToText(this, true);
 		});
 	});
-	// change icons to text
-	$('.block .commands a').each(function(){
-		iconToText(this, true);
-	});
-
 	// toggle menu
-	$('.block .commands').hide();
+	commands.hide();
 	
-
-	var item = $('.block .title');
-	console.log(item)
+	var item = commands.parent();
 
 	item.bind({
 		mouseenter: function() {
@@ -435,12 +385,11 @@ function editMode2(){
 	    	item.removeClass('edit-active');
 			$(this).addClass('edit-active');
 			
-			
-			$('.block .commands').fadeOut(function(){			
-				$('.commands', this);
-							
+			$(commands).fadeOut(function(){			
+				$('.commands', this);				
 			});
 			if($('.commands', this).css('display') == 'none') {
+				$('.commands').fadeOut().removeClass('edit-active')
 				$('.commands', this).fadeIn().addClass('edit-active');
 				$('.edit-toggle').empty();
 				$('.edit-toggle', this).html('▲');
