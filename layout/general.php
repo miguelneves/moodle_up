@@ -30,14 +30,27 @@ echo $OUTPUT->doctype() ?>
 <head>
     <title><?php echo $PAGE->title ?></title>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />  
-<!-- 	/<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'> -->
-
     <?php echo $OUTPUT->standard_head_html() ?>
     
       <!--[if lt IE 9]>
         <link rel="stylesheet" type="text/css" href="http://localhost/moodle/theme/up/style/ie.css" />
 	<![endif]-->
-   
+    
+    <!-- google fonts -->
+	<script type="text/javascript">
+		WebFontConfig = {
+    	google: { families: [ 'PT+Sans+Narrow:400,700:latin', 'Droid+Serif:400,700,400italic,700italic:latin' ] }
+  	};
+  	(function() {
+    	var wf = document.createElement('script');
+    	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    	wf.type = 'text/javascript';
+    	wf.async = 'true';
+    	var s = document.getElementsByTagName('script')[0];
+    	s.parentNode.insertBefore(wf, s);
+  	})(); </script>
+
 
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
@@ -132,26 +145,5 @@ echo $OUTPUT->doctype() ?>
     <?php } ?>
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
-
- 
-    <!-- google fonts -->
-
-<!--
-	<script type="text/javascript">
-		WebFontConfig = {
-    	google: { families: [ 'PT+Sans+Narrow:400,700:latin', 'Droid+Serif:400,700,400italic,700italic:latin' ] }
-  	};
-  	(function() {
-    	var wf = document.createElement('script');
-    	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    	wf.type = 'text/javascript';
-    	wf.async = 'true';
-    	var s = document.getElementsByTagName('script')[0];
-    	s.parentNode.insertBefore(wf, s);
-  	})(); </script>
--->
-
-
 </body>
 </html>

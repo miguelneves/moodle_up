@@ -22,8 +22,7 @@ th, td {
 	border: none;
 }
 ::selection {
-	background: #a78d51;
-	color: #fff;
+	background: #fdfcfa;
 }
 /* course links*/
 a {
@@ -47,10 +46,11 @@ a:active {
 .helplink a {
 	border: none;
 }
+/* modal box */
 
-strong { font-style: inherit; }
-em { font-weight: inherit; }
-
+strong {
+	font-style: inherit;
+}
 #helppopupbox {
 	background: #f7f7f7;
 	border: 1px solid #ea9e88;
