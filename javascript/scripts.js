@@ -455,12 +455,15 @@ function editMode2(){
 
 	//remove menu
 	$(document.body).bind('click', function() {
-		$('.block .commands').fadeOut('fast', function(){
-			$('.block .title').removeClass('edit-active');
-			$('.block .edit-toggle').remove();
+		$(commands).fadeOut('fast', function(){
+			$('.edit-active').removeClass('edit-active');
+			$('.edit-toggle').remove();
 		}); 
 	});
-	$('.block .title, .block .commands').bind('click', function(ev) {		
+	$(commands).parent().bind('click', function(ev) {        
+		ev.stopPropagation();
+	});
+	$(commands).bind('click', function(ev) {        		
 		ev.stopPropagation();
 	});
 

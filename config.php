@@ -54,7 +54,7 @@ $THEME->sheets = array(
 $THEME->editor_sheets = array('editor');
 
 //load javascript
-$THEME->javascripts_footer = array('jquery-1.6');
+$THEME->javascripts_footer = array('jquery-1.6', 'scripts');
 
 $THEME->layouts = array(
     // Most backwards compatible layout without the blocks - this is the layout used by default
