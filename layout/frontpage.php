@@ -57,7 +57,6 @@ echo $OUTPUT->doctype() ?>
     	<div id="page-header">
     		
 		        <h1 class="headermain">
-		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
 		        	<a href="/?redirect=0"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="logo_fcpe" /></a>
 		        </h1>
 		   
@@ -122,59 +121,32 @@ echo $OUTPUT->doctype() ?>
                 <div id="region-main-wrap">
                     <div id="region-main">
                         <div class="region-content">
-                          <!-- <?php echo core_renderer::MAIN_CONTENT_TOKEN ?> -->
-                           
-							<!-- frontpage static content 
-								
-								REMOVER OU ALTERAR PELO CORRECTO
-								
-								-->
-							<div id="frontpage-content">
-								<div class="frontblock">
-	  								<h2 class="frontblock fronthead p1">Welcome to Moodle U.PORTO!</h2>
-									<p class="fronttext p1"> <a title="Clicar aqui para se validar" href="/login/index.php"><img alt="Login eLearning@UP" src="http://moodle.up.pt/file.php/1/img/moodle-logo.gif" style="float: left;"></a>  <strong style="color: rgb(128, 112, 64);">How to login:</strong><br><strong>U.Porto Community: </strong>You may automatically login clicking on <em>Moodle U.PORTO</em> item that will show on your SiGARRA (IS) personal page after validation.<br><strong>External user and FEUP: </strong>Insert username and password on "Login" block. <br><br>Check for more information: <a href="/login/index.php">First time here</a>, or <a href="http://elearning.up.pt" target="_blank">http://elearning.up.pt</a>, or contact <a target="_blank" href="http://sigarra.up.pt/up/web_base.gera_pagina?p_pagina=18377">GATIUP</a> by email [<a href="mailto:gatiup@reit.up.pt" target="_blank">gatiup@reit.up.pt</a>]  </p> </div>
-								<div class="frontblock">
-									<h2 class="frontblock fronthead p2">U.PORTO courses</h2>
-									<p class="fronttext p2">
-										<a title="Clicar aqui para listar cursos" href="course/index.php">
-										<img alt="Cursos Moodle U.PORTO" src="http://moodle.up.pt/file.php/1/img/cursos.png" style="float: left;">
-										</a> Check U.PORTO course list!<br>On the left side of the interface you can find a list of all Institutions and Faculties of the University of Porto presenting e-learning courses in this platform.  </p>
-								</div>
-								<div class="frontblock">
-									<h2 class="frontblock fronthead p3">Training</h2>
-									<p class="fronttext p3"> <a href="/course/category.php?id=20"><img alt="Formação" src="http://moodle.up.pt/file.php/1/img/form-continua.png" style="float: left;"></a>  Check out the list of <a href="course/category.php?id=20">Continuing Education</a> and <a href="course/category.php?id=8">Internal Training</a> courses available in this platform. <br> Go to <a href="http://elearning.up.pt" target="_blank">eLearning portal</a> for more information about current training courses.  </p> </div>        
-								<div class="frontblock">
-									<h2 class="frontblock fronthead p4">SiGARRA courses</h2>
-									<p class="fronttext p4"> <a href="/course/category.php?id=6"><img alt="Formação SiGARRA" src="http://moodle.up.pt/file.php/1/img/cursos-sigarra.png" style="float: left;"></a>  SiGARRA courses are free courses to support you using U.Porto IS - SiGARRA. There you can find documentation, tutorials, tips and FAQs to help you to take advantage of all SiGARRA potentialities. Click <a href="course/category.php?id=6">FORMAÇÃO SiGARRA</a> and choose a subcategory of your interest.</p> </div>     
-                       		</div>
-                       	<div id="uni">
-                       		<h2>Unidades Curriculares</h2>
-	                       	<ul class="list">
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=26">GESTÃO DE PROJECTOS</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=6">FORMACAO SIGARRA</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=18">EGP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=9">FAUP</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=12">FADEUP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=10">FBAUP</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=21">FCNAUP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=11">FCUP</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=16">FDUP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=14">FEP</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=15">FEUP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=25">FFUP</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=17">FLUP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=23">FMDUP</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=22">FMUP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=13">FPCEUP</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=19">ICBAS</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=32">REITORIA</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=36">MOSTRA UP</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=118">UNIVERSIDADE JÚNIOR</a></div></li>
-								<li class="r0"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=612">FORMAÇÃO CONTÍNUA</a></div></li>
-								<li class="r1"><div class="icon column c0"><img src="http://moodle.up.pt/pix/smartpix.php/Universidade-do-Porto/i/course.gif" class="icon" alt="Categoria da disciplina"></div><div class="column c1"><a href="http://moodle.up.pt/course/category.php?id=778">UNIVERSIDADE DE VERÃO</a></div></li>
-							</ul>
-                       	</div>	
-                       		
+<!--                         <?php echo core_renderer::MAIN_CONTENT_TOKEN ?> -->
+
+<!-- START OF HOMEPAGE CONTENT -->
+							<div class="welcome">
+							<img src="<?php echo $OUTPUT->pix_url('welcome', 'theme'); ?>" />
+
+								<h2>Bem-vindo ao Moodle da U.Porto</h2>
+								<h3>Plataforma de gestão de apredizagem da Universidade do Porto</h3>
+							</div>
+							<div class="frontbloc">
+								<h4>Como Aceder</h4>
+								<p>Utilizador da U.Porto: Poderá agora entrar automaticamente na plataforma acedendo ao item Moodle U.PORTO existente, após autenticação, no menu direito da sua página pessoal no SiGARRA da sua instituição.
+Utilizador externo e FEUP: Introduza os seus dados de acesso no bloco "Entrar" que se encontra do lado direito da interface.</p>
+
+Para mais informações aceda a: Instruções 1º acesso, ou http://elearning.up.pt, ou contacte directamente o GATIUP por email [gatiup@reit.up.pt]
+							</div>
+							<div class="frontbloc">
+								<h4>Cursos Online</h4>
+								<p>Consulte a lista de cursos disponíveis na plataforma Moodle U.PORTO! 
+Do lado esquerdo da interface estão listadas as Instituições/Faculdades da Universidade do Porto que disponibilizam cursos e unidades curriculares com componente e-learning nesta plataforma.</p>
+							</div>
+							<div class="frontbloc">
+								<h4>Sobre a Moodle U.Porto</h4>
+								<p>Os cursos SiGARRA são cursos livres onde poderá aprender a tirar partido de todas as potencialidades do Sistema de Informação da Universidade do Porto — o SiGARRA. No bloco "Grupos de disciplinas" seleccione FORMAÇÃO SiGARRA e escolha a sub-categoria que mais lhe interessa. Para aceder aos cursos entre como visitante.</p>
+							</div>
+<!-- END OF HOMEPAGE CONTENT -->
                         </div>
                     </div>
                 </div>
@@ -190,6 +162,10 @@ echo $OUTPUT->doctype() ?>
                 <?php if ($hassidepost) { ?>
                 <div id="region-post" class="block-region">
                     <div class="region-content">
+                    	<div class="block highlight">
+                    		<h4>A não esquecer…</h4>
+                    		<p>Criar uma Unidade Curricular no Moodle!</p>
+                    	</div>
                         <?php echo $OUTPUT->blocks_for_region('side-post') ?>
                     </div>
                 </div>
@@ -200,17 +176,42 @@ echo $OUTPUT->doctype() ?>
     </div>
 
 <!-- START OF FOOTER -->
-    <div id="page-footer">
-     <!--   <p class="helplink">
-        <?php echo page_doc_link(get_string('moodledocslink')) ?>
-     </p> -->
-     <img src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="logo_up" />
-        <?php        
-        echo $OUTPUT->login_info();
-    //   echo $OUTPUT->home_link();
-        echo $OUTPUT->standard_footer_html();
-        ?>
+    <div id="page-footer-wrapper">
+	    <div id="page-footer">
+			<div class="footer-item site-info">
+				<img class="footer-logo" src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="logo_up" />
+		     	<p>Gestão e manutenção da plataforma Moodle U.PORTO da responsabilidade do GATIUP - Novas Tecnologias na Educação</p>
+			</div>
+			<div class="footer-item help">
+				<h5>Ajuda</h5>
+				<ul>
+					<li><a href="">Suporte Moodle UP</a></a></li>
+					<li><a href="">Manuais e Tutoriais UP</a></li>
+					<li><a href="">Portal e-learning@UP</a></li>
+					<li><a href="">MoodlePT</a></li>
+					<li><a href="">Moodle.org</a></li>
+				</ul>
+			</div>
+			<div class="footer-item links">
+				<ul>
+					<li><a href="">E-learning Café</a></li>
+					<li><a href="">Universidade do Porto</a></li>
+				</ul>
+			</div>
+			<div class="footer-item social">
+				<ul>
+					<li class="facebook"><a href="http://www.facebook.com/pages/Novas-Tecnologias-Na-Educacao/171484579541758" title="Facebook"><img src="<?php echo $OUTPUT->pix_url('facebook', 'theme'); ?>" alt="Facebook" /></a></li>
+					<li class="linkedin"><a href="http://www.linkedin.com/in/uportonte" title="Linkedin"><img src="<?php echo $OUTPUT->pix_url('linkedin', 'theme'); ?>" alt="Linkedin" /></a></li>
+					<li class="delicious"><a href="http://www.delicious.com/elearning.up.pt" title="Delicious"><img src="<?php echo $OUTPUT->pix_url('delicious', 'theme'); ?>" alt="Delicious" /></a></li>
+				</ul>
+			</div>
+	        <?php        
+	       		echo $OUTPUT->login_info();
+	        	echo $OUTPUT->standard_footer_html();
+	        ?>
+	    </div>
     </div>
+<!-- END OF FOOTER -->
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>

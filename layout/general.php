@@ -61,14 +61,12 @@ echo $OUTPUT->doctype() ?>
     	<div id="page-header">
     		<?php if ($hasheading) { ?>
 		        <h1 class="headermain">
-		        	<!-- <a href="/" title="Moodle U.Porto" >Moodle U.Porto</a> -->
 		        	<a href="/?redirect=0"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="logo_fcpe" /></a>
 		        </h1>
 		                
 		        <?php if($hasheadingmenu) { ?>
 			        <div class="headermenu">
 			        	<?php echo $PAGE->headingmenu; ?>
-			        	
 			        </div>
 		        <?php } ?>
 	        <?php } ?>
@@ -133,16 +131,44 @@ echo $OUTPUT->doctype() ?>
 
 <!-- START OF FOOTER -->
     <?php if ($hasfooter) { ?>
-    <div id="page-footer" class="clearfix">
-     <!--   <p class="helplink"><?php echo page_doc_link(get_string('moodledocslink')) ?></p> -->
-     <img src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="logo_up" />
-        <?php
-        echo $OUTPUT->login_info();
-      //  echo $OUTPUT->home_link();
-        echo $OUTPUT->standard_footer_html();
-        ?>
+	<div id="page-footer-wrapper">
+	    <div id="page-footer">
+			<div class="footer-item site-info">
+				<img class="footer-logo" src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="logo_up" />
+		     	<p>Gestão e manutenção da plataforma Moodle U.PORTO da responsabilidade do GATIUP - Novas Tecnologias na Educação</p>
+			</div>
+			<div class="footer-item help">
+				<h5>Ajuda</h5>
+				<ul>
+					<li><a href="">Suporte Moodle UP</a></a></li>
+					<li><a href="">Manuais e Tutoriais UP</a></li>
+					<li><a href="">Portal e-learning@UP</a></li>
+					<li><a href="">MoodlePT</a></li>
+					<li><a href="">Moodle.org</a></li>
+				</ul>
+			</div>
+			<div class="footer-item links">
+				<ul>
+					<li><a href="">E-learning Café</a></li>
+					<li><a href="">Universidade do Porto</a></li>
+				</ul>
+			</div>
+			<div class="footer-item social">
+				<ul>
+					<li class="facebook"><a href="http://www.facebook.com/pages/Novas-Tecnologias-Na-Educacao/171484579541758" title="Facebook"><img src="<?php echo $OUTPUT->pix_url('facebook', 'theme'); ?>" alt="Facebook" /></a></li>
+					<li class="linkedin"><a href="http://www.linkedin.com/in/uportonte" title="Linkedin"><img src="<?php echo $OUTPUT->pix_url('linkedin', 'theme'); ?>" alt="Linkedin" /></a></li>
+					<li class="delicious"><a href="http://www.delicious.com/elearning.up.pt" title="Delicious"><img src="<?php echo $OUTPUT->pix_url('delicious', 'theme'); ?>" alt="Delicious" /></a></li>
+				</ul>
+			</div>
+	        <?php        
+	       		echo $OUTPUT->login_info();
+	        	echo $OUTPUT->standard_footer_html();
+	        ?>
+	    </div>
     </div>
-    <?php } ?>
+
+	<?php } ?>
+<!-- END OF FOOTER -->
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>

@@ -18,11 +18,13 @@
 }
 .block .header h2 {
 	margin: 0 0 10px 0;
+	font: 20px bold "PT Sans Narrow", Verdana, sans-serif;
 	border-radius: 2px;
 	text-transform: none;
 	line-height: 1.2;
 	border: 1px solid #fff;
 	border-bottom: 1px solid #e5e5e5;
+	text-transform: uppercase;
 }
 .block .generalbox {
 	width: auto;
@@ -33,6 +35,10 @@
 }
 .block .content .list li {
 	list-style: none;
+	border-bottom: 1px solid #ddd;
+}
+.block .content .list li:last-child {
+	border: none;
 }
 .block .content .listentry img {
 	margin-right: 5px;

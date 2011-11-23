@@ -326,8 +326,6 @@ function tableContents(){
 			return false;
 		});
 	}
-	
-
 }
 
 
@@ -337,7 +335,11 @@ function editMode(){
 		iconToText(this);
 		$(this).addClass('edit-summary button');
 	});
-	
+	// Change text to icon in sidebar
+	$('.block .editbutton a').each(function(){
+		iconToText(this, false);
+		$(this).addClass('edit-summary button');
+	});
 	//change move button location
 	$('.course-content .commands').each(function(){
 		var m = $('a:first', this).addClass('move');
@@ -375,6 +377,7 @@ function createDropdown(commands){
 	commands.hide();
 	
 	var item = commands.parent();
+	
 	item.bind({
 		mouseenter: function() {
 			if(!$(this).hasClass('edit-active'))
@@ -425,7 +428,7 @@ function createDropdown(commands){
 
 //change link icons to text
 function iconToText(icon, remove){
-	var title = $(icon).attr('title');	
+	var title = $(icon).attr('title') || $(icon).children().attr('alt');
 	//return text; if true remove img
 	if(!remove) {
 		return $(icon).html(title);
