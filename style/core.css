@@ -47,6 +47,15 @@ a:active {
 .helplink a {
 	border: none;
 }
+/* ===== GLOBAL ===== */
+.region-content pre {
+	background:inherit;
+	border: 1px solid #d7d7d7;
+	margin: 10px 0;
+	padding: 5px;
+	overflow: auto;
+}
+
 /* modal box */
 
 strong { font-style: inherit; }
