@@ -56,6 +56,13 @@ h1, h2, h3, h4, h5, h6 {
 .accesshide,
 .skip-block { display: none;}
 
+#page pre {
+	background: #f7f7f7;
+	border: 1px solid #d7d7d7;
+	margin: 1em 1.75em;
+	padding: .25em;
+	overflow: auto;
+}
 /* ++ CABEÇALHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 #page-header-wrap {

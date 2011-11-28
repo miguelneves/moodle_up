@@ -521,3 +521,25 @@ span.hide, div.hide {
 	border-bottom: 1px solid #ccc !important;
 }
 .mdl-chat-my-entry .chat-message .text { background: none !important; }
+
+/* ===== MYHOME ===== */
+
+.region-content .block_course_overview {
+	width: auto;
+	overflow: auto;
+	padding: 0;
+	box-shadow: none;
+}
+.region-content .coursebox {
+	float: left;
+	border-bottom: 1px solid #ccc;
+	margin-right: 2%;
+	width: 49%;
+}
+.region-content .coursebox:nth-child(even) {
+	margin: 0;
+}
+
+.region-content .coursebox .dimmed {
+	text-decoration: line-through;
+}
