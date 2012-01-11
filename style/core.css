@@ -104,7 +104,6 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	border: 1px solid #E5E5E5;
 	background: #f7f7f7;
 	padding: 10px;
-	width: 70%;
 	margin: 10px auto;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
