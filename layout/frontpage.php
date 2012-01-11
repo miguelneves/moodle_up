@@ -31,7 +31,7 @@ echo $OUTPUT->doctype() ?>
     <?php echo $OUTPUT->standard_head_html() ?>
     
     <!--[if lt IE 9]>
-        <link rel="stylesheet" type="text/css" href="http://localhost/moodle/theme/up/style/ie.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot . "/theme/up/style/ie.css" ?>" />
 	<![endif]-->
 
 </head>

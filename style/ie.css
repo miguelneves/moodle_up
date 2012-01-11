@@ -19,3 +19,6 @@
 #page-content #region-post {
 	width: 218px;
 }
+body {
+	background: red !important;
+}
