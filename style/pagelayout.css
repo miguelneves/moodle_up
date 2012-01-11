@@ -376,7 +376,7 @@ padding: 10px;
 	border-radius: 2px;
 }
 .region-content .welcome h2 {
-	font: bold 44px "PT Sans Narrow", Verdana, sans-serif;
+	font: bold 40px "PT Sans Narrow", Verdana, sans-serif;
 	text-transform: uppercase;
 	margin: 0 0 30px 0;
 	line-height: 1.1;
@@ -386,6 +386,7 @@ padding: 10px;
 	font-size: 20px;
 	margin: 0;
 	width: 400px;
+	line-height: 1.5;
 	margin-bottom: 10px;
 }
 .frontbloc {
@@ -425,7 +426,7 @@ padding: 10px;
 	margin-bottom: 20px;
 }
 .pagelayout-frontpage .highlight p {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 
