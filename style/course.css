@@ -259,5 +259,29 @@ input + input {
 .editing .right div { float: right; margin-left: 5px; }
 .editing .right div img { display: block; }
 
-/* sidebar */
 
+/* ===== QUIZ ===== */
+table.roleassigntable {
+	width: 100%;
+}
+.roleassigntable #addselect {
+	width:  100%;
+}
+#buttonscell #addcontrols {
+	margin: 38px 0 5px;
+}
+.roleassigntable label[for=removeselect_searchtext] {
+	margin-right: 5px;
+}
+.roleassigntable #removeselect_wrapper > div {
+	max-width: 275px;;
+}
+.roleassigntable #removeselect_wrapper #userselector_options {
+	margin-top: 10px;
+}
+.backlink {
+	margin-top: 10px;
+}
+.collapsed .collapsibleregioninner {
+	display: none;
+}

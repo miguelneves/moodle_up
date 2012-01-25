@@ -35,9 +35,7 @@ echo $OUTPUT->doctype() ?>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot . "/theme/up/style/ie.css" ?>" />
 	<![endif]-->
-	<!--As fontes google n estao a ser incluidas na css-->
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow">
-	
+
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
