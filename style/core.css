@@ -118,6 +118,13 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 	margin: 0 auto;
 }
 
+.boxaligncenter { }
+.boxalignright { }
+.boxalignleft { }
+.boxwidthnarrow { }
+.boxwidthnormal { }
+.boxwidthwide { }
+
 /* TABLES */
 
 .generaltable {

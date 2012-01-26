@@ -38,6 +38,7 @@ $THEME->name = 'up';
 $THEME->parents = array('');
 
 $THEME->sheets = array(
+	'base',			/** Some styles from theme Base **/
     'pagelayout',   /** Must come first: Page layout **/
     'core',         /** Must come second: General styles **/
     'admin',

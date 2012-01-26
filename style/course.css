@@ -29,6 +29,9 @@
  * .course-content ul.weeks li.section .content * 
  * 
  */
+
+ 
+ 
 #course-title {
 	border-bottom: 2px solid #444;
 	overflow: hidden;
@@ -290,6 +293,13 @@ table.roleassigntable {
 	margin-top: 10px;
 }
 
+/* ===== DATABASES ===== */
+.comment-ctrl {
+	display: none;
+}
+
+
+
 /* foldertree */
 
 .foldertree .ygtvcontent > span {
@@ -309,4 +319,10 @@ table.roleassigntable {
 }
 .messagearea .fitemtitle label {
 	font-weight: bold;
+}
+
+/* .path-mod-data */
+
+#tempform #template {
+	width: 100%;
 }
