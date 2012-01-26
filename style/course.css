@@ -270,7 +270,8 @@ table.roleassigntable {
 #buttonscell #addcontrols {
 	margin: 38px 0 5px;
 }
-.roleassigntable label[for=removeselect_searchtext] {
+.roleassigntable label[for=removeselect_searchtext],
+.roleassigntable label[for=addselect_searchtext] {
 	margin-right: 5px;
 }
 .roleassigntable #removeselect_wrapper > div {
@@ -279,9 +280,21 @@ table.roleassigntable {
 .roleassigntable #removeselect_wrapper #userselector_options {
 	margin-top: 10px;
 }
+.jsenabled .collapsibleregion {
+	overflow: hidden;
+}
+.jsenabled .collapsed .collapsibleregioninner {
+    visibility: hidden;
+}
 .backlink {
 	margin-top: 10px;
 }
-.collapsed .collapsibleregioninner {
-	display: none;
+
+/* foldertree */
+
+.foldertree .ygtvcontent > span {
+	display: inline-block;
+	width: 90%;
+	word-wrap: break-word;
 }
+
