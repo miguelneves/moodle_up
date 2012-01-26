@@ -298,3 +298,15 @@ table.roleassigntable {
 	word-wrap: break-word;
 }
 
+/* messagearea */
+
+.messagearea .messagesendbox {
+	width: 100%;
+	min-height: 150px;
+}
+.messagearea .fitemtitle {
+	margin-top: 10px;
+}
+.messagearea .fitemtitle label {
+	font-weight: bold;
+}
