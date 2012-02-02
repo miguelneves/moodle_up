@@ -9,6 +9,21 @@ $(document).ready(function() {
 		editMode();
 	}		
 	
+	
+	/* ===== HOMEPAGE ===== */
+	
+	// Banner Slider bxslider.com 
+	$('#slider1').bxSlider({
+		mode: 'fade',
+		auto: true,
+		pause: 6000,
+		pager: false,
+		controls: false,
+		onAfterSlide: function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject){ 
+			currentSlideHtmlObject.parent().parent().css('width', '100%').parent().css('width', '100%'); // use something more pretty
+		}
+	});
+
 	// collapse menu
 	$('#settingsnav > .block_tree > li').addClass('collapsed');
 	 

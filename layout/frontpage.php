@@ -35,9 +35,9 @@ echo $OUTPUT->doctype() ?>
 	<![endif]-->
 	
 	<!--As fontes google n estao a ser incluidas na css-->
-	  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow">
 	
-
+	
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
@@ -54,9 +54,7 @@ echo $OUTPUT->doctype() ?>
 				<?php if($hasheadingmenu) { ?>
 					<div class="headermenu">
 						<?php echo $PAGE->headingmenu; ?>
-						
 					</div>
-				
 				<?php } ?>
 			<?php } ?>
 
@@ -114,25 +112,40 @@ echo $OUTPUT->doctype() ?>
 <!--                         <?php echo core_renderer::MAIN_CONTENT_TOKEN ?> -->
 
 <!-- START OF HOMEPAGE CONTENT -->
-								<div class="welcome" style="background-image: url(<?php echo $OUTPUT->pix_url('welcome', 'theme'); ?>)">
-							<!-- <img src="<?php echo $OUTPUT->pix_url('welcome', 'theme'); ?>" />-->
-
-								<h2>Bem-vindo ao Moodle 2 da U.Porto</h2>
-								<h3>Plataforma de gestão de aprendizagem da Universidade do Porto</h3>
-							</div>
-							<div class="frontbloc">
-								<h4>Como Aceder</h4>
-								<p> Siga os passos indicados na <a href="login/index.php">Pagina de login</a>. Mais informações no <a href="http://elearning.up.pt">portal de e-learning</a>, ou por email GATIUP/NTE [gatiup@reit.up.pt]</p>
-							</div>
-							<div class="frontbloc">
-								<h4>Cursos Online</h4>
-								<p>Consulte a <a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=1000435">lista de cursos</a> disponíveis na plataforma Moodle U.PORTO! A Universidade do Porto disponibiliza um ambiente virtual de ensino para unidades curriculares e <a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=1000419">cursos de formacao continua</a>.</p>
-							</div>
-							<div class="frontbloc">
-								<h4>Sobre Moodle U.Porto</h4>
-									<p>O Moodle 2 U.PORTO apresenta novas funcionalidades, novos conceitos de utilização, numa interface mais acessível e intuitiva. Mais informações sobre o <a href="http://moodle2.up.pt/mod/page/view.php?id=5">Moodle 2 Projeto Piloto</a>.</p></div>
-<!-- END OF HOMEPAGE CONTENT -->
-						</div>
+							<ul id="slider1">
+									<li>
+										<div class="welcome" style="background-image: url(<?php echo $OUTPUT->pix_url('welcome', 'theme'); ?>)">
+										<!-- <img src="<?php echo $OUTPUT->pix_url('welcomeimg', 'theme'); ?>" width="416" height="207"/> -->
+											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
+											<h3>Plataforma de gestão de aprendizagem da Universidade do Porto</h3>
+										</div>
+									</li>
+									<li>
+										<div class="welcome" style="background-image: url(<?php echo $OUTPUT->pix_url('welcome-monkey', 'theme'); ?>)">
+											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
+											<h3>Novos conceitos de utilizacao numa plataforma mais intuitiva e acessivel</h3>
+										</div>
+									</li>
+									<li>
+										<div class="welcome" style="background-image: url(<?php echo $OUTPUT->pix_url('welcome-usb', 'theme'); ?>)">
+											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
+											<h3>Plataforma de gestão de aprendizagem da Universidade do Porto</h3>
+										</div>
+									</li>
+								</ul>
+		
+								<div class="frontbloc">
+									<h4>Como Aceder</h4>
+									<p> Siga os passos indicados na <a href="login/index.php">Pagina de login</a>. Mais informações no <a href="http://elearning.up.pt">portal de e-learning</a>, ou por email GATIUP/NTE [gatiup@reit.up.pt]</p>
+								</div>
+								<div class="frontbloc">
+									<h4>Cursos Online</h4>
+									<p>Consulte a <a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=1000435">lista de cursos</a> disponíveis na plataforma Moodle U.PORTO! A Universidade do Porto disponibiliza um ambiente virtual de ensino para unidades curriculares e <a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=1000419">cursos de formacao continua</a>.</p>
+								</div>
+								<div class="frontbloc">
+									<h4>Sobre Moodle U.Porto</h4>
+										<p>O Moodle 2 U.PORTO apresenta novas funcionalidades, novos conceitos de utilização, numa interface mais acessível e intuitiva. Mais informações sobre o <a href="http://moodle2.up.pt/mod/page/view.php?id=5">Moodle 2 Projeto Piloto</a>.</p></div>
+								<!-- END OF HOMEPAGE CONTENT -->						</div>
 					</div>
 				</div>
 

@@ -126,6 +126,9 @@
 	 	font-size: 0.85em;
 		text-align: center;			
 	 }
+	 #page-site-index #region-main-wrap .block_settings {
+	 	display:  none;
+	 }
 }
 
 @media screen and (max-width: 520px) {

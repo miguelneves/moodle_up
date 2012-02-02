@@ -132,6 +132,7 @@ echo $OUTPUT->doctype() ?>
 				</ul>
 			</div>
 			<div class="footer-item links">
+				<h5>Outros Sites</h5>
 				<ul>
 					<li><a href="">E-learning Café</a></li>
 					<li><a href="">Universidade do Porto</a></li>
