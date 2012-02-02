@@ -393,9 +393,9 @@ function editMode(){
 	
 	// if block has no h2 create a edit button
 	$('.block .commands').each(function () {
-		console.log(this);
-		if ($(this).parent().find('h2').length == 0) {
-			$(this).parent().prepend("<h2>Edit</h2>");
+		var p = $(this).parent();
+		if (p.find('h2').length == 0) {
+			p.prepend('<h2><img width="16" height="16" title="" alt="Edit block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKRJREFUeNpiZCAC+Pr6+wOpCUCsABV6AMQFmzdv3MhIhOZ4ILUAh3QAMwmaPwAxB5oSCyYiNV+AOh/dJQpMRGp2APr3IxAnohvCRKxmJCUFUO+AA5OJFM1AeX4gdQCIBWCGMZGh2QAqlACPRjI1LwQxGCnRDAtEsjWjx8ICJIVEaQYBFiT2BCjNSKxmXOnAnljN6C6AgQNIbLyasbqAFM0gABBgAFqOauNelbdAAAAAAElFTkSuQmCC" /></h2>');
 		}
 	});
 }
