@@ -55,7 +55,7 @@ $THEME->sheets = array(
 $THEME->editor_sheets = array('editor');
 
 //load javascript
-$THEME->javascripts_footer = array('jquery-1.6', 'scripts');
+$THEME->javascripts_footer = array('jquery-1.6', 'masonry.min.js', 'scripts');
 
 $THEME->layouts = array(
     // Most backwards compatible layout without the blocks - this is the layout used by default
@@ -96,8 +96,8 @@ $THEME->layouts = array(
     // Server administration scripts.
     'admin' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
+        'regions' => array('side-post'),
+        'defaultregion' => 'side-post',
     ),
     // My dashboard page
     'mydashboard' => array(
@@ -160,8 +160,8 @@ $THEME->layouts = array(
     // http://moodle-testbed.up.pt/moodle2.x/mod/data/templates.php?d=5&mode=listtemplate
     'report' => array(
         'file' => 'general.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
+        'regions' => array('side-post'),
+        'defaultregion' => 'side-post',
     ),
 );
 

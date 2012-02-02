@@ -1,0 +1,174 @@
+
+/**	=======================================
+
+	MEDIA QUERIES
+	
+	======================================= **/
+
+
+@media screen and (max-width: 1024px) {
+	#page-header {
+		width: 95%;
+	}
+	#login-info-wrap {
+		position: absolute;
+		margin-top: 5px;
+	}
+	#page-content {
+		width: 95%;
+	}
+	#page-content #region-main-wrap {
+		width: 100%;
+		margin: 0;
+	}
+	#page-content #region-post {
+		display: none; /* remove it */
+		width: 100%;
+		margin-top: 20px;
+	}
+	#page-content #region-post .block {
+		box-sizing: border-box;
+		width: 32%;
+		margin-right: 2%;
+		float: left;
+	}
+	#page-content #region-post .block:nth-of-type(3) {
+		margin-right: 0;
+	}
+	#page-footer {
+		width: 95%; 
+	}
+	#page-footer .logininfo {
+		width: 30%;
+		float: left;
+	}
+	/* homepage */
+	#page-site-index #page-content #region-main-wrap {
+		width: 100%;
+	}
+	/* floating menu */
+	#region-main-wrap {
+	}
+	#region-main-wrap .block_settings {
+	}
+	.fixed {
+	   position:fixed;
+	   top: 77px;
+	   right: 22px;
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+	#header-login {
+		border-top: 1px solid #fff;
+		float: left;
+		padding: 8px 0;
+	}
+	#header-login .loginform .fld {
+		display: inline-block;
+		margin-right: 5px;
+	}
+	#header-login .loginform .rememberusername,
+	#header-login .footer {
+		display: none;
+	}
+	#header-login .loginform .btn {
+		margin-top: -2px;
+	}
+	#page-content #region-main {
+		width: 96%;
+		margin: 0;
+	}
+	#page-content #region-main-wrap {
+		position: relative;
+	}
+	#page-content #region-main-wrap #course-title {
+		margin-bottom: 40px;
+	}
+	/* settings */
+	#region-main-wrap .block_settings {
+		position: absolute;
+		width: 100%;
+		top: 48px;
+		left: 0;
+		border: none;
+		box-shadow: none;
+	}
+	#region-main-wrap .block_settings .block_tree {
+		display: table;
+		width: 100%;
+	}
+	#region-main-wrap .block_settings ul > li {
+		display: table-cell;
+		position: relative;
+	}
+	#region-main-wrap .block_settings #settingsnav > ul > li {
+		border-right: 1px solid #ccc;
+	}
+	#region-main-wrap .block_settings .block_tree > li > ul {
+		position: absolute;
+		min-width: 100%;
+		border: 1px solid #ccc;
+		background: #fff;
+	}
+	.block_settings .block_tree li.item_with_icon > p img {
+		margin-left: 3px;
+	}
+	.block_settings .block_tree .tree_item {
+		padding-left: 20px;
+	}
+	#region-main-wrap .block_settings .block_tree > li > ul li {
+	 	display: list-item;
+	 	background: #fff;
+	 }
+	 #region-main-wrap .block_settings .root_node {
+	 	font-size: 0.85em;
+		text-align: center;			
+	 }
+}
+
+@media screen and (max-width: 520px) {
+	#region-main-wrap .block_settings {
+		opacity: 0;
+		-webkit-transition: opacity .5s ease-in-out 0s;
+	}
+	#megamenu .level-1 > a {
+		font-size: 0.75em;
+		padding: 5px 15px;
+		-webkit-transition: font-size 1s ease;
+	}
+	#page-content #region-main-wrap #course-title {
+		margin-bottom: 20px;
+		-webkit-transition: margin 1s ease;
+	}
+	#page-footer .footer-item {
+		width: 50%;
+	}
+	#page-footer .logininfo {
+		width: 30%;
+		float: left;
+	}
+	/* homepage */
+	#page-site-index #page-content #region-main-wrap .frontbloc {
+		width: 100%;
+	}
+	#page-site-index .region-content .welcome h3,
+	#page-site-index .region-content .welcome h2 {
+		width: auto;
+	}
+	#page-site-index .region-content .welcome h2 {
+		font-size: 38px;		
+	}
+	#page-site-index #page-footer .footer-item {
+		width: 48%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#page-header,
+	#page-content,
+	#page-footer {
+		max-width: 1200px;
+	}
+}

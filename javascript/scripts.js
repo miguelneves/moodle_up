@@ -8,6 +8,28 @@ $(document).ready(function() {
 	if($('body').hasClass('editing')) {
 		editMode();
 	}		
+	
+	// collapse menu
+	$('#settingsnav > .block_tree > li').addClass('collapsed');
+	 
+	 
+	     //Calculate the height of <header>
+	       //Use outerHeight() instead of height() if have padding
+	       var aboveHeight = $('.block_settings').outerHeight();
+	
+		//when scroll
+	       $(window).scroll(function(){
+		        //if scrolled down more than the header’s height
+	               if ($(window).scrollTop() > 200){
+	
+		        // if yes, add “fixed” class to the <nav>
+		        // add padding top to the #content                (value is same as the height of the nav)
+//	               $('.block_settings').addClass('fixed');
+	
+	               } else {
+//	               $('.block_settings').removeClass('fixed');
+	               }
+	       });
 });
 
 function customMenu() {
@@ -353,10 +375,18 @@ function editMode(){
 	});
 	createDropdown($('.block .commands'));
 	createDropdown($('.course-content .commands'));
+	
+	// if block has no h2 create a edit button
+	$('.block .commands').each(function () {
+		console.log(this);
+		if ($(this).parent().find('h2').length == 0) {
+			$(this).parent().prepend("<h2>Edit</h2>");
+		}
+	});
 }
 
 function createDropdown(commands){	
-	
+
 	$('block .commands a').click(function(){
 		$('.block .commands a').each(function(){
 			iconToText(this, true);
@@ -377,7 +407,7 @@ function createDropdown(commands){
 	commands.hide();
 	
 	var item = commands.parent();
-	
+
 	item.bind({
 		mouseenter: function() {
 			if(!$(this).hasClass('edit-active'))
@@ -419,8 +449,6 @@ function createDropdown(commands){
 	$(commands).bind('click', function(ev) {        		
 		ev.stopPropagation();
 	});
-
-
 }
 
 

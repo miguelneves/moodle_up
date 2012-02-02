@@ -75,29 +75,52 @@ em { font-weight: inherit; }
 #helppopupbox .yui3-widget-hd {
 	float: right;
 }
-/* buttons */
+/* ===== INPUTS ===== */
+
 input[type=submit], button, input[type=button], .button {
 	border: none;
-	color: #fff;
-	background: #857040;
-	padding: 4px;
+	color: #666;
+	padding: 2px;
+/*	background: #857040;*/
+	padding: 6px;
 	border-radius: 2px;
-	border-bottom: 1px solid #777;
-	border-right: 1px solid #777;
+	background: -webkit-linear-gradient(90deg, #ccc, #eee);
+	box-shadow: 0px 0 1px #444;
+	text-shadow: 0 1px 1px #F7F7F7;
+	-moz-transition: color 0.5s ease;
+	-webkit-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+	margin: 0;
 }
 input[type=submit]:visited, button:visited, input[type=button]:visited, .button:visited {
-	background: #857040;
-	color: #fff;
 }
 input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover {
-	background: #57492a;
-	color: #fff;
+/*	background: -webkit-linear-gradient(90deg, #bbb, #eee 60%);*/
+	color: #444;
+	box-shadow: 0px 0 1px #000;
 	cursor: pointer;
+	-moz-transition: color 0.5s ease;
+	-webkit-transition: color 0.5s ease;
+	transition: color 0.5s ease;
 }
 input[type=submit]:active, button:active, input[type=button]:active, .button:active {
-	background: #b59d65;
+	box-shadow: inset 0px 0 4px #444;
 	cursor: pointer;
+	padding: 7px 6px 5px;	
 }
+input[type=text],
+input[type=password] {
+	border: 1px solid #ccc;
+	padding: 6px;
+	border-radius: 2px;
+}
+input[type=text]:focus {
+	border: 1px solid #aaa;
+	box-shadow: 0 0 6px #999 ;
+	outline: none;
+}
+
+
 /* GENERAL */
 .generalbox,
 .eventlist {
@@ -278,7 +301,6 @@ th, td {
 .tabtree .tabrow0 li a:active {
 	background: #444;
 	border-color: #444;
-	color: #fff;
 }
 .tabtree .tabrow0 > .active > a, .tabtree .tabrow0 > .selected > a {
 	background: #fff;
@@ -307,6 +329,9 @@ th, td {
 }
 .tabtree .tabrow1 li a:hover {
 	background: none;
+}
+.tabtree .tabrow1 li a:active {
+	color: #999;
 }
 .tabtree .tabrow1 .selected a {
 	color: #444;
@@ -549,7 +574,7 @@ span.hide, div.hide {
 	float: left;
 	border-bottom: 1px solid #ccc;
 	margin-right: 2%;
-	width: 49%;
+	border: 1px solid #333;
 }
 .region-content .coursebox:nth-child(even) {
 	margin: 0;

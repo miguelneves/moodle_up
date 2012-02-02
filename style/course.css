@@ -33,14 +33,20 @@
  
  
 #course-title {
-	border-bottom: 2px solid #444;
+	border-bottom: 1px solid #ccc;
 	overflow: hidden;
 	margin-bottom: 20px;
+	padding: 10px 2%;
+	background: #eee;
 }
 #course-title h2 {
 	float: left;
 	margin: 0;
-	padding: 0;
+	padding-top: 4px;
+	color: #666;
+	font: normal 1.2em "PT Sans Narrow", Verdana, sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 .course-content {
 	font: 13px/1.8 'Droid Serif', Georgia, serif;
@@ -72,6 +78,12 @@
 #region-main .section{
 	padding: 0 0 10px 0;
 	margin-bottom: 0 0 10px 0;
+}
+#region-main #section-0 {
+	margin-top: 0;
+}
+#region-main #section-0 .left {
+	display: none;
 }
 #region-main .section.hidden {
 	background-color: #eee;
@@ -238,15 +250,18 @@ input + input {
 	width: 300px;
 }
 
-.edit-summary {
+.button.edit-summary {
 	margin: 10px 0;
 	background: #857040;
 	margin-top: 3px;
-	padding: 0 4px;
+	padding: 4px;
 	color: #fff;
 	border-radius: 2px;
 	display: inline-block;
 	font-size: 12px;
+	text-shadow: none;
+}
+.button.edit-summary:hover {
 }
 
 /* side */
