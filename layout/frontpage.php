@@ -160,10 +160,10 @@ echo $OUTPUT->doctype() ?>
 				<?php if ($hassidepost) { ?>
 				<div id="region-post" class="block-region">
 					<div class="region-content">
-						<div class="block highlight">
+						<!--<div class="block highlight">
 							<h4>Moodle 2 U.PORTO</h4>
 							<p>A plataforma e-learning para docentes e estudantes da Universidade do Porto</p>
-						</div>
+						</div>-->
 						<?php echo $OUTPUT->blocks_for_region('side-post') ?>
 					</div>
 				</div>
