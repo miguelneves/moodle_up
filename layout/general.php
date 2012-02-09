@@ -45,7 +45,7 @@ echo $OUTPUT->doctype() ?>
     	<div id="page-header">
     		<?php if ($hasheading) { ?>
 		        <h1 class="headermain">
-		        	<a href="/?redirect=0"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="logo_fcpe" /></a>
+		        	<a href="/?redirect=0"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="Moodle" /></a>
 		        </h1>
 		                
 		        <?php if($hasheadingmenu) { ?>
@@ -118,7 +118,7 @@ echo $OUTPUT->doctype() ?>
 	<div id="page-footer-wrapper">
 	    <div id="page-footer">
 			<div class="footer-item site-info">
-				<img class="footer-logo" src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="logo_up" />
+				<img class="footer-logo" src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="U.Porto" />
 		     	<p>Gestão e manutenção da plataforma Moodle U.PORTO da responsabilidade do GATIUP - Novas Tecnologias na Educação</p>
 			</div>
 			<div class="footer-item help">
