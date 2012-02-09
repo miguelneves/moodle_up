@@ -298,6 +298,9 @@ table.roleassigntable {
 .roleassigntable #removeselect_wrapper #userselector_options {
 	margin-top: 10px;
 }
+#chooseuser #chooseusersubmit {
+	margin-top: 10px;
+}
 .jsenabled .collapsibleregion {
 	overflow: hidden;
 }
