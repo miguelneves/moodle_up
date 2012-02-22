@@ -62,7 +62,8 @@ $THEME->layouts = array(
     // Most backwards compatible layout without the blocks - this is the layout used by default
     'base' => array(
         'file' => 'general.php',
-        'regions' => array(),
+        'regions' => array('side-post'),
+        'defaultregion' => 'side-post',
     ),
     // Standard layout with blocks, this is recommended for most pages with general information
     'standard' => array(
