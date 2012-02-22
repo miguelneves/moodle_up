@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #page-header {
  	width: 90%;
+ 	min-width: 1024px;
 	margin: 0 auto;
 	color: #fff;
 }
@@ -146,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 }
 #header-login .footer > div {
-	float: le;
+	float: left;
 }
 #header-login .footer a { font-size: 0.9em; color: #444; }
 #header-login .footer a:visited { color: #57492a; }
@@ -202,13 +203,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #page {
 	margin: 0 auto;
-	font: 13px/1.8 'Droid Serif', Georgia, serif;
+	font: normal 13px/1.8 'Droid Serif', Georgia, serif;
 	font-weight: normal;
 	color: #444;
 }
 
 #page-content {
 	width: 90%;
+	min-width: 1024px;
 	margin: 20px auto 0;
 	clear: both;
 }
@@ -373,7 +375,7 @@ padding: 10px;
 #region-main-wrap .block_settings .root_node {
 	margin: 0;
 	padding: 0;
-	font: 15px normal normal 'PT Sans Narrow', Tahoma, sans-serif;
+	font: normal 15px 'PT Sans Narrow', Tahoma, sans-serif;
 	text-transform: uppercase;
 	background: #f7f7f7;
 	color: #666;
@@ -443,7 +445,7 @@ padding: 10px;
 .frontbloc:last-child { margin-right: 0; }
 
 .pagelayout-frontpage .frontbloc h4 {
-	font: 20px normal "PT Sans Narrow", Verdana, sans-serif;
+	font: normal 20px "PT Sans Narrow", Verdana, sans-serif;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 }
@@ -465,8 +467,7 @@ padding: 10px;
 	transition: box-shadow, background 1s ease;
 }
 .pagelayout-frontpage .highlight h4 {
-	font: 20px "PT Sans Narrow", Verdana, sans-serif;
-	font-weight: bold;
+	font: bold 20px "PT Sans Narrow", Verdana, sans-serif;
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
@@ -508,7 +509,7 @@ padding: 10px;
 	margin-right: 0;
 }
 .footer-item h5 {
-	font: 20px normal "PT Sans Narrow", Verdana, sans-serif;
+	font: normal 20px "PT Sans Narrow", Verdana, sans-serif;
 	text-transform: uppercase;
 }
 .footer-item ul {

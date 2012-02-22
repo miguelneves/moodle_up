@@ -6,7 +6,7 @@
 	======================================= **/
 
 
-@media screen and (max-width: 1024px) {
+/*@media screen and (max-width: 1024px) {
 	#page-header {
 		width: 95%;
 	}
@@ -22,7 +22,7 @@
 		margin: 0;
 	}
 	#page-content #region-post {
-		display: none; /* remove it */
+		display: none; /* remove it *!/
 		width: 100%;
 		margin-top: 20px;
 	}
@@ -42,11 +42,11 @@
 		width: 30%;
 		float: left;
 	}
-	/* homepage */
+	/* homepage *!/
 	#page-site-index #page-content #region-main-wrap {
 		width: 100%;
 	}
-	/* floating menu */
+	/* floating menu *!/
 	#region-main-wrap {
 	}
 	#region-main-wrap .block_settings {
@@ -86,7 +86,7 @@
 	#page-content #region-main-wrap #course-title {
 		margin-bottom: 40px;
 	}
-	/* settings */
+	/* settings *!/
 	#region-main-wrap .block_settings {
 		position: absolute;
 		width: 100%;
@@ -155,7 +155,7 @@
 		width: 30%;
 		float: left;
 	}
-	/* homepage */
+	/* homepage *!/
 	#page-site-index #page-content #region-main-wrap .frontbloc {
 		width: 100%;
 	}
@@ -177,4 +177,4 @@
 	#page-footer {
 		max-width: 1200px;
 	}
-}
+}*/

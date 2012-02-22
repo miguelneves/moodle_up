@@ -100,7 +100,7 @@
 	padding-bottom: 5px;
 }
 #region-main .section .content h3 {
-	font: 20px bold 'PT Sans Narrow', Tahoma, sans-serif;
+	font: bold 20px 'PT Sans Narrow', Tahoma, sans-serif;
 	padding: 5px 0;
 	margin: 0;
 }
@@ -123,7 +123,7 @@
 #region-main .section .content ul li .activityicon {
 	float: left; margin: 3px 5px 0 0;	
 }
-#region-main .section .left {font: 21px bold 'PT Sans Narrow', Tahoma, sans-serif; margin: 4px 4px 0 0; }
+#region-main .section .left {font: bold 21px 'PT Sans Narrow', Tahoma, sans-serif; margin: 4px 4px 0 0; }
 
 #region-main .section .left,
 #region-main .section .right {

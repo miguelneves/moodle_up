@@ -18,7 +18,7 @@
 }
 .block .header h2 {
 	margin: 0 0 10px 0;
-	font: 20px bold "PT Sans Narrow", Verdana, sans-serif;
+	font: normal 20px "PT Sans Narrow", Verdana, sans-serif;
 	border-radius: 2px;
 	text-transform: none;
 	line-height: 1.2;
