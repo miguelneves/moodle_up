@@ -410,6 +410,7 @@ padding: 10px;
 }
 .bx-window, #slider1, #slider1 li {
 	width: 100%;
+	height: 230px;
 }
 
 .welcome {
@@ -566,7 +567,7 @@ padding: 10px;
 	width: 100%;
 	margin: 0;
 }
-/* some page have .side-post-only and have a sidebar, others not... */
+/* some page have .side-post-only and have a sidebar, others dont... */
 .path-my #page-content #region-main-wrap,
 #page-course-view-topics #page-content #region-main-wrap,
 .side-post-only.editing #page-content #region-main-wrap {
