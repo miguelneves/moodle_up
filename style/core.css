@@ -583,10 +583,21 @@ span.hide, div.hide {
 	box-shadow: none;
 }
 .region-content .coursebox {
-	float: left;
+	width: 100%;
 	border-bottom: 1px solid #ccc;
 	margin-right: 2%;
-	border: 1px solid #333;
+}
+.region-content .coursebox h3 {
+	font-family: "PT Sans Narrow";
+	font-size: 1.3em;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.region-content .coursebox .overview {
+	margin-bottom: 10px;
+/*	background: #eee;
+	border: 1px solid #ddd;
+	padding: 5px;*/
 }
 .region-content .coursebox:nth-child(even) {
 	margin: 0;
