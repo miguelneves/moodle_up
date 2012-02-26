@@ -28,15 +28,16 @@ echo $OUTPUT->doctype() ?>
 	<title><?php echo $PAGE->title ?></title>
 	<link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
 	<meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
-	<?php echo $OUTPUT->standard_head_html() ?>
 	
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot . "/theme/up/style/ie.css" ?>" />
 	<![endif]-->
 	
-	<!--As fontes google n estao a ser incluidas na css-->
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
 	
+	<?php echo $OUTPUT->standard_head_html() ?>
+
 	
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
@@ -112,26 +113,26 @@ echo $OUTPUT->doctype() ?>
 <!--                         <?php echo core_renderer::MAIN_CONTENT_TOKEN ?> -->
 
 <!-- START OF HOMEPAGE CONTENT -->
-							<ul id="slider1">
+<ul id="slider1">
 									<li>
-										<div class="welcome" style="background-image: url(<?php echo $OUTPUT->pix_url('welcome', 'theme'); ?>)">
-										<!-- <img src="<?php echo $OUTPUT->pix_url('welcomeimg', 'theme'); ?>" width="416" height="207"/> -->
+										<div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome&amp;rev=483&amp;component=theme)">
+										<!-- <img src="http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcomeimg&amp;rev=483&amp;component=theme" width="416" height="207"/> -->
 											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
 											<h3>Plataforma de gestão de aprendizagem da Universidade do Porto</h3>
 										</div>
 									</li>
-									<li>
-										<div class="welcome" style="background-image: url(<?php echo $OUTPUT->pix_url('welcome-monkey', 'theme'); ?>)">
+									<!--<li>
+										<div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome-monkey&amp;rev=483&amp;component=theme)">
 											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
 											<h3>Novos conceitos de utilizacao numa plataforma mais intuitiva e acessivel</h3>
 										</div>
 									</li>
 									<li>
-										<div class="welcome" style="background-image: url(<?php echo $OUTPUT->pix_url('welcome-usb', 'theme'); ?>)">
+										<div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome-usb&amp;rev=483&amp;component=theme)">
 											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
 											<h3>Plataforma de gestão de aprendizagem da Universidade do Porto</h3>
 										</div>
-									</li>
+									</li> -->
 								</ul>
 		
 								<div class="frontbloc">

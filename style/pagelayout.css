@@ -1,7 +1,5 @@
-/* load Google Fonts */
-
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);*/
 
 /****
  * Three column floating div layout with 2,1,3 column order
@@ -30,7 +28,7 @@
  *   side-post-only     = Content + side post
  *   content-only       = Content
  *
- ****/
+ ***/
  
  html {
   	background-color: transparent;
@@ -54,7 +52,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
- */
+ 
 /*  */ 
  
 .skiplinks,
@@ -63,9 +61,14 @@ h1, h2, h3, h4, h5, h6 {
 .skip-block { display: none;}
 
 
-/* "fix" box model */
+/* "fix" the box model */
 
-* { -moz-box-sizing: border-box; box-sizing: border-box; }
+* {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+     -o-box-sizing: border-box;
+        box-sizing: border-box; }
 
 
 /* ++ CABEÇALHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -136,14 +139,17 @@ h1, h2, h3, h4, h5, h6 {
 #header-login .loginform { float: left; }
 #header-login .loginform .fld { text-align: right; }
 #header-login .loginform .fld input { border: 1px solid #857040; padding: 2px; }
-#header-login .loginform label {margin-right: 5px; }
+#header-login .loginform label { margin-right: 5px; }
+#header-login .loginform .rememberusername { text-align: right; }
+#header-login .loginform .rememberusername #rememberusername { margin-right: 6px; }
 #header-login .loginform .btn { margin-top: 5px; float: right; }
 #header-login .loginform input[type=submit] { background: #7a663a; color: #fff; text-shadow: none; }
 #header-login .loginform input[type=submit]:hover { background: #857040; }
 #header-login .loginform input[type=submit]:active { box-shadow: inset 0 0 4px 2px #444; }
 #header-login .footer {
 	clear: both;
-	top: -22px;
+	top: -24px;
+	left: 68px;
 	position: relative;
 }
 #header-login .footer > div {
@@ -406,10 +412,10 @@ padding: 10px;
 
 .bx-wrapper {
 	margin-bottom: 20px;
-	width: 100%;
+	width: 100% ;
 }
 .bx-window, #slider1, #slider1 li {
-	width: 100%;
+	width: 100% ;
 	height: 230px;
 }
 
@@ -490,6 +496,7 @@ padding: 10px;
 
 #page-footer {
 	width: 90%;
+ 	min-width: 1024px;
 	margin: 0 auto;
 	clear: both;
 }

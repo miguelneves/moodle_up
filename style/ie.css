@@ -1,24 +1,7 @@
-#megamenu .level-1 > a {
-	background: #99470A;
-}
-#megamenu .level-1 > a:hover {
-	background: #793808;
-}
-#megamenu .sub {
-	background: #793808;
-}
 #page-content #region-main-wrap {
-	border: 1px solid #ccc;
-	width: 858px;
+	border: 1px solid #ddd;
 }
 
 .block {
-	border: 1px solid #ccc;
-	width: ;
-}
-#page-content #region-post {
-	width: 218px;
-}
-body {
-	background: red !important;
+	border: 1px solid #ddd;
 }

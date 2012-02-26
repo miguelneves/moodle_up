@@ -15,10 +15,10 @@ $(document).ready(function() {
 	// Banner Slider bxslider.com 
 	$('#slider1').bxSlider({
 		mode: 'fade',
-		auto: true,
-		pause: 6000,
-		pager: false,
+		auto: false,
+		pause: 4000,
 		controls: false,
+		randomStart: false,
 		onAfterSlide: function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject){ 
 			currentSlideHtmlObject.parent().parent().css('width', '100%').parent().css('width', '100%'); // use something more pretty
 		}
