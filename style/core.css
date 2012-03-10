@@ -143,6 +143,9 @@ input[type=text]:focus {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.generalbox a {
+	text-decoration: underline;
+}
 .generalbox p:last-child {
 	margin: 0;
 }
@@ -270,6 +273,12 @@ th, td {
 	display: none;
 }
 
+/* ============ PAGE ================== */
+
+.modified {
+	font-size: 10px;
+	color: #999;
+}
 
 /* ============ TABTREE =============== */
 .tabtree {
