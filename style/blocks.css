@@ -95,14 +95,14 @@
 	top: 0;
 	color: #777 !important;
 }
-
-
-
-
-
-/*reset some stuff */
-/*
-.block.block_html .content .no-overflow {
-	padding: 0;
+.editing .block .buttons {
+	overflow: hidden;
 }
-*/
+.block .section_add_menus {
+	padding: 10px;
+	margin-top: 20px;
+	width: auto;
+}
+.block .section_add_menus .menujump {
+	width: 80%;
+}
