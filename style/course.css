@@ -52,6 +52,9 @@
 	font: 13px/1.8 'Droid Serif', Georgia, serif;
 }
 
+.region-content img {height: auto;
+	max-width:100%;}
+
 .region-content h1 { font-size: 20px; }
 .region-content h2 { font-size: 18px; }
 .region-content h3 { font-size: 16px; }
@@ -135,6 +138,7 @@
 .course-content .section .content .summary {
 	border-bottom: 1px solid #E5E5E5;
 	clear: both;
+
 }
 .course-content .section .content .summary p:last-child {
 	margin-bottom: 0;

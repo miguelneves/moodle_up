@@ -36,6 +36,7 @@
 $THEME->name = 'up';
 
 
+$THEME->parents = array('base');
 //$THEME->parentsheets = array('core');
 $THEME->parents_exclude_sheets = array('base' => array('pagelayout', 'blocks'));
 $THEME->sheets = array(
