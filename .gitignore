@@ -2,3 +2,6 @@
 *.pyc
 *.pyo
 .project
+up.esproj/Project.espressostorage
+
+up.esproj/user.jorgeribeiro.espressostorage

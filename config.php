@@ -35,10 +35,11 @@
 
 $THEME->name = 'up';
 
-$THEME->parents = array('');
-
+$THEME->parents = array('base');
+//$THEME->parentsheets = array('core');
+$THEME->parents_exclude_sheets = array('base' => array('pagelayout', 'blocks'));
 $THEME->sheets = array(
-	'base',			/** Some styles from theme Base **/
+//	'base',			/** Some styles from theme Base **/
     'pagelayout',   /** Must come first: Page layout **/
     'core',         /** Must come second: General styles **/
     'admin',

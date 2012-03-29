@@ -23,11 +23,6 @@ $(document).ready(function() {
 			currentSlideHtmlObject.parent().parent().css('width', '100%').parent().css('width', '100%'); // use something more pretty
 		}
 	});
-	
-	// collapse menu
-	$('#settingsnav > .block_tree > li').addClass('collapsed');
-	 
-	 
 	     //Calculate the height of <header>
 	       //Use outerHeight() instead of height() if have padding
 	       var aboveHeight = $('.block_settings').outerHeight();
