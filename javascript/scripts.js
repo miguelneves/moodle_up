@@ -60,6 +60,9 @@ function customMenu() {
 	var myCourses = $('.block_navigation li.depth_2:eq(3)');
 	var sitePages = $('.block_navigation li.depth_2:eq(1)');
 	
+	// remove .contains_branch for blocking YUI from loading subtopics	
+	myCourses.find('li').removeClass('contains_branch');
+	
 	/*
 var settingsName = $('.block_settings .header .title h2').html()
 	var settings = $('#settingsnav > ul');
@@ -69,9 +72,9 @@ var settingsName = $('.block_settings .header .title h2').html()
 
 	if(myProfile.length){
 		content = '<li id="home" class="level-1" role="menuitem">' + myHome.html() + '</a></li>' 
-		+ parseItem(myProfile) 
-		+ parseItem(myCourses)
-		+ parseItem(sitePages);
+		+ parseItem(myProfile, 'profile') 
+		+ parseItem(myCourses, 'courses')
+		+ parseItem(sitePages, 'pages');
 		//+ parseItem(settings, settingsName);
 
 		$('#page-header').append('<div id="megamenu"><ul id="menu" class="menu" role="menu">' + content + '</ul></div>');
@@ -114,7 +117,8 @@ var settingsName = $('.block_settings .header .title h2').html()
 			//collapse a menu node
 			collapse: function(event){
 				var target = $(event.target) || menu.find('a[tabindex=0]');
-				target.addClass('menu-parent-collapsed');
+				target.addClass('menu-parent-collapsed')
+				// default to down arrow
 				target.siblings().slideUp(150, function(){
 					target.parent().attr('aria-expanded', 'false');				
 					$(this).addClass('menu-group-collapsed');
@@ -166,9 +170,9 @@ var settingsName = $('.block_settings .header .title h2').html()
 			//clicks and presses
 			focus: function(event){
 					//deactivate previously active menu node, if one exists
-					menu.find('[tabindex=0]').attr('tabindex','-1').removeClass('active');
+					menu.find('[tabindex=0]').attr('tabindex','-1');
 					//assign 0 tabindex to focused item
-					$(event.target).attr('tabindex','0').addClass('active');
+					$(event.target).attr('tabindex','0');
 					//if($('li.first-child').hasClass('menu-item-active') && $('li.first-child').not('[aria-expanded=true]'))
 					$(event.target).parent().siblings('li.level-1').find('> a').trigger('collapse');
 				//	$(event.target).parent().next('li.level-1').find('> a').trigger('collapse');
@@ -223,7 +227,7 @@ var settingsName = $('.block_settings .header .title h2').html()
 				} 
 			}
 		});
-	
+		
 		//remove menu em click outsite menu
 		$(document.body).bind('click', function() {
 			$('a.menu-parent').trigger('collapse');
@@ -231,9 +235,13 @@ var settingsName = $('.block_settings .header .title h2').html()
 		$('#menu .level-1 .sub').bind('click', function(ev) {
 			ev.stopPropagation();
 		});
+		
+		// submenu
+		$('#menu .sub .contains_branch ul').hide();
+		$('#menu .sub .contains_branch .branch').click(function () {
+			$(this).next().toggle().parent().toggleClass('active-submenu');
+		});
 	}
-	
-	
 }
 
 
@@ -246,7 +254,24 @@ function parseItem(item, name){
 	} else {
 		var level = (name || 0);
 	}
-	level++;
+	var h4 = $('> p a, > p > span', item);
+	var list = $('> ul', item);
+
+	var content = '<li class="level-1 ' + name + '"><a href="#" tabindex="-1" class="menu-parent menu-parent-collapsed">' + h4.html() + '</a><ul class="sub menu-group-collapsed">' + list.html() + '</ul></li>';
+	
+//	if (level == 1) {
+//		h4 = '<a href="#" tabindex="-1" class="menu-parent menu-parent-collapsed">' + h4 + '</a>';
+//	} else {
+//		h4 = '<a href="#" tabindex="-1"><h4>' + h4 + '</h4></a>';
+//	}
+	
+//	if (level == 1)
+//	var content = '<li id="' + /* id +*/ '" class="level-' + level + '" role="menuitem">' + h4 + list +  '</li>';
+	
+	
+//	else
+//		content = '<li class="level-' + level + '" role="menuitem expanded">' + h4 + list +  '</li>';*/
+	/*level++;
 	
 	var h4 = $('> p a, > p > span', item);
 	var list = $('> ul > li', item);
@@ -304,8 +329,8 @@ function parseItem(item, name){
 	if (level == 1)
 		content = '<li id="' +  id + '" class="level-' + level + '" role="menuitem">' + h4 + list +  '</li>';
 	else
-		content = '<li class="level-' + level + '" role="menuitem expanded">' + h4 + list +  '</li>';
-		
+		content = '<li class="level-' + level + '" role="menuitem expanded">' + h4 + list +  '</li>';*/
+	
 	return content;
 }
 

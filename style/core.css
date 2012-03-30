@@ -399,27 +399,96 @@ th, td {
 	text-transform: uppercase;
 	display: block;
 	line-height: 1;
+	position: relative;
 }
 #megamenu .level-1 > a:hover {
 	background: #40361f;
 }
-#megamenu .submenu a.menu-parent:after {
-	content: ' ▾';
+#megamenu .level-1 .menu-parent:after {
+	content: '▴';
+	font-size: 12px;
+	padding-left: 4px;
+	position: absolute;
+	top: 8px;
 }
-#megamenu .submenu.active a.menu-parent:after {
-	content: ' ▴';
+#megamenu .level-1 .menu-parent.menu-parent-collapsed:after {
+	content: '▾';
+	font-size: 12px;
+	padding-left: 4px;
+	position: absolute;
+	top: 8px;
 }
 
 #megamenu .sub {
 	position: absolute;
 	background: #40361f;
 	z-index: 9999;
-	padding: 0 5px 5px;
+/*	padding: 0 0 5px;*/
 	border-bottom: 2px solid #857040;
+	margin-top: 2px;
 	max-width: 672px;
 }
+#megamenu .sub li {
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+	font-size: 16px;
+	width: 200px;
+	padding: 0;
+/*	border-bottom: 1px solid #57492a;*/
+}
+#megamenu .sub li p {
+	margin: 0;
+}
+#megamenu .sub li p a {
+	padding: 0 5px;
+	display: block;
+}
+#megamenu .sub li p a:hover {
+	background: #57492a;
+}
+#megamenu .sub li p a:active {
+	background: #352c19;
+	outline: 0;
+}
+#megamenu .sub .contains_branch {
+	
+}
+#megamenu .sub .contains_branch ul {
+	background: #473C22;
+	border-top: 1px solid #524627;
+	border-bottom: 1px solid #524627;
+}
+#megamenu .sub .contains_branch ul:hover {
+	content: "";
+}
+#megamenu .sub .contains_branch li {
+	width: 190px;
+	line-height: 22px;
+	color: #ccc;
+}
+#megamenu .sub .contains_branch ul a {
+	padding: 0 15px;
+	font-size: 13px;
+}
+#megamenu .sub .contains_branch .branch {
+	margin: 0 5px;
+	cursor: pointer;
+}
+#megamenu .sub .contains_branch .branch:after {
+	content: ' ▾';
+	font-size: 10px;
+	padding-left: 5px;
+}
+#megamenu .sub .active-submenu .branch:after {
+	content: ' ▴';
+	font-size: 10px;
+	padding-left: 5px;
+}
+#megamenu .courses .sub .contains_branch p {
+	border: none;
+	margin: 0;
+}
 
-#menu .sub .level-2 h4 {
+/*#menu .sub .level-2 h4 {
 	margin: 2px 0 4px;
 	padding: 0 0 2px 0;
 	border-bottom: 2px solid #fff;
@@ -458,7 +527,7 @@ th, td {
 
 #menu .sub > .general {
 	margin-top: 12px;
-}
+}*/
 
 
 /* FORMS */
