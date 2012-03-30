@@ -329,7 +329,18 @@ table.roleassigntable {
 	width: 90%;
 	word-wrap: break-word;
 }
-
+.foldertree table.ygtvtable {
+	width: 100%;
+}
+.foldertree table.ygtvtable .ygtvspacer {
+	text-decoration: none;
+}
+.foldertree table.ygtvtable .ygtvspacer:hover {
+	background: none;
+}
+.foldertree table.ygtvtable .ygtvspacer:active {
+	background: none;
+}
 /* messagearea */
 
 .messagearea .messagesendbox {

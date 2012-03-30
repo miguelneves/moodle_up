@@ -60,8 +60,9 @@ function customMenu() {
 	var myCourses = $('.block_navigation li.depth_2:eq(3)');
 	var sitePages = $('.block_navigation li.depth_2:eq(1)');
 	
-	// remove .contains_branch for blocking YUI from loading subtopics	
+	// remove .contains_branch for blocking YUI from loading subtopics and remove subtopics
 	myCourses.find('li').removeClass('contains_branch');
+	myCourses.find('li ul').remove();
 	
 	/*
 var settingsName = $('.block_settings .header .title h2').html()
