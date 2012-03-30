@@ -115,10 +115,11 @@ input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover 
 }
 input[type=submit]:active, button:active, input[type=button]:active, .button:active {
 	box-shadow: inset 0px 0 4px #444;
+	background: #ddd;
 	color: #111;
 	position: relative;
-	top: 1px;
-	padding: 7px 6px 5px;
+/*	top: 1px;*/
+/*	padding: 7px 6px 5px;*/
 }
 input[type=text],
 input[type=password] {

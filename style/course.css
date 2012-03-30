@@ -114,6 +114,7 @@
 	color: #857040;
 	text-decoration: underline;
 }
+#region-main .section .content ul li .dimmed_text,
 #region-main .section .content ul li .dimmed {
 	text-decoration: line-through;
 }
