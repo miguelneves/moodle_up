@@ -298,7 +298,50 @@ h1, h2, h3, h4, h5, h6 {
 #page-login-index #page-content #region-main {
 	width: 100%;
 }
+#page-login-index #page-content #region-main {
+	padding-right: 20px;
+}
 
+
+.loginbox,
+.loginbox.twocolumns {
+	margin: 0;
+}
+
+.loginbox.twocolumns .signuppanel,
+.loginbox.twocolumns .loginpanel {
+/*	float: left;*/
+/*	width: 49.5%;*/
+	border-right: none;
+/*	margin-bottom: 0;*/
+/*	padding-bottom: 0;*/
+}
+.loginbox.twocolumns .signuppanel {
+	float: left;
+}
+.loginbox.twocolumns .signuppanel .signuppanel {
+	width: 100%;
+}
+
+.loginbox.twocolumns .loginpanel {
+/*	padding-bottom: 2040px;*/
+}
+.loginbox .guestsub,
+.loginbox .forgotsub,
+.loginbox .potentialidps {
+	margin: 0;
+	padding: 0;
+}
+.loginbox .potentialidps .potentialidplist {
+	margin: 0 0 0 0;
+}
+.loginbox h2,
+.loginbox .subcontent {
+	margin: 0;
+	padding: 0;
+/*	overflow: auto;*/
+	text-align: left;;
+}
 .loginpanel .loginform {
 	margin-top: 10px;
 }
@@ -311,6 +354,15 @@ h1, h2, h3, h4, h5, h6 {
 .loginpanel #rememberusername {
 	float: left;
 	margin: 6px 6px 0 0;
+}
+.loginbox .loginform .form-label, 
+.loginbox .loginform .form-input {
+	float: none;
+	text-align: left;
+	width: auto;
+}
+.loginbox .loginform .form-input input {
+	width: auto;
 }
 .loginpanel label[for=rememberusername] {
 	float: left;

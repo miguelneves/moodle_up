@@ -9,7 +9,7 @@
 
 
 /* to be fixed... */
-.notloggedin .logininfo { display: none; }
+/*.notloggedin .logininfo { display: none; }*/
 
 
 .clearer, .clearfix {
@@ -55,6 +55,17 @@ a:active {
 	padding: 5px;
 	overflow: auto;
 }
+
+.error {
+	color: #A62A16;
+	background: #A62A16;
+	color: #fff;
+	padding: 4px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
 
 /* modal box */
 
