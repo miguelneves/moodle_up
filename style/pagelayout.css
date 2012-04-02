@@ -551,6 +551,8 @@ padding: 10px;
  	width: 1140px;
 	margin: 0 auto;
 	clear: both;
+	text-align: left;
+	font-size: 14px;
 }
 #page-footer .logininfo {
 	margin-top: 20px;
@@ -588,7 +590,8 @@ padding: 10px;
 	margin-bottom: 10px;
 }
 .site-info p {
-	font-size: 10px
+	font-size: 12px;
+	line-height: 1.4;
 }
 .social {
 	width: 120px;

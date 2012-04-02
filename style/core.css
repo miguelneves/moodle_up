@@ -177,40 +177,58 @@ input[type=text]:focus {
 
 /* TABLES */
 
+.userenrolment,
 .generaltable {
 	border-bottom: 2px solid #444;
 }
+.userenrolment thead,
 .generaltable thead {
 	background: #444;
 	color: #fff;
 	border-style: none;
 	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 }
+.userenrolment thead .header,
+.generaltable thead .header {
+	font-weight: normal;
+	line-height: 1;
+}
+.userenrolment tbody tr,
 .generaltable tbody tr {
 	border-bottom: 1px solid #E5E5E5;
 }
+.userenrolment tbody tr:nth-child(odd),
 .generaltable tbody tr:nth-child(odd) {
 	background: #f7f7f7;
 }
-.generaltable tbody tr:hover {
-	background: #fdfcfa;
-}
+.userenrolment td,
 .generaltable td {
 	border-color: #E5E5E5;
 }
+.userenrolment a,
 .generaltable a {
+	color: #fff;
 	border: none;
+	text-decoration: underline;
 	background: none;
 }
 .roleassigntable td {
     vertical-align: top;
 }
 
-th, td {
+th, td, tr {
  text-align: left;
  padding: 5px;
 }
+
+/* .userenrolment table */
+.userenrolment { margin-top: 10px; }
+.userenrolment td { padding: 5px; }
+.userenrolment .col_userdetails { min-width: 230px; }
+/*.userenrolment .col_lastseen { min-width: 70px; }*/
+/*.userenrolment .col_enrol { min-width: 120px; }*/
+.userenrolment .col_group .group { padding-left: 0; margin-left: 0; }
 
 /* ============== FORUMS ============== */
 

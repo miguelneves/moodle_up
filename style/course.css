@@ -62,6 +62,7 @@
 
 .region-content h2.main {
 	font-size: 20px;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: "PT Sans Narrow", Verdana, sans-serif;
 /*	font-weight: normal;*/
