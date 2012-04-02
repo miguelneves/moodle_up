@@ -640,8 +640,13 @@ span.hide, div.hide {
 	float: left;
 	margin-right: 5px;
 }
-.categorylist .course .indentation {
+
+.categorylist .indentation {
 	margin-left: 20px;
+}
+.categorylist .category {
+	font-weight: bold;
+	font-size: 14px;
 }
 .categorylist .course .name,
 .categorylist .course .info {
