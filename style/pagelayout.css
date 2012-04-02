@@ -176,12 +176,15 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 }
 .breadcrumb {
-	font-size: 10px;
+	font-size: 13px;
+	font-family: "PT Sans Narrow", sans-serif;
 	text-transform: uppercase;
-	padding: 5px 20px;
+	padding: 5px 20px 2px;
 	float: left;
+	color: #666;
 }
 .breadcrumb a:visited { color: #857040; }
+.breadcrumb a:hover { color: #666; }
 .breadcrumb a:active { color: #fff; }
 .breadcrumb ul {
 	margin: 0;
@@ -193,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .breadcrumb li:last-child a {
-	font-weight: bold;
+/*	font-weight: bold;*/
 }
 
 .navbutton {
