@@ -208,7 +208,7 @@ input[type=text]:focus {
 }
 .userenrolment a,
 .generaltable a {
-	color: #fff;
+	color: #a78d51;
 	border: none;
 	text-decoration: underline;
 	background: none;
@@ -719,3 +719,4 @@ span.hide, div.hide {
 .region-content .coursebox .dimmed {
 	text-decoration: line-through;
 }
+
