@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .headermain {
 	float: left;
-	height: 130px; /* colocar imagem */
+	height: 75px; /* colocar imagem */
 }
 
 .headermain {
@@ -604,8 +604,8 @@ padding: 10px;
 	width: 20px;
 	height: 20px;
 	-webkit-transition: background 1s ease;
-	-moz-transition: background 1s ease;
-	transition: background 1s ease;
+	-webkit-transition: background 1s ease;
+	-webkit-transition: background 1s ease;
 	
 }
 .social li a:hover {

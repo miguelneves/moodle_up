@@ -695,7 +695,7 @@ span.hide, div.hide {
 .wiki-toc {
 
 }
-.wiki-toc p.wiki-toc-section {
+.wiki-toc .wiki-toc-section .p {
 	margin: 2px 8px;
 }
 

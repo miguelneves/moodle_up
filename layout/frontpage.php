@@ -65,7 +65,7 @@ echo $OUTPUT->doctype() ?>
 			
 			<!-- header login -->
 				<?php
-				$sidebar = $OUTPUT->blocks_for_region('side-post');
+				/*$sidebar = $OUTPUT->blocks_for_region('side-post');
 	
 				$doc = new DOMDocument();
 				$doc->loadHTML($sidebar);
@@ -88,7 +88,7 @@ echo $OUTPUT->doctype() ?>
 						echo $innerHTML;
 						echo "</div>";
 					}
-				}
+				}*/
 				
 				?>
 	
