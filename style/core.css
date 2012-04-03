@@ -564,6 +564,9 @@ th, td, tr {
 
 .mform {
 }
+.mform fieldset {
+	border: none;
+}
 .mform fieldset.clearfix {
 	border-bottom: 2px solid #7a6f3a;
 }
@@ -686,6 +689,15 @@ span.hide, div.hide {
 	border-bottom: 1px solid #ccc !important;
 }
 .mdl-chat-my-entry .chat-message .text { background: none !important; }
+
+/* ===== WIKI ===== */
+
+.wiki-toc {
+
+}
+.wiki-toc p.wiki-toc-section {
+	margin: 2px 8px;
+}
 
 /* ===== MYHOME ===== */
 
