@@ -29,6 +29,7 @@
 	text-align: left;
 }
 
+
 .boxaligncenter {
 	align: left;
 	margin: 0;
@@ -45,4 +46,10 @@ width: 100%;
 	
 .que .qtext {
 	overflow: auto;
+}
+
+
+/* ===== edit view ==== */
+#page-mod-quiz-edit #quizcontentsblock {
+	
 }

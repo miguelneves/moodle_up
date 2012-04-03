@@ -8,12 +8,22 @@ $(document).ready(function() {
 	if($('body').hasClass('editing')) {
 		editMode();
 	}		
+	// remove navigation block
+	$('.block_navigation').next().remove();
+	$('.block_navigation').prev().remove();
+	$('.block_navigation').remove();
+	
+	// change width of the content column if sidebar is empty
+	if ($('#region-post .region-content').children().length == 0) {
+//		$('#region-post').remove();
+		$('body').addClass('no-sidebar');
+	}
 	
 	
 	/* ===== HOMEPAGE ===== */
 	
 	// Banner Slider bxslider.com 
-	$('#slider1').bxSlider({
+	$('#page-site-index #slider1').bxSlider({
 		mode: 'fade',
 		auto: false,
 		pause: 4000,
@@ -40,6 +50,7 @@ $(document).ready(function() {
 //	               $('.block_settings').removeClass('fixed');
 	               }
 	       });
+	     	       
 });
 
 function customMenu() {
@@ -242,7 +253,7 @@ var settingsName = $('.block_settings .header .title h2').html()
 		$('#menu .sub .contains_branch .branch').click(function () {
 			$(this).next().toggle().parent().toggleClass('active-submenu');
 		});
-	}
+	}	
 }
 
 
@@ -340,6 +351,10 @@ function settingsMenu(){
 
 	var settingsName = $('.block_settings .header .title h2').html()
 	var settings = $('.block_settings');
+	
+	//remove skip-blocks
+	settings.next().remove();
+	settings.prev().remove();
 	
 	$('.header', settings).remove();
 	$('.footer', settings).remove();	

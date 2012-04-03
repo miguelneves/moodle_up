@@ -61,6 +61,11 @@ h1, h2, h3, h4, h5, h6 {
 .skip-block { display: none;}
 
 
+/* prevent .block_navigation from flashing */
+#region-post .block_navigation {
+	display: none !important;
+}
+
 /* "fix" the box model */
 
 * {
@@ -104,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 #login-info-wrap {
 	float: right;
 	text-align: right;
-	margin: 15px 20px 0 0;
+	margin: 15px 0 0 0;
 }
 .notloggedin #login-info-wrap {
 /* 	margin: 15px 20px 0 0; */
@@ -238,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #page-content #region-main {
 	padding: 0 0 10px 20px;
-	width: 670px;
+	width: 660px;
 	float: left;
 }
 #page-content #region-pre {
@@ -251,9 +256,15 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 }
 /*if no sidebar */
-.side-pre-only #page-content #region-main-wrap { width: 1100px; }
-.side-pre-only #page-content #region-main { width: 880px; }
+/*.side-pre-only #page-content #region-main-wrap { width: 1100px; }*/
+/*.side-pre-only #page-content #region-main { width: 880px; }*/
 
+.no-sidebar #page-content #region-main-wrap {
+	width: 1140px;
+}
+.no-sidebar #page-content #region-main {
+	width: 900px;
+}
 
 /* FRONT PAGE */
 .pagelayout-frontpage #page-content #region-main { width: auto;  }
@@ -404,10 +415,10 @@ padding: 10px;
 }
 #region-main-wrap .block_settings {
 	float: right;
-	width: 24%;
+	width: 220px;
 	padding: 0;
 	box-shadow: none;
-	margin-right: -5px;
+	margin-right: -2px;
 	border-right: 1px solid #aaa;
 	box-shadow: 6px 0 5px -5px #aaa;
 	border-left: 1px solid #ccc;
