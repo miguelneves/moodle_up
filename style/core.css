@@ -178,7 +178,8 @@ input[type=submit][disabled=disabled]:active {
 
 /* GENERAL */
 .generalbox,
-.eventlist {
+.eventlist
+.mod_introbox {
 	border: 1px solid #E5E5E5;
 	background: #f7f7f7;
 	padding: 10px;
@@ -461,7 +462,7 @@ th, td, tr {
 }
 #megamenu .level-1 > a {
 	margin: 0;
-	padding: 5px 20px;
+	padding: 7px 20px 2px;
 	font-size: 18px;
 	text-transform: uppercase;
 	display: block;
