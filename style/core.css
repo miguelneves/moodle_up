@@ -310,6 +310,10 @@ th, td, tr {
 	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 18px;
 }
+.path-mod-forum .forumheaderlist thead .header {
+	font-weight: normal;
+	line-height: 1.2;
+}
 .path-mod-forum .forumheaderlist tbody tr {
 	border-bottom: 1px solid #e5e5e5;
 }

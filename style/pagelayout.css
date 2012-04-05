@@ -193,8 +193,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logininfo a,
-.logininfo a:visited { color: #fff; border-bottom-color: #444; }
-.logininfo a:hover { color: #444; background: inherit; }
+.logininfo a:visited { color: #fff; border-bottom-color: #444; text-decoration: underline;
+}
+.logininfo a:hover { color: #222; background: inherit; }
 
 
 .notloggedin .langmenu {
