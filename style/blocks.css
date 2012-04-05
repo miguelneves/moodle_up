@@ -13,6 +13,7 @@
 	padding: 10px;
 /*	width: 200px;*/
 }
+
 #region-post .block .header {
 
 }
@@ -44,6 +45,9 @@
 	margin-right: 5px;
 }
 
+#region-post .block.invisible h2 {
+	opacity: 0.5;
+}
 
 .unlist {
 	margin: 0;
