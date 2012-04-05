@@ -3,7 +3,7 @@
 
 /* general */
 
-.block {
+#region-post .block {
 	background: #fff;
 	border-radius: 2px;
 	-moz-box-shadow: 0 0 3px #ccc;
@@ -13,10 +13,10 @@
 	padding: 10px;
 /*	width: 200px;*/
 }
-.blcok .header {
+#region-post .block .header {
 
 }
-.block .header h2 {
+#region-post  .block .header h2 {
 	margin: 0 0 10px 0;
 	font: normal 20px "PT Sans Narrow", Verdana, sans-serif;
 	border-radius: 2px;
@@ -26,21 +26,21 @@
 	border-bottom: 1px solid #e5e5e5;
 	text-transform: uppercase;
 }
-.block .generalbox {
+#region-post  .block .generalbox {
 	width: auto;
 }
 
-.block .content .list {
+#region-post  .block .content .list {
 	margin: 10px 0 0;
 }
-.block .content .list li {
+#region-post  .block .content .list li {
 	list-style: none;
 	border-bottom: 1px solid #ddd;
 }
-.block .content .list li:last-child {
+#region-post .block .content .list li:last-child {
 	border: none;
 }
-.block .content .listentry img {
+#region-post  .block .content .listentry img {
 	margin-right: 5px;
 }
 

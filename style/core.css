@@ -37,7 +37,7 @@ a:visited {
 a:hover {
 	color: #444;
 	/*border-bottom: 1px solid #444;*/
-	background: #fdfcfa;
+/*	background: #fdfcfa;*/
 }
 a:active {
 	color: #fff;
@@ -105,28 +105,40 @@ input[type=submit], button, input[type=button], .button {
 	color: #666;
 	padding: 2px;
 	padding: 6px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
-	background: -webkit-linear-gradient(90deg, #ccc, #eee);
-	box-shadow: 0px 0 1px #444;
+	background: #ccc;
+	background-image: -webkit-linear-gradient(90deg, #ccc, #eee);
+	background-image: -moz-linear-gradient(90deg, #ccc, #eee);
+	background-image: -ms-linear-gradient(90deg, #ccc, #eee);
+	background-image: -o-linear-gradient(90deg, #ccc, #eee);
+	background-image: linear-gradient(90deg, #ccc, #eee);
+/*	box-shadow: 0px 0 1px #444;*/
+	border: 1px solid #ccc;
 	text-shadow: 0 1px 1px #F7F7F7;
 	-moz-transition: color 0.5s ease;
 	-webkit-transition: color 0.5s ease;
 	transition: color 0.5s ease;
 	margin: 0;
 }
+
 input[type=submit]:visited, button:visited, input[type=button]:visited, .button:visited {
 }
 input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover {
 	color: #444;
-	box-shadow: 0px 0 1px #000;
+/*	box-shadow: 0px 0 1px #000;*/
+	border: 1px solid #aaa;
 	cursor: pointer;
 	-moz-transition: color 0.5s ease;
 	-webkit-transition: color 0.5s ease;
 	transition: color 0.5s ease;
 }
 input[type=submit]:active, button:active, input[type=button]:active, .button:active {
-	box-shadow: inset 0px 0 4px #444;
-	background: #ddd;
+/*	box-shadow: inset 0px 0 4px #444;*/
+	background: #ccc;
 	color: #111;
 	position: relative;
 /*	top: 1px;*/
@@ -136,14 +148,33 @@ input[type=text],
 input[type=password] {
 	border: 1px solid #ccc;
 	padding: 6px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
 	border-radius: 2px;
 }
 input[type=text]:focus {
 	border: 1px solid #aaa;
-	box-shadow: 0 0 6px #999 ;
+/*	box-shadow: 0 0 6px #999 ;*/
 	outline: none;
 }
-
+/* disabled inputs */
+input[type=submit][disabled=disabled]{
+	opacity: 0.6;
+}
+input[type=submit][disabled=disabled]:hover {
+	border-color: #ccc;
+	color: #666;
+}
+input[type=submit][disabled=disabled]:active {
+	box-shadow: none;
+	background: #ccc;
+	background-image: -webkit-linear-gradient(90deg, #ccc, #eee);
+	background-image: -moz-linear-gradient(90deg, #ccc, #eee);
+	background-image: -ms-linear-gradient(90deg, #ccc, #eee);
+	background-image: -o-linear-gradient(90deg, #ccc, #eee);
+	background-image: linear-gradient(90deg, #ccc, #eee);
+	color: #666;
+}
 
 /* GENERAL */
 .generalbox,

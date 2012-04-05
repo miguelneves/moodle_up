@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* prevent .block_navigation from flashing */
-#region-post .block_navigation {
+.jsenabled #region-post .block_navigation {
 	display: none !important;
 }
 
@@ -630,24 +630,41 @@ padding: 10px;
 .social .delicious a:hover { background: #407ACC; }
 
 
+/* ===== CONTENT ONLY ===== */
 
-
+.content-only #page-content #region-main-wrap {
+	width: 100%;
+	margin: 0;
+}
+.content-only #page-header-wrap {
+	min-width: 0;
+}
+.content-only #page-header-wrap,
+.content-only #page-header,
+.content-only #page-footer,
+.content-only #page-content #region-main {
+	width: 100%;
+}
+.content-only #page-content {
+	margin: 2%;
+	width: 96%;
+}
+.content-only #page-content #region-main {
+	padding: 0 20px;
+}
 /** ==============
 	.side-post-only
 	.content-only
 	============== **/
 
-.content-only #page-content #region-main-wrap {
-/*	width: 100%;
-	margin: 0;*/
-}
+
 /* some page have .side-post-only and have a sidebar, others dont... */
-.path-my #page-content #region-main-wrap,
+/*.path-my #page-content #region-main-wrap,
 #page-course-view-topics #page-content #region-main-wrap,
-.side-post-only.editing #page-content #region-main-wrap {
+.side-post-only.editing #page-content #region-main-wrap {*/
 /*	width: 78%;
 	margin-right: 2%;*/
-}
+/*}*/
 
 /*.path-user #page-content #region-main-wrap,
 .path-notes #page-content #region-main-wrap,
