@@ -632,7 +632,7 @@ padding: 10px;
 
 /* ===== CONTENT ONLY ===== */
 
-.content-only #page-content #region-main-wrap {
+/*.content-only #page-content #region-main-wrap {
 	width: 100%;
 	margin: 0;
 }
@@ -651,7 +651,7 @@ padding: 10px;
 }
 .content-only #page-content #region-main {
 	padding: 0 20px;
-}
+}*/
 /** ==============
 	.side-post-only
 	.content-only
