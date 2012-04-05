@@ -259,11 +259,13 @@ input + input {
 	margin: 10px 0;
 /*	background: #857040;*/
 	margin-top: 3px;
-	padding: 4px;
+	padding: 6px;
 /*	color: #fff;*/
 /*	border-radius: 2px;*/
 	display: inline-block;
-	font-size: 12px;
+	font-size: 13px;
+	line-height: 1.2;
+	font-family: "PT Sans Narrow", Verdana, sans-serif;
 /*	text-shadow: none;*/
 }
 .button.edit-summary:hover {

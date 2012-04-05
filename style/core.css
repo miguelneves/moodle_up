@@ -57,7 +57,7 @@ a:active {
 }
 
 .error {
-	color: #A62A16;
+	color: #fff;
 	background: #A62A16;
 	color: #fff;
 	padding: 4px;
@@ -65,7 +65,12 @@ a:active {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 }
-
+.mform .error {
+	background: #F7E3E1;
+}
+.mform .fitem div.error {
+	border: 1px solid #F0BDB9;
+}
 
 /* modal box */
 
@@ -178,7 +183,7 @@ input[type=submit][disabled=disabled]:active {
 
 /* GENERAL */
 .generalbox,
-.eventlist
+.eventlist,
 .mod_introbox {
 	border: 1px solid #E5E5E5;
 	background: #f7f7f7;
@@ -644,9 +649,9 @@ span.hide, div.hide {
 .mform fieldset .advancedbutton {
 	text-align: right;
 }
-.filemanager-container {
+.ffilemanager .filemanager-container {
 	padding: 5px;
-	background: #fdfcfa;
+	background: #eee;
 	border-radius: 2px;
 	border: 1px solid #7a6f3a;
 	margin-top: 10px;
