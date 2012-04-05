@@ -769,6 +769,32 @@ span.hide, div.hide {
 	text-decoration: line-through;
 }
 
+/* messagins */
+
+.region-content #providers .generaltable {
+/*	float: left;*/
+	width: 100%;
+}
+.region-content #providers > div {
+	margin: 0;
+}
+#providers .generaltable .header,
+#providers .generaltable .cell {
+	text-align: left;
+}
+#page-message-edit #providers legend {
+	float: none;
+}
+
+.message .messagearea #combinedsearch {
+	margin: 0 0 10px 0;
+}
+.message #message_contacts tr {
+	border-bottom: 1px solid #ccc;
+}
+.message #message_contacts tr:first-child {
+	border-color: #666;
+}
 /* Redirect Message */
 
 .redirectmessage {
