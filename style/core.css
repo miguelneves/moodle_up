@@ -207,11 +207,12 @@ input[type=submit][disabled=disabled]:active {
 .boxwidthwide { }
 
 /* TABLES */
-
+table#categoryquestions,
 .userenrolment,
 .generaltable {
 	border-bottom: 2px solid #444;
 }
+#categoryquestions thead,
 .userenrolment thead,
 .generaltable thead {
 	background: #444;
@@ -220,26 +221,31 @@ input[type=submit][disabled=disabled]:active {
 	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 16px;
 }
+#categoryquestions  thead .header,
 .userenrolment thead .header,
 .generaltable thead .header {
 	font-weight: normal;
 	line-height: 1;
 }
+#categoryquestions tbody tr,
 .userenrolment tbody tr,
 .generaltable tbody tr {
 	border-bottom: 1px solid #E5E5E5;
 }
+#categoryquestions tbody tr:nth-child(odd),
 .userenrolment tbody tr:nth-child(odd),
 .generaltable tbody tr:nth-child(odd) {
 	background: #f7f7f7;
 }
+#categoryquestions td,
 .userenrolment td,
 .generaltable td {
 	border-color: #E5E5E5;
 }
+#categoryquestions a,
 .userenrolment a,
 .generaltable a {
-	color: #a78d51;
+	color: #fff/*#a78d51*/;
 	border: none;
 	text-decoration: underline;
 	background: none;

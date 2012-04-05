@@ -35,8 +35,8 @@
 	text-align: left;
 }
 
-.boxaligncenter {
-	align: left;
+#page-question-edit .boxaligncenter {
+	text-align: left;
 	margin: 0;
 }
 
@@ -53,6 +53,10 @@ width: 100%;
 	overflow: auto;
 }
 
+/* question bank */
+#page-question-edit .questionbankwindow {
+	width: 100%;
+}
 
 /* ===== edit view ==== */
 #page-mod-quiz-edit #quizcontentsblock {
@@ -92,6 +96,13 @@ width: 100%;
 #categoryquestions .questionname {
 	width: 20%;
 	color: #666;
+}
+#categoryquestions th.modifiername .sorters, #categoryquestions th.creatorname .sorters {
+	padding: 4px 0;
+}
+table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
+	text-overflow: ellipsis;
+	padding: 0 5px;
 }
 #page-mod-quiz-edit div.reorder div.question div.qnum,
 #page-mod-quiz-edit .reorder div.question div.content {
