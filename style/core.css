@@ -737,6 +737,20 @@ span.hide, div.hide {
 }
 .mdl-chat-my-entry .chat-message .text { background: none !important; }
 
+.yui-layout .yui-layout-noscroll div.yui-layout-bd {
+overflow-y: hidden;
+}
+
+.yui-layout .yui-layout-noscroll div.yui-layout-bd {
+overflow-x: auto;
+}
+
+
+#page-mod-chat-gui_ajax-index #chat-input-area  #button-send {
+
+	font-size: 11px; !important;
+
+}
 /* ===== WIKI ===== */
 
 .wiki-toc {
@@ -828,3 +842,5 @@ span.hide, div.hide {
 .continuebutton a {
 	color: #666;
 }
+
+
