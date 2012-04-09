@@ -47,6 +47,10 @@ a:active {
 .helplink a {
 	border: none;
 }
+.helplink a:active {
+	background: none;
+}
+
 /* ===== GLOBAL ===== */
 .region-content pre {
 	background:inherit;
@@ -121,7 +125,6 @@ input[type=submit], button, input[type=button], .button {
 	background-image: -ms-linear-gradient(90deg, #ccc, #eee);
 	background-image: -o-linear-gradient(90deg, #ccc, #eee);
 	background-image: linear-gradient(90deg, #ccc, #eee);
-/*	box-shadow: 0px 0 1px #444;*/
 	border: 1px solid #ccc;
 	text-shadow: 0 1px 1px #F7F7F7;
 	-moz-transition: color 0.5s ease;
@@ -149,6 +152,7 @@ input[type=submit]:active, button:active, input[type=button]:active, .button:act
 /*	top: 1px;*/
 /*	padding: 7px 6px 5px;*/
 }
+textarea,
 input[type=text],
 input[type=password] {
 	border: 1px solid #ccc;
@@ -156,6 +160,11 @@ input[type=password] {
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
+	-o-box-shadow: inset 0px 1px 2px #ccc;
+	-ms-shadow: inset 0px 1px 2px #ccc;
+	-webkit-shadow: inset 0px 1px 2px #ccc;
+	-moz--shadow: inset 0px 1px 2px #ccc;
+	box-shadow: inset 0px 1px 2px #ccc;
 }
 input[type=text]:focus {
 	border: 1px solid #aaa;
@@ -251,10 +260,9 @@ table#categoryquestions,
 #categoryquestions a,
 .userenrolment a,
 .generaltable a {
-	color: #fff/*#a78d51*/;
+	color: #a78d51*;
 	border: none;
 	text-decoration: underline;
-	background: none;
 }
 .roleassigntable td {
     vertical-align: top;
@@ -374,23 +382,23 @@ th, td, tr {
 	display: block;
 	height: 1px;
 	border: none;
-	border-bottom: 2px solid #777;
+	border-bottom: 1px solid #999;
 	overflow: hidden;
 	position: absolute;
 	width: 100%;
-	margin-top: -4px;
+	margin-top: -3px;
 }
-.gecko .tabtree .tabrow0 .here .empty { margin-top: 0; } /* rever */
+.gecko .tabtree .tabrow0 .here .empty { margin-top: -2px;  }
 
 .tabtree .tabrow0 li a {
-	border: 2px solid #E5E5E5;
+	border: 1px solid #E5E5E5;
 	padding: 5px;
 	background: #f7f7f7;
 	color: #777;
 	border-radius: 2px 2px 0 0;
 }
 .tabtree .tabrow0 li a:hover {
-	background: #E5E5E5;
+	background: #eee;
 	color: #444;
 }
 .tabtree .tabrow0 li a.nolink:hover {
@@ -398,12 +406,13 @@ th, td, tr {
 }
 .tabtree .tabrow0 li a:active {
 	background: #444;
-	border-color: #444;
+	border-color: #999;
+	color: #fff;
 }
 .tabtree .tabrow0 > .active > a, .tabtree .tabrow0 > .selected > a {
 	background: #fff;
 	color: #444;
-	border-color: #777;
+	border-color: #999;
 	z-index: 200;
 	position: relative;
 	border-bottom-color: #fff;
@@ -415,8 +424,8 @@ th, td, tr {
 	width: 100%;
 }
 .tabtree .tabrow1 {
-	border-top: 2px solid #777;
-	border-bottom: 2px solid #E5E5E5;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #E5E5E5;
 	padding: 2px 0;
 	margin-top: 1px;
 }
@@ -510,7 +519,8 @@ th, td, tr {
 	font-size: 16px;
 	width: 200px;
 	padding: 0;
-/*	border-bottom: 1px solid #57492a;*/
+	list-style-type: none;
+/*	border-bottom: 1px solid #3A311C;*/
 }
 #megamenu .sub li p {
 	margin: 0;
@@ -535,10 +545,10 @@ th, td, tr {
 	border-bottom: 1px solid #524627;
 }
 #megamenu .sub .contains_branch ul:hover {
-	content: "";
+/*	content: "";*/
 }
 #megamenu .sub .contains_branch li {
-	width: 190px;
+/*	width: 190px;*/
 	line-height: 22px;
 	color: #ccc;
 }
@@ -653,11 +663,15 @@ span.hide, div.hide {
 .mform fieldset .advancedbutton {
 	text-align: right;
 }
+.filepicker-filelist,
 .ffilemanager .filemanager-container {
 	padding: 5px;
 	background: #eee;
 	border-radius: 2px;
-	border: 1px solid #7a6f3a;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+}
+.mform fieldset div .filepicker-filelist {
 	margin-top: 10px;
 }
 /* user profile */
@@ -737,6 +751,24 @@ span.hide, div.hide {
 }
 .mdl-chat-my-entry .chat-message .text { background: none !important; }
 
+/* ===== DATABASE ===== */
+
+#page-mod-data-templates .boxwidthwide  {
+	width: 100%;
+}
+#page-mod-data-templates .boxwidthwide #availabletags {
+	width: 100%;	
+}
+#page-mod-data-templates .littleintro {
+	margin: 10px 0;
+}
+#page-mod-data-field- .generaltable {
+	width: 100%;
+}
+#page-mod-data-edit form div .generalbox.boxaligncenter.boxwidthwide {
+	width: 100%;
+	overflow: auto;
+}
 /* ===== WIKI ===== */
 
 .wiki-toc {

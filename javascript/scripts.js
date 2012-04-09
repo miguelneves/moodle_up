@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	//init
 	customMenu();
-	tableContents();
+//	tableContents();
 	settingsMenu();
 	//textIcons();	
 	if($('body').hasClass('editing')) {
@@ -18,7 +18,10 @@ $(document).ready(function() {
 //		$('#region-post').remove();
 		$('body').addClass('no-sidebar');
 	}
-	
+	$('#id_attempts option').bind('click', function (ev) {
+		alert("hell");
+		return false;
+	});
 	
 	/* ===== HOMEPAGE ===== */
 	
@@ -28,10 +31,10 @@ $(document).ready(function() {
 		auto: false,
 		pause: 4000,
 		controls: false,
-		randomStart: false,
-		onAfterSlide: function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject){ 
-			currentSlideHtmlObject.parent().parent().css('width', '100%').parent().css('width', '100%'); // use something more pretty
-		}
+		randomStart: false
+//		onAfterSlide: function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject){ 
+//			currentSlideHtmlObject.parent().parent().css('width', '100%').parent().css('width', '100%'); // use something more pretty
+//		}
 	});
 	     //Calculate the height of <header>
 	       //Use outerHeight() instead of height() if have padding
