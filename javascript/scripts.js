@@ -11,10 +11,10 @@ $(document).ready(function() {
 	// remove navigation block
 	$('.block_navigation').next().remove();
 	$('.block_navigation').prev().remove();
-	$('.block_navigation').remove();
+	$('.block_navigation').empty();
 	
 	// change width of the content column if sidebar is empty
-	if ($('#region-post .region-content').children().length == 0) {
+	if ($('#region-post .region-content .block_navigation').children().length == 0) {
 //		$('#region-post').remove();
 		$('body').addClass('no-sidebar');
 	}
