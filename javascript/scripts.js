@@ -2,23 +2,27 @@ $(document).ready(function() {
 	
 	//init
 	customMenu();
-	tableContents();
+//	tableContents();
 	settingsMenu();
 	//textIcons();	
 	if($('body').hasClass('editing')) {
 		editMode();
 	}		
 	// remove navigation block
-	$('.block_navigation').next().remove();
-	$('.block_navigation').prev().remove();
-	$('.block_navigation').remove();
+	var nav = $('.block_navigation');
+	nav.next().remove();
+	nav.prev().remove();
+//	nav.remove();
 	
 	// change width of the content column if sidebar is empty
-	if ($('#region-post .region-content').children().length == 0) {
+	if ($(nav).siblings().length == 0) {
 //		$('#region-post').remove();
 		$('body').addClass('no-sidebar');
 	}
-	
+	$('#id_attempts option').bind('click', function (ev) {
+		alert("hell");
+		return false;
+	});
 	
 	/* ===== HOMEPAGE ===== */
 	
@@ -28,10 +32,10 @@ $(document).ready(function() {
 		auto: false,
 		pause: 4000,
 		controls: false,
-		randomStart: false,
-		onAfterSlide: function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject){ 
-			currentSlideHtmlObject.parent().parent().css('width', '100%').parent().css('width', '100%'); // use something more pretty
-		}
+		randomStart: false
+//		onAfterSlide: function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject){ 
+//			currentSlideHtmlObject.parent().parent().css('width', '100%').parent().css('width', '100%'); // use something more pretty
+//		}
 	});
 	     //Calculate the height of <header>
 	       //Use outerHeight() instead of height() if have padding
@@ -72,8 +76,8 @@ function customMenu() {
 	var sitePages = $('.block_navigation li.depth_2:eq(1)');
 	
 	// remove .contains_branch for blocking YUI from loading subtopics and remove subtopics
-	myCourses.find('li').removeClass('contains_branch');
-	myCourses.find('li ul').remove();
+	myCourses.find('.type_course').removeClass('contains_branch');
+	myCourses.find('.type_course ul').remove();
 	
 	/*
 var settingsName = $('.block_settings .header .title h2').html()
