@@ -795,6 +795,12 @@ span.hide, div.hide {
 }
 .mdl-chat-my-entry .chat-message .text { background: none !important; }
 
+div#yui-gen4 {top: 0px !important;}
+
+#input-message { padding-bottom: 0px !important;}
+
+
+
 <<<<<<< HEAD
 .yui-layout .yui-layout-noscroll div.yui-layout-bd {
 overflow-y: hidden;
@@ -806,9 +812,16 @@ overflow-x: auto;
 
 
 #page-mod-chat-gui_ajax-index #chat-input-area  #button-send {
-
-	font-size: 11px; !important;
-
+	font-size: 11px !important;
+	height: 28px;
+	top: 4px;
+	position: absolute;
+	left: 410px;
+	
+}
+#page-mod-chat-gui_ajax-index #chat-input-area  #choosetheme {
+	display: none;	
+}
 =======
 /* ===== DATABASE ===== */
 
