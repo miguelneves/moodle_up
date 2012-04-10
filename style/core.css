@@ -242,6 +242,11 @@ table#categoryquestions,
 	font-weight: normal;
 	line-height: 1;
 }
+#categoryquestions  thead .header a,
+.userenrolment thead .header a,
+.generaltable thead .header a {
+	color: #fff;
+}
 #categoryquestions tbody tr,
 .userenrolment tbody tr,
 .generaltable tbody tr {
@@ -553,7 +558,7 @@ th, td, tr {
 	color: #ccc;
 }
 #megamenu .sub .contains_branch ul a {
-	padding: 0 15px;
+	padding: 0 10px;
 	font-size: 13px;
 }
 #megamenu .sub .contains_branch .branch {

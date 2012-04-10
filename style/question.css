@@ -186,6 +186,7 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 	font-weight: normal;
 	width: 20px;
 	height: 20px;
+	padding-top: 2px;
 	letter-spacing: 0;
 }
 .path-mod-quiz .qnbutton.notyetanswered, .path-mod-quiz .qnbutton.requiresgrading, .path-mod-quiz .qnbutton.invalidanswer {
