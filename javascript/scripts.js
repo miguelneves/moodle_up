@@ -11,7 +11,7 @@ $(document).ready(function() {
 	// remove navigation block
 	$('.block_navigation').next().remove();
 	$('.block_navigation').prev().remove();
-	$('.block_navigation').empty();
+//	$('.block_navigation').empty();
 	
 	// change width of the content column if sidebar is empty
 	if ($('#region-post .region-content .block_navigation').children().length == 0) {
@@ -75,8 +75,8 @@ function customMenu() {
 	var sitePages = $('.block_navigation li.depth_2:eq(1)');
 	
 	// remove .contains_branch for blocking YUI from loading subtopics and remove subtopics
-	myCourses.find('li').removeClass('contains_branch');
-	myCourses.find('li ul').remove();
+	myCourses.find('.type_course').removeClass('contains_branch');
+	myCourses.find('.type_course ul').remove();
 	
 	/*
 var settingsName = $('.block_settings .header .title h2').html()

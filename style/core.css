@@ -590,7 +590,29 @@ th, td, tr {
 	border: none;
 	margin: 0;
 }
-
+#megamenu .courses .sub .type_category > .branch,
+#megamenu .courses .sub .type_category > .emptybranch {
+	padding: 0 5px;
+}
+#megamenu .courses .sub .type_course .branch:after {
+	content: "";
+}
+#megamenu .courses .sub .contains_branch .branch a:hover:before {
+	width: 0;
+	height: 0;
+}
+#megamenu .courses .sub .type_course .emptybranch a,
+#megamenu .courses .sub .type_course .branch a {
+	display: block;
+	padding: 0 5px;
+}
+#megamenu .courses .sub .type_course .branch a:hover {
+	background: #57492a;
+}
+#megamenu .courses .sub .type_category.contains_branch .contains_branch .emptybranch,
+#megamenu .courses .sub .type_category.contains_branch .contains_branch .branch {
+	padding: 0 5px;
+}
 /*#menu .sub .level-2 h4 {
 	margin: 2px 0 4px;
 	padding: 0 0 2px 0;
@@ -687,6 +709,7 @@ span.hide, div.hide {
 	border: 1px solid #ccc;
 	margin-top: 10px;
 }
+.mform fieldset div .filemanager-container,
 .mform fieldset div .filepicker-filelist {
 	margin-top: 10px;
 }
