@@ -786,12 +786,12 @@ span.hide, div.hide {
 }
 .path-mod-chat .yui-layout-unit-bottom { border-top-color: #857040 !important; }
 
+
+
 .mdl-chat-entry,
-.mdl-chat-my-entry,
 .chat-message {
 	border-radius: 0 !important;
 	border: none !important;
-	border-bottom: 1px solid #ccc !important;
 }
 .mdl-chat-my-entry .chat-message .text { background: none !important; }
 
@@ -799,7 +799,41 @@ div#yui-gen4 {top: 0px !important;}
 
 #input-message { padding-bottom: 0px !important;}
 
+.chat-message .meta span.time {
 
+	color: #777;
+
+}
+
+
+.mdl-chat-entry .meta {
+	
+	background: none !important;
+	
+}
+
+.mdl-chat-entry .text {
+	
+	background: none !important;
+	color: #000 !important;
+}
+
+.mdl-chat-my-entry .chat-message .meta {
+	background: #F7F7F7 !important;
+	border-bottom: 1px solid white;
+}
+
+.path-mod-chat .chat-event .text, .path-mod-chat .chat-message .text {
+	text-align: left;
+	color: #000;
+}
+
+.mdl-chat-entry, .mdl-chat-my-entry  { border: none !important;}
+
+.path-mod-chat #messages-list, .path-mod-chat #users-list {
+padding: 10px;
+
+}
 
 <<<<<<< HEAD
 .yui-layout .yui-layout-noscroll div.yui-layout-bd {
