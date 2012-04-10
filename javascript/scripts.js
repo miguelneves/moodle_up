@@ -9,12 +9,13 @@ $(document).ready(function() {
 		editMode();
 	}		
 	// remove navigation block
-	$('.block_navigation').next().remove();
-	$('.block_navigation').prev().remove();
-//	$('.block_navigation').empty();
+	var nav = $('.block_navigation');
+	nav.next().remove();
+	nav.prev().remove();
+//	nav.remove();
 	
 	// change width of the content column if sidebar is empty
-	if ($('#region-post .region-content .block_navigation').children().length == 0) {
+	if ($(nav).siblings().length == 0) {
 //		$('#region-post').remove();
 		$('body').addClass('no-sidebar');
 	}
