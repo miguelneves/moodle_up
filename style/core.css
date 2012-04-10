@@ -740,6 +740,15 @@ span.hide, div.hide {
 	border: 2px dashed #444;
 }
 
+/* grade table */
+.yui3-overlay-content .graderreportoverlay {
+
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #CCC;
+
+}
+
 /* course list */
 .categorylist {
 	margin-top: 10px;
@@ -772,6 +781,7 @@ span.hide, div.hide {
 .fp-panel {
     padding: 5px;   
 }
+
 
 /* LISTS */
 .filemanager-container ul li {
@@ -962,7 +972,7 @@ overflow-x: auto;
 }
 .continuebutton {
 	width: 300px;
-	margin: 0 auto;
+	margin-top: 10px;
 }
 .continuebutton a {
 	color: #666;
