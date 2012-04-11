@@ -450,6 +450,21 @@ th, td, tr {
 	font-weight: bold;
 	text-decoration: underline;
 }
+
+.block_settings .block_tree li.item_with_icon > p img  {
+	margin-left: 5px;
+
+}
+
+.tree_item a { padding-left: 7px;}
+.tree_item span { padding-left: 7px;}
+
+.block_settings .block_tree .tree_item.branch {
+
+	background-position: 5px;
+
+}
+
 /* 3rd level */
 .tabtree .here .tabrow2.empty {
 	display: none;
