@@ -788,6 +788,11 @@ span.hide, div.hide {
     list-style-type: none;
 }
 
+/* ======= Checkbox ======== */
+
+input#recurse_on, input#showhidden_on, input#showhidden_off {
+	margin-right: 5px !important;}
+
 /* ====== CHAT ====== */
 #chat-userlist { background: #f2f2f2 !important; }
 #chat-input-area, #chat-input-area table.generaltable,
