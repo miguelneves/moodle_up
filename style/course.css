@@ -340,6 +340,28 @@ table.roleassigntable {
 	margin-top: 10px;
 }
 
+#page-mod-quiz-edit div.question div.content div.points {
+	border-left: none;
+	background-color: transparent;
+}
+
+#page-mod-quiz-edit .editq div.question div.content {
+	background-color: transparent;
+}
+
+#page-mod-quiz-edit div.question div.content div.questioncontrols {
+	background-color: transparent;
+}
+
+#categoryquestions thead tr {
+	height: 30px;
+}
+
+#categoryquestions tbody tr {
+	height: 27px;
+}
+
+
 /* ===== DATABASES ===== */
 .comment-ctrl {
 	display: none;

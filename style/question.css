@@ -192,3 +192,29 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 .path-mod-quiz .qnbutton.notyetanswered, .path-mod-quiz .qnbutton.requiresgrading, .path-mod-quiz .qnbutton.invalidanswer {
 /*	background: #F7E3E1;*/
 }
+
+#categoryquestions .qtype {
+	padding-top: 4px;
+}
+
+.pagecontrols .singlebutton + .singlebutton {
+	margin-top: 0px;
+}
+
+#page-mod-quiz-edit .addpage {
+	margin-bottom: 5px;
+}
+
+#page-mod-quiz-edit .quizpagedelete img {
+	padding: 0.3em;
+	margin: 2px;
+}
+
+.modulespecificbuttonscontainer input {
+	margin-top: 2px;
+	margin-bottom: 2px;}
+	
+input#id_usecurrentcat  {
+	margin-right: 3px;
+	margin-top: 1px;
+}
