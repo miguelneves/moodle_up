@@ -755,15 +755,6 @@ span.hide, div.hide {
 	border: 2px dashed #444;
 }
 
-/* grade table */
-.yui3-overlay-content .graderreportoverlay {
-
-	background: #fff;
-	padding: 5px;
-	border: 1px solid #CCC;
-
-}
-
 /* course list */
 .categorylist {
 	margin-top: 10px;
@@ -865,7 +856,6 @@ padding: 10px;
 
 }
 
-<<<<<<< HEAD
 .yui-layout .yui-layout-noscroll div.yui-layout-bd {
 overflow-y: hidden;
 }
@@ -886,7 +876,6 @@ overflow-x: auto;
 #page-mod-chat-gui_ajax-index #chat-input-area  #choosetheme {
 	display: none;	
 }
-=======
 /* ===== DATABASE ===== */
 
 #page-mod-data-templates .boxwidthwide  {
@@ -904,7 +893,6 @@ overflow-x: auto;
 #page-mod-data-edit form div .generalbox.boxaligncenter.boxwidthwide {
 	width: 100%;
 	overflow: auto;
->>>>>>> 6146aa66811b4ae95b8eaeab1b3e15787a8165e4
 }
 /* ===== WIKI ===== */
 
@@ -913,6 +901,153 @@ overflow-x: auto;
 }
 .wiki-toc .wiki-toc-section .p {
 	margin: 2px 8px;
+}
+
+/* ===== GRADE ===== */
+#page-grade-report-grader-index .gradeparent #user-grades {
+	border: none;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .r0 .category,
+#page-grade-report-grader-index .gradeparent #user-grades .r0 .fixedcolumn {
+	background: #444;
+	color: #fff;
+	border: none;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+#page-grade-report-grader-index .gradeparent #user-grades th,
+#page-grade-report-grader-index .gradeparent #user-grades td,
+#page-grade-report-grader-index .gradeparent #user-grades tr {
+	height: 35px;
+/*	padding: 8px 2px;*/
+	padding: 0;
+}
+#page-grade-report-grader-index .gradeparent #user-grades tr {
+	border: none;
+}
+#page-grade-report-grader-index .gradeparent #user-grades td {
+	border-width: 1px 1px 0 0;
+}
+#page-grade-report-grader-index table#user-grades th.item,
+#page-grade-report-grader-index table#user-grades th.categoryitem,
+#page-grade-report-grader-index table#user-grades th.courseitem {
+	border-left: none;
+	border-top: none;
+	border-bottom: 1px solid #333;
+	vertical-align: middle;
+}
+#page-grade-report-grader-index .gradeparent #user-grades tr:first-child,
+#page-grade-report-grader-index .gradeparent #user-grades .even {
+	border-left: 249px solid transparent;	
+}
+#page-grade-report-grader-index .gradeparent #user-grades .odd {
+	border-left: 249px solid #EFEFEF;	
+}
+#page-grade-report-grader-index .gradeparent #user-grades .topleft {
+	background: #444;
+	border-radius: none;
+/*	height: 24px;*/
+}
+
+#page-grade-report-grader-index .region-content{
+	position: relative;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .topleft,
+#page-grade-report-grader-index .gradeparent #user-grades .heading .header,
+#page-grade-report-grader-index .gradeparent #user-grades .user,
+#page-grade-report-grader-index .gradeparent #user-grades .controls .header,
+#page-grade-report-grader-index .gradeparent #user-grades .userreport,
+#page-grade-report-grader-index .gradeparent #user-grades .avg .header {
+	position: absolute;
+	width: 250px;
+	background: #EFEFEF;
+	border: none;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin: 0;
+	padding: 2px 20px 2px 2px;
+/*	margin-left: -1px;*/
+/*	padding-left: 2px;*/
+	left: 0;
+/*	opacity: 0.5;*/
+}
+#page-grade-report-grader-index .gradeparent #user-grades .heading .header {
+	background: #E9E9E9;
+	border-top: none;
+	border-bottom: 1px solid #333;
+	z-index: 99;
+	height: 36px;
+	padding-top: 8px;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .avg {
+/*	border-bottom-color: tranparent;*/
+}
+
+#page-grade-report-grader-index .gradeparent #user-grades .avg .cell,
+#page-grade-report-grader-index .gradeparent #user-grades .avg .header {
+	background: #ddd;
+	border-top: 1px solid #bbb;
+	height: 36px !important;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .avg .header {
+	border-bottom: 1px solid #ccc;
+	padding-top: 8px;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .avg .cell {
+	border-right-color: #ccc;
+/*	border-bottom: 1px solid #ccc;*/
+	border-bottom: none;
+	height: 38px;
+}
+
+#page-grade-report-grader-index .gradeparent #user-grades .controls .header {
+	height: 36px !important;
+	padding: 8px 5px 0;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .user > a {
+	padding-top: 5px;
+	display: inline;
+	white-space: normal;
+}
+
+#page-grade-report-grader-index .gradeparent #user-grades .userreport {
+	width: auto;
+	left: 232px;
+	border: none;
+	background: transparent;
+	padding-top: 10px;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .grade_icons {
+	display: inline;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .cell .grade_icons {
+	float: right;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .category .grade_icons {
+	float: none;
+}
+#page-grade-report-grader-index .gradeparent #user-grades .cell input {
+	padding: 3px;
+}
+
+.path-grade-report-grader div.userpic img {
+	border: none;
+}
+table#fixed_column tr.odd th,
+table#user-grades tr.odd th {
+/*	padding: 2px;*/
+}
+table#user-grades .userpic {
+	margin-right: 5px;
+}
+
+/* grade table */
+.yui3-overlay-content .graderreportoverlay {
+
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #CCC;
+
 }
 
 /* ===== MYHOME ===== */
@@ -998,13 +1133,10 @@ overflow-x: auto;
 	color: #666;
 }
 
-<<<<<<< HEAD
 
-=======
 /* new message */
 #newmessageoverlay {
 	background: #eee;
 	border: 1px solid #ccc;
 	text-align: left;
 }
->>>>>>> 6146aa66811b4ae95b8eaeab1b3e15787a8165e4
