@@ -639,9 +639,10 @@ padding: 10px;
 #page-footer {
  	width: 1140px;
 	margin: 0 auto;
+	padding-left: 20px;
 	clear: both;
 	text-align: left;
-	font-size: 14px;
+	font-size: 13px;
 }
 #page-footer .logininfo {
 	margin-top: 20px;
@@ -655,7 +656,7 @@ padding: 10px;
 	width: 20%;
 	float: left;
 	margin-right: 2%;
-	font-size: 13px;
+	font-size: 11px;
 }
 .footer-item:last-child {
 	margin-right: 0;
