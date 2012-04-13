@@ -633,48 +633,17 @@ th, td, tr {
 #megamenu .courses .sub .type_category.contains_branch .contains_branch .branch {
 	padding: 0 5px;
 }
-/*#menu .sub .level-2 h4 {
-	margin: 2px 0 4px;
-	padding: 0 0 2px 0;
-	border-bottom: 2px solid #fff;
-	line-height: 1;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-size: 17px;
-}
-#menu .sub .level-3 h4 {
-	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
-	border-bottom-width: 1px;
-	text-transform: none;
-	font-size: 17px;
-	margin: 4px 0 2px;
-}
 
-#menu .sub li li {
-	color: #fff;
-	font-family: 'Droid Serif', Georgia, serif;
-	font-size: 13px;
-	padding: 2px 0;
-	list-style-type: none;	
-	line-height: 1.4;
+#megamenu .sub .contains_branch.type_activity .branch:after {
+	content: "";
 }
-
-#menu .sub li li a:hover,
-#menu .sub li li a:focus {
-	text-decoration: underline;
+#megamenu .sub .contains_branch.type_activity .branch {
+	padding: 0 5px;
+	margin: 0;
 }
-#menu .sub > li {
-	float: left;
-	display: inline-block;
-	margin: 5px;
-	width: 214px;
+#megamenu .sub .contains_branch.type_activity .branch a {
+	display: block;
 }
-
-#menu .sub > .general {
-	margin-top: 12px;
-}*/
-
-
 /* FORMS */
 
 .mform {
