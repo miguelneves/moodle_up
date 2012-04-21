@@ -44,6 +44,11 @@ a:active {
 	/*border-bottom: 1px solid #444;*/
 	background: #857040;
 }
+
+ul ul {
+	margin-top: 0;
+}
+
 .helplink a {
 	border: none;
 }
