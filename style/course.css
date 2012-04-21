@@ -101,6 +101,9 @@
 #region-main .section .content {
 	margin: 0;
 }
+#region-main .section .content > br {
+	display: none;
+}	
 .path-course-view #region-main .section .content .unread {
 	font-family: "PT Sans Narrow", Verdana, sans-serif;
 	font-size: 12px;
@@ -154,7 +157,7 @@
 .course-content .section .content .summary {
 	border-bottom: 1px solid #E5E5E5;
 	clear: both;
-
+	margin-bottom: 10px;
 }
 .course-content .section .content .summary p:last-child {
 	margin-bottom: 0;
