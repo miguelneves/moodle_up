@@ -644,6 +644,9 @@ th, td, tr {
 #megamenu .sub .contains_branch.type_activity .branch a {
 	display: block;
 }
+.tree_item span {
+	padding: 0;
+}
 /* FORMS */
 
 .mform {

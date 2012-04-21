@@ -30,14 +30,11 @@ echo $OUTPUT->doctype() ?>
 <head>
     <title><?php echo $PAGE->title ?></title>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />      
+		
+	<?php echo $OUTPUT->standard_head_html() ?>
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot . "/theme/up/style/ie.css" ?>" />
-	<![endif]-->
-<!--		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow">-->
-<!--		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">-->
-		
-		<?php echo $OUTPUT->standard_head_html() ?>
-	
+	<![endif]-->	
 
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
