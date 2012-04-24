@@ -244,7 +244,7 @@ var settingsName = $('.block_settings .header .title h2').html()
 			}
 		});
 		
-		//remove menu em click outsite menu
+		//remove menu on click outsite menu
 		$(document.body).bind('click', function() {
 			$('a.menu-parent').trigger('collapse');
 		});

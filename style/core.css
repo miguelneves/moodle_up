@@ -21,8 +21,9 @@
 th, td {
 	border: none;
 }
-::selection { background: #DEC38F; }
+
 ::-moz-selection { background: #DEC38F; }
+::selection { background: #DEC38F; }
 
 /* course links*/
 a {
