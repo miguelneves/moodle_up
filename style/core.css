@@ -619,8 +619,10 @@ th, td, tr {
 #megamenu .courses .sub .type_category > .emptybranch {
 	padding: 0 5px;
 }
+#megamenu .sub .contains_branch.type_activity .branch:after,
 #megamenu .courses .sub .type_course .branch:after {
 	content: "";
+	padding: 0;
 }
 #megamenu .courses .sub .contains_branch .branch a:hover:before {
 	width: 0;
@@ -637,10 +639,6 @@ th, td, tr {
 #megamenu .courses .sub .type_category.contains_branch .contains_branch .emptybranch,
 #megamenu .courses .sub .type_category.contains_branch .contains_branch .branch {
 	padding: 0 5px;
-}
-
-#megamenu .sub .contains_branch.type_activity .branch:after {
-	content: "";
 }
 #megamenu .sub .contains_branch.type_activity .branch {
 	padding: 0 5px;
