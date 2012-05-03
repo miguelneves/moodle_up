@@ -357,7 +357,6 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 	padding-bottom: 20px;
 	margin-right: 20px;
-	
 }
 
 #frontpage-content > .frontblock:last-child { border: none; }
@@ -591,6 +590,10 @@ padding: 10px;
 }
 /*.frontbloc:first-child { margin-left: 2%; }*/
 .frontbloc:last-child { margin-right: 0; }
+
+.frontbloc a {
+	text-decoration: underline;
+}
 
 .pagelayout-frontpage .frontbloc h4 {
 	font: normal 20px "PT Sans Narrow", Verdana, sans-serif;
