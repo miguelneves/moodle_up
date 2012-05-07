@@ -792,12 +792,11 @@ input#recurse_on, input#showhidden_on, input#showhidden_off {
 }
 .mdl-chat-my-entry .chat-message .text { background: none !important; }
 
-div#yui-gen4 {top: 0px !important;}
+#page-mod-chat-gui_ajax-index div#yui-gen4 {top: 0px !important;}
 
 #input-message { padding-bottom: 0px !important;}
 
 .chat-message .meta span.time {
-
 	color: #777;
 
 }
