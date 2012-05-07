@@ -129,6 +129,9 @@
 #region-main .section .content ul li{
 	list-style-type: none;
 }
+#region-main .section .content .summary ul li {
+	list-style-type: disc;
+}
 #region-main .section .content ul li a {
 	color: #857040;
 	text-decoration: underline;
