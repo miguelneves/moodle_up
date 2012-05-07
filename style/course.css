@@ -41,7 +41,7 @@
 }
 #course-title h2 {
 	float: left;
-	width: 760px;
+	maxa-width: 760px;
 	margin: 0;
 	padding-top: 6px;
 	color: #666;

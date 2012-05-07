@@ -686,9 +686,19 @@ th, td, tr {
 }
 .mform fieldset.clearfix  .felement textarea {
 	width: 100%;
+	max-width: 450px;
+}
+.no-sidebar .mform fieldset.clearfix  .felement textarea {
+	max-width: 675px;
+}
+.mform .mceIframeContainer iframe {
+	max-width: 450px;
+}
+.no-sidebar .mform .mceIframeContainer iframe {
+	max-width: 675px;
 }
 .mform fieldset.clearfix .required .fitemtitle {
-	color: #857040 !important;
+	color: #857040;
 }
 span.hide, div.hide {
 	display: none;
