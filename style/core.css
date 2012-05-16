@@ -11,7 +11,7 @@
 /* to be fixed... */
 /*.notloggedin .logininfo { display: none; }*/
 
-
+.clearfloat,
 .clearer, .clearfix {
 	clear: both;
 }
@@ -271,7 +271,7 @@ table#categoryquestions,
 #categoryquestions a,
 .userenrolment a,
 .generaltable a {
-	color: #a78d51*;
+	color: #a78d51;
 	border: none;
 	text-decoration: underline;
 }
@@ -894,8 +894,7 @@ overflow-x: auto;
 #page-grade-edit-tree-index #page-content #region-main {
 	width: 1120px;
 }
-	
-}
+
 #page-grade-report-grader-index .gradeparent #user-grades {
 	border: none;
 }

@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 }
 .breadcrumb {
-	font-size: 13xpx;
+	font-size: 13px;
 	font-family: "PT Sans Narrow", sans-serif;
 	text-transform: uppercase;
 	padding: 5px 20px 2px;
@@ -287,6 +287,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbutton table {	margin: 0; }
 .navbutton th, .navbutton td {	padding: 0; }
+
+.navbutton fieldset {
+	margin-bottom: 0;
+}
+.navbutton .helplink a {
+/*	margin: 7px 5px 0 0;*/
+/*	float: left;*/
+}
 
 
 /* ++ MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
