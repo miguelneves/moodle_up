@@ -218,3 +218,7 @@ input#id_usecurrentcat  {
 	margin-right: 3px;
 	margin-top: 1px;
 }
+
+.path-mod-quiz #attemptsform .no-overflow {
+	overflow: scroll;
+}

@@ -228,6 +228,7 @@ input[type=submit][disabled=disabled]:active {
 .boxwidthwide { }
 
 /* TABLES */
+table#attempts,
 table#categoryquestions,
 .userenrolment,
 .generaltable {
@@ -242,32 +243,50 @@ table#categoryquestions,
 	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 16px;
 }
-#categoryquestions  thead .header,
+table#attempts tbody .header {
+	background: #444;
+	color: #fff;
+	border-style: none;
+	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+table#attempts tbody .header,
+#categoryquestions thead .header,
 .userenrolment thead .header,
 .generaltable thead .header {
 	font-weight: normal;
 	line-height: 1;
 }
+table#attempts tbody .header a,
 #categoryquestions  thead .header a,
 .userenrolment thead .header a,
 .generaltable thead .header a {
 	color: #fff;
 }
+table#attempts tbody tr,
 #categoryquestions tbody tr,
 .userenrolment tbody tr,
 .generaltable tbody tr {
 	border-bottom: 1px solid #E5E5E5;
 }
+table .r1 {
+	background: #fff;
+}
+table .r0,
 #categoryquestions tbody tr:nth-child(odd),
 .userenrolment tbody tr:nth-child(odd),
 .generaltable tbody tr:nth-child(odd) {
 	background: #f7f7f7;
 }
+table#attempts td,
 #categoryquestions td,
 .userenrolment td,
 .generaltable td {
 	border-color: #E5E5E5;
 }
+table#attempts a,
 #categoryquestions a,
 .userenrolment a,
 .generaltable a {
