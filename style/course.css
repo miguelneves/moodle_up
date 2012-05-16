@@ -81,7 +81,7 @@
 }
 #region-main .section{
 	padding: 0 0 10px 0;
-	margin-bottom: 0 0 10px 0;
+	margin: 0 0 10px 0;
 }
 #region-main #section-0 {
 	margin-top: 0;
@@ -126,8 +126,12 @@
 	padding: 5px 0;
 	margin: 0;
 }
-#region-main .section .content ul li{
+#region-main .section .content ul li {
 	list-style-type: none;
+}
+#region-main .section .content ul li .instancename {
+	max-width: 570px;
+	display: inline-block;
 }
 #region-main .section .content .summary ul li {
 	list-style-type: disc;
@@ -268,7 +272,7 @@ input + input {
 
 .editing .course-content .section li .mod-indent .move {
 	float: left;
-	margin: 0 5px 0 -10px;
+	margin: -2px 5px 0 -10px;
 }
 .section_add_menus {
 	border: 1px solid #ccc;
@@ -303,14 +307,18 @@ section_add_menus .horizontal div,
 }
 
 /* side */
+
 /*.editing .left { margin: 8px 5px 0 0; }*/
 .editing .left div { margin-left: 32px; }
-/*.editing .left a {
-	margin-top: -32px;
-	border: 1px solid #e5e5e5;
-	padding: 5px 2px 1px 2px;
+.editing .left a {
+	margin-top: -27px;
+/*	border: 1px solid #e5e5e5;*/
+/*	padding: 5px 2px 1px 2px;*/
 	float: left;
-}*/
+}
+.editing .left a:active {
+	background: transparent;
+}
 .editing .right a,
 .editing .right div { float: right; margin-left: 5px; }
 .editing .right div img { display: block; }
