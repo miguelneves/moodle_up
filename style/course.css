@@ -423,3 +423,31 @@ table.roleassigntable {
 #tempform #template {
 	width: 100%;
 }
+
+
+/* #page-mod-choice-report */
+
+#attemptsform .response .results thead .header {
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #ccc;
+	background: #eee;
+}
+#attemptsform .response .results .data {
+	border-right: 1px solid #ccc;
+}
+#attemptsform .response .results .data:last-child {
+	border-right: none;
+}
+#attemptsform .response .results .data .user {
+	padding: 10px 0 0 0;
+}
+#attemptsform .response .results .data .user:nth-child(odd) {
+	border-bottom: 1px solid #eee;
+}
+#attemptsform .response .results .data .user .attemptaction {
+	margin-right: 5px;
+}
+#attemptsform .response .results .data .user .fullname {
+	white-space: normal;
+	width: 150px;
+}
