@@ -41,13 +41,17 @@
 }
 #course-title h2 {
 	float: left;
-	maxa-width: 760px;
+	max-width: 760px;
 	margin: 0;
 	padding-top: 6px;
 	color: #666;
 	font: normal 1.2em "PT Sans Narrow", Verdana, sans-serif;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+}
+#page-mod-forum-discuss #course-title h2,
+#page-mod-forum-view #course-title h2 {
+	max-width: 580px;
 }
 .course-content {
 	font: 13px/1.8 'Droid Serif', Georgia, serif;
@@ -309,19 +313,20 @@ section_add_menus .horizontal div,
 /* side */
 
 /*.editing .left { margin: 8px 5px 0 0; }*/
-.editing .left div { margin-left: 32px; }
-.editing .left a {
+.editing .section .left div { margin-left: 32px; }
+.editing .section .left a {
 	margin-top: -27px;
 /*	border: 1px solid #e5e5e5;*/
 /*	padding: 5px 2px 1px 2px;*/
 	float: left;
 }
-.editing .left a:active {
+.editing .section .left a:active {
 	background: transparent;
 }
-.editing .right a,
-.editing .right div { float: right; margin-left: 5px; }
-.editing .right div img { display: block; }
+.editing .section .left a
+.editing .section .right a,
+.editing .section .right div { float: right; margin-left: 5px; }
+.editing .section .right div img { display: block; }
 
 
 /* ===== QUIZ ===== */
@@ -439,7 +444,7 @@ table.roleassigntable {
 	border-right: none;
 }
 #attemptsform .response .results .data .user {
-	padding: 10px 0 0 0;
+	padding: 10px 0;
 }
 #attemptsform .response .results .data .user:nth-child(odd) {
 	border-bottom: 1px solid #eee;

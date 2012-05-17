@@ -1,0 +1,48 @@
+@media print {
+	* { 
+		background: transparent !important;
+		color: black !important;
+		text-shadow: none !important;
+		filter:none !important;
+		-ms-filter: none !important;
+	} /* Black prints faster: h5bp.com/s */
+		
+	a, a:visited { text-decoration: underline; }
+	
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	pre, blockquote { 	border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* h5bp.com/t */
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 1.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3 { page-break-after: avoid; }
+	
+	#navbutton,
+	.navbutton,
+	.discussioncontrols, .options,
+	#page-header-wrap,
+	#region-post,
+	.block_settings {
+		display: none !important;
+	}
+	
+	.logininfo,
+	#region-main-wrap,
+	#region-main {
+		width: 100% !important;
+		border: none !important;
+		box-shadow: none !important;
+	}
+	#page-footer .footer-item {
+		display: none;
+	}
+	
+	#page-footer .site-info {
+		display: block !important;
+		width: 100% !important;
+	}
+	#page-footer .footer-logo {
+		width: auto !important;
+	}
+}
