@@ -32,7 +32,7 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />      
 		
 	<?php echo $OUTPUT->standard_head_html() ?>
-	<!--[if lt IE 9]>
+	<!--[if lt IE 8]>
 		<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot . "/theme/up/style/ie.css" ?>" />
 	<![endif]-->	
 

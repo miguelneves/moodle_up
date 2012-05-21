@@ -19,10 +19,6 @@ $(document).ready(function() {
 //		$('#region-post').remove();
 		$('body').addClass('no-sidebar');
 	}
-	$('#id_attempts option').bind('click', function (ev) {
-		alert("hell");
-		return false;
-	});
 	
 	/* ===== HOMEPAGE ===== */
 	

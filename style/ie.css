@@ -1,7 +1,20 @@
 #page-content #region-main-wrap {
 	border: 1px solid #ddd;
 }
-
 .block {
 	border: 1px solid #ddd;
+}
+
+
+
+#page-content #region-main-wrap {
+	width: 880px;	
+}
+
+#page-content #region-main {
+	width: 640px;
+}
+
+#region-main-wrap .block_settings {
+	width: 200px;
 }

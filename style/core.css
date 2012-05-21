@@ -69,7 +69,6 @@ ul ul {
 .error {
 	color: #fff;
 	background: #A62A16;
-	color: #fff;
 	padding: 4px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -116,7 +115,6 @@ em { font-weight: inherit; }
 /* ===== INPUTS ===== */
 
 input[type=submit], button, input[type=button], .button {
-	border: none;
 	color: #666;
 	padding: 2px;
 	padding: 6px;
@@ -125,7 +123,7 @@ input[type=submit], button, input[type=button], .button {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
-	background: #ccc;
+	background: #ddd;
 	background-image: -webkit-linear-gradient(90deg, #ccc, #eee);
 	background-image: -moz-linear-gradient(90deg, #ccc, #eee);
 	background-image: -ms-linear-gradient(90deg, #ccc, #eee);
@@ -194,6 +192,9 @@ input[type=submit][disabled=disabled]:active {
 	background-image: -o-linear-gradient(90deg, #ccc, #eee);
 	background-image: linear-gradient(90deg, #ccc, #eee);
 	color: #666;
+}
+.singleselect select {
+	max-width: 200px;
 }
 
 /* GENERAL */
@@ -304,12 +305,17 @@ th, td, tr {
 }
 
 /* .userenrolment table */
+
 .userenrolment { margin-top: 10px; }
 .userenrolment td { padding: 5px; }
 .userenrolment .col_userdetails { min-width: 230px; }
+.userenrolment .col_role { min-width: 120px; width: auto; }
 /*.userenrolment .col_lastseen { min-width: 70px; }*/
 /*.userenrolment .col_enrol { min-width: 120px; }*/
 .userenrolment .col_group .group { padding-left: 0; margin-left: 0; }
+
+
+.enrolpanel { background: transparent; }
 
 /* ============== FORUMS ============== */
 
@@ -623,7 +629,6 @@ th, td, tr {
 #megamenu .sub .contains_branch .branch a:hover:before {
 	content: "";
 	width: 100%;
-	height: 100%;
 	background: #57492a;
 	position: absolute;
 	margin-left: -5px;
@@ -1125,7 +1130,6 @@ table#user-grades .userpic {
 /* Redirect Message */
 
 .redirectmessage {
-	background: white;
 	border: 4px solid #444;
 	width: 300px;
 	margin: 30px auto;
@@ -1153,3 +1157,13 @@ table#user-grades .userpic {
 	border: 1px solid #ccc;
 	text-align: left;
 }
+
+/* #page-admin-course-index */
+
+#page-admin-course-index .editcourse {
+	width: 100%;
+}
+#page-admin-course-index .editcourse .icons {
+	min-width: 110px;
+}
+
