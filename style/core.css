@@ -916,7 +916,7 @@ overflow-x: auto;
 
 #page-grade-report-grader-index #page-content #region-main,
 #page-grade-edit-tree-index #page-content #region-main {
-	width: 1120px;
+/*	width: 1120px;*/
 }
 
 #page-grade-report-grader-index .gradeparent #user-grades {
@@ -1053,6 +1053,9 @@ table#user-grades .userpic {
 	margin-right: 5px;
 }
 
+.path-grade-report-grader form {
+	text-align: left;
+}
 
 
 .gradetreebox #gradetreeform {
