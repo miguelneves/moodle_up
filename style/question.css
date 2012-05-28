@@ -12,7 +12,10 @@
 	width: 100%;
 
 }
-
+.que {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
 .que .formulation {
 	background-color: transparent;
 	margin: 0px;
@@ -47,8 +50,10 @@ width: 100%;
 /* para fazer o overflow da imagem nas perguntas */
 
 .que .qtext img {
-	height: 100%;}
-	
+/* 	max-height: 100%; */
+/* 	width: auto; */
+}
+
 .que .qtext {
 	overflow: auto;
 }
@@ -60,7 +65,7 @@ width: 100%;
 
 /* ===== edit view ==== */
 #page-mod-quiz-edit #quizcontentsblock {
-	
+
 }
 #page-mod-quiz-edit div.quizpage span.pagetitle {
 	display: block;
@@ -108,7 +113,7 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 #page-mod-quiz-edit .reorder div.question div.content {
 	line-height: 2em;
 	background: none;
-	width: 92%;	
+	width: 92%;
 }
 
 #page-mod-quiz-edit div.reorder div.question div.qnum {
@@ -192,6 +197,9 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 .path-mod-quiz .qnbutton.notyetanswered, .path-mod-quiz .qnbutton.requiresgrading, .path-mod-quiz .qnbutton.invalidanswer {
 /*	background: #F7E3E1;*/
 }
+.path-mod-quiz .qnbutton.flagged {
+	background: #F7E3E1;
+}
 
 #categoryquestions .qtype {
 	padding-top: 4px;
@@ -213,7 +221,7 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 .modulespecificbuttonscontainer input {
 	margin-top: 2px;
 	margin-bottom: 2px;}
-	
+
 input#id_usecurrentcat  {
 	margin-right: 3px;
 	margin-top: 1px;

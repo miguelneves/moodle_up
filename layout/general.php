@@ -29,12 +29,12 @@ echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
     <title><?php echo $PAGE->title ?></title>
-    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />      
-		
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
+
 	<?php echo $OUTPUT->standard_head_html() ?>
 	<!--[if lt IE 8]>
 		<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot . "/theme/up/style/ie.css" ?>" />
-	<![endif]-->	
+	<![endif]-->
 
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
@@ -47,20 +47,20 @@ echo $OUTPUT->doctype() ?>
 		        <h1 class="headermain">
 		        	<a href="/?redirect=0"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="Moodle" /></a>
 		        </h1>
-		                
+
 		        <?php if($hasheadingmenu) { ?>
 			        <div class="headermenu">
 			        	<?php echo $PAGE->headingmenu; ?>
 			        </div>
 		        <?php } ?>
 	        <?php } ?>
-	        
+
 	        <?php if ($hascustommenu) { ?>
 	        <div id="custommenu"><?php echo $custommenu; ?></div>
 	        <?php } ?>
-	        
+
 	        <div id="login-info-wrap">
-		    	<?php 
+		    	<?php
 		    		 if (!empty($PAGE->layout_options['langmenu'])) {
 		            	echo $OUTPUT->lang_menu();
 		       		}
@@ -73,7 +73,7 @@ echo $OUTPUT->doctype() ?>
     </div>
 <?php } ?>
 <!-- END OF HEADER -->
-		
+
     <div id="page-content">
     	<?php if ($hasnavbar) { ?>
             <div class="navbar clearfix">
@@ -88,24 +88,24 @@ echo $OUTPUT->doctype() ?>
 	                	<?php if ($hasheading) { ?>
                     		<h2><?php echo $PAGE->heading ?></h2>
                     	<?php } ?>
-                    	<?php if ($hasnavbar) { ?>					             
+                    	<?php if ($hasnavbar) { ?>
 				        	<div class="navbutton"> <?php echo $PAGE->button; ?></div>
 				        <?php } ?>
 					</div>
-                    <div id="region-main">                    	
-            	        <div class="region-content">                        	
-                            <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>                           
+                    <div id="region-main">
+            	        <div class="region-content">
+                            <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
                         </div>
                     </div>
 				</div>
                 <!-- sidebar -->
-  				<?php if ($hassidepost) { ?>               
+  				<?php if ($hassidepost) { ?>
 	                <div id="region-post" class="block-region">
-	                    <div class="region-content">	                    
+	                    <div class="region-content">
 	                        <?php echo $OUTPUT->blocks_for_region('side-post') ?>
 	                    </div>
 	                </div>
-                <?php } ?>	
+                <?php } ?>
 				</div>
 			</div>
 		</div>
@@ -120,11 +120,13 @@ echo $OUTPUT->doctype() ?>
 			<div class="footer-item site-info">
 				<img class="footer-logo" src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="U.Porto" />
 		     	<p>Gestão e manutenção da plataforma Moodle U.PORTO da responsabilidade do GATIUP - Novas Tecnologias na Educação</p>
+   				<p>Tema gráfico criado por <a href="http://idd.fba.up.pt">idd.fba.up.pt</a></p>
+
 			</div>
 			<div class="footer-item help">
 				<h5>Ajuda</h5>
 				<ul>
-					<li><a href="">Suporte Moodle UP</a></a></li>
+					<li><a href="">Suporte Moodle UP</a></li>
 					<li><a href="">Manuais e Tutoriais UP</a></li>
 					<li><a href="">Portal e-learning@UP</a></li>
 					<li><a href="">MoodlePT</a></li>
@@ -145,7 +147,7 @@ echo $OUTPUT->doctype() ?>
 					<li class="delicious"><a href="http://www.delicious.com/elearning.up.pt" title="Delicious"><img src="<?php echo $OUTPUT->pix_url('delicious', 'theme'); ?>" alt="Delicious" /></a></li>
 				</ul>
 			</div>
-	        <?php        
+	        <?php
 	       		echo $OUTPUT->login_info();
 	        	echo $OUTPUT->standard_footer_html();
 	        ?>
@@ -154,7 +156,7 @@ echo $OUTPUT->doctype() ?>
 
 	<?php } ?>
 <!-- END OF FOOTER -->
-</div>
+
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>
 </html>

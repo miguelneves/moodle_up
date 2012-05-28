@@ -28,13 +28,13 @@ echo $OUTPUT->doctype() ?>
 	<title><?php echo $PAGE->title ?></title>
 	<link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
 	<meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
-	
+
 	<?php echo $OUTPUT->standard_head_html() ?>
-	
+
 	<!--[if lt IE 8]>
 		<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot . "/theme/up/style/ie.css" ?>" />
 	<![endif]-->
-	
+
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
@@ -42,11 +42,11 @@ echo $OUTPUT->doctype() ?>
 <div id="page">
 	<div id="page-header-wrap">
 		<div id="page-header">
-			
+
 				<h1 class="headermain">
 					<a href="/?redirect=0"><img src="<?php echo $OUTPUT->pix_url('header', 'theme'); ?>" alt="Moodle" /></a>
 				</h1>
-		
+
 			<?php if ($hasheading) { ?>
 				<?php if($hasheadingmenu) { ?>
 					<div class="headermenu">
@@ -58,36 +58,6 @@ echo $OUTPUT->doctype() ?>
 			<?php if ($hascustommenu) { ?>
 		<div id="custommenu"><?php echo $custommenu; ?></div>
 			<?php } ?>
-			
-			<!-- header login -->
-				<?php
-				/*$sidebar = $OUTPUT->blocks_for_region('side-post');
-	
-				$doc = new DOMDocument();
-				$doc->loadHTML($sidebar);
-				
-				$elems = $doc->getElementsByTagName('div');
-				
-				foreach($elems as $elem){
-					$attr = $elem->getAttribute('class');
-					// check if has block_login class
-					$pattern = '/block_login/';
-					$match = preg_match($pattern, $attr);
-					if ($match) {
-						echo "<div id=\"header-login\">";
-						$children = $elem->childNodes;
-						foreach ($children as $child) {
-							$tmp_doc = new DOMDocument();
-				$tmp_doc->appendChild($tmp_doc->importNode($child,true));
-							$innerHTML .= $tmp_doc->saveHTML();
-						}
-						echo $innerHTML;
-						echo "</div>";
-					}
-				}*/
-				
-				?>
-	
 			<div id="login-info-wrap">
 				<?php
 					echo $OUTPUT->lang_menu();
@@ -96,7 +66,7 @@ echo $OUTPUT->doctype() ?>
 			</div>
 		</div>
 	</div>
-	
+
 <!-- END OF HEADER -->
 
 	<div id="page-content">
@@ -130,7 +100,7 @@ echo $OUTPUT->doctype() ?>
 										</div>
 									</li> -->
 								</ul>
-		
+
 								<div class="frontbloc">
 									<h4>Como Aceder</h4>
 									<p> Siga os passos indicados na <a href="login/index.php">Pagina de login</a>. Mais informações no <a href="http://elearning.up.pt">portal de e-learning</a>, ou por email GATIUP/NTE [gatiup@reit.up.pt]</p>
@@ -176,11 +146,12 @@ echo $OUTPUT->doctype() ?>
 			<div class="footer-item site-info">
 				<img class="footer-logo" src="<?php echo $OUTPUT->pix_url('logo_up', 'theme'); ?>" alt="U.Porto" />
 			<p>Gestão e manutenção da plataforma Moodle U.PORTO da responsabilidade do GATIUP - Novas Tecnologias na Educação</p>
+			<p>Tema gráfico criado por <a href="http://idd.fba.up.pt">idd.fba.up.pt</a></p>
 			</div>
 			<div class="footer-item help">
 				<h5>Ajuda</h5>
 				<ul>
-					<li><a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=1000431">Suporte Moodle UP</a></a></li>
+					<li><a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=1000431">Suporte Moodle UP</a></li>
 					<li><a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=18390">Manuais e Tutoriais UP</a></li>
 					<li><a href="http://elearning.up.pt">Portal e-learning@UP</a></li>
 					<li><a href="http://moodlept.net.educom.pt">MoodlePT</a></li>
