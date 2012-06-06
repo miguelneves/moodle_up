@@ -964,7 +964,7 @@ overflow-x: auto;
 }
 #page-grade-report-grader-index .gradeparent #user-grades .topleft {
 	background: #444;
-	border-radius: none;
+/* 	border-radius: none; */
 /*	height: 24px;*/
 }
 

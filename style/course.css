@@ -15,23 +15,23 @@
  * dark grey: #444
  * middle grey: #777 || #DDD
  * light grey #E5E5E5
- * 
+ *
  * red: #857040 => 857040
  * light red: #f9e5de => b59d65
  * middle red: #e89279 => a78d51
  * dark red: #7f2e16 => 57492a
  * red hover: #fefcfb => fdfcfa
- * 
+ *
  */
 
 /*
  * .course-content ul.topics li.section .content
- * .course-content ul.weeks li.section .content * 
- * 
+ * .course-content ul.weeks li.section .content *
+ *
  */
 
- 
- 
+
+
 #course-title {
 	border-bottom: 1px solid #ccc;
 	overflow: hidden;
@@ -54,7 +54,7 @@
 	max-width: 580px;
 }
 .course-content {
-	font: 13px/1.8 'Droid Serif', Georgia, serif;
+	font: normal 13px/1.8 'Droid Serif', Georgia, serif;
 }
 
 
@@ -108,7 +108,7 @@
 }
 #region-main .section .content > br {
 	display: none;
-}	
+}
 .path-course-view #region-main .section .content .unread {
 	font-family: "PT Sans Narrow", Verdana, sans-serif;
 	font-size: 12px;
@@ -155,7 +155,7 @@
 	color: #fff;
 }
 #region-main .section .content ul li .activityicon {
-	float: left; margin: 3px 5px 0 0;	
+	float: left; margin: 3px 5px 0 0;
 }
 #region-main .section .left {
 	font: normal 21px 'PT Sans Narrow', Tahoma, sans-serif;

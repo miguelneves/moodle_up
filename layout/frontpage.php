@@ -61,7 +61,7 @@ echo $OUTPUT->doctype() ?>
 			<div id="login-info-wrap">
 				<?php
 					echo $OUTPUT->lang_menu();
-		echo $OUTPUT->login_info();
+					echo $OUTPUT->login_info();
 				?>
 			</div>
 		</div>
