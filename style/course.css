@@ -144,9 +144,15 @@
 	color: #857040;
 	text-decoration: underline;
 }
-#region-main .section .content ul li .dimmed_text,
-#region-main .section .content ul li .dimmed {
+#region-main .section .dimmed_text,
+#region-main .section .dimmed_text .commands a { opacity: 1; }
+#region-main .section .content ul li .dimmed_text .instancename,
+#region-main .section .content ul li .dimmed .instancename  {
 	text-decoration: line-through;
+}
+#region-main .section .content ul li .dimmed_text img,
+#region-main .section .content ul li .dimmed img  {
+	opacity: 0.6;
 }
 #region-main .section .content ul li a:hover {
 	color: #444;
