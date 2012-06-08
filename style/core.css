@@ -1224,3 +1224,9 @@ table#user-grades .userpic {
 	line-height: 1.3;
 	padding-top: 4px;
 }
+
+/* ===== GROUP ===== */
+
+#page-group-index #groupeditform table.generalbox {
+	width: 100%;
+}
