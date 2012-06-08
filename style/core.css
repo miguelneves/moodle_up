@@ -129,7 +129,6 @@ input[type=submit]:visited, button:visited, input[type=button]:visited, .button:
 }
 input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover {
 	color: #444;
-/*	box-shadow: 0px 0 1px #000;*/
 	border: 1px solid #aaa;
 	cursor: pointer;
 	-moz-transition: color 0.5s ease;
@@ -137,12 +136,9 @@ input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover 
 	transition: color 0.5s ease;
 }
 input[type=submit]:active, button:active, input[type=button]:active, .button:active {
-/*	box-shadow: inset 0px 0 4px #444;*/
 	background: #ccc;
 	color: #111;
 	position: relative;
-/*	top: 1px;*/
-/*	padding: 7px 6px 5px;*/
 }
 textarea,
 input[type=text],
@@ -160,18 +156,17 @@ input[type=password] {
 }
 input[type=text]:focus {
 	border: 1px solid #aaa;
-/*	box-shadow: 0 0 6px #999 ;*/
 	outline: none;
 }
 /* disabled inputs */
-input[type=submit][disabled=disabled]{
+input[type=submit][disabled=disabled], input[disabled]{
 	opacity: 0.6;
 }
-input[type=submit][disabled=disabled]:hover {
+input[type=submit][disabled=disabled]:hover, input[disabled]:hover {
 	border-color: #ccc;
 	color: #666;
 }
-input[type=submit][disabled=disabled]:active {
+input[type=submit][disabled=disabled]:active, input[disabled]:active {
 	box-shadow: none;
 	background: #ccc;
 	background-image: -webkit-linear-gradient(90deg, #ccc, #eee);
@@ -1229,4 +1224,27 @@ table#user-grades .userpic {
 
 #page-group-index #groupeditform table.generalbox {
 	width: 100%;
+}
+.groupinfobox {
+	border: 1px solid #ccc;
+}
+#page-group-assign #addmembersform #assignform {
+	background: #eee;
+	border: 1px solid #ccc;
+}
+#addmembersform table .arrow_button {
+	margin-top: 38px;
+}
+#addmembersform table .arrow_button input {
+	margin-bottom: 10px;
+}
+#addmembersform table {
+	width: 100%;
+}
+#addmembersform table #userselector_options_inner {
+	font-size: 10px;
+}
+#addmembersform #removeselect,
+#addmembersform #addselect {
+	min-width: 200px;
 }
