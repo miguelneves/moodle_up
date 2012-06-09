@@ -31,7 +31,6 @@
  */
 
 
-
 #course-title {
 	border-bottom: 1px solid #ccc;
 	overflow: hidden;
@@ -253,13 +252,14 @@ input + input {
 .editing .course-content .section li .mod-indent { border: 1px solid #fff; padding-left: 10px; }
 .editing .course-content .section li .edit-active,
 .editing .course-content .section li .mod-indent:hover,
-.editing .block .edit-active h2,
-.editing .block h2:hover {
+.editing #region-post .block .edit-active h2,
+.editing #region-post .block h2:hover {
 	background: #f7f7f7;
 	border: 1px solid #e5e5e5;
+	cursor: pointer;
 }
 .editing .course-content .section li .commands,
-.editing .block .commands {
+.editing #region-post  .block .commands {
 	background: #f7f7f7;
 	padding: 2px;
 	border: 1px solid #e5e5e5;
@@ -278,7 +278,12 @@ input + input {
 
 .editing .course-content .section .edit-toggle { float: right; }
 .editing .course-content .section li .mod-indent { position: relative; }
-.editing .course-content .section li .mod-indent .edit-toggle { position: absolute; right: 5px; color: #777 !important; }
+.editing .course-content .section li .mod-indent .edit-toggle {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	color: #777 !important;
+}
 
 .editing .course-content .section li .mod-indent .move {
 	float: left;

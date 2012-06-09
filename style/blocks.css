@@ -89,17 +89,17 @@
 
 /* ===== EDIT MODE ===== */
 
-.editing .block .title { position: relative; }
-.editing .block div.commands { margin: -11px 0 0 0; }
-.editing .block .commands a { display: block; }
-.editing .block .commands a img { margin-right: 5px; }
-.editing .block .edit-toggle {
+.editing #region-post .block .title { position: relative; }
+.editing #region-post .block div.commands { margin: -11px 0 0 0; }
+.editing #region-post .block .commands a { display: block; }
+.editing #region-post .block .commands a img { margin-right: 5px; }
+.editing #region-post .block .edit-toggle {
 	position: absolute;
 	right: 5px;
 	top: 0;
 	color: #777 !important;
 }
-.editing .block .buttons {
+.editing #region-post .block .buttons {
 	overflow: hidden;
 }
 .block .section_add_menus {
