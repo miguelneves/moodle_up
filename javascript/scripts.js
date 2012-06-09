@@ -404,15 +404,15 @@ function tableContents(){
 
 function editMode(){
 //	 Edit Summary
-//	$('.summary .edit').parent().each(function(){
-//		iconToText(this);
-//		$(this).addClass('edit-summary button');
-//	});
+	$('.summary .edit').parent().each(function(){
+		iconToText(this);
+		$(this).addClass('edit-summary button');
+	});
 	// Change text to icon in sidebar
-//	$('.block .editbutton a').each(function(){
-//		iconToText(this, false);
-//		$(this).addClass('edit-summary button');
-//	});
+	$('.block .editbutton a').each(function(){
+		iconToText(this, false);
+		$(this).addClass('edit-summary button');
+	});
 	//change move button location
 	$('.course-content .commands').each(function(){
 		var m = $('a:first', this).addClass('move');

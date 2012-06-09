@@ -162,6 +162,10 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 #categoryquestions .questiontext {
 	max-width: 48%;
 }
+#page-mod-quiz-edit.editing div.question div.content .questiontext,
+#categoryquestions .questiontext {
+	max-width: 40%;
+}
 #page-mod-quiz-edit .questionbankwindow div.header h2 {
 	margin: 0;
 	font-weight: normal;
