@@ -467,3 +467,13 @@ table.roleassigntable {
 	white-space: normal;
 	width: 150px;
 }
+
+/* assignment */
+
+.path-mod-assignment #intro,
+.path-mod-assignment #dates {
+	margin-bottom: 10px;
+}
+.path-mod-assignment .singlebutton {
+	margin-top: 10px;
+}
