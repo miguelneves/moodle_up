@@ -691,6 +691,10 @@ th, td, tr {
 	margin-left: 180px;
 	width: 460px;
 }
+.mform .fselect select {
+	max-width: 100%;
+}
+
 .mform fieldset.clearfix  .felement textarea {
 	width: 100%;
 	max-width: 450px;

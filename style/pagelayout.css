@@ -707,6 +707,11 @@ padding: 10px;
 }
 .social {
 	width: 120px;
+	margin-bottom: 5px;
+}
+
+.social li {
+	float: left;
 }
 .social li a {
 	float: left;
