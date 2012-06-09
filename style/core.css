@@ -1248,3 +1248,9 @@ table#user-grades .userpic {
 #addmembersform #addselect {
 	min-width: 200px;
 }
+
+/* ===== PARTICIPANTS ===== */
+
+.userlist table#participants {
+	width: 100%;
+}
