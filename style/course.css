@@ -442,7 +442,14 @@ table.roleassigntable {
 
 
 /* #page-mod-choice-report */
-
+.path-mod-choice .anonymous,
+.path-mod-choice .names {
+	width: 100%;
+	border: 1px solid #ccc;
+}
+.path-mod-choice .downloadreport {
+	margin: 0;
+}
 #attemptsform .response .results thead .header {
 	border-bottom: 1px solid #333;
 	border-top: 1px solid #ccc;
@@ -460,6 +467,7 @@ table.roleassigntable {
 #attemptsform .response .results .data .user:nth-child(odd) {
 	border-bottom: 1px solid #eee;
 }
+#attemptsform .response .results .data .user:last-child { border: none; }
 #attemptsform .response .results .data .user .attemptaction {
 	margin-right: 5px;
 }
