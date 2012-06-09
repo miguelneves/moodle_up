@@ -143,12 +143,15 @@
 	color: #857040;
 	text-decoration: underline;
 }
-#region-main .section .dimmed_text,
-#region-main .section .dimmed_text .commands a { opacity: 1; }
 #region-main .section .content ul li .dimmed_text .instancename,
 #region-main .section .content ul li .dimmed .instancename  {
 	text-decoration: line-through;
+	opacity: 0.6;
 }
+#region-main .section .dimmed_text,
+#region-main .section .dimmed .commands img,
+#region-main .section .dimmed_text .commands a { opacity: 1; }
+
 #region-main .section .content ul li .dimmed_text img,
 #region-main .section .content ul li .dimmed img  {
 	opacity: 0.6;
@@ -484,4 +487,7 @@ table.roleassigntable {
 }
 .path-mod-assignment .singlebutton {
 	margin-top: 10px;
+}
+.formtable tbody th, .generaltable th.header {
+	white-space: normal;
 }
