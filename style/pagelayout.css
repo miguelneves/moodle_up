@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* prevent .block_navigation from flashing */
 .jsenabled #region-post .block_navigation {
-	display: none !important;
+/* 	display: none !important; */
 }
 
 /* "fix" the box model */
@@ -520,6 +520,7 @@ padding: 10px;
 	box-shadow: 6px 0 5px -5px #aaa;
 	border-left: 1px solid #ccc;
 	border-top: 1px solid #ccc;
+	background: #fff;
 }
 #region-main-wrap .block_settings .block_tree {
 	padding: 0;

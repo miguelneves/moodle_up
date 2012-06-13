@@ -1076,6 +1076,13 @@ table#user-grades .userpic {
 
 }
 
+/* ===== REPORT ===== */
+
+.path-report .graph img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* ===== MYHOME ===== */
 
 .region-content .block_course_overview {
@@ -1248,9 +1255,16 @@ table#user-grades .userpic {
 #addmembersform table #userselector_options_inner {
 	font-size: 10px;
 }
+.groupmanagementtable #buttonscell input {
+	width: 100%;
+}
+.groupmanagementtable #existingcell,
+.groupmanagementtable #potentialcell {
+	width: auto
+}
 #addmembersform #removeselect,
 #addmembersform #addselect {
-	min-width: 200px;
+	min-width: 170px;
 }
 
 /* ===== PARTICIPANTS ===== */
