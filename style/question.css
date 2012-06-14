@@ -116,9 +116,15 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 	padding-top: 3px;
 }
 
+#page-mod-quiz-edit div.reorder div.question div.qnum,
+#page-mod-quiz-edit div.question div.qnum,
+#page-mod-quiz-edit .editq div.question div.qnum {
+	width: 24px;
+	padding: 3px 0 0 1px;
+	font-size: 14px;
+}
 #page-mod-quiz-edit div.reorder div.question div.qnum {
-	width: 42px;
-	padding-top: 7px;
+	width: 41px;
 }
 #page-mod-quiz-edit div.question div.content div.qorder input {
 	padding: 2px;
@@ -128,8 +134,28 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 	background: transparent;
 }
 
+#page-mod-quiz-edit div.editq div.question div.content {
+	padding: 2px;
+	width: 94%;
+}
+#page-mod-quiz-edit div.question div.content div.points {
+	top: 0;
+}
+#page-mod-quiz-edit div.question div.content div.points input {
+	margin: 0;
+}
 
-
+#page-mod-quiz-edit a.configurerandomquestion {
+	font-size: 11px;
+}
+#page-mod-quiz-edit .questioncontentcontainer div.randomquestionqlist {
+	padding: 2px;
+	margin: 5px 0;
+}
+#page-mod-quiz-edit .questioncontentcontainer div.randomquestionqlist .error {
+	margin-top: 2px;
+	display: inline-block;
+}
 #page-mod-quiz-edit div.reorder .reordercontrols .addnewpagesafterselected,
 #page-mod-quiz-edit .repaginatecommand {
 	padding-right: 0;
@@ -162,7 +188,7 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 }
 #page-mod-quiz-edit div.question div.content .questiontext,
 #categoryquestions .questiontext {
-	max-width: 48%;
+	max-width: 40%;
 }
 #page-mod-quiz-edit.editing div.question div.content .questiontext,
 #categoryquestions .questiontext {
@@ -220,7 +246,7 @@ table#categoryquestions td, #page-mod-quiz-edit table#categoryquestions th {
 }
 
 #page-mod-quiz-edit .quizpagedelete img {
-	padding: 0.3em;
+	padding: 1px;
 	margin: 2px;
 }
 
@@ -235,4 +261,8 @@ input#id_usecurrentcat  {
 
 .path-mod-quiz #attemptsform .no-overflow {
 	overflow: scroll;
+}
+
+.quizattempt .continuebutton {
+	margin-left: 0;
 }
