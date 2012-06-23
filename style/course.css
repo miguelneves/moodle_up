@@ -68,7 +68,6 @@
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: "PT Sans Narrow", Verdana, sans-serif;
-/*	font-weight: normal;*/
 	margin: 0;
 }
 .region-content > h2.main { margin-bottom: 20px; }
@@ -260,7 +259,7 @@ input + input {
 .editing .course-content .section li .mod-indent:hover,
 .editing #region-post .block .edit-active h2,
 .editing #region-post .block h2:hover {
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 	border: 1px solid #e5e5e5;
 	cursor: pointer;
 }
@@ -310,16 +309,12 @@ section_add_menus .horizontal div,
 
 .button.edit-summary {
 	margin: 10px 0;
-/*	background: #857040;*/
 	margin-top: 3px;
 	padding: 6px;
-/*	color: #fff;*/
-/*	border-radius: 2px;*/
 	display: inline-block;
 	font-size: 13px;
-	line-height: 1.2;
+	line-height: 1;
 	font-family: "PT Sans Narrow", Verdana, sans-serif;
-/*	text-shadow: none;*/
 }
 .button.edit-summary:visited {
 	color: #666;
@@ -329,12 +324,9 @@ section_add_menus .horizontal div,
 
 /* side */
 
-/*.editing .left { margin: 8px 5px 0 0; }*/
 .editing .section .left div { margin-left: 32px; }
 .editing .section .left a {
 	margin-top: -27px;
-/*	border: 1px solid #e5e5e5;*/
-/*	padding: 5px 2px 1px 2px;*/
 	float: left;
 }
 .editing .section .left a:active {
