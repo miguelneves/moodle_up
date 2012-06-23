@@ -70,6 +70,7 @@ ul ul {
 	border: 1px solid #F0BDB9;
 }
 
+
 /* modal box */
 
 strong { font-style: inherit; }
@@ -721,8 +722,16 @@ th, td, tr {
 .mform fieldset.clearfix .required .fitemtitle {
 	color: #857040;
 }
+
+.mform .felement label {
+	margin-left: 5px;
+}
 span.hide, div.hide {
 	display: none;
+}
+
+.mform img.iconhelp {
+	margin-right: 0;
 }
 /* submit */
 .mform fieldset .advancedbutton {
@@ -1315,5 +1324,5 @@ table#user-grades .userpic {
 	margin: 10px 0 0;
 }
 #page-mod-choice-report .region-content .reportoption:first-child {
-	margin-left: 0;
+	padding-left: 0;
 }

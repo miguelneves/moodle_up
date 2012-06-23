@@ -13,8 +13,9 @@
 
 }
 .que {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #999;
 	padding-bottom: 20px;
+	overflow: hidden;
 }
 .que .formulation {
 	background-color: transparent;
@@ -29,7 +30,7 @@
 
 .que .qtext {
 	overflow: auto;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px dotted #ccc;
 }
 .que h2.no, .que span.qno {
 	font-family: "PT Sans Narrow", sans-serif;
