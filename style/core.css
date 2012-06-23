@@ -221,19 +221,22 @@ table#categoryquestions,
 #categoryquestions thead,
 .userenrolment thead,
 .generaltable thead {
-	background: #444;
-	color: #fff;
+	background: #ccc;
+	color: #222;
 	border-style: none;
 	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 16px;
+	border-bottom: 1px solid #222;
 }
 table#attempts tbody .header {
-	background: #444;
-	color: #fff;
+	background: #ccc;
+	color: #444;
 	border-style: none;
 	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
 	font-size: 16px;
 	text-decoration: none;
+	border-bottom: 1px solid #222;
+	border-top: 1px solid #aaa;
 }
 
 table#attempts tbody .header,
@@ -247,7 +250,7 @@ table#attempts tbody .header a,
 #categoryquestions  thead .header a,
 .userenrolment thead .header a,
 .generaltable thead .header a {
-	color: #fff;
+	color: #222;
 }
 table#attempts tbody tr,
 #categoryquestions tbody tr,
@@ -269,6 +272,13 @@ table#attempts td,
 .userenrolment td,
 .generaltable td {
 	border-color: #E5E5E5;
+	border-right: 1px solid #e5e5e5;
+}
+table#attempts td:last-child,
+#categoryquestions td:last-child,
+.userenrolment td:last-child,
+.generaltable td:last-child {
+	border: none;
 }
 table#attempts a,
 #categoryquestions a,
@@ -739,7 +749,31 @@ span.hide, div.hide {
 .userprofile .profilepicture a {
 	border-bottom: none;
 }
-
+.userprofile .messagebox,
+.userprofile .fullprofilelink,
+.userprofile .descriptionbox .list {
+	margin-left: 110px;
+	text-align: left;
+}
+.userprofile .descriptionbox .list,
+.userprofile .descriptionbox .list tr,
+.userprofile .descriptionbox .list td {
+/*
+	display: block;
+	padding: 0;
+*/
+}
+.userprofile .descriptionbox .list .label {
+	min-width: 210px;
+	text-align: right;
+	vertical-align: top;
+	color: #666;
+	padding-left: 0;
+/*
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+*/
+}
 /*edit mode */
 .blockmovetarget {
 	display: block;
@@ -1083,6 +1117,8 @@ table#user-grades .userpic {
 	height: auto;
 }
 
+
+
 /* ===== MYHOME ===== */
 
 .region-content .block_course_overview {
@@ -1271,4 +1307,13 @@ table#user-grades .userpic {
 
 .userlist table#participants {
 	width: 100%;
+}
+
+/* ===== CHOICE ====== */
+
+#page-mod-choice-report .region-content .downloadreport ul {
+	margin: 10px 0 0;
+}
+#page-mod-choice-report .region-content .reportoption:first-child {
+	margin-left: 0;
 }

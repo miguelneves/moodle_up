@@ -76,6 +76,9 @@
 	text-transform: none;
 	margin: 0;
 }
+.course-content .headingblock.outline {
+	display: none;
+}
 .course-content ul .section.main{
 	border-top: 1px solid #E5E5E5;
 }
