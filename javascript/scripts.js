@@ -32,8 +32,6 @@ $(document).ready(function() {
 		randomStart: false
 	});
 
-
-
 });
 
 function customMenu() {
@@ -239,10 +237,17 @@ function parseItem(item, name){
 	} else {
 		var level = (name || 0);
 	}
+		
 	var h4 = $('> p a, > p > span', item);
 	var list = $('> ul', item);
 
 	var content = '<li class="level-1 ' + name + '"><a href="#" tabindex="-1" class="menu-parent menu-parent-collapsed">' + h4.html() + '</a><ul class="sub menu-group-collapsed">' + list.html() + '</ul></li>';
+			
+	// return empty if item is null
+	if ( item.length == 0 ) {
+		return '';
+	}
+	
 	return content;
 }
 
