@@ -25,7 +25,8 @@ $(document).ready(function() {
 	// Banner Slider bxslider.com
 	$('#page-site-index #slider1').bxSlider({
 		mode: 'fade',
-		auto: false,
+		auto: true,
+		page: true,
 		pause: 4000,
 		controls: false,
 		randomStart: false

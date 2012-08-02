@@ -81,24 +81,27 @@ echo $OUTPUT->doctype() ?>
 <!-- START OF HOMEPAGE CONTENT -->
 <ul id="slider1">
 									<li>
-										<div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome&amp;rev=483&amp;component=theme)">
+										<div class="welcome" style="background-image: url(http://moodle-testbed.up.pt/moodle2test/theme/image.php?theme=up&amp;image=welcome-ipad&amp;rev=483&amp;component=theme)">
 										<!-- <img src="http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcomeimg&amp;rev=483&amp;component=theme" width="416" height="207"/> -->
-											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
-											<h3>Plataforma de gestão de aprendizagem da Universidade do Porto</h3>
-										</div>
-									</li>
-									<!--<li>
-										<div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome-monkey&amp;rev=483&amp;component=theme)">
-											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
-											<h3>Novos conceitos de utilizacao numa plataforma mais intuitiva e acessivel</h3>
+											<h2 class="white">Bem-vindo <br />ao Moodle U.Porto</h2>
+                                                                                       <h3><a href="http://moodle2.up.pt/mod/page/view.php?id=5"><span>O sistema de gestão de aprendizagem</span><br /><span> da Universidade do Porto</span></a></h3>											
 										</div>
 									</li>
 									<li>
-										<div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome-usb&amp;rev=483&amp;component=theme)">
-											<h2>Bem-vindo ao Moodle2 da U.Porto</h2>
-											<h3>Plataforma de gestão de aprendizagem da Universidade do Porto</h3>
+                                                                                <div class="welcome" style="background-image: url(http://moodle-testbed.up.pt/moodle2test/theme/image.php?theme=up&amp;image=welcome-mobile&amp;rev=483&amp;component=theme)">
+										<!--<div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome-monkey&amp;rev=483&amp;component=theme)">-->
+											<h2>Bem-vindo <br />ao Moodle U.Porto</h2>
+                                                                                        <h3><a href="http://www.up.pt"><span>... com nova interface <em>mobile!</em></span></a></h3>
 										</div>
-									</li> -->
+									</li>
+									<li>
+                                                                                <div class="welcome" style="background-image: url(http://moodle-testbed.up.pt/moodle2test/theme/image.php?theme=up&amp;image=welcome&amp;rev=483&amp;component=theme)">
+										<!-- <div class="welcome" style="background-image: url(http://moodle2.up.pt/theme/image.php?theme=up&amp;image=welcome-usb&amp;rev=483&amp;component=theme)">-->
+								                   
+                                                                 			<h2>Bem-vindo <br />ao Moodle U.Porto</h2>
+											<h3><a href="http://moodle2.up.pt/mod/page/view.php?id=5"><span>Tudo sobre e-learning na U.Porto</span><br /><span>http://elearning.up.pt</span></a></h3>
+										</div>
+									</li>
 								</ul>
 
 								<div class="frontbloc">

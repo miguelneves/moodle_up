@@ -126,18 +126,18 @@ echo $OUTPUT->doctype() ?>
 			<div class="footer-item help">
 				<h5>Ajuda</h5>
 				<ul>
-					<li><a href="">Suporte Moodle UP</a></li>
-					<li><a href="">Manuais e Tutoriais UP</a></li>
-					<li><a href="">Portal e-learning@UP</a></li>
-					<li><a href="">MoodlePT</a></li>
-					<li><a href="">Moodle.org</a></li>
+					<li><a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=1000431">Suporte Moodle UP</a></li>
+					<li><a href="https://sigarra.up.pt/up/web_base.gera_pagina?P_pagina=18390">Manuais e Tutoriais UP</a></li>
+					<li><a href="https://sigarra.up.pt/up/web_base.gera_pagina?p_pagina=18375">Portal e-learning@UP</a></li>
+					<li><a href="http://moodlept.net.educom.pt/">MoodlePT</a></li>
+					<li><a href="http://moodle.org/">Moodle.org</a></li>
 				</ul>
 			</div>
 			<div class="footer-item links">
 				<h5>Outros Sites</h5>
 				<ul>
-					<li><a href="">E-learning Café</a></li>
-					<li><a href="">Universidade do Porto</a></li>
+					<li><a href="http://elearningcafe.up.pt/">E-learning Café</a></li>
+					<li><a href="http://sigarra.up.pt/up/web_page.inicial">Universidade do Porto</a></li>
 				</ul>
 			</div>
 			<div class="footer-item social">

@@ -577,8 +577,30 @@ padding: 10px;
 }
 .bx-window, #slider1, #slider1 li {
 	width: 100% ;
-	height: 230px;
+	height: 400px;
 }
+
+.bx-pager {
+    float: left;
+    float: left;
+    font-size: 16px;
+    margin-left: 25px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 100;
+}
+
+.bx-pager .pager-link {
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 0 3px #CCCCCC;
+    margin: 2px;
+    padding: 5px;
+
+}.bx-pager .pager-active{
+    color: black;
+}
+
 
 .welcome {
 	border: 1px solid #ccc;
@@ -586,6 +608,7 @@ padding: 10px;
 	padding: 10px;
 	background: url([[pix:theme|bg]]) right no-repeat;
 	box-shadow:	inset 0 0 30px 5px #E5E9EA, 0 0 3px #ccc, 0 0 3px #ccc;
+        height: 400px;
 }
 .welcome img {
 	float: right;
@@ -594,16 +617,36 @@ padding: 10px;
 .region-content .welcome h2 {
 	font: bold 44px "PT Sans Narrow", Verdana, sans-serif;
 	text-transform: uppercase;
-	margin: 0 0 30px 0;
+	margin: 40px 0 20px 15px;
 	line-height: 1.1;
 	width: 430px;
 	}
+.region-content .welcome h2.white {
+	color: white;
+}
+.region-content .welcome h2.black {
+        color: black;
+}
 .region-content .welcome h3 {
 	font-size: 20px;
 	margin: 0;
 	width: 400px;
 	margin-bottom: 10px;
+        margin-left: 15px;
 }
+.region-content .welcome h3 a span {
+        background-color: white;
+        padding: 0 2px;
+}
+
+.region-content .welcome h3.white {
+        color: white;
+}
+.region-content .welcome h3.black {
+        color: black;
+}
+
+
 .frontbloc {
 	float: left;
 	width: 31%;
