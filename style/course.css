@@ -100,7 +100,7 @@
 	opacity: 0.6;
 }
 #region-main .section.current {
-	border-left: 5px solid #857040;
+	border-left: 5px solid #ccc;
 	margin-left: -10px;
 	padding-left: 5px;
 }
@@ -142,7 +142,7 @@
 	list-style-type: disc;
 }
 #region-main .section .content ul li a {
-	color: #857040;
+	color: #666;
 	text-decoration: underline;
 }
 #region-main .section .content ul li .dimmed_text .instancename,
@@ -206,27 +206,7 @@
 #region-pre a:hover { color: #857040; }
 #region-pre a:active { color: #fff; }
 
-/* table of content */
-#tableContents {
-	margin-bottom: 20px;
-}
-#tableContents li:before {
-	content: "\00BB  ";
-}
-#tableContents h4,
-#courseInfo .list-header h4 {
-	font-family: 'PT Sans Narrow', Tahoma, sans-serif;
-	font-size: 18px;
-	color: #857040;
-	border-bottom: 1px solid #7a6f3a;
-	line-height: 1.2;
-}
-#tableContents #tc {
-	font-family: 'Droid Serif', Georgia, serif;
-}
-#tableContents .list-header {
-	cursor: default;
-}
+
 
 #courseInfo .level-2 {
 	margin-bottom: 20px;
@@ -308,12 +288,12 @@ section_add_menus .horizontal div,
 }
 
 .button.edit-summary {
-	margin: 10px 0;
-	margin-top: 3px;
-	padding: 6px;
+	margin: 3px 0 10px 0;
+	padding: 8px 6px 3px;
 	display: inline-block;
 	font-size: 13px;
 	line-height: 1;
+	text-decoration: none;
 	font-family: "PT Sans Narrow", Verdana, sans-serif;
 }
 .button.edit-summary:visited {

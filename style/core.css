@@ -22,16 +22,16 @@ th, td {
 	border: none;
 }
 
-::-moz-selection { background: #DEC38F; }
-::selection { background: #DEC38F; }
+/* ::-moz-selection { background: #DEC38F; } */
+/* ::selection { background: #DEC38F; } */
 
 /* course links*/
-a { color: #857040; }
-a:visited { color: #7a6f3a; }
+a { color: #666; }
+a:visited { color: #888; }
 a:hover { color: #444; }
 a:active {
 	color: #fff;
-	background: #857040;
+	background: #444;
 }
 
 ul ul {
@@ -54,7 +54,9 @@ ul ul {
 	padding: 5px;
 	overflow: auto;
 }
-
+.region-content a {
+  text-decoration: underline;
+}
 .error {
 	color: #fff;
 	background: #A62A16;
@@ -319,14 +321,14 @@ th, td, tr {
 	border-bottom: 2px solid #444;
 }
 .path-mod-forum .forumheaderlist a { border: none; }
-.path-mod-forum .forumheaderlist a:visited { color: #857040; }
+/* .path-mod-forum .forumheaderlist a:visited { color: #857040; } */
 .path-mod-forum .forumheaderlist a:hover {
 	background: none;
 	color: #444;
 }
 .path-mod-forum .forumheaderlist a:active {
-	background: #857040 ;
-	color: #fff;
+/* 	background: #444 ; */
+/* 	color: #fff; */
 }
 .path-mod-forum .forumheaderlist .replies,
 .path-mod-forum .forumheaderlist .discussion .author,
@@ -377,7 +379,7 @@ th, td, tr {
 }
 .forumpost {
 	border: none;
-	border-top: 2px solid #7a6f3a;
+	border-top: 2px solid #666;
 	border-bottom: 1px solid #fdfcfa;
 	margin: 0;
 }
@@ -422,6 +424,7 @@ th, td, tr {
 
 .tabtree .tabrow0 li a {
 	border: 1px solid #E5E5E5;
+	text-decoration: none;
 	padding: 5px;
 	background: #f7f7f7;
 	color: #777;
@@ -586,8 +589,8 @@ th, td, tr {
 }
 #megamenu .sub .contains_branch ul {
 	background: #473C22;
-	border-top: 1px solid #524627;
-	border-bottom: 1px solid #524627;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
 }
 #megamenu .sub .contains_branch ul:hover {
 /*	content: "";*/
@@ -676,11 +679,14 @@ th, td, tr {
 .mform fieldset {
 	border: none;
 }
+.mform fieldset div {
+  margin: 0;
+}
 .mform fieldset.clearfix {
-	border-bottom: 2px solid #7a6f3a;
+	border-bottom: 2px solid #666;
 }
 .mform fieldset.clearfix  legend {
-	border-bottom: 1px solid #fdfcfa;
+/* 	border-bottom: 1px solid #fdfcfa; */
 	margin: 0 10px 10px 0;
 	float: left;
 	width: 100%;
@@ -720,7 +726,7 @@ th, td, tr {
 	max-width: 675px;
 }
 .mform fieldset.clearfix .required .fitemtitle {
-	color: #857040;
+	color: #444;
 }
 
 .mform .felement label {
@@ -731,7 +737,7 @@ span.hide, div.hide {
 }
 
 .mform img.iconhelp {
-	margin-right: 0;
+	margin: 0 0 0 5px;
 }
 /* submit */
 .mform fieldset .advancedbutton {

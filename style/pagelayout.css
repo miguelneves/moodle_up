@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 .logininfo a,
 .logininfo a:visited { color: #fff; border-bottom-color: #444; text-decoration: underline;
 }
-.logininfo a:hover { color: #222; background: inherit; }
+.logininfo a:hover { background: inherit; color: #fff; text-decoration: none; }
 
 
 .notloggedin .langmenu {
@@ -266,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	color: #666;
 }
-.breadcrumb a:visited { color: #857040; }
+.breadcrumb a:visited { color: #888; }
 .breadcrumb a:hover { color: #666; }
 .breadcrumb a:active { color: #fff; }
 .breadcrumb ul {
@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 }
 #frontpage-content > .frontblock {
-	border-bottom: 2px solid #857040;
+	border-bottom: 2px solid #444;
 	overflow: hidden;
 	padding-bottom: 20px;
 	margin-right: 20px;
@@ -369,7 +369,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #frontpage-content > .frontblock:last-child { border: none; }
 #uni { float: right; }
-#uni h2 { border-bottom: 2px solid #857040; }
+#uni h2 { border-bottom: 2px solid #444; }
 #uni ul { margin: 0; }
 #uni .list .icon {
 	float: left;
@@ -717,7 +717,7 @@ padding: 10px;
 	border: none;
 }
 #page-footer .logininfo a {
-	color: #857040;
+	color: #666;
 }
 .footer-item {
 	width: 20%;
@@ -778,6 +778,48 @@ padding: 10px;
 .social .facebook a:hover { background: #27649B; }
 .social .linkedin a:hover { background: #4393BB; }
 .social .delicious a:hover { background: #407ACC; }
+
+
+
+/* Fluid pages */
+
+#page-mod-assignment-submissions #page-content,
+#page-mod-quiz-edit #page-content,
+#page-grade-edit-tree-index #page-content,
+#page-grade-report-grader-index #page-content,
+#page-mod-quiz-report #page-content {
+	min-width: 1140px;
+	width: 95%;
+}
+
+#page-mod-assignment-submissions #page-content #region-main-wrap,
+#page-mod-quiz-edit #page-content #region-main-wrap,
+#page-grade-edit-tree-index #page-content #region-main-wrap,
+#page-grade-report-grader-index #page-content #region-main-wrap,
+#page-mod-quiz-report #page-content #region-main-wrap {
+	width: 100%;
+}
+
+#page-mod-assignment-submissions #page-content #region-main,
+#page-grade-edit-tree-index #page-content #region-main,
+#page-grade-report-grader-index #page-content #region-main,
+#page-mod-quiz-report #page-content #region-main {
+	width: 80%;
+	padding-right: 20px;
+}
+#page-mod-assignment-submissions .block_settings,
+#page-mod-quiz-edit .block_settings,
+#page-grade-edit-tree-index .block_settings,
+#page-grade-report-grader-index .block_settings,
+#region-main-wrap .block_settings {
+	width: 20%;
+	max-width: 220px;
+}
+
+
+
+
+
 
 
 /* ===== IE ====== */
