@@ -1332,3 +1332,24 @@ table#user-grades .userpic {
 #page-mod-choice-report .region-content .reportoption:first-child {
 	padding-left: 0;
 }
+
+/* ===== Kubric ====== */
+
+.gradingform_rubric.evaluate .criterion .levels .level:hover {
+	background: #b5dfb5;
+}
+.gradingform_rubric .criterion .levels {
+	padding: 1px 0;
+}
+
+.gradingform_rubric.editor .addlevel input,
+.gradingform_rubric.editor .addcriterion input {
+	line-height: 1.2;
+}
+.gradingform_rubric .criterion .levels .level .level-wrapper {
+	min-width: 60px;
+}
+.gradingform_rubric .criterion .levels .level .score {
+	font-family: "PT Sans Narrow";
+	font-style: normal;
+}
