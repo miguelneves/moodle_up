@@ -801,6 +801,7 @@ padding: 10px;
 }
 
 #page-mod-assignment-submissions #page-content #region-main,
+#page-mod-quiz-edit #page-content #region-main,
 #page-grade-edit-tree-index #page-content #region-main,
 #page-grade-report-grader-index #page-content #region-main,
 #page-mod-quiz-report #page-content #region-main {
@@ -811,7 +812,7 @@ padding: 10px;
 #page-mod-quiz-edit .block_settings,
 #page-grade-edit-tree-index .block_settings,
 #page-grade-report-grader-index .block_settings,
-#region-main-wrap .block_settings {
+#page-mod-quiz-report .block_settings {
 	width: 20%;
 	max-width: 220px;
 }

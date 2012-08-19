@@ -18,14 +18,20 @@
 
 }
 #region-post  .block .header h2 {
-	margin: 0 0 10px 0;
-	font: normal 20px "PT Sans Narrow", Verdana, sans-serif;
-	border-radius: 2px;
-	text-transform: none;
-	line-height: 1.2;
-	border: 1px solid #fff;
-	border-bottom: 1px solid #e5e5e5;
+/* 	margin: 0 0 10px 0; */
+/* 	border-radius: 2px; */
+/* 	text-transform: none; */
+/* 	border: 1px solid #fff; */
+/* 	text-transform: uppercase; */
+
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	margin: -10px -10px 10px;
+	padding: 10px 10px 6px;
+	font: normal 1.1em/1 "PT Sans Narrow", Verdana, sans-serif;
+	color: #666;
 	text-transform: uppercase;
+	
 }
 #region-post  .block .generalbox {
 	width: auto;
@@ -90,29 +96,39 @@
 /* ===== EDIT MODE ===== */
 
 .editing #region-post .block .title { position: relative; }
-.editing #region-post .block div.commands { margin: -11px 0 0 0; }
+.editing #region-post .block div.commands { margin: -11px -11px 0 0; }
 .editing #region-post .block .commands a { display: block; }
 .editing #region-post .block .commands a img { margin-right: 5px; }
-.editing #region-post .block .edit-toggle {
+.editing #region-post .block_with_controls .edit-toggle {
 	position: absolute;
-	right: 5px;
-	top: 0;
+	right: 0px;
+	top: 3px;
 	color: #777 !important;
+	font-size: 12px;
 }
 .editing #region-post .block .edit-toggle {
 	pointer-events: none;
 }
-.editing #region-post .block h2,
-.editing #region-post .block h2:hover {
-	background-image: url([[pix:theme|edit]]);
-	background-repeat: no-repeat;
-	background-position-x: right;
-	line-height: 1;
-	padding-top: 4px;
+.editing #region-post .block h2 {
+	position: relative;
 }
-.editing #region-post .block h2:hover,
-.editing #region-post .block .edit-active h2 {
-	background-image: none;
+.editing #region-post .block_with_controls h2:after {
+	content: '▼';
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: #ccc;
+	font-size: 12px;
+}
+.editing #region-post .block_with_controls h2:hover {
+	background: #F7F7F7;
+	cursor: pointer;
+}
+.editing #region-post .block_with_controls .edit-active h2 {
+	background: #F7F7F7;
+}
+.editing #region-post .block_with_controls .edit-active h2:after {
+	content: "";
 }
 
 .editing #region-post .block .empty-title {

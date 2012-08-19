@@ -939,6 +939,11 @@ overflow-x: auto;
 	width: 100%;
 	overflow: auto;
 }
+
+.mceIframeContainer iframe {
+	max-width: 500px;
+	width: 500px;
+}
 /* ===== WIKI ===== */
 
 .wiki-toc {
@@ -1210,7 +1215,8 @@ table#user-grades .userpic {
 }
 .continuebutton {
 	width: 300px;
-	margin: 10px auto 0;
+	margin: 0 auto;
+	padding-left: 15px;
 }
 .continuebutton a {
 	color: #666;
