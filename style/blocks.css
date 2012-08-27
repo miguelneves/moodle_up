@@ -31,7 +31,7 @@
 	font: normal 1.1em/1 "PT Sans Narrow", Verdana, sans-serif;
 	color: #666;
 	text-transform: uppercase;
-	
+
 }
 #region-post  .block .generalbox {
 	width: auto;
@@ -67,9 +67,6 @@
 	float: left;
 	margin: 3px 5px 0 0;
 }
-.unlist li:before {
-/*	content: '\00BB ';*/
-}
 
 /* latests news */
 .unlist .post {
@@ -83,7 +80,6 @@
 
 /* my private files */
 
-/*.ygtvspacer { display: none; }*/
 .block_private_files #ygtvcontentel1 .icon {
 	margin: 3px 5px 0 0;
 	float: left;
@@ -102,9 +98,9 @@
 .editing #region-post .block_with_controls .edit-toggle {
 	position: absolute;
 	right: 0px;
-	top: 3px;
+	top: 6px;
 	color: #777 !important;
-	font-size: 12px;
+	font-size: 10px;
 }
 .editing #region-post .block .edit-toggle {
 	pointer-events: none;
@@ -116,9 +112,9 @@
 	content: '▼';
 	position: absolute;
 	right: 10px;
-	top: 10px;
+	top: 12px;
 	color: #ccc;
-	font-size: 12px;
+	font-size: 10px;
 }
 .editing #region-post .block_with_controls h2:hover {
 	background: #F7F7F7;
@@ -144,4 +140,10 @@
 }
 .block .section_add_menus .menujump {
 	width: 80%;
+}
+
+/* settings block */
+
+.block_settings .adminsearchform #adminsearchquery {
+	width: 60%;
 }

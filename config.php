@@ -37,7 +37,7 @@ $THEME->name = 'up';
 
 
 $THEME->parents = array('base');
-//$THEME->parentsheets = array('core');
+
 $THEME->parents_exclude_sheets = array('base' => array('pagelayout', 'blocks'));
 $THEME->sheets = array(
 //	'base',			/** Some styles from theme Base **/
@@ -51,14 +51,13 @@ $THEME->sheets = array(
     'grade',
     'message',
     'question',
-    'user'
+    'user',
+    'print'
 );
 
 $THEME->editor_sheets = array('editor');
 
 //load javascript
-//$THEME->javascripts = array('jquery.bxSlider.min');
-//$THEME->javascripts_footer = array('jquery-1.6', 'jquery.bxSlider.min', 'scripts');
 $THEME->javascripts = array('jquery-1.6', 'jquery.bxSlider.min', 'scripts');
 
 $THEME->layouts = array(

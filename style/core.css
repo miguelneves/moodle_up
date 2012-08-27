@@ -556,7 +556,7 @@ th, td, tr {
 #megamenu .sub {
 	position: absolute;
 	background: #40361f;
-	z-index: 9999;
+	z-index: 99999;
 /*	padding: 0 0 5px;*/
 	border-bottom: 2px solid #857040;
 	margin-top: 2px;
@@ -608,12 +608,12 @@ th, td, tr {
 	margin: 0 5px;
 	cursor: pointer;
 }
-#megamenu .sub .contains_branch .branch:after {
+#megamenu .sub .contains_branch > .branch:after {
 	content: ' ▾';
 	font-size: 10px;
 	padding-left: 5px;
 }
-#megamenu .sub .active-submenu .branch:after {
+#megamenu .sub .active-submenu >.branch:after {
 	content: ' ▴';
 	font-size: 10px;
 	padding-left: 5px;
@@ -655,6 +655,7 @@ th, td, tr {
 	display: block;
 	padding: 0 5px;
 }
+#megamenu .settings .contains_branch:hover,
 #megamenu .courses .sub .type_course .branch a:hover {
 	background: #57492a;
 }
@@ -669,6 +670,32 @@ th, td, tr {
 #megamenu .sub .contains_branch.type_activity .branch a {
 	display: block;
 }
+#megamenu .settings .contains_branch li { color: #fff; }
+#megamenu .settings .contains_branch .active-submenu {
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
+}
+#megamenu .settings .contains_branch .active-submenu .active-submenu { border: none; }
+#megamenu .settings .contains_branch .contains_branch .branch { font-size: 13px; }
+#megamenu .settings .contains_branch .contains_branch .contains_branch .tree_item { margin: 0; }
+#megamenu .settings .contains_branch .active-submenu .tree_item a {
+	padding-left: 15px;
+}
+#megamenu .settings .contains_branch .contains_branch .active-submenu ul .tree_item a {
+	padding-left: 25px;
+}
+#megamenu .settings .contains_branch ul a { padding: 0 }
+
+#megamenu .settings .sub > .type_setting > .contains_branch > p a,
+#megamenu .settings .sub > .type_setting > ul > li > p a {
+	padding-left: 5px;
+	margin: 0;
+}
+
+
+#megamenu .settings hr { display: none; }
+#megamenu .settings .contains_branch ul { border: none; }
+
 .tree_item span {
 	padding: 0;
 }

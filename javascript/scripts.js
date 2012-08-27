@@ -1,13 +1,18 @@
 $(document).ready(function() {
 
-	//init
+	//INIT
+
+	// Menu de navegação no cabeçalho
 	customMenu();
-//	tableContents();
+
+	// Menu de settings na lateral (provavelmente já não deve ser preciso)
 	settingsMenu();
-	//textIcons();
+
+	// Dropdowns no modo de edição
 	if($('body').hasClass('editing')) {
 		editMode();
 	}
+
 
 	// change width of the content column if sidebar is empty
 	if ($('body').hasClass('notloggedin')) {
@@ -39,11 +44,11 @@ function customMenu() {
 
 	//hide default block
 	$('.block_navigation').hide();
-	//$('.block_settings').hide();
+/* 	$('.block_settings').hide(); */
 
 	//remove images
 	$('.block_navigation a img').remove();
-	//$('.block_settings a img').remove();
+	$('.block_settings a img').remove();
 
 	//get content
 	var myHome = $('.block_navigation li.depth_1:eq(0) p');
@@ -56,12 +61,19 @@ function customMenu() {
 	myCourses.find('.type_course').removeClass('contains_branch');
 	myCourses.find('.type_course ul').remove();
 
+	var settingsName = $('.block_settings .header .title h2').html()
+	var settings = $('#settingsnav > ul');
+
+	settings = $('<li class="contains_branch"></li>').append(settings);
+
 
 	if(myProfile.length){
 		content = '<li id="home" class="level-1" role="menuitem">' + myHome.html() + '</a></li>'
 		+ parseItem(myProfile, 'profile')
 		+ parseItem(myCourses, 'courses')
-		+ parseItem(sitePages, 'pages');
+		+ parseItem(sitePages, 'pages')
+		+ parseItem(settings, 'settings');
+
 
 		$('#page-header').append('<div id="megamenu"><ul id="menu" class="menu" role="menu">' + content + '</ul></div>');
 
@@ -237,17 +249,24 @@ function parseItem(item, name){
 	} else {
 		var level = (name || 0);
 	}
-		
+
 	var h4 = $('> p a, > p > span', item);
+
+	if (h4.length === 0) {
+		h4 = $('.block_settings .header .title h2');
+
+	}
+
 	var list = $('> ul', item);
 
+/* 	var content = '<li class="level-1 ' + name + '"><a href="#" tabindex="-1" class="menu-parent menu-parent-collapsed">' + h4.html() + '</a><ul class="sub menu-group-collapsed">' + list.html() + '</ul></li>'; */
 	var content = '<li class="level-1 ' + name + '"><a href="#" tabindex="-1" class="menu-parent menu-parent-collapsed">' + h4.html() + '</a><ul class="sub menu-group-collapsed">' + list.html() + '</ul></li>';
-			
+
 	// return empty if item is null
 	if ( item.length == 0 ) {
 		return '';
 	}
-	
+
 	return content;
 }
 
@@ -282,8 +301,14 @@ function editMode(){
 	});
 	//change move button location
 	$('.course-content .commands').each(function(){
-		var m = $('a:first', this).addClass('move');
- 		$(this).parent().prepend(m);
+		var m = $('a:first', this);
+		console.log(m.css('cursor'))
+		if (m.css('cursor') === 'move') {
+			m.addClass('move');
+	 		$(this).parent().prepend(m);
+		}
+
+
 	});
 	// redraw menu if item is added or removed
 	$('.course-content .commands a').click(function(){
