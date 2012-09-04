@@ -2,14 +2,7 @@
 .skip-block {
 	display: none;
 }
-/* remove all <br> */
-/*
- br { display: none !important; }
- */
 
-
-/* to be fixed... */
-/*.notloggedin .logininfo { display: none; }*/
 
 .clearfloat,
 .clearer, .clearfix {
@@ -21,9 +14,6 @@
 th, td {
 	border: none;
 }
-
-/* ::-moz-selection { background: #DEC38F; } */
-/* ::selection { background: #DEC38F; } */
 
 /* course links*/
 a { color: #666; }
@@ -126,9 +116,6 @@ input[type=submit], button, input[type=button], .button {
 	-webkit-transition: color 0.5s ease;
 	transition: color 0.5s ease;
 	margin: 0;
-}
-
-input[type=submit]:visited, button:visited, input[type=button]:visited, .button:visited {
 }
 input[type=submit]:hover, button:hover, input[type=button]:hover, .button:hover {
 	color: #444;

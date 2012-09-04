@@ -1,3 +1,6 @@
+// se true o menu de settings vai ficar no topo, caso contrário fica na coluna lateral
+var settingsHeader = false;
+
 $(document).ready(function() {
 
 	//INIT
@@ -44,11 +47,13 @@ function customMenu() {
 
 	//hide default block
 	$('.block_navigation').hide();
-/* 	$('.block_settings').hide(); */
+	if (settingsHeader)
+	 	$('.block_settings').hide();
 
 	//remove images
 	$('.block_navigation a img').remove();
-	$('.block_settings a img').remove();
+	if (settingsHeader)
+		$('.block_settings a img').remove();
 
 	//get content
 	var myHome = $('.block_navigation li.depth_1:eq(0) p');
@@ -61,18 +66,19 @@ function customMenu() {
 	myCourses.find('.type_course').removeClass('contains_branch');
 	myCourses.find('.type_course ul').remove();
 
-	var settingsName = $('.block_settings .header .title h2').html()
-	var settings = $('#settingsnav > ul');
-
-	settings = $('<li class="contains_branch"></li>').append(settings);
-
+	if (settingsHeader) {
+		var settingsName = $('.block_settings .header .title h2').html()
+		var settings = $('#settingsnav > ul');
+		settings = $('<li class="contains_branch"></li>').append(settings);
+	}
 
 	if(myProfile.length){
 		content = '<li id="home" class="level-1" role="menuitem">' + myHome.html() + '</a></li>'
 		+ parseItem(myProfile, 'profile')
 		+ parseItem(myCourses, 'courses')
-		+ parseItem(sitePages, 'pages')
-		+ parseItem(settings, 'settings');
+		+ parseItem(sitePages, 'pages');
+		if (settingsHeader)
+			content += parseItem(settings, 'settings');
 
 
 		$('#page-header').append('<div id="megamenu"><ul id="menu" class="menu" role="menu">' + content + '</ul></div>');
@@ -289,6 +295,10 @@ function settingsMenu(){
 
 
 function editMode(){
+
+	// add class to body
+	$('body').addClass('edit-mode');
+
 //	 Edit Summary
 	$('.summary .edit').parent().each(function(){
 		iconToText(this);
@@ -302,13 +312,10 @@ function editMode(){
 	//change move button location
 	$('.course-content .commands').each(function(){
 		var m = $('a:first', this);
-		console.log(m.css('cursor'))
 		if (m.css('cursor') === 'move') {
 			m.addClass('move');
 	 		$(this).parent().prepend(m);
 		}
-
-
 	});
 	// redraw menu if item is added or removed
 	$('.course-content .commands a').click(function(){

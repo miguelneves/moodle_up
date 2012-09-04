@@ -143,7 +143,7 @@
 	list-style-type: disc;
 }
 #region-main .section .content ul li a {
-	color: #666;
+/* 	color: #666; */
 }
 #region-main .section .content ul li a span {
 	text-decoration: underline;
@@ -246,8 +246,9 @@ input + input {
 }
 .editing .course-content .section .right.side br { display: none; }
 
-.editing .course-content .section li .commands,
-.editing #region-post  .block .commands {
+/* edit mode - for when editMode() function is active */
+.edit-mode .course-content .section li .commands,
+.edit-mode #region-post  .block .commands {
 	background: #f7f7f7;
 	padding: 2px;
 	border: 1px solid #e5e5e5;
@@ -257,7 +258,7 @@ input + input {
 	right: 0;
 	z-index: 99999;
 }
-.editing .course-content .section li .commands a {
+.edit-mode .course-content .section li .commands a {
 	display: block;
 	border-color: #e5e5e5;
 }

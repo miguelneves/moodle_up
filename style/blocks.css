@@ -91,24 +91,24 @@
 
 /* ===== EDIT MODE ===== */
 
-.editing #region-post .block .title { position: relative; }
-.editing #region-post .block div.commands { margin: -11px -11px 0 0; }
-.editing #region-post .block .commands a { display: block; }
-.editing #region-post .block .commands a img { margin-right: 5px; }
-.editing #region-post .block_with_controls .edit-toggle {
+.edit-mode #region-post .block .title { position: relative; }
+.edit-mode #region-post .block div.commands { margin: -11px -11px 0 0; }
+.edit-mode #region-post .block .commands a { display: block; }
+.edit-mode #region-post .block .commands a img { margin-right: 5px; }
+.edit-mode #region-post .block_with_controls .edit-toggle {
 	position: absolute;
 	right: 0px;
 	top: 6px;
 	color: #777 !important;
 	font-size: 10px;
 }
-.editing #region-post .block .edit-toggle {
+.edit-mode #region-post .block .edit-toggle {
 	pointer-events: none;
 }
-.editing #region-post .block h2 {
+.edit-mode #region-post .block h2 {
 	position: relative;
 }
-.editing #region-post .block_with_controls h2:after {
+.edit-mode #region-post .block_with_controls h2:after {
 	content: '▼';
 	position: absolute;
 	right: 10px;
@@ -116,14 +116,14 @@
 	color: #ccc;
 	font-size: 10px;
 }
-.editing #region-post .block_with_controls h2:hover {
+.edit-mode #region-post .block_with_controls h2:hover {
 	background: #F7F7F7;
 	cursor: pointer;
 }
-.editing #region-post .block_with_controls .edit-active h2 {
+.edit-mode #region-post .block_with_controls .edit-active h2 {
 	background: #F7F7F7;
 }
-.editing #region-post .block_with_controls .edit-active h2:after {
+.edit-mode #region-post .block_with_controls .edit-active h2:after {
 	content: "";
 }
 
